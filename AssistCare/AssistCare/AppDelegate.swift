@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().barTintColor = getAppColor()
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = MedicationVC(nibName: "MedicationVC", bundle: nil)
+        let vc = EditProfile(nibName: "EditProfile", bundle: nil)
         let nav = UINavigationController(rootViewController: vc)
         nav.isNavigationBarHidden = true
         self.window?.rootViewController = nav

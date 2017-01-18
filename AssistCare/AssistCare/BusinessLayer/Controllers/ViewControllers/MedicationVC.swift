@@ -75,7 +75,7 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.tintColor = getFontColor()
-        txtMedicationName.setBottomBorder()
+//        txtMedicationName.setBottomBorder()
         btnMon.layer.cornerRadius = btnMon.bounds.size.width/2
         btnTue.layer.cornerRadius = btnTue.bounds.size.width/2
         btnWed.layer.cornerRadius = btnWed.bounds.size.width/2

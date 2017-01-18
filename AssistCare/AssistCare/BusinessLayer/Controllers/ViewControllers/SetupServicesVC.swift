@@ -55,7 +55,7 @@ class SetupServicesVC: UIViewController,UITextFieldDelegate,UITableViewDelegate,
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.tintColor = getFontColor()
-        txtInstruction.setBottomBorder()
+//        txtInstruction.setBottomBorder()
         txtInstruction.backgroundColor = getBackgroundColor()
         btnContinue.isHidden = false
         btnAddMedication.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "addMedication"), scaledToSize: CGSize(width: btnAddMedication.bounds.size.width, height: btnAddMedication.bounds.size.height)), for: .normal)
