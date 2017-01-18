@@ -9,13 +9,11 @@
 /* Begin PBXBuildFile section */
 		0C849E5E1E2DF3A60078DA28 /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E5B1E2DF3A60078DA28 /* AppDesign.swift */; };
 		0C849E5F1E2DF3A60078DA28 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E5C1E2DF3A60078DA28 /* Constant.swift */; };
-		0C849E601E2DF3A60078DA28 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E5D1E2DF3A60078DA28 /* Extension.swift */; };
 		0C849E651E2DF3E50078DA28 /* CategoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E611E2DF3E50078DA28 /* CategoryVC.xib */; };
 		0C849E661E2DF3E50078DA28 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E621E2DF3E50078DA28 /* SignUpVC.xib */; };
 		0C849E671E2DF3E50078DA28 /* VerificationLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E631E2DF3E50078DA28 /* VerificationLoadingVC.xib */; };
 		0C849E681E2DF3E50078DA28 /* VerificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E641E2DF3E50078DA28 /* VerificationVC.xib */; };
 		0C849E6D1E2DF4500078DA28 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E691E2DF4500078DA28 /* CategoryVC.swift */; };
-		0C849E6E1E2DF4500078DA28 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E6A1E2DF4500078DA28 /* SignUpVC.swift */; };
 		0C849E6F1E2DF4500078DA28 /* VerificationLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E6B1E2DF4500078DA28 /* VerificationLoadingVC.swift */; };
 		0C849E701E2DF4500078DA28 /* VerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E6C1E2DF4500078DA28 /* VerificationVC.swift */; };
 		0CBA41E51E2CAA9A0008C8E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA41E41E2CAA9A0008C8E4 /* AppDelegate.swift */; };
@@ -23,6 +21,14 @@
 		0CBA41EF1E2CAA9A0008C8E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBA41ED1E2CAA9A0008C8E4 /* LaunchScreen.storyboard */; };
 		0CBA41FA1E2CAA9A0008C8E4 /* AssistCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA41F91E2CAA9A0008C8E4 /* AssistCareTests.swift */; };
 		0CBA42051E2CAA9A0008C8E4 /* AssistCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA42041E2CAA9A0008C8E4 /* AssistCareUITests.swift */; };
+		24C4D69B1E2DF8FA00A2267D /* SetupServicesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C4D69A1E2DF8FA00A2267D /* SetupServicesVC.xib */; };
+		24C4D6A71E2DFAC400A2267D /* cellMedication.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C4D6A61E2DFAC400A2267D /* cellMedication.xib */; };
+		24C4D6A91E2DFAD800A2267D /* cellMedication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C4D6A81E2DFAD800A2267D /* cellMedication.swift */; };
+		24C4D6B11E2E09FB00A2267D /* MedicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C4D6B01E2E09FB00A2267D /* MedicationVC.swift */; };
+		24C4D6B51E2E0E4600A2267D /* MedicationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24C4D6B41E2E0E4600A2267D /* MedicationVC.xib */; };
+		24C4D6D01E2E2EBB00A2267D /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E6A1E2DF4500078DA28 /* SignUpVC.swift */; };
+		24C4D6D11E2E2EC000A2267D /* SetupServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24C4D6941E2DF89500A2267D /* SetupServicesVC.swift */; };
+		24C4D6D21E2E2EC300A2267D /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E5D1E2DF3A60078DA28 /* Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,6 +71,12 @@
 		0CBA42001E2CAA9A0008C8E4 /* AssistCareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssistCareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBA42041E2CAA9A0008C8E4 /* AssistCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistCareUITests.swift; sourceTree = "<group>"; };
 		0CBA42061E2CAA9A0008C8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		24C4D6941E2DF89500A2267D /* SetupServicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupServicesVC.swift; sourceTree = "<group>"; };
+		24C4D69A1E2DF8FA00A2267D /* SetupServicesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupServicesVC.xib; sourceTree = "<group>"; };
+		24C4D6A61E2DFAC400A2267D /* cellMedication.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellMedication.xib; sourceTree = "<group>"; };
+		24C4D6A81E2DFAD800A2267D /* cellMedication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellMedication.swift; sourceTree = "<group>"; };
+		24C4D6B01E2E09FB00A2267D /* MedicationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationVC.swift; sourceTree = "<group>"; };
+		24C4D6B41E2E0E4600A2267D /* MedicationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicationVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,26 +132,22 @@
 			children = (
 				0C849E541E2DF29B0078DA28 /* Views */,
 			);
-			path = PresentationLayer;
+			name = PresentationLayer;
+			path = ../../../PresentationLayer;
 			sourceTree = "<group>";
 		};
 		0C849E541E2DF29B0078DA28 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				24C4D6A51E2DFA9E00A2267D /* CellView */,
+				24C4D69A1E2DF8FA00A2267D /* SetupServicesVC.xib */,
 				0C849E611E2DF3E50078DA28 /* CategoryVC.xib */,
 				0C849E621E2DF3E50078DA28 /* SignUpVC.xib */,
 				0C849E631E2DF3E50078DA28 /* VerificationLoadingVC.xib */,
 				0C849E641E2DF3E50078DA28 /* VerificationVC.xib */,
-				0C849E551E2DF29B0078DA28 /* CellView */,
+				24C4D6B41E2E0E4600A2267D /* MedicationVC.xib */,
 			);
 			path = Views;
-			sourceTree = "<group>";
-		};
-		0C849E551E2DF29B0078DA28 /* CellView */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CellView;
 			sourceTree = "<group>";
 		};
 		0C849E561E2DF2B20078DA28 /* BusinessLayer */ = {
@@ -154,26 +162,22 @@
 		0C849E571E2DF2B20078DA28 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				0C849E581E2DF2B20078DA28 /* CellControllers */,
+				24C4D6A41E2DFA8800A2267D /* CellControllers */,
 				0C849E591E2DF2B20078DA28 /* ViewControllers */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
 		};
-		0C849E581E2DF2B20078DA28 /* CellControllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = CellControllers;
-			sourceTree = "<group>";
-		};
 		0C849E591E2DF2B20078DA28 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				24C4D6941E2DF89500A2267D /* SetupServicesVC.swift */,
 				0C849E691E2DF4500078DA28 /* CategoryVC.swift */,
 				0C849E6A1E2DF4500078DA28 /* SignUpVC.swift */,
 				0C849E6B1E2DF4500078DA28 /* VerificationLoadingVC.swift */,
 				0C849E6C1E2DF4500078DA28 /* VerificationVC.swift */,
+				24C4D6B01E2E09FB00A2267D /* MedicationVC.swift */,
+				0C849E531E2DF29B0078DA28 /* PresentationLayer */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -191,10 +195,10 @@
 		0CBA41D81E2CAA9A0008C8E4 = {
 			isa = PBXGroup;
 			children = (
+				0CBA41E21E2CAA9A0008C8E4 /* Products */,
 				0CBA41E31E2CAA9A0008C8E4 /* AssistCare */,
 				0CBA41F81E2CAA9A0008C8E4 /* AssistCareTests */,
 				0CBA42031E2CAA9A0008C8E4 /* AssistCareUITests */,
-				0CBA41E21E2CAA9A0008C8E4 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,7 +216,6 @@
 			isa = PBXGroup;
 			children = (
 				0C849E561E2DF2B20078DA28 /* BusinessLayer */,
-				0C849E531E2DF29B0078DA28 /* PresentationLayer */,
 				0C849E501E2DF28B0078DA28 /* DataLayer */,
 				0CBA41E41E2CAA9A0008C8E4 /* AppDelegate.swift */,
 				0CBA41EB1E2CAA9A0008C8E4 /* Assets.xcassets */,
@@ -240,6 +243,22 @@
 			path = AssistCareUITests;
 			sourceTree = "<group>";
 		};
+		24C4D6A41E2DFA8800A2267D /* CellControllers */ = {
+			isa = PBXGroup;
+			children = (
+				24C4D6A81E2DFAD800A2267D /* cellMedication.swift */,
+			);
+			name = CellControllers;
+			sourceTree = "<group>";
+		};
+		24C4D6A51E2DFA9E00A2267D /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				24C4D6A61E2DFAC400A2267D /* cellMedication.xib */,
+			);
+			name = CellView;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -264,9 +283,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CBA420C1E2CAA9A0008C8E4 /* Build configuration list for PBXNativeTarget "AssistCareTests" */;
 			buildPhases = (
+				5C856C37CE1CB85CBE04D921 /* [CP] Check Pods Manifest.lock */,
 				0CBA41F11E2CAA9A0008C8E4 /* Sources */,
 				0CBA41F21E2CAA9A0008C8E4 /* Frameworks */,
 				0CBA41F31E2CAA9A0008C8E4 /* Resources */,
+				3FDCA072FA563ED968F076CD /* [CP] Embed Pods Frameworks */,
+				BD4D5F389B8025CE3E19B63F /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -282,9 +304,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0CBA420F1E2CAA9A0008C8E4 /* Build configuration list for PBXNativeTarget "AssistCareUITests" */;
 			buildPhases = (
+				1A7E769432022D1A28C72183 /* [CP] Check Pods Manifest.lock */,
 				0CBA41FC1E2CAA9A0008C8E4 /* Sources */,
 				0CBA41FD1E2CAA9A0008C8E4 /* Frameworks */,
 				0CBA41FE1E2CAA9A0008C8E4 /* Resources */,
+				F61A0F7A67AF64632AA14CBB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -308,15 +332,18 @@
 				TargetAttributes = {
 					0CBA41E01E2CAA9A0008C8E4 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
 					0CBA41F41E2CAA9A0008C8E4 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0CBA41E01E2CAA9A0008C8E4;
 					};
 					0CBA41FF1E2CAA9A0008C8E4 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 						TestTargetID = 0CBA41E01E2CAA9A0008C8E4;
 					};
@@ -347,10 +374,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C4D6A71E2DFAC400A2267D /* cellMedication.xib in Resources */,
 				0C849E661E2DF3E50078DA28 /* SignUpVC.xib in Resources */,
 				0CBA41EF1E2CAA9A0008C8E4 /* LaunchScreen.storyboard in Resources */,
+				24C4D6B51E2E0E4600A2267D /* MedicationVC.xib in Resources */,
 				0CBA41EC1E2CAA9A0008C8E4 /* Assets.xcassets in Resources */,
 				0C849E671E2DF3E50078DA28 /* VerificationLoadingVC.xib in Resources */,
+				24C4D69B1E2DF8FA00A2267D /* SetupServicesVC.xib in Resources */,
 				0C849E651E2DF3E50078DA28 /* CategoryVC.xib in Resources */,
 				0C849E681E2DF3E50078DA28 /* VerificationVC.xib in Resources */,
 			);
@@ -372,19 +402,100 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1A7E769432022D1A28C72183 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3FDCA072FA563ED968F076CD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AssistCareTests/Pods-AssistCareTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5C856C37CE1CB85CBE04D921 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BD4D5F389B8025CE3E19B63F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AssistCareTests/Pods-AssistCareTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F61A0F7A67AF64632AA14CBB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-AssistCareUITests/Pods-AssistCareUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0CBA41DD1E2CAA9A0008C8E4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24C4D6D21E2E2EC300A2267D /* Extension.swift in Sources */,
+				24C4D6D11E2E2EC000A2267D /* SetupServicesVC.swift in Sources */,
+				24C4D6D01E2E2EBB00A2267D /* SignUpVC.swift in Sources */,
+				24C4D6A91E2DFAD800A2267D /* cellMedication.swift in Sources */,
 				0C849E6D1E2DF4500078DA28 /* CategoryVC.swift in Sources */,
 				0C849E6F1E2DF4500078DA28 /* VerificationLoadingVC.swift in Sources */,
+				24C4D6B11E2E09FB00A2267D /* MedicationVC.swift in Sources */,
 				0C849E5F1E2DF3A60078DA28 /* Constant.swift in Sources */,
 				0C849E701E2DF4500078DA28 /* VerificationVC.swift in Sources */,
 				0CBA41E51E2CAA9A0008C8E4 /* AppDelegate.swift in Sources */,
 				0C849E5E1E2DF3A60078DA28 /* AppDesign.swift in Sources */,
-				0C849E6E1E2DF4500078DA28 /* SignUpVC.swift in Sources */,
-				0C849E601E2DF3A60078DA28 /* Extension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().barTintColor = getAppColor()
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
+        let vc = MedicationVC(nibName: "MedicationVC", bundle: nil)
         let nav = UINavigationController(rootViewController: vc)
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()

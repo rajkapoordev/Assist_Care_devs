@@ -68,6 +68,14 @@ func appUIColorFromRGB(rgbValue: UInt,alpha:Double) -> UIColor {
     )
 }
 
+func imageWithImage(_ image: UIImage, scaledToSize newSize: CGSize) -> UIImage {
+    UIGraphicsBeginImageContextWithOptions(newSize, false, 0.0)
+    image.draw(in: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
+    let newImage: UIImage = UIGraphicsGetImageFromCurrentImageContext()!
+    UIGraphicsEndImageContext()
+    return newImage
+}
+
 class TextField: UITextField {
     
     let padding = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 5);
