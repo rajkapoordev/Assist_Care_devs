@@ -16,6 +16,7 @@ class VerificationLoadingVC: UIViewController {
         super.viewDidLoad()
         self.setInterface()
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1) ){
+//          let vc = EditProfile(nibName: "EditProfile", bundle: nil)
             let vc = SetupServicesVC(nibName: "SetupServicesVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
         }

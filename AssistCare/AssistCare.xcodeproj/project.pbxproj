@@ -16,6 +16,12 @@
 		0C849E6D1E2DF4500078DA28 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E691E2DF4500078DA28 /* CategoryVC.swift */; };
 		0C849E6F1E2DF4500078DA28 /* VerificationLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E6B1E2DF4500078DA28 /* VerificationLoadingVC.swift */; };
 		0C849E701E2DF4500078DA28 /* VerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E6C1E2DF4500078DA28 /* VerificationVC.swift */; };
+		0C849E721E2DFAF80078DA28 /* EditProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E711E2DFAF80078DA28 /* EditProfile.xib */; };
+		0C849E741E2DFB020078DA28 /* CareServicesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E731E2DFB020078DA28 /* CareServicesCell.xib */; };
+		0C849E761E2DFB170078DA28 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E751E2DFB170078DA28 /* EditProfile.swift */; };
+		0C849E781E2DFB200078DA28 /* CareServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E771E2DFB200078DA28 /* CareServicesCell.swift */; };
+		0C849E7A1E2DFC340078DA28 /* noimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E791E2DFC340078DA28 /* noimg.png */; };
+		0C849E7C1E2E27CC0078DA28 /* rightmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E7B1E2E27CC0078DA28 /* rightmark.png */; };
 		0CBA41E51E2CAA9A0008C8E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA41E41E2CAA9A0008C8E4 /* AppDelegate.swift */; };
 		0CBA41EC1E2CAA9A0008C8E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBA41EB1E2CAA9A0008C8E4 /* Assets.xcassets */; };
 		0CBA41EF1E2CAA9A0008C8E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBA41ED1E2CAA9A0008C8E4 /* LaunchScreen.storyboard */; };
@@ -60,6 +66,12 @@
 		0C849E6A1E2DF4500078DA28 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		0C849E6B1E2DF4500078DA28 /* VerificationLoadingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationLoadingVC.swift; sourceTree = "<group>"; };
 		0C849E6C1E2DF4500078DA28 /* VerificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationVC.swift; sourceTree = "<group>"; };
+		0C849E711E2DFAF80078DA28 /* EditProfile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfile.xib; sourceTree = "<group>"; };
+		0C849E731E2DFB020078DA28 /* CareServicesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareServicesCell.xib; sourceTree = "<group>"; };
+		0C849E751E2DFB170078DA28 /* EditProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
+		0C849E771E2DFB200078DA28 /* CareServicesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareServicesCell.swift; sourceTree = "<group>"; };
+		0C849E791E2DFC340078DA28 /* noimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimg.png; sourceTree = "<group>"; };
+		0C849E7B1E2E27CC0078DA28 /* rightmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightmark.png; sourceTree = "<group>"; };
 		0CBA41E11E2CAA9A0008C8E4 /* AssistCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssistCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBA41E41E2CAA9A0008C8E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CBA41EB1E2CAA9A0008C8E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -139,8 +151,7 @@
 		0C849E541E2DF29B0078DA28 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				24C4D6A51E2DFA9E00A2267D /* CellView */,
-				24C4D69A1E2DF8FA00A2267D /* SetupServicesVC.xib */,
+				0C849E711E2DFAF80078DA28 /* EditProfile.xib */,
 				0C849E611E2DF3E50078DA28 /* CategoryVC.xib */,
 				0C849E621E2DF3E50078DA28 /* SignUpVC.xib */,
 				0C849E631E2DF3E50078DA28 /* VerificationLoadingVC.xib */,
@@ -150,6 +161,15 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		0C849E551E2DF29B0078DA28 /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				0C849E731E2DFB020078DA28 /* CareServicesCell.xib */,
+			);
+			path = CellView;
+			sourceTree = "<group>";
+		};
+
 		0C849E561E2DF2B20078DA28 /* BusinessLayer */ = {
 			isa = PBXGroup;
 			children = (
@@ -168,10 +188,19 @@
 			path = Controllers;
 			sourceTree = "<group>";
 		};
+		0C849E581E2DF2B20078DA28 /* CellControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C849E771E2DFB200078DA28 /* CareServicesCell.swift */,
+			);
+			path = CellControllers;
+			sourceTree = "<group>";
+		};
 		0C849E591E2DF2B20078DA28 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				24C4D6941E2DF89500A2267D /* SetupServicesVC.swift */,
+				0C849E751E2DFB170078DA28 /* EditProfile.swift */,
+
 				0C849E691E2DF4500078DA28 /* CategoryVC.swift */,
 				0C849E6A1E2DF4500078DA28 /* SignUpVC.swift */,
 				0C849E6B1E2DF4500078DA28 /* VerificationLoadingVC.swift */,
@@ -215,6 +244,8 @@
 		0CBA41E31E2CAA9A0008C8E4 /* AssistCare */ = {
 			isa = PBXGroup;
 			children = (
+				0C849E7B1E2E27CC0078DA28 /* rightmark.png */,
+				0C849E791E2DFC340078DA28 /* noimg.png */,
 				0C849E561E2DF2B20078DA28 /* BusinessLayer */,
 				0C849E501E2DF28B0078DA28 /* DataLayer */,
 				0CBA41E41E2CAA9A0008C8E4 /* AppDelegate.swift */,
@@ -374,13 +405,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24C4D6A71E2DFAC400A2267D /* cellMedication.xib in Resources */,
+				0C849E7A1E2DFC340078DA28 /* noimg.png in Resources */,
 				0C849E661E2DF3E50078DA28 /* SignUpVC.xib in Resources */,
 				0CBA41EF1E2CAA9A0008C8E4 /* LaunchScreen.storyboard in Resources */,
-				24C4D6B51E2E0E4600A2267D /* MedicationVC.xib in Resources */,
+				0C849E7C1E2E27CC0078DA28 /* rightmark.png in Resources */,
 				0CBA41EC1E2CAA9A0008C8E4 /* Assets.xcassets in Resources */,
 				0C849E671E2DF3E50078DA28 /* VerificationLoadingVC.xib in Resources */,
-				24C4D69B1E2DF8FA00A2267D /* SetupServicesVC.xib in Resources */,
+				0C849E741E2DFB020078DA28 /* CareServicesCell.xib in Resources */,
+				0C849E721E2DFAF80078DA28 /* EditProfile.xib in Resources */,
+
 				0C849E651E2DF3E50078DA28 /* CategoryVC.xib in Resources */,
 				0C849E681E2DF3E50078DA28 /* VerificationVC.xib in Resources */,
 			);
@@ -485,10 +518,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24C4D6D21E2E2EC300A2267D /* Extension.swift in Sources */,
-				24C4D6D11E2E2EC000A2267D /* SetupServicesVC.swift in Sources */,
-				24C4D6D01E2E2EBB00A2267D /* SignUpVC.swift in Sources */,
-				24C4D6A91E2DFAD800A2267D /* cellMedication.swift in Sources */,
+				0C849E781E2DFB200078DA28 /* CareServicesCell.swift in Sources */,
+
 				0C849E6D1E2DF4500078DA28 /* CategoryVC.swift in Sources */,
 				0C849E6F1E2DF4500078DA28 /* VerificationLoadingVC.swift in Sources */,
 				24C4D6B11E2E09FB00A2267D /* MedicationVC.swift in Sources */,
@@ -496,6 +527,10 @@
 				0C849E701E2DF4500078DA28 /* VerificationVC.swift in Sources */,
 				0CBA41E51E2CAA9A0008C8E4 /* AppDelegate.swift in Sources */,
 				0C849E5E1E2DF3A60078DA28 /* AppDesign.swift in Sources */,
+				0C849E6E1E2DF4500078DA28 /* SignUpVC.swift in Sources */,
+				0C849E601E2DF3A60078DA28 /* Extension.swift in Sources */,
+				0C849E761E2DFB170078DA28 /* EditProfile.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

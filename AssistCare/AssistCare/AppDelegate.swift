@@ -20,6 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         let vc = MedicationVC(nibName: "MedicationVC", bundle: nil)
         let nav = UINavigationController(rootViewController: vc)
+        nav.isNavigationBarHidden = true
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()
         return true
