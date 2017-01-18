@@ -10,6 +10,9 @@ import UIKit
 
 class CareServicesCell: UICollectionViewCell {
 
+    @IBOutlet var imgMark: UIImageView!
+    @IBOutlet var vWMark: UIView!
+    @IBOutlet var vWServices: UIView!
     @IBOutlet var imgServices: UIImageView!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -18,7 +21,17 @@ class CareServicesCell: UICollectionViewCell {
     }
 
 }
+
 extension UIImageView {
+    
+    override func setRounded() {
+        let radius = self.frame.width / 2
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
+    }
+}
+
+extension UIView {
     
     func setRounded() {
         let radius = self.frame.width / 2
