@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfile" customModule="AssistCare" customModuleProvider="target">
             <connections>
-                <outlet property="btnNext" destination="z2m-RI-KHK" id="y8A-9H-BGN"/>
+                <outlet property="btnNext" destination="z2m-RI-KHK" id="rlS-h5-crL"/>
                 <outlet property="cvcServices" destination="5vg-0s-Jk5" id="z6c-KC-Fuy"/>
                 <outlet property="imgAddress" destination="8Jf-gp-bNs" id="TCB-xw-7YK"/>
                 <outlet property="imgProfile" destination="7z5-XT-0sR" id="2i9-mQ-n2A"/>
@@ -185,6 +185,9 @@
                             <state key="normal" title="Next">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="W6D-lH-UpH"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -197,9 +200,6 @@
                             <rect key="frame" x="8" y="8" width="46" height="30"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <state key="normal" title="Back"/>
-                            <connections>
-                                <action selector="nextClick:" destination="-1" eventType="touchUpInside" id="zRU-vC-96k"/>
-                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7ia-Wh-7cx">
                             <rect key="frame" x="70" y="12" width="125" height="21"/>

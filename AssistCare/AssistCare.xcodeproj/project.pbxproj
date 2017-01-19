@@ -7,6 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+
+		0C6EC8FB1E2F48B6009744FF /* CareServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8DE1E2F48B6009744FF /* CareServicesCell.swift */; };
+		0C6EC8FC1E2F48B6009744FF /* cellMedication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8DF1E2F48B6009744FF /* cellMedication.swift */; };
+		0C6EC8FD1E2F48B6009744FF /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E11E2F48B6009744FF /* CategoryVC.swift */; };
+		0C6EC8FE1E2F48B6009744FF /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E21E2F48B6009744FF /* EditProfile.swift */; };
+		0C6EC8FF1E2F48B6009744FF /* MedicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E31E2F48B6009744FF /* MedicationVC.swift */; };
+		0C6EC9001E2F48B6009744FF /* SetupServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E41E2F48B6009744FF /* SetupServicesVC.swift */; };
+		0C6EC9011E2F48B6009744FF /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E51E2F48B6009744FF /* SignUpVC.swift */; };
+		0C6EC9021E2F48B6009744FF /* VerificationLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E61E2F48B6009744FF /* VerificationLoadingVC.swift */; };
+		0C6EC9031E2F48B6009744FF /* VerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E71E2F48B6009744FF /* VerificationVC.swift */; };
+		0C6EC9041E2F48B6009744FF /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E91E2F48B6009744FF /* AppDesign.swift */; };
+		0C6EC9051E2F48B6009744FF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8EA1E2F48B6009744FF /* Constant.swift */; };
+		0C6EC9061E2F48B6009744FF /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8EB1E2F48B6009744FF /* Extension.swift */; };
+		0C6EC9071E2F48B6009744FF /* CategoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F11E2F48B6009744FF /* CategoryVC.xib */; };
+		0C6EC9081E2F48B6009744FF /* CareServicesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F31E2F48B6009744FF /* CareServicesCell.xib */; };
+		0C6EC9091E2F48B6009744FF /* cellMedication.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F41E2F48B6009744FF /* cellMedication.xib */; };
+		0C6EC90A1E2F48B6009744FF /* EditProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F51E2F48B6009744FF /* EditProfile.xib */; };
+		0C6EC90B1E2F48B6009744FF /* MedicationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F61E2F48B6009744FF /* MedicationVC.xib */; };
+		0C6EC90C1E2F48B6009744FF /* SetupServicesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F71E2F48B6009744FF /* SetupServicesVC.xib */; };
+		0C6EC90D1E2F48B6009744FF /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F81E2F48B6009744FF /* SignUpVC.xib */; };
+		0C6EC90E1E2F48B6009744FF /* VerificationLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F91E2F48B6009744FF /* VerificationLoadingVC.xib */; };
+		0C6EC90F1E2F48B6009744FF /* VerificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8FA1E2F48B6009744FF /* VerificationVC.xib */; };
+		0C6EC9131E2F48CB009744FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC9111E2F48CB009744FF /* LaunchScreen.storyboard */; };
+		0C6EC9161E2F5B57009744FF /* PaymentDetailsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC9141E2F5B57009744FF /* PaymentDetailsVc.swift */; };
+		0C6EC9191E2F5C01009744FF /* PaymentDetailsVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC9181E2F5C01009744FF /* PaymentDetailsVc.xib */; };
+		0C6EC91C1E2F71F1009744FF /* ThanksVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC91A1E2F71F1009744FF /* ThanksVc.swift */; };
+		0C6EC91F1E2F722C009744FF /* ThanksVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC91E1E2F722C009744FF /* ThanksVc.xib */; };
+		0C6EC9221E2F79B5009744FF /* AppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC9201E2F79B5009744FF /* AppointmentVC.swift */; };
+		0C6EC9251E2F79F8009744FF /* AppointmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC9241E2F79F8009744FF /* AppointmentVC.xib */; };
+
 		0C849E651E2DF3E50078DA28 /* CategoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E611E2DF3E50078DA28 /* CategoryVC.xib */; };
 		0C849E661E2DF3E50078DA28 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E621E2DF3E50078DA28 /* SignUpVC.xib */; };
 		0C849E671E2DF3E50078DA28 /* VerificationLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E631E2DF3E50078DA28 /* VerificationLoadingVC.xib */; };
@@ -16,6 +46,7 @@
 		0C849E701E2DF4500078DA28 /* VerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E6C1E2DF4500078DA28 /* VerificationVC.swift */; };
 		0C849E721E2DFAF80078DA28 /* EditProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E711E2DFAF80078DA28 /* EditProfile.xib */; };
 		0C849E761E2DFB170078DA28 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E751E2DFB170078DA28 /* EditProfile.swift */; };
+
 		0C849E7A1E2DFC340078DA28 /* noimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E791E2DFC340078DA28 /* noimg.png */; };
 		0C849E7C1E2E27CC0078DA28 /* rightmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E7B1E2E27CC0078DA28 /* rightmark.png */; };
 		0CBA41E51E2CAA9A0008C8E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA41E41E2CAA9A0008C8E4 /* AppDelegate.swift */; };
@@ -23,6 +54,8 @@
 		0CBA41EF1E2CAA9A0008C8E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBA41ED1E2CAA9A0008C8E4 /* LaunchScreen.storyboard */; };
 		0CBA41FA1E2CAA9A0008C8E4 /* AssistCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA41F91E2CAA9A0008C8E4 /* AssistCareTests.swift */; };
 		0CBA42051E2CAA9A0008C8E4 /* AssistCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA42041E2CAA9A0008C8E4 /* AssistCareUITests.swift */; };
+
+
 		24562A381E30860C000814C6 /* NewAppoinmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24562A371E30860C000814C6 /* NewAppoinmentVC.xib */; };
 		24562A3B1E308636000814C6 /* CareServicesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24562A3A1E308636000814C6 /* CareServicesCell.xib */; };
 		24562A411E308699000814C6 /* SetupServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562A401E308699000814C6 /* SetupServicesVC.swift */; };
@@ -37,6 +70,7 @@
 		24562AA41E308900000814C6 /* cellMedication.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24562AA31E308900000814C6 /* cellMedication.xib */; };
 		24562AA61E30891A000814C6 /* cellMedication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562AA51E30891A000814C6 /* cellMedication.swift */; };
 		24562AA81E30899F000814C6 /* MedicationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24562AA71E30899F000814C6 /* MedicationVC.xib */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +91,36 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+
+		0C6EC8DE1E2F48B6009744FF /* CareServicesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareServicesCell.swift; sourceTree = "<group>"; };
+		0C6EC8DF1E2F48B6009744FF /* cellMedication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellMedication.swift; sourceTree = "<group>"; };
+		0C6EC8E11E2F48B6009744FF /* CategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
+		0C6EC8E21E2F48B6009744FF /* EditProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
+		0C6EC8E31E2F48B6009744FF /* MedicationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationVC.swift; sourceTree = "<group>"; };
+		0C6EC8E41E2F48B6009744FF /* SetupServicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupServicesVC.swift; sourceTree = "<group>"; };
+		0C6EC8E51E2F48B6009744FF /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		0C6EC8E61E2F48B6009744FF /* VerificationLoadingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationLoadingVC.swift; sourceTree = "<group>"; };
+		0C6EC8E71E2F48B6009744FF /* VerificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationVC.swift; sourceTree = "<group>"; };
+		0C6EC8E91E2F48B6009744FF /* AppDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDesign.swift; sourceTree = "<group>"; };
+		0C6EC8EA1E2F48B6009744FF /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		0C6EC8EB1E2F48B6009744FF /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		0C6EC8F11E2F48B6009744FF /* CategoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryVC.xib; sourceTree = "<group>"; };
+		0C6EC8F31E2F48B6009744FF /* CareServicesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareServicesCell.xib; sourceTree = "<group>"; };
+		0C6EC8F41E2F48B6009744FF /* cellMedication.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellMedication.xib; sourceTree = "<group>"; };
+		0C6EC8F51E2F48B6009744FF /* EditProfile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfile.xib; sourceTree = "<group>"; };
+		0C6EC8F61E2F48B6009744FF /* MedicationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicationVC.xib; sourceTree = "<group>"; };
+		0C6EC8F71E2F48B6009744FF /* SetupServicesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupServicesVC.xib; sourceTree = "<group>"; };
+		0C6EC8F81E2F48B6009744FF /* SignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
+		0C6EC8F91E2F48B6009744FF /* VerificationLoadingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationLoadingVC.xib; sourceTree = "<group>"; };
+		0C6EC8FA1E2F48B6009744FF /* VerificationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationVC.xib; sourceTree = "<group>"; };
+		0C6EC9121E2F48CB009744FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0C6EC9141E2F5B57009744FF /* PaymentDetailsVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentDetailsVc.swift; sourceTree = "<group>"; };
+		0C6EC9181E2F5C01009744FF /* PaymentDetailsVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentDetailsVc.xib; sourceTree = "<group>"; };
+		0C6EC91A1E2F71F1009744FF /* ThanksVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksVc.swift; sourceTree = "<group>"; };
+		0C6EC91E1E2F722C009744FF /* ThanksVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThanksVc.xib; sourceTree = "<group>"; };
+		0C6EC9201E2F79B5009744FF /* AppointmentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentVC.swift; sourceTree = "<group>"; };
+		0C6EC9241E2F79F8009744FF /* AppointmentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentVC.xib; sourceTree = "<group>"; };
+
 		0C849E611E2DF3E50078DA28 /* CategoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryVC.xib; sourceTree = "<group>"; };
 		0C849E621E2DF3E50078DA28 /* SignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
 		0C849E631E2DF3E50078DA28 /* VerificationLoadingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationLoadingVC.xib; sourceTree = "<group>"; };
@@ -66,6 +130,7 @@
 		0C849E6C1E2DF4500078DA28 /* VerificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationVC.swift; sourceTree = "<group>"; };
 		0C849E711E2DFAF80078DA28 /* EditProfile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfile.xib; sourceTree = "<group>"; };
 		0C849E751E2DFB170078DA28 /* EditProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
+
 		0C849E791E2DFC340078DA28 /* noimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimg.png; sourceTree = "<group>"; };
 		0C849E7B1E2E27CC0078DA28 /* rightmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightmark.png; sourceTree = "<group>"; };
 		0CBA41E11E2CAA9A0008C8E4 /* AssistCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssistCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -79,6 +144,8 @@
 		0CBA42001E2CAA9A0008C8E4 /* AssistCareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssistCareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBA42041E2CAA9A0008C8E4 /* AssistCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistCareUITests.swift; sourceTree = "<group>"; };
 		0CBA42061E2CAA9A0008C8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+
+
 		24562A371E30860C000814C6 /* NewAppoinmentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewAppoinmentVC.xib; sourceTree = "<group>"; };
 		24562A3A1E308636000814C6 /* CareServicesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareServicesCell.xib; sourceTree = "<group>"; };
 		24562A401E308699000814C6 /* SetupServicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupServicesVC.swift; sourceTree = "<group>"; };
@@ -93,6 +160,7 @@
 		24562AA31E308900000814C6 /* cellMedication.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellMedication.xib; sourceTree = "<group>"; };
 		24562AA51E30891A000814C6 /* cellMedication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellMedication.swift; sourceTree = "<group>"; };
 		24562AA71E30899F000814C6 /* MedicationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicationVC.xib; sourceTree = "<group>"; };
+
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,40 +188,62 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C849E501E2DF28B0078DA28 /* DataLayer */ = {
+		0C6EC8DB1E2F48B6009744FF /* BusinessLayer */ = {
 			isa = PBXGroup;
 			children = (
-				0C849E511E2DF28B0078DA28 /* Models */,
-				0C849E521E2DF28B0078DA28 /* ServerAPI */,
+				0C6EC8DC1E2F48B6009744FF /* Controllers */,
+				0C6EC8E81E2F48B6009744FF /* Helpers */,
 			);
-			path = DataLayer;
+			path = BusinessLayer;
 			sourceTree = "<group>";
 		};
-		0C849E511E2DF28B0078DA28 /* Models */ = {
+		0C6EC8DC1E2F48B6009744FF /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0C6EC8DD1E2F48B6009744FF /* CellControllers */,
+				0C6EC8DF1E2F48B6009744FF /* cellMedication.swift */,
+				0C6EC8E01E2F48B6009744FF /* ViewControllers */,
 			);
-			path = Models;
+			path = Controllers;
 			sourceTree = "<group>";
 		};
-		0C849E521E2DF28B0078DA28 /* ServerAPI */ = {
+		0C6EC8DD1E2F48B6009744FF /* CellControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0C6EC8DE1E2F48B6009744FF /* CareServicesCell.swift */,
 			);
-			path = ServerAPI;
+			path = CellControllers;
 			sourceTree = "<group>";
 		};
-		0C849E531E2DF29B0078DA28 /* PresentationLayer */ = {
+		0C6EC8E01E2F48B6009744FF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0C849E541E2DF29B0078DA28 /* Views */,
+				0C6EC8E11E2F48B6009744FF /* CategoryVC.swift */,
+				0C6EC8E21E2F48B6009744FF /* EditProfile.swift */,
+				0C6EC8E31E2F48B6009744FF /* MedicationVC.swift */,
+				0C6EC8E41E2F48B6009744FF /* SetupServicesVC.swift */,
+				0C6EC8E51E2F48B6009744FF /* SignUpVC.swift */,
+				0C6EC8E61E2F48B6009744FF /* VerificationLoadingVC.swift */,
+				0C6EC8E71E2F48B6009744FF /* VerificationVC.swift */,
+				0C6EC9141E2F5B57009744FF /* PaymentDetailsVc.swift */,
+				0C6EC91A1E2F71F1009744FF /* ThanksVc.swift */,
+				0C6EC9201E2F79B5009744FF /* AppointmentVC.swift */,
 			);
+
+			path = ViewControllers;
+
 			path = PresentationLayer;
+
 			sourceTree = "<group>";
 		};
-		0C849E541E2DF29B0078DA28 /* Views */ = {
+		0C6EC8E81E2F48B6009744FF /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+
+				0C6EC8E91E2F48B6009744FF /* AppDesign.swift */,
+				0C6EC8EA1E2F48B6009744FF /* Constant.swift */,
+				0C6EC8EB1E2F48B6009744FF /* Extension.swift */,
+
 				24562A391E308636000814C6 /* CellView */,
 				24562AA71E30899F000814C6 /* MedicationVC.xib */,
 				24562A8F1E308734000814C6 /* SetupServicesVC.xib */,
@@ -163,28 +253,61 @@
 				0C849E621E2DF3E50078DA28 /* SignUpVC.xib */,
 				0C849E631E2DF3E50078DA28 /* VerificationLoadingVC.xib */,
 				0C849E641E2DF3E50078DA28 /* VerificationVC.xib */,
+
 			);
-			path = Views;
+			path = Helpers;
 			sourceTree = "<group>";
 		};
+
+		0C6EC8EC1E2F48B6009744FF /* DataLayer */ = {
+			isa = PBXGroup;
+			children = (
+				0C6EC8ED1E2F48B6009744FF /* Models */,
+				0C6EC8EE1E2F48B6009744FF /* ServerAPI */,
+			);
+			path = DataLayer;
+			sourceTree = "<group>";
+		};
+		0C6EC8ED1E2F48B6009744FF /* Models */ = {
+
 		0C849E561E2DF2B20078DA28 /* BusinessLayer */ = {
+
 			isa = PBXGroup;
 			children = (
-				0C849E571E2DF2B20078DA28 /* Controllers */,
-				0C849E5A1E2DF2B20078DA28 /* Helpers */,
 			);
-			path = BusinessLayer;
+			path = Models;
 			sourceTree = "<group>";
 		};
-		0C849E571E2DF2B20078DA28 /* Controllers */ = {
+		0C6EC8EE1E2F48B6009744FF /* ServerAPI */ = {
 			isa = PBXGroup;
 			children = (
-				24C4D6A41E2DFA8800A2267D /* CellControllers */,
-				0C849E591E2DF2B20078DA28 /* ViewControllers */,
 			);
-			path = Controllers;
+			path = ServerAPI;
 			sourceTree = "<group>";
 		};
+
+		0C6EC8EF1E2F48B6009744FF /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				0C6EC8F01E2F48B6009744FF /* Views */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		0C6EC8F01E2F48B6009744FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0C6EC9241E2F79F8009744FF /* AppointmentVC.xib */,
+				0C6EC91E1E2F722C009744FF /* ThanksVc.xib */,
+			
+			
+				0C6EC8F21E2F48B6009744FF /* CellView */,
+				0C6EC8F51E2F48B6009744FF /* EditProfile.xib */,
+		
+				
+				
+				
+
 		0C849E591E2DF2B20078DA28 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -192,22 +315,36 @@
 				24562A8D1E30871B000814C6 /* NewAppoinmentVC.swift */,
 				24562A8B1E308706000814C6 /* MedicationVC.swift */,
 				24562A401E308699000814C6 /* SetupServicesVC.swift */,
-				0C849E751E2DFB170078DA28 /* EditProfile.swift */,
+				
 				0C849E691E2DF4500078DA28 /* CategoryVC.swift */,
 				0C849E6B1E2DF4500078DA28 /* VerificationLoadingVC.swift */,
 				0C849E6C1E2DF4500078DA28 /* VerificationVC.swift */,
+
 			);
-			path = ViewControllers;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		0C849E5A1E2DF2B20078DA28 /* Helpers */ = {
+		0C6EC8F21E2F48B6009744FF /* CellView */ = {
 			isa = PBXGroup;
 			children = (
+
+				0C6EC8F31E2F48B6009744FF /* CareServicesCell.xib */,
+				0C6EC8F41E2F48B6009744FF /* cellMedication.xib */,
+
 				24562A9F1E308897000814C6 /* Constant.swift */,
 				24562A9B1E308852000814C6 /* AppDesign.swift */,
 				24562A9C1E308852000814C6 /* Extension.swift */,
+
 			);
-			path = Helpers;
+			path = CellView;
+			sourceTree = "<group>";
+		};
+		0C6EC9101E2F48CB009744FF /* Base.lproj */ = {
+			isa = PBXGroup;
+			children = (
+				0C6EC9111E2F48CB009744FF /* LaunchScreen.storyboard */,
+			);
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
 		0CBA41D81E2CAA9A0008C8E4 = {
@@ -233,11 +370,18 @@
 		0CBA41E31E2CAA9A0008C8E4 /* AssistCare */ = {
 			isa = PBXGroup;
 			children = (
+				0C6EC9101E2F48CB009744FF /* Base.lproj */,
+				0C6EC8DB1E2F48B6009744FF /* BusinessLayer */,
+				0C6EC8EC1E2F48B6009744FF /* DataLayer */,
+				0C6EC8EF1E2F48B6009744FF /* PresentationLayer */,
 				0C849E7B1E2E27CC0078DA28 /* rightmark.png */,
 				0C849E791E2DFC340078DA28 /* noimg.png */,
+
+
 				0C849E531E2DF29B0078DA28 /* PresentationLayer */,
 				0C849E561E2DF2B20078DA28 /* BusinessLayer */,
 				0C849E501E2DF28B0078DA28 /* DataLayer */,
+r
 				0CBA41E41E2CAA9A0008C8E4 /* AppDelegate.swift */,
 				0CBA41EB1E2CAA9A0008C8E4 /* Assets.xcassets */,
 				0CBA41ED1E2CAA9A0008C8E4 /* LaunchScreen.storyboard */,
@@ -264,6 +408,8 @@
 			path = AssistCareUITests;
 			sourceTree = "<group>";
 		};
+
+
 		24562A391E308636000814C6 /* CellView */ = {
 			isa = PBXGroup;
 			children = (
@@ -282,6 +428,7 @@
 			name = CellControllers;
 			sourceTree = "<group>";
 		};
+
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -397,20 +544,38 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				24562A3B1E308636000814C6 /* CareServicesCell.xib in Resources */,
+
+				0C6EC90D1E2F48B6009744FF /* SignUpVC.xib in Resources */,
+				0C6EC9091E2F48B6009744FF /* cellMedication.xib in Resources */,
+				0C6EC9081E2F48B6009744FF /* CareServicesCell.xib in Resources */,
+				0C6EC9131E2F48CB009744FF /* LaunchScreen.storyboard in Resources */,
+
 				0C849E7A1E2DFC340078DA28 /* noimg.png in Resources */,
-				0C849E661E2DF3E50078DA28 /* SignUpVC.xib in Resources */,
+				0C6EC9191E2F5C01009744FF /* PaymentDetailsVc.xib in Resources */,
+				0C6EC90B1E2F48B6009744FF /* MedicationVC.xib in Resources */,
 				0CBA41EF1E2CAA9A0008C8E4 /* LaunchScreen.storyboard in Resources */,
+v
+				0C6EC90C1E2F48B6009744FF /* SetupServicesVC.xib in Resources */,
+				0C6EC9251E2F79F8009744FF /* AppointmentVC.xib in Resources */,
+				0C6EC9071E2F48B6009744FF /* CategoryVC.xib in Resources */,
+
 				24562AA41E308900000814C6 /* cellMedication.xib in Resources */,
-				24562A901E308734000814C6 /* SetupServicesVC.xib in Resources */,
+
 				0C849E7C1E2E27CC0078DA28 /* rightmark.png in Resources */,
+				0C6EC90F1E2F48B6009744FF /* VerificationVC.xib in Resources */,
+				0C6EC90A1E2F48B6009744FF /* EditProfile.xib in Resources */,
 				0CBA41EC1E2CAA9A0008C8E4 /* Assets.xcassets in Resources */,
+
+
+				0C6EC91F1E2F722C009744FF /* ThanksVc.xib in Resources */,
+
 				0C849E671E2DF3E50078DA28 /* VerificationLoadingVC.xib in Resources */,
 				24562A381E30860C000814C6 /* NewAppoinmentVC.xib in Resources */,
 				0C849E721E2DFAF80078DA28 /* EditProfile.xib in Resources */,
 				24562AA81E30899F000814C6 /* MedicationVC.xib in Resources */,
 				0C849E651E2DF3E50078DA28 /* CategoryVC.xib in Resources */,
 				0C849E681E2DF3E50078DA28 /* VerificationVC.xib in Resources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -513,6 +678,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
+				0C6EC9011E2F48B6009744FF /* SignUpVC.swift in Sources */,
+				0C6EC9031E2F48B6009744FF /* VerificationVC.swift in Sources */,
+				0C6EC91C1E2F71F1009744FF /* ThanksVc.swift in Sources */,
+				0C6EC8FB1E2F48B6009744FF /* CareServicesCell.swift in Sources */,
+				0C6EC8FF1E2F48B6009744FF /* MedicationVC.swift in Sources */,
+				0CBA41E51E2CAA9A0008C8E4 /* AppDelegate.swift in Sources */,
+				0C6EC9221E2F79B5009744FF /* AppointmentVC.swift in Sources */,
+				0C6EC8FD1E2F48B6009744FF /* CategoryVC.swift in Sources */,
+				0C6EC9021E2F48B6009744FF /* VerificationLoadingVC.swift in Sources */,
+				0C6EC9001E2F48B6009744FF /* SetupServicesVC.swift in Sources */,
+				0C6EC8FE1E2F48B6009744FF /* EditProfile.swift in Sources */,
+				0C6EC9061E2F48B6009744FF /* Extension.swift in Sources */,
+				0C6EC9041E2F48B6009744FF /* AppDesign.swift in Sources */,
+				0C6EC8FC1E2F48B6009744FF /* cellMedication.swift in Sources */,
+				0C6EC9161E2F5B57009744FF /* PaymentDetailsVc.swift in Sources */,
+				0C6EC9051E2F48B6009744FF /* Constant.swift in Sources */,
+
 				0C849E6D1E2DF4500078DA28 /* CategoryVC.swift in Sources */,
 				24562A411E308699000814C6 /* SetupServicesVC.swift in Sources */,
 				24562A8C1E308706000814C6 /* MedicationVC.swift in Sources */,
@@ -527,6 +710,7 @@
 				24562AA21E3088D9000814C6 /* SignUpVC.swift in Sources */,
 				24562A8E1E30871B000814C6 /* NewAppoinmentVC.swift in Sources */,
 				24562AA01E308897000814C6 /* Constant.swift in Sources */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -562,6 +746,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		0C6EC9111E2F48CB009744FF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0C6EC9121E2F48CB009744FF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
 		0CBA41ED1E2CAA9A0008C8E4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

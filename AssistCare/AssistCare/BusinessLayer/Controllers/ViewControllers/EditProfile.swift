@@ -146,10 +146,12 @@ class EditProfile: UIViewController,UICollectionViewDelegate,UICollectionViewDat
     
     
     
-    @IBAction func nextClick(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+    @IBAction func nextAction(_ sender: Any) {
+        let vc = PaymentDetailsVc(nibName: "PaymentDetailsVc", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+       
     }
-
+    
 
 }
 

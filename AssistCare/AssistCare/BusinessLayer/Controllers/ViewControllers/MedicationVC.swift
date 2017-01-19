@@ -173,6 +173,8 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.tintColor = getFontColor()
+
+
         txtMedicationName.setBottomBorder()
         btnMon.backgroundColor = getGrayColor()
         btnTue.backgroundColor = getGrayColor()
