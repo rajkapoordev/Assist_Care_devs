@@ -18,9 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         UINavigationBar.appearance().barTintColor = getAppColor()
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = EditProfile(nibName: "EditProfile", bundle: nil)
+        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
         let nav = UINavigationController(rootViewController: vc)
-        nav.isNavigationBarHidden = true
+        //nav.isNavigationBarHidden = true
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()
         return true
