@@ -26,6 +26,13 @@ func getBackgroundColor() -> UIColor {
     return appUIColorFromRGB(rgbValue: BACK_COLOR, alpha: 1)
 }
 
+func getGrayColor()->UIColor{
+    return appUIColorFromRGB(rgbValue: GRAY_COLOR, alpha: 1)
+}
+
+func getGreenColor()->UIColor{
+    return appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1)
+}
 
 /*func SAAppFontRegular(x:CGFloat) -> UIFont {
     return UIFont(name: "OpenSans", size: x)!
