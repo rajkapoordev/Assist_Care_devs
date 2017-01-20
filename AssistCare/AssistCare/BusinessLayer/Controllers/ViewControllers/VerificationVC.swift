@@ -40,7 +40,7 @@ class VerificationVC: UIViewController ,UITextFieldDelegate{
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.tintColor = getFontColor()
-//        txtEnterNum.setBottomBorder()
+        txtEnterNum.setBottomBorder()
     }
     
     func keyboardWillAppear(notification:NSNotification) {

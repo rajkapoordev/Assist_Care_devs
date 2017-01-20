@@ -11,10 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewAppoinmentVC" customModule="AssistCare" customModuleProvider="target">
             <connections>
-                <outlet property="collAssistServices" destination="qhu-nH-WHp" id="2Ff-HL-0D2"/>
+                <outlet property="btnCancelAppoinment" destination="Daz-jH-cfG" id="5Ze-I5-Jkz"/>
+                <outlet property="btnOkay" destination="Bqv-az-gYt" id="Mma-zb-UJu"/>
                 <outlet property="collPrefferedServices" destination="thN-jr-GkV" id="Rkg-bi-Qad"/>
+                <outlet property="mapView" destination="99D-HN-rhk" id="CHN-8j-Dv1"/>
                 <outlet property="scrollNewAppoinment" destination="llj-aT-lDs" id="gZ6-Um-JH4"/>
                 <outlet property="view" destination="iN0-l3-epB" id="G8c-iW-KbB"/>
+                <outlet property="vwMap" destination="yEZ-fl-bin" id="fyq-1f-Z8l"/>
+                <outlet property="vwPopUp" destination="pVe-41-P1p" id="T0D-0n-Ctr"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -22,41 +26,62 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="llj-aT-lDs">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" id="llj-aT-lDs">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="848"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" id="7vc-aI-Szm">
-                            <rect key="frame" x="0.0" y="65" width="375" height="238"/>
+                        <view contentMode="scaleToFill" misplaced="YES" id="yEZ-fl-bin">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="185"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                        </mapView>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" id="thN-jr-GkV">
-                            <rect key="frame" x="0.0" y="465" width="375" height="225"/>
+                            <subviews>
+                                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" id="99D-HN-rhk">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="185"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </mapView>
+                            </subviews>
+                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" id="thN-jr-GkV">
+                            <rect key="frame" x="0.0" y="311" width="375" height="550"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                            <color key="backgroundColor" red="0.27450980390000002" green="0.73725490199999999" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="YrG-Fj-xhu">
-                                <size key="itemSize" width="50" height="50"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="5" minimumInteritemSpacing="5" id="YrG-Fj-xhu">
+                                <size key="itemSize" width="70" height="70"/>
+                                <size key="headerReferenceSize" width="50" height="50"/>
                                 <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                             </collectionViewFlowLayout>
                         </collectionView>
-                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" id="qhu-nH-WHp">
-                            <rect key="frame" x="0.0" y="732" width="375" height="225"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                            <color key="backgroundColor" red="0.27450980390000002" green="0.73725490199999999" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
-                            <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BeW-z3-3s9">
-                                <size key="itemSize" width="50" height="50"/>
-                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                            </collectionViewFlowLayout>
-                        </collectionView>
+                        <view alpha="0.0" contentMode="scaleToFill" misplaced="YES" id="pVe-41-P1p">
+                            <rect key="frame" x="30" y="90" width="315" height="392"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Daz-jH-cfG">
+                                    <rect key="frame" x="0.0" y="352" width="158" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                    <color key="backgroundColor" red="0.27450980390000002" green="0.73725490199999999" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="btnCancelAppoinment:" destination="-1" eventType="touchUpInside" id="Ue0-IA-RYb"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Bqv-az-gYt">
+                                    <rect key="frame" x="158" y="352" width="157" height="40"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
+                                    <color key="backgroundColor" red="0.87058823529999996" green="0.3294117647" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="Button"/>
+                                    <connections>
+                                        <action selector="btnOkay:" destination="-1" eventType="touchUpInside" id="OyN-2f-Rzi"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                     </subviews>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="33.5" y="104.5"/>
+            <point key="canvasLocation" x="710.5" y="340.5"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
