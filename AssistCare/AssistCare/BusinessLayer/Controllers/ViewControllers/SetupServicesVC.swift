@@ -26,7 +26,8 @@ class SetupServicesVC: UIViewController,UITextFieldDelegate,UITableViewDelegate,
     }
     
     @IBAction func btnContinue(_ sender: Any) {
-        
+        let vc = NewAppoinmentVC(nibName: "NewAppoinmentVC", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     override func viewDidLoad() {
@@ -55,11 +56,12 @@ class SetupServicesVC: UIViewController,UITextFieldDelegate,UITableViewDelegate,
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.tintColor = getFontColor()
-//        txtInstruction.setBottomBorder()
+        txtInstruction.setBottomBorder()
         txtInstruction.backgroundColor = getBackgroundColor()
         btnContinue.isHidden = false
         btnAddMedication.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "addMedication"), scaledToSize: CGSize(width: btnAddMedication.bounds.size.width, height: btnAddMedication.bounds.size.height)), for: .normal)
         btnContinue.backgroundColor = UIColor(red: 62/255, green: 186/255, blue: 207/255, alpha: 1)
+        btnContinue.layer.cornerRadius = 2.0
         tblMedication.backgroundColor = getBackgroundColor()
     }
     

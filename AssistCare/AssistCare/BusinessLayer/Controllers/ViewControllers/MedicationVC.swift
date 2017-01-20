@@ -196,6 +196,8 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
         btnMon.isHighlighted = false
         btnFood.titleLabel?.numberOfLines = 0; // Dynamic number of lines
         btnFood.titleLabel?.lineBreakMode = .byWordWrapping
+        
+        btnAdd.layer.cornerRadius = 2.0
         view.backgroundColor = getBackgroundColor()
         txtMedicationName.backgroundColor = getBackgroundColor()
     }
