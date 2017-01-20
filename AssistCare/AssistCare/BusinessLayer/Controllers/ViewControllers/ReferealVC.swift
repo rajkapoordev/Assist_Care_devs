@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ReferealVC: UIViewController {
+class ReferealVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet var btnInvite: UIButton!
     @IBOutlet var btnHistory: UIButton!
@@ -39,23 +39,23 @@ class ReferealVC: UIViewController {
     @IBAction func btnInviteFriends(_ sender: UIButton) {
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        setInterface()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
+        return 2
     }
     
-    func setInterface(){
-        self.title = "Referral"
-        navigationController?.navigationBar.isHidden = false
-       // self.navigationController?.navigationBar.tintColor = UIColor.white
-        activeInvite()
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "PersonHistoryCell", for: indexPath) as! PersonHistoryCell
+            cell.setInterface()
+            cell.lblName.text = "Test abc name"
+            cell.lblEmailId.text = "abc@gmail.com"
+            cell.lblEarnAmount.text = "$20"
+            return cell
     }
- 
+    
+    public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
+        return 70
+    }
+
     func activeHistory() {
         viewInvite.isHidden = true
         tabInvite.isHidden = true
@@ -83,4 +83,30 @@ class ReferealVC: UIViewController {
         globeButton.layer.shadowRadius = 0.0
         globeButton.layer.masksToBounds = false
     }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setInterface()
+    }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func setInterface(){
+        self.title = "Referral"
+        navigationController?.navigationBar.isHidden = false
+       // self.navigationController?.navigationBar.tintColor = UIColor.white
+        activeInvite()
+        //Register nib
+         self.tblHistory.register(UINib(nibName: "PersonHistoryCell", bundle: nil), forCellReuseIdentifier: "PersonHistoryCell")
+        self.tblHistory.dataSource = self
+        self.tblHistory.delegate = self
+        self.viewTopEarn.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        self.lblEarnAmount.textColor = UIColor.white
+        self.lblInfoEarn.textColor = UIColor.white
+        self.automaticallyAdjustsScrollViewInsets = false
+    }
+ 
 }
