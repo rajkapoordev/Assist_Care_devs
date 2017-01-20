@@ -59,6 +59,7 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
         {
             txtCardNumber.becomeFirstResponder()
             scrollView.setContentOffset(CGPoint(x: 0.0, y: screenSize.width/2), animated: true)
+      
 //            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: .UIKeyboardWillShow, object: nil)
 //            NotificationCenter.default.addObserver(self, selector: #selector(PaymentDetailsVc.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         }
@@ -82,7 +83,7 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             let keyboardHeight = keyboardSize.height
             print(keyboardHeight)
-            scrollView.setContentOffset(CGPoint(x: 0.0, y: screenSize.width/2), animated: true)
+           scrollView.setContentOffset(CGPoint(x: 0.0, y: screenSize.width/2), animated: true)
         }
         
     }
