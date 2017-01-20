@@ -23,6 +23,13 @@ class ThanksVc: UIViewController {
     }
 
     @IBAction func btnOkAction(_ sender: Any) {
+        
+        let vc = TabBarVC(nibName: "TabBarVC", bundle: nil)
+        let nav = UINavigationController(rootViewController: vc)
+        nav.isNavigationBarHidden = true
+        appDelegate().window?.rootViewController = nav
+//        let vc = AppointmentVC(nibName: "AppointmentVC", bundle: nil)
+//        self.navigationController?.pushViewController(vc, animated: false)
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

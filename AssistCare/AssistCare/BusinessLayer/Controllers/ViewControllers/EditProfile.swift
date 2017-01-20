@@ -8,8 +8,9 @@
 
 import UIKit
 
-class EditProfile: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITextFieldDelegate {
+class EditProfile: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
+    let imagePicker = UIImagePickerController()
     @IBOutlet var btnNext: UIButton!
     @IBOutlet var vw1: UIView!
     
@@ -37,7 +38,8 @@ class EditProfile: UIViewController,UICollectionViewDelegate,UICollectionViewDat
           cvcServices.register(UINib(nibName:"CareServicesCell",bundle: nil) , forCellWithReuseIdentifier: "CareServicesCell")
 
         scrollView.contentSize = CGSize(width:0, height: 5 + vw1.frame.height + vw2.frame.height + cvcServices.frame.height + btnNext.frame.height + 100)
-        self.shadow(button: btnNext)
+        imagePicker.delegate = self
+        shadow(button: btnNext)
 
         // Do any additional setup after loading the view.
     }
@@ -47,6 +49,22 @@ class EditProfile: UIViewController,UICollectionViewDelegate,UICollectionViewDat
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func pickDocument(_ sender: Any) {
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+        
+    }
+    @IBAction func pickProfileImg(_ sender: Any) {
+        
+        imagePicker.allowsEditing = false
+        imagePicker.sourceType = .photoLibrary
+        present(imagePicker, animated: true, completion: nil)
+    }
+        
+  
+
+
     func shadow(button:UIButton){
         button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
         button.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
@@ -55,6 +73,19 @@ class EditProfile: UIViewController,UICollectionViewDelegate,UICollectionViewDat
         button.layer.masksToBounds = false
         button.layer.cornerRadius = 4.0
     }
+
+ func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject])
+{
+    if let pickedImage = info[UIImagePickerControllerOriginalImage] as? UIImage {
+        imgProfile.contentMode = .scaleAspectFill
+        imgProfile.image = pickedImage
+    }
+    dismiss(animated: true, completion: nil)
+   
+}
+func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+    dismiss(animated: true, completion: nil)
+}
     
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
