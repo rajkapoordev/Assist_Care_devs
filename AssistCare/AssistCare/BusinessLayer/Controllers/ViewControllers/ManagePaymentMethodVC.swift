@@ -9,7 +9,8 @@
 import UIKit
 
 class ManagePaymentMethodVC: UIViewController, UITextFieldDelegate {
-    
+ 
+    @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var txtPaymentType: UITextField!
     @IBOutlet var txtNameOfCard: UITextField!
     @IBOutlet var txtCardNumber:UITextField!
@@ -60,6 +61,8 @@ class ManagePaymentMethodVC: UIViewController, UITextFieldDelegate {
         lblCardNumber.isHidden = true
         lblCardExpDate.isHidden = true
         lblCVC.isHidden = true
+        
+        scrollView.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 520)
         
     }
 
