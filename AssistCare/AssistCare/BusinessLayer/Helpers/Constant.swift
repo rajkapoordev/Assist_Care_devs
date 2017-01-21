@@ -21,9 +21,12 @@ let screenSize = UIScreen.main.bounds
 
 
 
+
+
 // define for user role
 let patient = "Patient"
 let careGiver = "CareGiver"
+
 
 
 func appDelegate() -> AppDelegate {
