@@ -14,6 +14,7 @@ class CareServicesCell: UICollectionViewCell {
     @IBOutlet var vWMark: UIView!
     @IBOutlet var vWServices: UIView!
     @IBOutlet var imgServices: UIImageView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         imgServices.setRounded()

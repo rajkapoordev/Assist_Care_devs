@@ -13,19 +13,19 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         UINavigationBar.appearance().barTintColor = getAppColor()
+    
         self.window = UIWindow(frame: UIScreen.main.bounds)
-        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
+//        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
+        let vc = ReferealVC(nibName: "ReferealVC", bundle: nil)
         let nav = UINavigationController(rootViewController: vc)
         //nav.isNavigationBarHidden = true
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()
         return true
     }
-
    
     func applicationWillResignActive(_ application: UIApplication) {
 

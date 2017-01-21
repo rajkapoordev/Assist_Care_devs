@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-let FONT_COLOR:UInt = 0xFFFFFF
+let FONT_COLOR:UInt = 0x6D6D6D
 let INFO_FONT_COLOR:UInt = 0x6F7179
 let APP_COLOR:UInt = 0xE64F53
 let SILVER_COLOR:UInt = 0xF2F2F2
@@ -18,6 +18,13 @@ let GRAY_COLOR:UInt = 0xE0E0E0
 let GREEN_COLOR:UInt = 0x46BCD0
 let RED_COLOR:UInt = 0xF07374
 let screenSize = UIScreen.main.bounds
+
+
+
+// define for user role
+let patient = "Patient"
+let careGiver = "CareGiver"
+
 
 func appDelegate() -> AppDelegate {
     return (UIApplication.shared.delegate as! AppDelegate)

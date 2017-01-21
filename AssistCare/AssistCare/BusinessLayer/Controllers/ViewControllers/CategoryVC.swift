@@ -29,6 +29,7 @@ class CategoryVC: UIViewController {
     }
     
     @IBAction func btnPatient(_ sender: Any) {
+        setUserRole(role: patient)
         vwPatient.isHidden = false
         vwCareGiver.isHidden = true
         btnPatient.setTitleColor(UIColor(red: 70/255, green: 188/255, blue: 208/255, alpha: 1), for: .normal)
@@ -36,6 +37,7 @@ class CategoryVC: UIViewController {
     }
     
     @IBAction func btnCareGiver(_ sender: Any) {
+        setUserRole(role: careGiver)
         vwPatient.isHidden = true
         vwCareGiver.isHidden = false
         btnCareGiver.setTitleColor(UIColor(red: 70/255, green: 188/255, blue: 208/255, alpha: 1), for: .normal)
@@ -57,6 +59,12 @@ class CategoryVC: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
 
+    }
+    
+    func setUserRole(role: String) {
+        let defaults = UserDefaults.standard
+        defaults.set(role, forKey: "UserRole")
+        defaults.synchronize()
     }
     
 }
