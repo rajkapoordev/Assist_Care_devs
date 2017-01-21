@@ -43,6 +43,7 @@ class CategoryVC: UIViewController {
         btnCareGiver.setTitleColor(UIColor(red: 70/255, green: 188/255, blue: 208/255, alpha: 1), for: .normal)
         btnPatient.setTitleColor(UIColor(red: 109/255, green: 109/255, blue: 109/255, alpha: 1), for: .normal)
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setInterface()

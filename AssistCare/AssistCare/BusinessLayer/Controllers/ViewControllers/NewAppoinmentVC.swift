@@ -10,31 +10,123 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,MKMapViewDelegate, CLLocationManagerDelegate{
+class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,MKMapViewDelegate, CLLocationManagerDelegate,UIPickerViewDelegate,UIPickerViewDataSource, FSCalendarDataSource, FSCalendarDelegate,UIGestureRecognizerDelegate{
 
+    @IBOutlet var lbMonth: UILabel!
+    @IBOutlet var lbDate: UILabel!
+    @IBOutlet var lbYear: UILabel!
+    @IBOutlet var vwSelectedDate: UIView!
+    @IBOutlet var vwCalender: UIView!
+    @IBOutlet weak var calendar: FSCalendar!
+    @IBOutlet var pickerView: UIPickerView!
+    @IBOutlet var btnDuration: UIButton!
+    @IBOutlet var btnTime: UIButton!
+    @IBOutlet var btnDate: UIButton!
+    @IBOutlet var btnDateOk: UIButton!
+    @IBOutlet var btnDateCancel: UIButton!
     
+    @IBOutlet var viewGray: UIView!
+    @IBOutlet var btnPopUpaddServices: UIButton!
+    @IBOutlet var btnPopUpMessage: UIButton!
+    @IBOutlet var lbPopUpServicesProvided: UILabel!
+    @IBOutlet var lbPopUpTime: UILabel!
+    @IBOutlet var lbPopUpDate: UILabel!
+    @IBOutlet var lbPopUpName: UILabel!
+    @IBOutlet var imgPopUpProfile: UIImageView!
     @IBOutlet var btnOkay: UIButton!
     @IBOutlet var btnCancelAppoinment: UIButton!
     @IBOutlet var vwPopUp: UIView!
+    @IBOutlet var vwDuration: UIView!
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var vwMap: UIView!
     @IBOutlet var collAssistServices: UICollectionView!
     @IBOutlet var collPrefferedServices: UICollectionView!
     @IBOutlet var scrollNewAppoinment: UIScrollView!
+    
+    
+    let duration = ["1 hour","2 hour","3 hour","4 hour"]
     let googleMapAPIKey = "AIzaSyCblEAKCQQZE9EFFlkTlwB8BVA4Ize8t5M"
     let kBgQueue = DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default)
     var currentCentre = CLLocationCoordinate2D()
     var currenDist:CLLocationDistance = 0
     let locationManager = CLLocationManager()
+    var selectedData:String!
+    var tempButton:UIButton!
+    var isOpened:Bool = false
+    var selectedDate = Date()
+
     
+    
+    @IBAction func btnTime(_ sender: Any) {
+        
+    }
+    
+    @IBAction func btnDate(_ sender: Any) {
+        vwCalender.isHidden = false
+        self.callCalender()
+    }
+    
+    @IBAction func btnDateOk(_ sender: Any) {
+        self.viewGray.isHidden = true
+        
+        UIView.animate(withDuration: 1.0, animations:{self.vwCalender.alpha = 0.0}, completion: { (bool) in
+            
+        })
+    }
+    
+    @IBAction func btnDateCancel(_ sender: Any) {
+        self.viewGray.isHidden = true
+        
+        UIView.animate(withDuration: 1.0, animations:{self.vwCalender.alpha = 0.0}, completion: { (bool) in
+            
+        })
+    }
+    
+    @IBAction func btnDuration(_ sender: Any) {
+        if(isOpened == false){
+
+        self.tempButton = self.btnDuration
+        pickerView.reloadAllComponents()
+        UIView.animate(withDuration: 0.8, animations:{self.vwDuration.frame = CGRect(x: self.vwDuration.frame.origin.x, y: (self.vwDuration.frame.origin.y-self.vwDuration.bounds.size.height), width: self.vwDuration.bounds.size.width, height: self.vwDuration.bounds.size.height)}, completion: { (bool) in
+            self.isOpened = true
+        })
+    }else{
+            closePickerView()
+                self.isOpened = false
+    }
+    }
+
+
+
+    @IBAction func btnDone(_ sender: Any) {
+        closePickerView()
+        self.isOpened = false
+    }
     
     @IBAction func btnCancelAppoinment(_ sender: Any) {
+        self.viewGray.isHidden = true
         
+        UIView.animate(withDuration: 1.0, animations:{self.vwPopUp.alpha = 0.0}, completion: { (bool) in
+            
+        })
     }
     
     @IBAction func btnOkay(_ sender: Any) {
         
     }
+    fileprivate lazy var dateFormatter: DateFormatter = {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd"
+        return formatter
+    }()
+    fileprivate lazy var scopeGesture: UIPanGestureRecognizer = {
+        [unowned self] in
+        let panGesture = UIPanGestureRecognizer(target: self.calendar, action: #selector(self.calendar.handleScopeGesture(_:)))
+        panGesture.delegate = self
+        panGesture.minimumNumberOfTouches = 1
+        panGesture.maximumNumberOfTouches = 2
+        return panGesture
+        }()
     
 
     override func viewDidLoad() {
@@ -42,14 +134,18 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         super.viewDidLoad()
         self.collPrefferedServices.delegate = self
         self.collPrefferedServices.dataSource = self
+        pickerView.delegate = self
+        pickerView.dataSource = self
         
         self.collPrefferedServices.register(UINib(nibName: "CareServicesCell", bundle: nil), forCellWithReuseIdentifier: "CareServicesCell")
 
         self.collPrefferedServices.register(UINib(nibName: "AppoinmentHeaderCell", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "AppoinmentHeaderCell")
         self.setInterface()
         
-
-        // Do any additional setup after loading the view.
+    }
+    
+    deinit {
+        print("\(#function)")
     }
 
     override func didReceiveMemoryWarning() {
@@ -70,17 +166,31 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
         navigationController?.navigationBar.isHidden = false
-        scrollNewAppoinment.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 1000)
-        vwPopUp.layer.cornerRadius = 3.0
-        btnCancelAppoinment.setTitle("Cancel Appoinment", for: .normal)
-        btnOkay.setTitle("Okay", for: .normal)
+        scrollNewAppoinment.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 700)
+        vwPopUp.layer.cornerRadius = 5.0
+        vwCalender.layer.cornerRadius = 2.0
+        btnCancelAppoinment.setTitle("CANCEL APPOINMENT", for: .normal)
+        btnOkay.setTitle("OKAY", for: .normal)
         btnCancelAppoinment.backgroundColor = getRedColor()
         btnOkay.backgroundColor = getGreenColor()
         btnCancelAppoinment.titleLabel?.numberOfLines = 0; // Dynamic number of lines
         btnCancelAppoinment.titleLabel?.lineBreakMode = .byWordWrapping
         btnOkay.tintColor = UIColor.white
+        btnCancelAppoinment.titleLabel?.textAlignment = .center
+        btnOkay.titleLabel?.textAlignment = .center
         btnCancelAppoinment.tintColor = UIColor.white
+        
+        lbPopUpName.text = "Anna Connonly"
+        lbPopUpDate.text = "February 28th"
+        lbPopUpTime.text = "9:00 am - 12:00 pm"
+        lbPopUpServicesProvided.text = "Services Provided"
     
+        btnPopUpMessage.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "chat"), scaledToSize: CGSize(width: btnPopUpMessage.bounds.size.width, height: btnPopUpMessage.bounds.size.width)), for: .normal)
+        btnPopUpaddServices.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "addMedication"), scaledToSize: CGSize(width: btnPopUpaddServices.bounds.size.width, height: btnPopUpaddServices.bounds.size.width)), for: .normal)
+        imgPopUpProfile.layer.cornerRadius = imgPopUpProfile.bounds.size.width/2
+        btnOkay.roundedBottomRightButton()
+        btnCancelAppoinment.roundedBottomLeftButton()
+        btnDate.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "timer"), scaledToSize: CGSize(width: btnDate.bounds.size.width, height: btnDate.bounds.size.height)), for: .normal)
         
         self.mapView.showsUserLocation = true
         if (CLLocationManager.locationServicesEnabled()) {
@@ -99,6 +209,13 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         }
         mapView.delegate = self
     
+        self.calendar.select(Date())
+        self.view.addGestureRecognizer(self.scopeGesture)
+        //self.tableView.panGestureRecognizer.require(toFail: self.scopeGesture)
+        self.calendar.scope = .week
+        
+        // Do any additional setup after loading the view.
+
     }
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
@@ -192,10 +309,76 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
     }
     
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        var count = 0
+        if(self.duration != nil){
+            count = duration.count
+        }
+        return count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        var data = ""
+        if(self.duration != nil){
+            data = self.duration[row]
+        }
+        return data
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        var data = ""
+        data = self.duration[row]
+        self.selectedData = data
+        self.changeData(button: self.tempButton)
+    }
+
+    
     func callPopup(){
+        self.viewGray.isHidden = false
         UIView.animate(withDuration: 1.0, animations:{self.vwPopUp.alpha = 1.0}, completion: { (bool) in
             
         })
     }
+    
+    func callCalender(){
+        self.viewGray.isHidden = false
+        UIView.animate(withDuration: 1.0, animations:{self.vwCalender.alpha = 1.0}, completion: { (bool) in
+            
+        })
+    }
+    
+    func changeData(button:UIButton){
+        button.setTitle(self.selectedData, for: .normal)
+    }
+    
+    func closePickerView(){
+        UIView.animate(withDuration: 0.6, animations:{self.vwDuration.frame = CGRect(x: self.vwDuration.frame.origin.x, y: (self.vwDuration.frame.origin.y+self.vwDuration.bounds.size.height), width: self.vwDuration.bounds.size.width, height: self.vwDuration.bounds.size.height)}, completion: { (bool) in
+        })
         
+    }
+    
+    
+    func calendar(_ calendar: FSCalendar, boundingRectWillChange bounds: CGRect, animated: Bool) {
+        self.calendar.bounds.size.height = bounds.height
+        self.view.layoutIfNeeded()
+    }
+    
+    func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        print("did select date \(self.dateFormatter.string(from: date))")
+        let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
+        print("selected dates is \(selectedDates)")
+        self.selectedData = selectedDates[0]
+        if monthPosition == .next || monthPosition == .previous {
+            calendar.setCurrentPage(date, animated: true)
+        }
+    }
+    
+    func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
+        print("\(self.dateFormatter.string(from: calendar.currentPage))")
+    }
+
 }

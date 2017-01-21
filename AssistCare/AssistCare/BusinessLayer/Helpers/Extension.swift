@@ -29,4 +29,36 @@ extension UIButton{
     self.layer.masksToBounds = false
     self.layer.cornerRadius = 4.0
     }
+    
+
+    func roundedBottomLeftButton(){
+            let maskPAth1 = UIBezierPath(roundedRect: self.bounds,
+                                         byRoundingCorners: [.bottomLeft ],
+                                         cornerRadii:CGSize(width: 8.0, height: 8.0))
+            let maskLayer1 = CAShapeLayer()
+            maskLayer1.frame = self.bounds
+            maskLayer1.path = maskPAth1.cgPath
+            self.layer.mask = maskLayer1
+            
+        }
+    
+    func roundedBottomRightButton(){
+        let maskPAth1 = UIBezierPath(roundedRect: self.bounds,
+                                     byRoundingCorners: [.bottomRight ],
+                                     cornerRadii:CGSize(width: 8.0, height: 8.0))
+        let maskLayer1 = CAShapeLayer()
+        maskLayer1.frame = self.bounds
+        maskLayer1.path = maskPAth1.cgPath
+        self.layer.mask = maskLayer1
+    }
+    
+    func roundCorners(corners:UIRectCorner, radius: CGFloat) {
+        let path = UIBezierPath(roundedRect: self.bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
+        let mask = CAShapeLayer()
+        mask.path = path.cgPath
+        self.layer.mask = mask
+    }
+
 }
+
+

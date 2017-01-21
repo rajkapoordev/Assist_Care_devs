@@ -19,9 +19,12 @@ let GREEN_COLOR:UInt = 0x46BCD0
 let RED_COLOR:UInt = 0xF07374
 let screenSize = UIScreen.main.bounds
 
+
+
 // define for user role
 let patient = "Patient"
 let careGiver = "CareGiver"
+
 
 func appDelegate() -> AppDelegate {
     return (UIApplication.shared.delegate as! AppDelegate)
