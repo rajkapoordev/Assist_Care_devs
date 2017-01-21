@@ -42,6 +42,9 @@ class ManagePaymentMethodVC: UIViewController, UITextFieldDelegate {
         self.title = "Add Payment Method"
         self.navigationController?.navigationBar.tintColor = UIColor.white
         self.navigationController?.navigationBar.isHidden = false
+        
+        scrollView.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 520)
+        
         txtPaymentType.setBottomBorder()
         txtNameOfCard.setBottomBorder()
         txtCardNumber.setBottomBorder()
@@ -62,7 +65,6 @@ class ManagePaymentMethodVC: UIViewController, UITextFieldDelegate {
         lblCardExpDate.isHidden = true
         lblCVC.isHidden = true
         
-        scrollView.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 520)
         
     }
 

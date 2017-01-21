@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentDetailVC" customModule="AssistCare" customModuleProvider="target">
             <connections>
-                <outlet property="tblPayment" destination="NZs-su-Ppx" id="28f-YX-D3x"/>
+                <outlet property="tblPaymentCardDetail" destination="NZs-su-Ppx" id="0iL-B3-MHn"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Ag2-BV-8Up"/>
             </connections>
         </placeholder>
@@ -21,7 +21,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NZs-su-Ppx">
-                    <rect key="frame" x="0.0" y="80" width="320" height="400"/>
+                    <rect key="frame" x="0.0" y="90" width="320" height="390"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
