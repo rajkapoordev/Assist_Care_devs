@@ -38,9 +38,6 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
         btnSkipForNow.shadow()
         btnSave.shadow()
         
-        
-        
-        
         // Do any additional setup after loading the view.
     }
 
