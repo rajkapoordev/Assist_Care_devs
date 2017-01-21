@@ -21,7 +21,6 @@ func getAppColor() -> UIColor{
         return appUIColorFromRGB(rgbValue: APP_COLOR, alpha: 1)
 }
 
-
 func getBackgroundColor() -> UIColor {
     return appUIColorFromRGB(rgbValue: BACK_COLOR, alpha: 1)
 }
