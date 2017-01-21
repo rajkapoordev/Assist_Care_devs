@@ -57,7 +57,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate{
         );
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
         navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.tintColor = getFontColor()
+        navigationController?.navigationBar.tintColor = UIColor.white
         txtEmail.setBottomBorder()
         txtPassword.setBottomBorder()
         btnSignUp.layer.cornerRadius = 2.0
