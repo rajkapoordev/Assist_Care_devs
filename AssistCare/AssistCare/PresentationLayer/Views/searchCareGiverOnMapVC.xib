@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="searchCareGiverOnMapVC" customModule="AssistCare" customModuleProvider="target">
+            <connections>
+                <outlet property="btnMealPreparation" destination="qCS-Ew-JJ5" id="w2B-fZ-OXZ"/>
+                <outlet property="btnMedicalPrompt" destination="EXU-R6-5M1" id="jET-eg-U4d"/>
+                <outlet property="btnNavigate" destination="qh2-Ey-Edi" id="4zK-9M-1J9"/>
+                <outlet property="mapView" destination="fSa-uc-Wp3" id="JVL-Km-gOa"/>
+                <outlet property="view" destination="iN0-l3-epB" id="MEE-ya-ngq"/>
+                <outlet property="vwDetail" destination="Gqw-FW-Jxe" id="86i-xp-xbh"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Gqw-FW-Jxe">
+                    <rect key="frame" x="0.0" y="65" width="320" height="50"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="fSa-uc-Wp3">
+                    <rect key="frame" x="0.0" y="114" width="320" height="320"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                </mapView>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qCS-Ew-JJ5">
+                    <rect key="frame" x="0.0" y="429" width="160" height="52"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" red="0.6588235294" green="0.87450980389999999" blue="0.91372549020000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="btnMealPreparation:" destination="-1" eventType="touchUpInside" id="rmS-80-B8x"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EXU-R6-5M1">
+                    <rect key="frame" x="160" y="429" width="160" height="51"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" red="0.24313725489999999" green="0.70588235290000001" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="btnMedicalPrompt:" destination="-1" eventType="touchUpInside" id="ydK-Vo-a93"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qh2-Ey-Edi">
+                    <rect key="frame" x="235" y="340" width="60" height="60"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                    <connections>
+                        <action selector="btnNavigate:" destination="-1" eventType="touchUpInside" id="bBm-aa-ssu"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <point key="canvasLocation" x="33" y="106"/>
+        </view>
+    </objects>
+</document>

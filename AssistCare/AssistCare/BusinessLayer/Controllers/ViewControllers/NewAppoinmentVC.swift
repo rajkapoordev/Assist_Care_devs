@@ -166,6 +166,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
         navigationController?.navigationBar.isHidden = false
+        navigationController?.navigationBar.tintColor = UIColor.white
         scrollNewAppoinment.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 700)
         vwPopUp.layer.cornerRadius = 5.0
         vwCalender.layer.cornerRadius = 2.0
@@ -208,15 +209,9 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
             print("Location services are not enabled");
         }
         mapView.delegate = self
-    
-        self.calendar.select(Date())
-        self.view.addGestureRecognizer(self.scopeGesture)
-        //self.tableView.panGestureRecognizer.require(toFail: self.scopeGesture)
-        self.calendar.scope = .week
-        
-        // Do any additional setup after loading the view.
-
+        setCalenderInterface()
     }
+
 
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
@@ -368,6 +363,12 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        //selectedDate = date
+        let calendar1 = Calendar.current
+        lbDate.text = String(calendar1.component(.day, from: date))
+        let monthNumber  = calendar1.component(.month, from: date)
+        lbMonth.text = DateFormatter().monthSymbols[monthNumber - 1]
+        lbYear.text = String(calendar1.component(.year, from: date))
         print("did select date \(self.dateFormatter.string(from: date))")
         let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
         print("selected dates is \(selectedDates)")
@@ -381,4 +382,18 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         print("\(self.dateFormatter.string(from: calendar.currentPage))")
     }
 
+    func setCalenderInterface(){
+        
+        self.calendar.select(Date())
+        //view.addGestureRecognizer(self.scopeGesture)
+        //self.tableView.panGestureRecognizer.require(toFail: self.scopeGesture)
+        self.calendar.scope = .month
+        
+        let date = Date()
+        let calendar1 = Calendar.current
+        lbDate.text = String(calendar1.component(.day, from: date))
+        let monthNumber  = calendar1.component(.month, from: date)
+        lbMonth.text = DateFormatter().monthSymbols[monthNumber - 1]
+        lbYear.text = String(calendar1.component(.year, from: date))
+    }
 }

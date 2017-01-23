@@ -55,7 +55,7 @@ class SetupServicesVC: UIViewController,UITextFieldDelegate,UITableViewDelegate,
 
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
         navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.tintColor = getFontColor()
+        navigationController?.navigationBar.tintColor = UIColor.white
         txtInstruction.setBottomBorder()
         txtInstruction.backgroundColor = getBackgroundColor()
         btnContinue.isHidden = false

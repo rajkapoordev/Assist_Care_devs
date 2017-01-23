@@ -23,7 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let vc = PaymentDetailVC(nibName: "PaymentDetailVC", bundle: nil)
 
-//        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
+
+
+        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
+
 
         let nav = UINavigationController(rootViewController: vc)
         //nav.isNavigationBarHidden = true

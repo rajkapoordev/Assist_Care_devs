@@ -38,7 +38,7 @@ class VerificationLoadingVC: UIViewController {
         
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
         navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.tintColor = getFontColor()
+        navigationController?.navigationBar.tintColor = UIColor.white
         lbLoading.text = "Waiting for text message to automatically verify phone number"
         lbLoading.frame = CGRect(x: lbLoading.frame.origin.x, y: lbLoading.frame.origin.y, width: lbLoading.bounds.size.width, height: heightForView(lbLoading.text!, font: lbLoading.font, width: lbLoading.bounds.size.width))
     }
