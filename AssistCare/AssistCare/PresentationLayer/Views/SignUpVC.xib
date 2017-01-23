@@ -12,9 +12,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpVC" customModule="AssistCare" customModuleProvider="target">
             <connections>
                 <outlet property="btnFacebook" destination="Zph-2A-2l3" id="VlL-SS-giP"/>
-                <outlet property="btnGoogle" destination="JIA-nq-vck" id="h3S-Et-U7l"/>
                 <outlet property="btnSignUp" destination="3DU-Wu-BwI" id="ksQ-h5-8Z4"/>
                 <outlet property="scrollSignUp" destination="day-fm-0Ia" id="1Dg-eY-MgS"/>
+                <outlet property="signInButton" destination="Rtp-ov-wqa" id="4d6-Uw-pvZ"/>
                 <outlet property="txtEmail" destination="kUU-fj-c7Z" id="bZh-Ug-J9b"/>
                 <outlet property="txtPassword" destination="c9h-de-Phy" id="W0O-6k-pCd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -29,18 +29,6 @@
                     <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JIA-nq-vck">
-                            <rect key="frame" x="23" y="137" width="274" height="25"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.87058823529411766" green="0.32941176470588235" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                            <state key="normal" title="SIGN UP WITH GOOGLE">
-                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </state>
-                            <connections>
-                                <action selector="btnGoogle:" destination="-1" eventType="touchUpInside" id="IJN-2y-93J"/>
-                            </connections>
-                        </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="OR CREATE AN ACCOUNT WITH EMAIL" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="9EE-tp-jhq">
                             <rect key="frame" x="23" y="200" width="274" height="10"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -85,11 +73,16 @@
                                 <action selector="btnFacebook:" destination="-1" eventType="touchUpInside" id="MZ8-IY-Pfr"/>
                             </connections>
                         </button>
+                        <view contentMode="scaleToFill" misplaced="YES" id="Rtp-ov-wqa" customClass="GIDSignInButton">
+                            <rect key="frame" x="25" y="125" width="274" height="25"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
                     </subviews>
                 </scrollView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="25" y="52"/>
+            <point key="canvasLocation" x="-182" y="-5"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

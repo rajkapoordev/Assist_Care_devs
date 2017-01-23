@@ -9,6 +9,8 @@
 import UIKit
 import MapKit
 import Foundation
+import CoreLocation
+
 class AppointmentVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
 
     @IBOutlet var btnHomeTab: UITabBarItem!
@@ -33,6 +35,7 @@ class AppointmentVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegat
         func centerMapOnLocation(location: CLLocation) {
             let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
                                                                       regionRadius * 2.0, regionRadius * 2.0)
+            
             mapView.setRegion(coordinateRegion, animated: true)
             centerMapOnLocation(location: initialLocation)
             
@@ -47,11 +50,22 @@ class AppointmentVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegat
             annotation.coordinate = CLLocationCoordinate2D(latitude: 21.17, longitude: 72.83)
             mapView.addAnnotation(annotation)
             
-            self.locationManager.delegate = self
-            self.locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            self.locationManager.requestWhenInUseAuthorization()
-            self.locationManager.startUpdatingLocation()
             self.mapView.showsUserLocation = true
+            if (CLLocationManager.locationServicesEnabled()) {
+                locationManager.delegate = self
+                locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                locationManager.distanceFilter = kCLDistanceFilterNone
+                locationManager.requestWhenInUseAuthorization()
+                locationManager.requestAlwaysAuthorization()
+                locationManager.startMonitoringSignificantLocationChanges()
+                locationManager.startUpdatingLocation()
+                mapView.showsUserLocation = true
+                mapView.mapType = .standard
+                
+            } else {
+                print("Location services are not enabled");
+            }
+            mapView.delegate = self
 
         }
 
@@ -100,7 +114,8 @@ class AppointmentVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegat
 //        self.locationManager.stopUpdatingLocation() 
 //    }
 //    
-    func mapView(mapView: MKMapView!, viewForAnnotation annotation: MKAnnotation!) -> MKAnnotationView! {
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? MapAnnotation {
             let identifier = "pin"
             var view: MKPinAnnotationView
