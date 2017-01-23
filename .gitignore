@@ -27,7 +27,7 @@ xcuserdata/
 *.dSYM.zip
 *.dSYM
 //Binary file
-*.string
+*.strings
 ## Playgrounds
 timeline.xctimeline
 playground.xcworkspace
