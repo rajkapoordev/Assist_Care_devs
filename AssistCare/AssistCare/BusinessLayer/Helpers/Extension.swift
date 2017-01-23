@@ -10,6 +10,7 @@ import Foundation
 import UIKit
 
 extension UITextField {
+    
     func setBottomBorder() {
         self.borderStyle = .none
         self.layer.backgroundColor = UIColor.white.cgColor
@@ -21,7 +22,8 @@ extension UITextField {
     }
 }
 extension UIButton{
-    func shadow(){
+    
+    func shadow() {
     self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
     self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
     self.layer.shadowOpacity = 1.0
@@ -30,7 +32,6 @@ extension UIButton{
     self.layer.cornerRadius = 4.0
     }
     
-
     func roundedBottomLeftButton(){
             let maskPAth1 = UIBezierPath(roundedRect: self.bounds,
                                          byRoundingCorners: [.bottomLeft ],
@@ -39,8 +40,7 @@ extension UIButton{
             maskLayer1.frame = self.bounds
             maskLayer1.path = maskPAth1.cgPath
             self.layer.mask = maskLayer1
-            
-        }
+    }
     
     func roundedBottomRightButton(){
         let maskPAth1 = UIBezierPath(roundedRect: self.bounds,
@@ -57,6 +57,21 @@ extension UIButton{
         let mask = CAShapeLayer()
         mask.path = path.cgPath
         self.layer.mask = mask
+    }
+
+}
+
+extension UITextField
+{
+    
+    func isEmpty()->Bool
+    {
+        let trimmedString = self.text?.trimmingCharacters(in: NSCharacterSet.whitespacesAndNewlines)
+        if trimmedString!.characters.count == 0
+        {
+            return true
+        }
+        return false
     }
 
 }

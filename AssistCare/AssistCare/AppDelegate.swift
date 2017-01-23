@@ -16,11 +16,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         UINavigationBar.appearance().barTintColor = getAppColor()
-    
+        UINavigationBar.appearance().tintColor = UIColor.white
+        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
 
+        let vc = PaymentDetailVC(nibName: "PaymentDetailVC", bundle: nil)
 
-        let vc = CareGiverDetailVC(nibName: "CareGiverDetailVC", bundle: nil)
+
+
+        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
+
 
         let nav = UINavigationController(rootViewController: vc)
         //nav.isNavigationBarHidden = true
@@ -30,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
    
     func applicationWillResignActive(_ application: UIApplication) {
-
+        
     }
 
     func applicationDidEnterBackground(_ application: UIApplication) {

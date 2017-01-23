@@ -96,7 +96,7 @@ class ReferealVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func setInterface(){
         self.title = "Referral"
-        navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = false
        // self.navigationController?.navigationBar.tintColor = UIColor.white
         activeInvite()
         //Register nib

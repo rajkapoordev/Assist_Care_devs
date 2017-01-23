@@ -92,6 +92,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate{
         button.layer.masksToBounds = false
         button.layer.cornerRadius = 4.0
     }
+    
 }
 
 
