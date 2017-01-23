@@ -21,15 +21,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
 
-        let vc = PaymentDetailVC(nibName: "PaymentDetailVC", bundle: nil)
+      //  let vc = PaymentDetailVC(nibName: "PaymentDetailVC", bundle: nil)
 
 
 
-        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
+        let vc = CreateProfileSecond(nibName: "CreateProfileSecond", bundle: nil)
 
 
         let nav = UINavigationController(rootViewController: vc)
-        //nav.isNavigationBarHidden = true
+        nav.isNavigationBarHidden = true
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()
         return true
