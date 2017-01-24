@@ -18,16 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = getAppColor()
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-        
-        self.window = UIWindow(frame: UIScreen.main.bounds)
+          self.window = UIWindow(frame: UIScreen.main.bounds)
 
-        let vc = PaymentDetailVC(nibName: "PaymentDetailVC", bundle: nil)
-
-
-
-        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
-
-
+        let vc = NewAppoinmentVC(nibName: "NewAppoinmentVC", bundle: nil)
         let nav = UINavigationController(rootViewController: vc)
         //nav.isNavigationBarHidden = true
         self.window?.rootViewController = nav
