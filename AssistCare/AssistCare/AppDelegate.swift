@@ -15,10 +15,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
+        GIDSignIn.sharedInstance().clientID = "327847630381-6dbe80qbvs1s4ollt9j75qt50p4aajeu.apps.googleusercontent.com"
+        
         UINavigationBar.appearance().barTintColor = getAppColor()
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
+
+        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
+
           self.window = UIWindow(frame: UIScreen.main.bounds)
+
 
         let vc = NewAppoinmentVC(nibName: "NewAppoinmentVC", bundle: nil)
         let nav = UINavigationController(rootViewController: vc)

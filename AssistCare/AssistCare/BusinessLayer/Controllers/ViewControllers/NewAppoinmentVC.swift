@@ -11,7 +11,7 @@ import MapKit
 import CoreLocation
 
 class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,MKMapViewDelegate, CLLocationManagerDelegate,UIPickerViewDelegate,UIPickerViewDataSource, FSCalendarDataSource, FSCalendarDelegate,UIGestureRecognizerDelegate{
-
+    
     @IBOutlet var lbMonth: UILabel!
     @IBOutlet var lbDate: UILabel!
     @IBOutlet var lbYear: UILabel!
@@ -58,16 +58,16 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     var tempButton:UIButton!
     var isOpened:Bool = false
     var selectedDate = Date()
+
     var arrX = NSMutableArray()
     var arrY = NSMutableArray()
     var radius = CGFloat()
     var arrButton:Array<UIButton> = []
-
-
     
     @IBAction func btnAM(_ sender: Any) {
         
     }
+
     
     @IBAction func btnPM(_ sender: Any) {
         
@@ -110,20 +110,18 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     
     @IBAction func btnDuration(_ sender: Any) {
         if(isOpened == false){
-
-        self.tempButton = self.btnDuration
-        pickerView.reloadAllComponents()
-        UIView.animate(withDuration: 0.8, animations:{self.vwDuration.frame = CGRect(x: self.vwDuration.frame.origin.x, y: (self.vwDuration.frame.origin.y-self.vwDuration.bounds.size.height), width: self.vwDuration.bounds.size.width, height: self.vwDuration.bounds.size.height)}, completion: { (bool) in
-            self.isOpened = true
-        })
-    }else{
+            
+            self.tempButton = self.btnDuration
+            pickerView.reloadAllComponents()
+            UIView.animate(withDuration: 0.8, animations:{self.vwDuration.frame = CGRect(x: self.vwDuration.frame.origin.x, y: (self.vwDuration.frame.origin.y-self.vwDuration.bounds.size.height), width: self.vwDuration.bounds.size.width, height: self.vwDuration.bounds.size.height)}, completion: { (bool) in
+                self.isOpened = true
+            })
+        }else{
             closePickerView()
-                self.isOpened = false
+            self.isOpened = false
+        }
     }
-    }
-
-
-
+    
     @IBAction func btnDone(_ sender: Any) {
         closePickerView()
         self.isOpened = false
@@ -154,9 +152,9 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         return panGesture
         }()
     
-
+    
     override func viewDidLoad() {
-
+        
         super.viewDidLoad()
         self.collPrefferedServices.delegate = self
         self.collPrefferedServices.dataSource = self
@@ -164,7 +162,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         pickerView.dataSource = self
         
         self.collPrefferedServices.register(UINib(nibName: "CareServicesCell", bundle: nil), forCellWithReuseIdentifier: "CareServicesCell")
-
+        
         self.collPrefferedServices.register(UINib(nibName: "AppoinmentHeaderCell", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "AppoinmentHeaderCell")
         self.setInterface()
         
@@ -173,10 +171,10 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     deinit {
         print("\(#function)")
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
+        
     }
     override func viewWillAppear(_ animated: Bool) {
         
@@ -211,7 +209,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         lbPopUpDate.text = "February 28th"
         lbPopUpTime.text = "9:00 am - 12:00 pm"
         lbPopUpServicesProvided.text = "Services Provided"
-    
+        
         btnPopUpMessage.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "chat"), scaledToSize: CGSize(width: btnPopUpMessage.bounds.size.width, height: btnPopUpMessage.bounds.size.width)), for: .normal)
         btnPopUpaddServices.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "addMedication"), scaledToSize: CGSize(width: btnPopUpaddServices.bounds.size.width, height: btnPopUpaddServices.bounds.size.width)), for: .normal)
         imgPopUpProfile.layer.cornerRadius = imgPopUpProfile.bounds.size.width/2
@@ -241,8 +239,8 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         mapView.delegate = self
         setCalenderInterface()
     }
-
-
+    
+    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
     }
@@ -250,7 +248,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
-
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CareServicesCell", for: indexPath) as! CareServicesCell
         cell.vWServices.frame.size = CGSize(width: cell.frame.width , height: cell.frame.width )
@@ -261,17 +259,13 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         cell.vWServices.setRounded()
         
         collPrefferedServices.frame = CGRect(x: self.collPrefferedServices.frame.origin.x, y: self.collPrefferedServices.frame.origin.y, width: self.collPrefferedServices.bounds.size.width, height: collPrefferedServices.contentSize.height)
-
         
         return cell
     }
     
-    
-    
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         
         let numOfColumnsInRow = 3
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
@@ -279,14 +273,14 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
             + flowLayout.sectionInset.right
             + (flowLayout.minimumInteritemSpacing * CGFloat(numOfColumnsInRow - 1))
         flowLayout.headerReferenceSize = CGSize(width: 320, height: 50)
-
+        
         let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(numOfColumnsInRow))
         let items = (flowLayout.minimumInteritemSpacing * CGFloat(numOfColumnsInRow - 1))
         
         return CGSize(width: size, height: size)
     }
     
-      func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         return CGSize(width: UIScreen.main.bounds.size.width, height: CGFloat(60.0))
     }
     
@@ -298,11 +292,11 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         case UICollectionElementKindSectionHeader:
             //3
             headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "AppoinmentHeaderCell", for: indexPath) as! AppoinmentHeaderCell
-                    default:
+        default:
             assert(false, "Unexpected element kind")
         }
         return headerView
-   
+        
     }
     
     
@@ -360,7 +354,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         self.selectedData = data
         self.changeData(button: self.tempButton)
     }
-
+    
     
     func callPopup(){
         self.viewGray.isHidden = false
@@ -418,7 +412,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     func calendarCurrentPageDidChange(_ calendar: FSCalendar) {
         print("\(self.dateFormatter.string(from: calendar.currentPage))")
     }
-
+    
     func setCalenderInterface(){
         
         self.calendar.select(Date())
