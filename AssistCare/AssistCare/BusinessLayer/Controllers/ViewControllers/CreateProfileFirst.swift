@@ -263,7 +263,7 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     func setTime(btn:UIButton)
     {
     
-        var dateFormatter = DateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "hh:mm a"
         print(dateFormatter.string(from: timePicker.date))
         if isFrom
@@ -301,7 +301,7 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
      
     }
     @IBAction func btnDoneClick(_ sender: Any) {
-        var dateFormatter = DateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "hh:mm a"
      //    timePicker.isHidden = true
        //  vWDone.isHidden = true
@@ -370,7 +370,6 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     }
 
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        var data = ""
         txtEducation.text = education[row]
         
     }

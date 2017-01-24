@@ -68,7 +68,7 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
     
     
     @IBAction func btnAdd(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController!.popViewController(animated: true)
     }
     
     @IBAction func btnMon(_ sender: Any) {
@@ -173,7 +173,6 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
         navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
         navigationController?.navigationBar.isHidden = false
         navigationController?.navigationBar.tintColor = UIColor.white
-
 
         txtMedicationName.setBottomBorder()
         btnMon.backgroundColor = getGrayColor()
