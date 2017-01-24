@@ -21,11 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
 
-      //  let vc = PaymentDetailVC(nibName: "PaymentDetailVC", bundle: nil)
-
-
-
-        let vc = CreateProfileSecond(nibName: "CreateProfileSecond", bundle: nil)
+       let vc = PaymentDetailVC(nibName: "PaymentDetailVC", bundle: nil
 
 
         let nav = UINavigationController(rootViewController: vc)
