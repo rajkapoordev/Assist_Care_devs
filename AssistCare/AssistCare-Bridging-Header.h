@@ -7,4 +7,6 @@
 
 #import "FSCalendar.h"
 
+#import <GoogleSignIn/GoogleSignIn.h>
+
 #endif

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import MapKit
 
 extension UITextField {
     
@@ -75,5 +76,4 @@ extension UITextField
     }
 
 }
-
 

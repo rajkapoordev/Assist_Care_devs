@@ -8,22 +8,24 @@
 
 import UIKit
 
-class SignUpVC: UIViewController,UITextFieldDelegate{
-
+class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
+    
+    @IBOutlet weak var signInButton: GIDSignInButton!
+    
     @IBOutlet var scrollSignUp: UIScrollView!
     @IBOutlet var btnSignUp: UIButton!
     @IBOutlet var txtPassword: UITextField!
     @IBOutlet var txtEmail: UITextField!
-    @IBOutlet var btnGoogle: UIButton!
+  //  @IBOutlet var btnGoogle: UIButton!
     @IBOutlet var btnFacebook: UIButton!
     
     @IBAction func btnFacebook(_ sender: Any) {
         
     }
     
-    @IBAction func btnGoogle(_ sender: Any) {
-        
-    }
+  //  @IBAction func btnGoogle(_ sender: Any) {
+ //
+ //   }
     
     @IBAction func btnSignUp(_ sender: Any) {
         let vc = VerificationVC(nibName: "VerificationVC", bundle: nil)
@@ -36,8 +38,28 @@ class SignUpVC: UIViewController,UITextFieldDelegate{
         txtPassword.delegate = self
         self.setInterface()
         NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: Selector("keyboardWillHide"), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SignUpVC.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        
+        //Google sign in
+        GIDSignIn.sharedInstance().shouldFetchBasicProfile = true
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.login")
+//                GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.me")
+        //
+        GIDSignIn.sharedInstance().signInSilently()
     }
+    
+    
+    public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
+        print(user.authentication)
+        if (error) != nil {
+            print()
+        }
+        else {
+            //Perform navigation here
+        }
+    }
+
     
     override func viewWillAppear(_ animated: Bool) {
         self.setInterface()
@@ -61,7 +83,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate{
         txtEmail.setBottomBorder()
         txtPassword.setBottomBorder()
         btnSignUp.layer.cornerRadius = 2.0
-        btnGoogle.layer.cornerRadius = 1.0
+ //       btnGoogle.layer.cornerRadius = 1.0
         btnFacebook.layer.cornerRadius = 1.0
         shadow(button: btnSignUp)
     }
@@ -70,7 +92,7 @@ class SignUpVC: UIViewController,UITextFieldDelegate{
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             let keyboardHeight = keyboardSize.height
             print(keyboardHeight)
-            scrollSignUp.setContentOffset(CGPoint(x: 0.0, y: btnGoogle.frame.origin.y), animated: true)
+     //       scrollSignUp.setContentOffset(CGPoint(x: 0.0, y: btnGoogle.frame.origin.y), animated: true)
         }
         
     }
