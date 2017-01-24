@@ -11,12 +11,14 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NewAppoinmentVC" customModule="AssistCare" customModuleProvider="target">
             <connections>
+                <outlet property="btnAM" destination="9Ge-uS-6hh" id="b99-dS-2LL"/>
                 <outlet property="btnCancelAppoinment" destination="Daz-jH-cfG" id="5Ze-I5-Jkz"/>
                 <outlet property="btnDate" destination="Uab-sp-HOC" id="Xir-dH-L3U"/>
                 <outlet property="btnDateCancel" destination="k9h-7v-B5D" id="zpC-5z-89R"/>
                 <outlet property="btnDateOk" destination="x9w-bT-7qG" id="dOZ-vP-W9k"/>
                 <outlet property="btnDuration" destination="sFX-CJ-j28" id="5DO-BA-HW5"/>
                 <outlet property="btnOkay" destination="Bqv-az-gYt" id="Mma-zb-UJu"/>
+                <outlet property="btnPM" destination="QQd-uX-qWm" id="7gP-HI-HTu"/>
                 <outlet property="btnPopUpMessage" destination="c3w-8u-MVP" id="JER-sp-0DW"/>
                 <outlet property="btnPopUpaddServices" destination="IF7-YO-Zke" id="grr-ri-oZz"/>
                 <outlet property="btnTime" destination="Xb3-Ie-2mH" id="UMM-fG-ZXG"/>
@@ -36,10 +38,13 @@
                 <outlet property="view" destination="iN0-l3-epB" id="G8c-iW-KbB"/>
                 <outlet property="viewGray" destination="l4V-g5-DbN" id="7rY-zZ-CJ5"/>
                 <outlet property="vwCalender" destination="DfL-3a-ms9" id="OAC-kd-ZXX"/>
+                <outlet property="vwClock" destination="yof-hd-Prl" id="QvJ-Hl-pLU"/>
                 <outlet property="vwDuration" destination="pcF-8K-erS" id="kXg-1L-pY7"/>
                 <outlet property="vwMap" destination="yEZ-fl-bin" id="fyq-1f-Z8l"/>
                 <outlet property="vwPopUp" destination="pVe-41-P1p" id="T0D-0n-Ctr"/>
                 <outlet property="vwSelectedDate" destination="c0k-TG-BCI" id="JXQ-Ju-xFs"/>
+                <outlet property="vwSelectedTime" destination="ryI-RI-DbE" id="iKI-Qf-WaO"/>
+                <outlet property="vwTime" destination="f9P-qK-bng" id="Ysy-oU-Alo"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -93,6 +98,9 @@
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xb3-Ie-2mH">
                             <rect key="frame" x="65" y="153" width="149" height="35"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" title="9:00 am">
+                                <color key="titleColor" red="0.60392156860000001" green="0.85098039219999999" blue="0.89411764709999997" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
                             <connections>
                                 <action selector="btnTime:" destination="-2" eventType="touchUpInside" id="bZC-7F-liY"/>
                             </connections>
@@ -225,7 +233,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                             <state key="normal" title="OK">
-                                <color key="titleColor" red="0.24313725489999999" green="0.70588235290000001" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.21176470589999999" green="0.68235294120000001" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
                                 <action selector="btnDateOk:" destination="-2" eventType="touchUpInside" id="C3s-B8-Tkg"/>
@@ -236,7 +244,7 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                             <state key="normal" title="CANCEL">
-                                <color key="titleColor" red="0.24313725489999999" green="0.70588235290000001" blue="0.81176470590000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="titleColor" red="0.21176470589999999" green="0.68235294120000001" blue="0.7725490196" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
                                 <action selector="btnDateCancel:" destination="-2" eventType="touchUpInside" id="ir6-wY-MXJ"/>
@@ -247,21 +255,21 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="906-Dq-3Xc">
-                                    <rect key="frame" x="8" y="69" width="272" height="45"/>
+                                    <rect key="frame" x="8" y="67" width="272" height="45"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="45"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="M9G-6W-K0o">
-                                    <rect key="frame" x="8" y="121" width="272" height="21"/>
+                                    <rect key="frame" x="8" y="123" width="272" height="20"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="23"/>
-                                    <color key="textColor" red="0.6588235294117647" green="0.87450980392156863" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                    <color key="textColor" red="0.60392156862745094" green="0.85098039215686272" blue="0.89411764705882346" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cyQ-FT-V7b">
-                                    <rect key="frame" x="8" y="39" width="272" height="23"/>
+                                    <rect key="frame" x="8" y="36" width="272" height="20"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -271,7 +279,68 @@
                             <color key="backgroundColor" red="0.24705882352941178" green="0.73333333333333328" blue="0.81568627450980391" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                     </subviews>
-                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view hidden="YES" contentMode="scaleToFill" misplaced="YES" id="f9P-qK-bng">
+                    <rect key="frame" x="16" y="20" width="288" height="440"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" misplaced="YES" id="yof-hd-Prl">
+                            <rect key="frame" x="9" y="85" width="270" height="270"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <view contentMode="scaleToFill" misplaced="YES" id="ryI-RI-DbE">
+                            <rect key="frame" x="0.0" y="0.0" width="288" height="82"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </view>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Ge-uS-6hh">
+                            <rect key="frame" x="19" y="326" width="45" height="45"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="AM">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="btnAM:" destination="-1" eventType="touchUpInside" id="ujr-VX-DBk"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="QQd-uX-qWm">
+                            <rect key="frame" x="224" y="328" width="46" height="43"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                            <state key="normal" title="PM">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <connections>
+                                <action selector="btnPM:" destination="-1" eventType="touchUpInside" id="pBr-El-xAN"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FT7-qa-DFg">
+                            <rect key="frame" x="211" y="390" width="70" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <state key="normal" title="OK">
+                                <color key="titleColor" red="0.21176470588235294" green="0.68235294117647061" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnTimeOK:" destination="-1" eventType="touchUpInside" id="beM-dO-TSq"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="glL-OF-RE3">
+                            <rect key="frame" x="131" y="390" width="70" height="35"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMinY="YES"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
+                            <state key="normal" title="CANCEL">
+                                <color key="titleColor" red="0.21176470588235294" green="0.68235294117647061" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="btnTimeCancel:" destination="-2" eventType="touchUpInside" id="fkb-0r-fPI"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
