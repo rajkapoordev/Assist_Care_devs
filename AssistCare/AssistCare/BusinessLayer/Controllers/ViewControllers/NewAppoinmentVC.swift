@@ -42,7 +42,11 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     @IBOutlet var collAssistServices: UICollectionView!
     @IBOutlet var collPrefferedServices: UICollectionView!
     @IBOutlet var scrollNewAppoinment: UIScrollView!
-    
+    @IBOutlet var vwTime: UIView!
+    @IBOutlet var vwClock: UIView!
+    @IBOutlet var vwSelectedTime: UIView!
+    @IBOutlet var btnPM: UIButton!
+    @IBOutlet var btnAM: UIButton!
     
     let duration = ["1 hour","2 hour","3 hour","4 hour"]
     let googleMapAPIKey = "AIzaSyCblEAKCQQZE9EFFlkTlwB8BVA4Ize8t5M"
@@ -54,11 +58,37 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     var tempButton:UIButton!
     var isOpened:Bool = false
     var selectedDate = Date()
+    var arrX = NSMutableArray()
+    var arrY = NSMutableArray()
+    var radius = CGFloat()
+    var arrButton:Array<UIButton> = []
 
+
+    
+    @IBAction func btnAM(_ sender: Any) {
+        
+    }
+    
+    @IBAction func btnPM(_ sender: Any) {
+        
+    }
+    
+    @IBAction func btnTimeCancel(_ sender: Any) {
+        UIView.animate(withDuration: 1.0, animations:{self.vwTime.alpha = 0.0}, completion: { (bool) in
+            self.viewGray.isHidden = true
+        })
+    }
+    
+    @IBAction func btnTimeOK(_ sender: Any) {
+        UIView.animate(withDuration: 1.0, animations:{self.vwTime.alpha = 0.0}, completion: { (bool) in
+            self.viewGray.isHidden = true
+        })
+    }
     
     
     @IBAction func btnTime(_ sender: Any) {
-        
+        vwTime.isHidden = false
+        self.callTime()
     }
     
     @IBAction func btnDate(_ sender: Any) {
@@ -67,18 +97,14 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     }
     
     @IBAction func btnDateOk(_ sender: Any) {
-        self.viewGray.isHidden = true
-        
         UIView.animate(withDuration: 1.0, animations:{self.vwCalender.alpha = 0.0}, completion: { (bool) in
-            
+            self.viewGray.isHidden = true
         })
     }
     
     @IBAction func btnDateCancel(_ sender: Any) {
-        self.viewGray.isHidden = true
-        
         UIView.animate(withDuration: 1.0, animations:{self.vwCalender.alpha = 0.0}, completion: { (bool) in
-            
+            self.viewGray.isHidden = true
         })
     }
     
@@ -193,7 +219,11 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         btnCancelAppoinment.roundedBottomLeftButton()
         btnDate.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "timer"), scaledToSize: CGSize(width: btnDate.bounds.size.width, height: btnDate.bounds.size.height)), for: .normal)
         
-        self.mapView.showsUserLocation = true
+        vwClock.layer.cornerRadius = vwClock.bounds.size.width/2
+        vwClock.backgroundColor = UIColor(red: 230/255, green: 234/255, blue: 236/255, alpha: 1)
+        createClock()
+        vwSelectedTime.backgroundColor = UIColor(red: 54/255, green: 174/255, blue: 197/255, alpha: 1)
+
         if (CLLocationManager.locationServicesEnabled()) {
             locationManager.delegate = self
             locationManager.desiredAccuracy = kCLLocationAccuracyBest
@@ -346,6 +376,13 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         })
     }
     
+    func callTime(){
+        self.viewGray.isHidden = false
+        UIView.animate(withDuration: 1.0, animations:{self.vwTime.alpha = 1.0}, completion: { (bool) in
+            
+        })
+    }
+    
     func changeData(button:UIButton){
         button.setTitle(self.selectedData, for: .normal)
     }
@@ -385,8 +422,6 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     func setCalenderInterface(){
         
         self.calendar.select(Date())
-        //view.addGestureRecognizer(self.scopeGesture)
-        //self.tableView.panGestureRecognizer.require(toFail: self.scopeGesture)
         self.calendar.scope = .month
         
         let date = Date()
@@ -395,5 +430,82 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         let monthNumber  = calendar1.component(.month, from: date)
         lbMonth.text = DateFormatter().monthSymbols[monthNumber - 1]
         lbYear.text = String(calendar1.component(.year, from: date))
+    }
+    
+    func createClock(){
+        let clock = CALayer()
+        
+        var bounds = self.vwClock.layer.bounds
+        bounds.origin.x = vwClock.layer.bounds.origin.x + 15
+        bounds.origin.y = vwClock.layer.bounds.origin.y + 15
+        bounds.size.height = self.vwClock.layer.bounds.size.height-30
+        bounds.size.width = self.vwClock.layer.bounds.size.width-30
+        clock.bounds = bounds;
+        clock.cornerRadius = bounds.size.width / 2;
+        clock.borderWidth = 1.0
+        clock.borderColor = UIColor.black.cgColor
+        var position = CGPoint(x: CGFloat(bounds.midX), y: CGFloat(bounds.midY))
+        position = (self.vwClock.superview?.convert(position, from: self.vwClock))!
+        clock.position = position
+        
+        //self.vwClock.layer.superlayer?.insertSublayer(clock, below: self.vwClock.layer)
+        let arr = [12,1,2,3,4,5,6,7,8,9,10,11]
+        radius = clock.bounds.size.width / 2 - 10
+        (arr as NSArray).enumerateObjects({ (aLabelString, index, stop) in
+            let angle: CGFloat = (CGFloat(index)) * CGFloat(M_PI) * 2 / CGFloat(arr.count) - CGFloat(M_PI_2)
+            let x: CGFloat = round(CGFloat(cosf(Float(angle))) * radius) + bounds.midX
+            let y: CGFloat = round(CGFloat(sinf(Float(angle))) * radius) + bounds.midY
+            let center = CGPoint(x: x, y: y)
+            arrX.add(x)
+            arrY.add(y)
+            //Create a label.
+            
+            let btn = UIButton(frame: CGRect(x: CGFloat(0), y: CGFloat(0), width: CGFloat(35), height: CGFloat(35)))
+            btn.layer.cornerRadius = btn.bounds.size.width / 2
+            btn.tag = index
+            btn.addTarget(self, action: #selector(self.ratingButtonTapped(_:)), for: .touchUpInside)
+            //Set up it's font, color, position, center alignment, etc.
+            
+            btn.center = center
+            btn.setTitle(String(arr[btn.tag]), for: .normal)
+            btn.setTitleColor(UIColor.black, for: .normal)
+            //Finally, add the button to the clock view.
+            self.vwClock.addSubview(btn)
+            arrButton.insert(btn, at: index)
+        });
+        
+    }
+    func ratingButtonTapped(_ button: UIButton) {
+        let btn = button
+        let Path = UIBezierPath()
+        Path.move(to: CGPoint(x:arrX[btn.tag] as! CGFloat, y:arrY[btn.tag] as! CGFloat))
+        Path.addLine(to: CGPoint(x: radius+30, y: radius+30))
+        let layerShape = CAShapeLayer()
+        layerShape.path = Path.cgPath
+        layerShape.strokeColor = UIColor(red: 54/255, green: 174/255, blue: 197/255, alpha: 1).cgColor
+        layerShape.lineWidth = 1
+        layerShape.fillColor = UIColor.red.cgColor
+        
+        if(self.vwClock.layer.value(forKey: "abc") != nil){
+            let layerA:CALayer = self.vwClock.layer.value(forKey: "abc") as! CALayer
+            layerA.removeFromSuperlayer()
+            self.vwClock.layer .addSublayer(layerShape)
+            self.vwClock.layer.setValue(layerShape, forKey: "abc")
+        }
+        else{
+            self.vwClock.layer .addSublayer(layerShape)
+            self.vwClock.layer.setValue(layerShape, forKey: "abc")
+        }
+        
+        print(btn.tag)
+        for i in 0..<arrButton.count{
+            if(arrButton[i].tag == btn.tag){
+                arrButton[i].backgroundColor = UIColor(red: 54/255, green: 174/255, blue: 197/255, alpha: 1)
+                arrButton[i].setTitleColor(UIColor.white, for: .normal)
+            }else{
+                arrButton[i].backgroundColor = UIColor.clear
+                arrButton[i].setTitleColor(UIColor.black, for: .normal)
+            }
+        }
     }
 }
