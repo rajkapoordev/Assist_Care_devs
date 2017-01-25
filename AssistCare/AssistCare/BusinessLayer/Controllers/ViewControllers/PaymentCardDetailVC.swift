@@ -34,14 +34,6 @@ class PaymentCardDetailVC: UIViewController, UITableViewDelegate, UITableViewDat
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
         
-        //Right bar button
-        //        let button = UIButton.init(type: .custom)
-        //        button.setImage(UIImage.init(named: "add_button.png"), for: .normal)
-        //        button.addTarget(self, action:#selector(self.addNewPaymentDetail), for: UIControlEvents.touchUpInside)
-        //        button.frame = CGRect.init(x: 0, y: 0, width: 25, height: 25)
-        //        let barButton = UIBarButtonItem.init(customView: button)
-        //        self.navigationItem.rightBarButtonItem = barButton
-        
         self.view.backgroundColor = appUIColorFromRGB(rgbValue: BACK_COLOR, alpha: 1.0)
         //register nib
         tblPaymentCardDetail.register(UINib(nibName: "PaymentCardDetailCell", bundle:nil), forCellReuseIdentifier: "PaymentCardDetailCell")

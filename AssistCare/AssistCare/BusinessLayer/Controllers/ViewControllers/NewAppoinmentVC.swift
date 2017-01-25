@@ -253,7 +253,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "New Appoinment"
         
@@ -348,7 +348,6 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         let numOfColumnsInRow = 3
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
         let totalSpace = flowLayout.sectionInset.left
@@ -358,7 +357,6 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
         let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(numOfColumnsInRow))
         let items = (flowLayout.minimumInteritemSpacing * CGFloat(numOfColumnsInRow - 1))
-        
         return CGSize(width: size, height: size)
     }
     
@@ -391,20 +389,16 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
             selectedCell.vWMark.isHidden = false
             selectedCell.imgMark.isHidden = false
             callPopup()
-        }
-        else
-        {
+        }else {
             selectedCell.vWMark.isHidden = true
             selectedCell.imgMark.isHidden = true
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let selectedCell = collectionView.cellForItem(at: indexPath) as! CareServicesCell
         selectedCell.vWMark.isHidden = true
         selectedCell.imgMark.isHidden = true
-        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -491,7 +485,6 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     }
     
     func setCalenderInterface(){
-        
         self.calendar.select(Date())
         self.calendar.scope = .month
         

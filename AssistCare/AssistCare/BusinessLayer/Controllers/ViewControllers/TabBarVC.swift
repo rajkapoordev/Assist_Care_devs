@@ -61,8 +61,6 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
         self.navigationVC4.isNavigationBarHidden = true
         self.navigationVC3.isNavigationBarHidden = true
         
-        
-   
         self.myVC1.tabBarItem = UITabBarItem(
             title: "",
             image: UIImage(named: "Home-50.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
