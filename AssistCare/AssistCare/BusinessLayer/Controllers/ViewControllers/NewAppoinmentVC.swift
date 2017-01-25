@@ -12,6 +12,7 @@ import CoreLocation
 
 class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,MKMapViewDelegate, CLLocationManagerDelegate,UIPickerViewDelegate,UIPickerViewDataSource, FSCalendarDataSource, FSCalendarDelegate,UIGestureRecognizerDelegate{
     
+    @IBOutlet var lblDay: UILabel!
     @IBOutlet var lbMonth: UILabel!
     @IBOutlet var lbDate: UILabel!
     @IBOutlet var lbYear: UILabel!
@@ -236,7 +237,6 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
         self.collPrefferedServices.register(UINib(nibName: "AppoinmentHeaderCell", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "AppoinmentHeaderCell")
         self.setInterface()
-        
     }
     
     deinit {
