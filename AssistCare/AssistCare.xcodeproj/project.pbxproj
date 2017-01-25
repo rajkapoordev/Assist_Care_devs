@@ -7,70 +7,104 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
-		0C6EC8FB1E2F48B6009744FF /* CareServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8DE1E2F48B6009744FF /* CareServicesCell.swift */; };
-		0C6EC8FC1E2F48B6009744FF /* cellMedication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8DF1E2F48B6009744FF /* cellMedication.swift */; };
-		0C6EC8FD1E2F48B6009744FF /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E11E2F48B6009744FF /* CategoryVC.swift */; };
-		0C6EC8FE1E2F48B6009744FF /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E21E2F48B6009744FF /* EditProfile.swift */; };
-		0C6EC8FF1E2F48B6009744FF /* MedicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E31E2F48B6009744FF /* MedicationVC.swift */; };
-		0C6EC9001E2F48B6009744FF /* SetupServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E41E2F48B6009744FF /* SetupServicesVC.swift */; };
-		0C6EC9011E2F48B6009744FF /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E51E2F48B6009744FF /* SignUpVC.swift */; };
-		0C6EC9021E2F48B6009744FF /* VerificationLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E61E2F48B6009744FF /* VerificationLoadingVC.swift */; };
-		0C6EC9031E2F48B6009744FF /* VerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E71E2F48B6009744FF /* VerificationVC.swift */; };
-		0C6EC9041E2F48B6009744FF /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8E91E2F48B6009744FF /* AppDesign.swift */; };
-		0C6EC9051E2F48B6009744FF /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8EA1E2F48B6009744FF /* Constant.swift */; };
-		0C6EC9061E2F48B6009744FF /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC8EB1E2F48B6009744FF /* Extension.swift */; };
-		0C6EC9071E2F48B6009744FF /* CategoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F11E2F48B6009744FF /* CategoryVC.xib */; };
-		0C6EC9081E2F48B6009744FF /* CareServicesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F31E2F48B6009744FF /* CareServicesCell.xib */; };
-		0C6EC9091E2F48B6009744FF /* cellMedication.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F41E2F48B6009744FF /* cellMedication.xib */; };
-		0C6EC90A1E2F48B6009744FF /* EditProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F51E2F48B6009744FF /* EditProfile.xib */; };
-		0C6EC90B1E2F48B6009744FF /* MedicationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F61E2F48B6009744FF /* MedicationVC.xib */; };
-		0C6EC90C1E2F48B6009744FF /* SetupServicesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F71E2F48B6009744FF /* SetupServicesVC.xib */; };
-		0C6EC90D1E2F48B6009744FF /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F81E2F48B6009744FF /* SignUpVC.xib */; };
-		0C6EC90E1E2F48B6009744FF /* VerificationLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8F91E2F48B6009744FF /* VerificationLoadingVC.xib */; };
-		0C6EC90F1E2F48B6009744FF /* VerificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC8FA1E2F48B6009744FF /* VerificationVC.xib */; };
-		0C6EC9131E2F48CB009744FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC9111E2F48CB009744FF /* LaunchScreen.storyboard */; };
-		0C6EC9161E2F5B57009744FF /* PaymentDetailsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC9141E2F5B57009744FF /* PaymentDetailsVc.swift */; };
-		0C6EC9191E2F5C01009744FF /* PaymentDetailsVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC9181E2F5C01009744FF /* PaymentDetailsVc.xib */; };
-		0C6EC91C1E2F71F1009744FF /* ThanksVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC91A1E2F71F1009744FF /* ThanksVc.swift */; };
-		0C6EC91F1E2F722C009744FF /* ThanksVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC91E1E2F722C009744FF /* ThanksVc.xib */; };
-		0C6EC9221E2F79B5009744FF /* AppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6EC9201E2F79B5009744FF /* AppointmentVC.swift */; };
-		0C6EC9251E2F79F8009744FF /* AppointmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6EC9241E2F79F8009744FF /* AppointmentVC.xib */; };
-
-		0C849E651E2DF3E50078DA28 /* CategoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E611E2DF3E50078DA28 /* CategoryVC.xib */; };
-		0C849E661E2DF3E50078DA28 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E621E2DF3E50078DA28 /* SignUpVC.xib */; };
-		0C849E671E2DF3E50078DA28 /* VerificationLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E631E2DF3E50078DA28 /* VerificationLoadingVC.xib */; };
-		0C849E681E2DF3E50078DA28 /* VerificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E641E2DF3E50078DA28 /* VerificationVC.xib */; };
-		0C849E6D1E2DF4500078DA28 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E691E2DF4500078DA28 /* CategoryVC.swift */; };
-		0C849E6F1E2DF4500078DA28 /* VerificationLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E6B1E2DF4500078DA28 /* VerificationLoadingVC.swift */; };
-		0C849E701E2DF4500078DA28 /* VerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E6C1E2DF4500078DA28 /* VerificationVC.swift */; };
-		0C849E721E2DFAF80078DA28 /* EditProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E711E2DFAF80078DA28 /* EditProfile.xib */; };
-		0C849E761E2DFB170078DA28 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C849E751E2DFB170078DA28 /* EditProfile.swift */; };
-
-		0C849E7A1E2DFC340078DA28 /* noimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E791E2DFC340078DA28 /* noimg.png */; };
-		0C849E7C1E2E27CC0078DA28 /* rightmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C849E7B1E2E27CC0078DA28 /* rightmark.png */; };
+		0C19A2B71E3731B30014B01C /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2AF1E3731B30014B01C /* add_button.png */; };
+		0C19A2B81E3731B30014B01C /* bell.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B01E3731B30014B01C /* bell.png */; };
+		0C19A2B91E3731B30014B01C /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B11E3731B30014B01C /* camera.png */; };
+		0C19A2BA1E3731B30014B01C /* go-back-left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B21E3731B30014B01C /* go-back-left-arrow.png */; };
+		0C19A2BB1E3731B30014B01C /* Home-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B31E3731B30014B01C /* Home-50.png */; };
+		0C19A2BC1E3731B30014B01C /* noimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B41E3731B30014B01C /* noimg.png */; };
+		0C19A2BD1E3731B30014B01C /* rightmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B51E3731B30014B01C /* rightmark.png */; };
+		0C19A2BE1E3731B30014B01C /* visa.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B61E3731B30014B01C /* visa.png */; };
+		0C19A2DF1E3731EF0014B01C /* FSCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2C01E3731EF0014B01C /* FSCalendar.m */; };
+		0C19A2E01E3731EF0014B01C /* FSCalendar+Deprecated.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2C11E3731EF0014B01C /* FSCalendar+Deprecated.m */; };
+		0C19A2E11E3731EF0014B01C /* FSCalendarAppearance.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2C31E3731EF0014B01C /* FSCalendarAppearance.m */; };
+		0C19A2E21E3731EF0014B01C /* FSCalendarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2C51E3731EF0014B01C /* FSCalendarCalculator.m */; };
+		0C19A2E31E3731EF0014B01C /* FSCalendarCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2C71E3731EF0014B01C /* FSCalendarCell.m */; };
+		0C19A2E41E3731EF0014B01C /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2C91E3731EF0014B01C /* FSCalendarCollectionView.m */; };
+		0C19A2E51E3731EF0014B01C /* FSCalendarCollectionViewLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2CB1E3731EF0014B01C /* FSCalendarCollectionViewLayout.m */; };
+		0C19A2E61E3731EF0014B01C /* FSCalendarConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2CD1E3731EF0014B01C /* FSCalendarConstants.m */; };
+		0C19A2E71E3731EF0014B01C /* FSCalendarDelegationFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2CF1E3731EF0014B01C /* FSCalendarDelegationFactory.m */; };
+		0C19A2E81E3731EF0014B01C /* FSCalendarDelegationProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2D11E3731EF0014B01C /* FSCalendarDelegationProxy.m */; };
+		0C19A2E91E3731EF0014B01C /* FSCalendarExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2D41E3731EF0014B01C /* FSCalendarExtensions.m */; };
+		0C19A2EA1E3731EF0014B01C /* FSCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2D61E3731EF0014B01C /* FSCalendarHeaderView.m */; };
+		0C19A2EB1E3731EF0014B01C /* FSCalendarScopeHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2D81E3731EF0014B01C /* FSCalendarScopeHandle.m */; };
+		0C19A2EC1E3731EF0014B01C /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DA1E3731EF0014B01C /* FSCalendarStickyHeader.m */; };
+		0C19A2ED1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DC1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m */; };
+		0C19A2EE1E3731EF0014B01C /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */; };
+		0C91A8971E31F51E0000955E /* AppoinmentHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C91A8961E31F51E0000955E /* AppoinmentHeaderCell.swift */; };
+		0C91A8991E320B580000955E /* ReferealVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C91A8981E320B580000955E /* ReferealVC.xib */; };
+		0C91A89B1E320BFC0000955E /* ReferealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C91A89A1E320BFC0000955E /* ReferealVC.swift */; };
+		0C91A8A71E3230530000955E /* PersonHistoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C91A8A51E3230530000955E /* PersonHistoryCell.xib */; };
+		0C91A8A91E32306D0000955E /* PersonHistoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C91A8A81E32306D0000955E /* PersonHistoryCell.swift */; };
+		0CAC45D81E37219800C79AFA /* GoogleSignIn.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAC45D71E37219800C79AFA /* GoogleSignIn.framework */; };
+		0CAC45DA1E3721FA00C79AFA /* GoogleSignIn.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 0CAC45D91E3721FA00C79AFA /* GoogleSignIn.bundle */; };
+		0CAC45DC1E3724F600C79AFA /* AddressBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAC45DB1E3724F600C79AFA /* AddressBook.framework */; };
+		0CAC45DE1E37250900C79AFA /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAC45DD1E37250900C79AFA /* AssetsLibrary.framework */; };
+		0CAC45E01E37252000C79AFA /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAC45DF1E37252000C79AFA /* CoreMotion.framework */; };
+		0CAC45E21E37253C00C79AFA /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAC45E11E37253C00C79AFA /* MediaPlayer.framework */; };
+		0CAC45E41E37254300C79AFA /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CAC45E31E37254300C79AFA /* Security.framework */; };
+		0CAC45E61E372E8100C79AFA /* ManagePaymentCardMethodVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAC45E51E372E8100C79AFA /* ManagePaymentCardMethodVC.swift */; };
+		0CAC45E81E372E9F00C79AFA /* ManagePaymentCardMethodVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAC45E71E372E9F00C79AFA /* ManagePaymentCardMethodVC.xib */; };
+		0CAC45EA1E372EDA00C79AFA /* PaymentCardDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAC45E91E372EDA00C79AFA /* PaymentCardDetailVC.xib */; };
+		0CAC45EC1E372EFC00C79AFA /* PaymentCardDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAC45EB1E372EFC00C79AFA /* PaymentCardDetailVC.swift */; };
+		0CAC45EE1E372F3900C79AFA /* PaymentDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAC45ED1E372F3900C79AFA /* PaymentDetailCell.swift */; };
+		0CAC45F01E372F5500C79AFA /* PaymentDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAC45EF1E372F5500C79AFA /* PaymentDetailCell.xib */; };
 		0CBA41E51E2CAA9A0008C8E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA41E41E2CAA9A0008C8E4 /* AppDelegate.swift */; };
 		0CBA41EC1E2CAA9A0008C8E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBA41EB1E2CAA9A0008C8E4 /* Assets.xcassets */; };
 		0CBA41EF1E2CAA9A0008C8E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBA41ED1E2CAA9A0008C8E4 /* LaunchScreen.storyboard */; };
 		0CBA41FA1E2CAA9A0008C8E4 /* AssistCareTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA41F91E2CAA9A0008C8E4 /* AssistCareTests.swift */; };
 		0CBA42051E2CAA9A0008C8E4 /* AssistCareUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA42041E2CAA9A0008C8E4 /* AssistCareUITests.swift */; };
-
-
-		24562A381E30860C000814C6 /* NewAppoinmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24562A371E30860C000814C6 /* NewAppoinmentVC.xib */; };
-		24562A3B1E308636000814C6 /* CareServicesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24562A3A1E308636000814C6 /* CareServicesCell.xib */; };
-		24562A411E308699000814C6 /* SetupServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562A401E308699000814C6 /* SetupServicesVC.swift */; };
-		24562A8C1E308706000814C6 /* MedicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562A8B1E308706000814C6 /* MedicationVC.swift */; };
-		24562A8E1E30871B000814C6 /* NewAppoinmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562A8D1E30871B000814C6 /* NewAppoinmentVC.swift */; };
-		24562A901E308734000814C6 /* SetupServicesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24562A8F1E308734000814C6 /* SetupServicesVC.xib */; };
-		24562A921E30875F000814C6 /* CareServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562A911E30875F000814C6 /* CareServicesCell.swift */; };
-		24562A9D1E308852000814C6 /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562A9B1E308852000814C6 /* AppDesign.swift */; };
-		24562A9E1E308852000814C6 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562A9C1E308852000814C6 /* Extension.swift */; };
-		24562AA01E308897000814C6 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562A9F1E308897000814C6 /* Constant.swift */; };
-		24562AA21E3088D9000814C6 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562AA11E3088D9000814C6 /* SignUpVC.swift */; };
-		24562AA41E308900000814C6 /* cellMedication.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24562AA31E308900000814C6 /* cellMedication.xib */; };
-		24562AA61E30891A000814C6 /* cellMedication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562AA51E30891A000814C6 /* cellMedication.swift */; };
-		24562AA81E30899F000814C6 /* MedicationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24562AA71E30899F000814C6 /* MedicationVC.xib */; };
-
+		24194F341E31E1B100982135 /* CreateProfileFirst.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24194F321E31E1B100982135 /* CreateProfileFirst.swift */; };
+		24194F351E31E1B100982135 /* TabBarVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24194F331E31E1B100982135 /* TabBarVC.swift */; };
+		24194F371E31E1BD00982135 /* MapAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24194F361E31E1BD00982135 /* MapAnnotation.swift */; };
+		24194F391E31E1CD00982135 /* CreateProfileFirst.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24194F381E31E1CD00982135 /* CreateProfileFirst.xib */; };
+		243130B91E2F98B9006F24D4 /* NewAppoinmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243130B81E2F98B9006F24D4 /* NewAppoinmentVC.xib */; };
+		243130BB1E2F98DA006F24D4 /* NewAppoinmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243130BA1E2F98DA006F24D4 /* NewAppoinmentVC.swift */; };
+		243705E11E2F49C100005416 /* CareServicesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243705C41E2F49C100005416 /* CareServicesCell.swift */; };
+		243705E31E2F49C100005416 /* CategoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243705C71E2F49C100005416 /* CategoryVC.swift */; };
+		243705E41E2F49C100005416 /* EditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243705C81E2F49C100005416 /* EditProfile.swift */; };
+		243705E51E2F49C100005416 /* MedicationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243705C91E2F49C100005416 /* MedicationVC.swift */; };
+		243705E61E2F49C100005416 /* SetupServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243705CA1E2F49C100005416 /* SetupServicesVC.swift */; };
+		243705E71E2F49C100005416 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243705CB1E2F49C100005416 /* SignUpVC.swift */; };
+		243705E81E2F49C100005416 /* VerificationLoadingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243705CC1E2F49C100005416 /* VerificationLoadingVC.swift */; };
+		243705E91E2F49C100005416 /* VerificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243705CD1E2F49C100005416 /* VerificationVC.swift */; };
+		243705EA1E2F49C100005416 /* AppDesign.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243705CF1E2F49C100005416 /* AppDesign.swift */; };
+		243705EB1E2F49C100005416 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243705D01E2F49C100005416 /* Constant.swift */; };
+		243705EC1E2F49C100005416 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 243705D11E2F49C100005416 /* Extension.swift */; };
+		243705ED1E2F49C100005416 /* CategoryVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243705D41E2F49C100005416 /* CategoryVC.xib */; };
+		243705EE1E2F49C100005416 /* CareServicesCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243705D61E2F49C100005416 /* CareServicesCell.xib */; };
+		243705EF1E2F49C100005416 /* cellMedication.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243705D71E2F49C100005416 /* cellMedication.xib */; };
+		243705F01E2F49C100005416 /* EditProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243705D81E2F49C100005416 /* EditProfile.xib */; };
+		243705F11E2F49C100005416 /* MedicationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243705D91E2F49C100005416 /* MedicationVC.xib */; };
+		243705F21E2F49C100005416 /* SetupServicesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243705DA1E2F49C100005416 /* SetupServicesVC.xib */; };
+		243705F31E2F49C100005416 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243705DB1E2F49C100005416 /* SignUpVC.xib */; };
+		243705F41E2F49C100005416 /* VerificationLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243705DC1E2F49C100005416 /* VerificationLoadingVC.xib */; };
+		243705F51E2F49C100005416 /* VerificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243705DD1E2F49C100005416 /* VerificationVC.xib */; };
+		243705F61E2F49C100005416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243705DF1E2F49C100005416 /* LaunchScreen.storyboard */; };
+		24562AAC1E309608000814C6 /* AppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562AA91E309608000814C6 /* AppointmentVC.swift */; };
+		24562AAD1E309608000814C6 /* PaymentDetailsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562AAA1E309608000814C6 /* PaymentDetailsVc.swift */; };
+		24562AAE1E309608000814C6 /* ThanksVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562AAB1E309608000814C6 /* ThanksVc.swift */; };
+		24562AB21E30963B000814C6 /* AppointmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24562AAF1E30963B000814C6 /* AppointmentVC.xib */; };
+		24562AB31E30963B000814C6 /* PaymentDetailsVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24562AB01E30963B000814C6 /* PaymentDetailsVc.xib */; };
+		24562AB41E30963B000814C6 /* ThanksVc.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24562AB11E30963B000814C6 /* ThanksVc.xib */; };
+		24562AB81E3096C4000814C6 /* cellMedication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562AB71E3096C4000814C6 /* cellMedication.swift */; };
+		24562ACA1E30C5F6000814C6 /* AppoinmentHeaderCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 24562AC91E30C5F6000814C6 /* AppoinmentHeaderCell.xib */; };
+		24562ACD1E30D07D000814C6 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562ACC1E30D07D000814C6 /* Accelerate.framework */; };
+		24562ACF1E30D0A0000814C6 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562ACE1E30D0A0000814C6 /* SystemConfiguration.framework */; };
+		24562AD11E30D0B5000814C6 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562AD01E30D0B5000814C6 /* QuartzCore.framework */; };
+		24562AD31E30D0BF000814C6 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562AD21E30D0BF000814C6 /* OpenGLES.framework */; };
+		24562AD51E30D0D3000814C6 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562AD41E30D0D3000814C6 /* ImageIO.framework */; };
+		24562AD71E30D0DA000814C6 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562AD61E30D0DA000814C6 /* GLKit.framework */; };
+		24562AD91E30D0E2000814C6 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562AD81E30D0E2000814C6 /* CoreText.framework */; };
+		24562ADB1E30D0EA000814C6 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562ADA1E30D0EA000814C6 /* CoreData.framework */; };
+		24562ADD1E30D0F2000814C6 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562ADC1E30D0F2000814C6 /* MapKit.framework */; };
+		24562ADF1E30D0F9000814C6 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562ADE1E30D0F9000814C6 /* UIKit.framework */; };
+		24562AE11E30D103000814C6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562AE01E30D103000814C6 /* Foundation.framework */; };
+		24562AE31E30D10B000814C6 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562AE21E30D10B000814C6 /* CoreLocation.framework */; };
+		24562AE51E30D111000814C6 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562AE41E30D111000814C6 /* CoreGraphics.framework */; };
+		24562AE71E30D128000814C6 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562AE61E30D128000814C6 /* libc++.tbd */; };
+		24562AE91E30D132000814C6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562AE81E30D132000814C6 /* libz.tbd */; };
+		24562B061E30D7E8000814C6 /* GooglePlacePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24562B051E30D7E8000814C6 /* GooglePlacePicker.bundle */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,48 +125,65 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-
-		0C6EC8DE1E2F48B6009744FF /* CareServicesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareServicesCell.swift; sourceTree = "<group>"; };
-		0C6EC8DF1E2F48B6009744FF /* cellMedication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellMedication.swift; sourceTree = "<group>"; };
-		0C6EC8E11E2F48B6009744FF /* CategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
-		0C6EC8E21E2F48B6009744FF /* EditProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
-		0C6EC8E31E2F48B6009744FF /* MedicationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationVC.swift; sourceTree = "<group>"; };
-		0C6EC8E41E2F48B6009744FF /* SetupServicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupServicesVC.swift; sourceTree = "<group>"; };
-		0C6EC8E51E2F48B6009744FF /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
-		0C6EC8E61E2F48B6009744FF /* VerificationLoadingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationLoadingVC.swift; sourceTree = "<group>"; };
-		0C6EC8E71E2F48B6009744FF /* VerificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationVC.swift; sourceTree = "<group>"; };
-		0C6EC8E91E2F48B6009744FF /* AppDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDesign.swift; sourceTree = "<group>"; };
-		0C6EC8EA1E2F48B6009744FF /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		0C6EC8EB1E2F48B6009744FF /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		0C6EC8F11E2F48B6009744FF /* CategoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryVC.xib; sourceTree = "<group>"; };
-		0C6EC8F31E2F48B6009744FF /* CareServicesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareServicesCell.xib; sourceTree = "<group>"; };
-		0C6EC8F41E2F48B6009744FF /* cellMedication.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellMedication.xib; sourceTree = "<group>"; };
-		0C6EC8F51E2F48B6009744FF /* EditProfile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfile.xib; sourceTree = "<group>"; };
-		0C6EC8F61E2F48B6009744FF /* MedicationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicationVC.xib; sourceTree = "<group>"; };
-		0C6EC8F71E2F48B6009744FF /* SetupServicesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupServicesVC.xib; sourceTree = "<group>"; };
-		0C6EC8F81E2F48B6009744FF /* SignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
-		0C6EC8F91E2F48B6009744FF /* VerificationLoadingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationLoadingVC.xib; sourceTree = "<group>"; };
-		0C6EC8FA1E2F48B6009744FF /* VerificationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationVC.xib; sourceTree = "<group>"; };
-		0C6EC9121E2F48CB009744FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0C6EC9141E2F5B57009744FF /* PaymentDetailsVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentDetailsVc.swift; sourceTree = "<group>"; };
-		0C6EC9181E2F5C01009744FF /* PaymentDetailsVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentDetailsVc.xib; sourceTree = "<group>"; };
-		0C6EC91A1E2F71F1009744FF /* ThanksVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksVc.swift; sourceTree = "<group>"; };
-		0C6EC91E1E2F722C009744FF /* ThanksVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThanksVc.xib; sourceTree = "<group>"; };
-		0C6EC9201E2F79B5009744FF /* AppointmentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentVC.swift; sourceTree = "<group>"; };
-		0C6EC9241E2F79F8009744FF /* AppointmentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentVC.xib; sourceTree = "<group>"; };
-
-		0C849E611E2DF3E50078DA28 /* CategoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryVC.xib; sourceTree = "<group>"; };
-		0C849E621E2DF3E50078DA28 /* SignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
-		0C849E631E2DF3E50078DA28 /* VerificationLoadingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationLoadingVC.xib; sourceTree = "<group>"; };
-		0C849E641E2DF3E50078DA28 /* VerificationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationVC.xib; sourceTree = "<group>"; };
-		0C849E691E2DF4500078DA28 /* CategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
-		0C849E6B1E2DF4500078DA28 /* VerificationLoadingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationLoadingVC.swift; sourceTree = "<group>"; };
-		0C849E6C1E2DF4500078DA28 /* VerificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationVC.swift; sourceTree = "<group>"; };
-		0C849E711E2DFAF80078DA28 /* EditProfile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfile.xib; sourceTree = "<group>"; };
-		0C849E751E2DFB170078DA28 /* EditProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
-
-		0C849E791E2DFC340078DA28 /* noimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = noimg.png; sourceTree = "<group>"; };
-		0C849E7B1E2E27CC0078DA28 /* rightmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rightmark.png; sourceTree = "<group>"; };
+		0C19A2AF1E3731B30014B01C /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add_button.png; path = AppImages/add_button.png; sourceTree = "<group>"; };
+		0C19A2B01E3731B30014B01C /* bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bell.png; path = AppImages/bell.png; sourceTree = "<group>"; };
+		0C19A2B11E3731B30014B01C /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = AppImages/camera.png; sourceTree = "<group>"; };
+		0C19A2B21E3731B30014B01C /* go-back-left-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "go-back-left-arrow.png"; path = "AppImages/go-back-left-arrow.png"; sourceTree = "<group>"; };
+		0C19A2B31E3731B30014B01C /* Home-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Home-50.png"; path = "AppImages/Home-50.png"; sourceTree = "<group>"; };
+		0C19A2B41E3731B30014B01C /* noimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noimg.png; path = AppImages/noimg.png; sourceTree = "<group>"; };
+		0C19A2B51E3731B30014B01C /* rightmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rightmark.png; path = AppImages/rightmark.png; sourceTree = "<group>"; };
+		0C19A2B61E3731B30014B01C /* visa.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = visa.png; path = AppImages/visa.png; sourceTree = "<group>"; };
+		0C19A2BF1E3731EF0014B01C /* FSCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendar.h; path = FSCalendar/FSCalendar.h; sourceTree = "<group>"; };
+		0C19A2C01E3731EF0014B01C /* FSCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendar.m; path = FSCalendar/FSCalendar.m; sourceTree = "<group>"; };
+		0C19A2C11E3731EF0014B01C /* FSCalendar+Deprecated.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "FSCalendar+Deprecated.m"; path = "FSCalendar/FSCalendar+Deprecated.m"; sourceTree = "<group>"; };
+		0C19A2C21E3731EF0014B01C /* FSCalendarAppearance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarAppearance.h; path = FSCalendar/FSCalendarAppearance.h; sourceTree = "<group>"; };
+		0C19A2C31E3731EF0014B01C /* FSCalendarAppearance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarAppearance.m; path = FSCalendar/FSCalendarAppearance.m; sourceTree = "<group>"; };
+		0C19A2C41E3731EF0014B01C /* FSCalendarCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarCalculator.h; path = FSCalendar/FSCalendarCalculator.h; sourceTree = "<group>"; };
+		0C19A2C51E3731EF0014B01C /* FSCalendarCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCalculator.m; path = FSCalendar/FSCalendarCalculator.m; sourceTree = "<group>"; };
+		0C19A2C61E3731EF0014B01C /* FSCalendarCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarCell.h; path = FSCalendar/FSCalendarCell.h; sourceTree = "<group>"; };
+		0C19A2C71E3731EF0014B01C /* FSCalendarCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCell.m; path = FSCalendar/FSCalendarCell.m; sourceTree = "<group>"; };
+		0C19A2C81E3731EF0014B01C /* FSCalendarCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarCollectionView.h; path = FSCalendar/FSCalendarCollectionView.h; sourceTree = "<group>"; };
+		0C19A2C91E3731EF0014B01C /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCollectionView.m; path = FSCalendar/FSCalendarCollectionView.m; sourceTree = "<group>"; };
+		0C19A2CA1E3731EF0014B01C /* FSCalendarCollectionViewLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarCollectionViewLayout.h; path = FSCalendar/FSCalendarCollectionViewLayout.h; sourceTree = "<group>"; };
+		0C19A2CB1E3731EF0014B01C /* FSCalendarCollectionViewLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCollectionViewLayout.m; path = FSCalendar/FSCalendarCollectionViewLayout.m; sourceTree = "<group>"; };
+		0C19A2CC1E3731EF0014B01C /* FSCalendarConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarConstants.h; path = FSCalendar/FSCalendarConstants.h; sourceTree = "<group>"; };
+		0C19A2CD1E3731EF0014B01C /* FSCalendarConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarConstants.m; path = FSCalendar/FSCalendarConstants.m; sourceTree = "<group>"; };
+		0C19A2CE1E3731EF0014B01C /* FSCalendarDelegationFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarDelegationFactory.h; path = FSCalendar/FSCalendarDelegationFactory.h; sourceTree = "<group>"; };
+		0C19A2CF1E3731EF0014B01C /* FSCalendarDelegationFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarDelegationFactory.m; path = FSCalendar/FSCalendarDelegationFactory.m; sourceTree = "<group>"; };
+		0C19A2D01E3731EF0014B01C /* FSCalendarDelegationProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarDelegationProxy.h; path = FSCalendar/FSCalendarDelegationProxy.h; sourceTree = "<group>"; };
+		0C19A2D11E3731EF0014B01C /* FSCalendarDelegationProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarDelegationProxy.m; path = FSCalendar/FSCalendarDelegationProxy.m; sourceTree = "<group>"; };
+		0C19A2D21E3731EF0014B01C /* FSCalendarDynamicHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarDynamicHeader.h; path = FSCalendar/FSCalendarDynamicHeader.h; sourceTree = "<group>"; };
+		0C19A2D31E3731EF0014B01C /* FSCalendarExtensions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarExtensions.h; path = FSCalendar/FSCalendarExtensions.h; sourceTree = "<group>"; };
+		0C19A2D41E3731EF0014B01C /* FSCalendarExtensions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarExtensions.m; path = FSCalendar/FSCalendarExtensions.m; sourceTree = "<group>"; };
+		0C19A2D51E3731EF0014B01C /* FSCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarHeaderView.h; path = FSCalendar/FSCalendarHeaderView.h; sourceTree = "<group>"; };
+		0C19A2D61E3731EF0014B01C /* FSCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarHeaderView.m; path = FSCalendar/FSCalendarHeaderView.m; sourceTree = "<group>"; };
+		0C19A2D71E3731EF0014B01C /* FSCalendarScopeHandle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarScopeHandle.h; path = FSCalendar/FSCalendarScopeHandle.h; sourceTree = "<group>"; };
+		0C19A2D81E3731EF0014B01C /* FSCalendarScopeHandle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarScopeHandle.m; path = FSCalendar/FSCalendarScopeHandle.m; sourceTree = "<group>"; };
+		0C19A2D91E3731EF0014B01C /* FSCalendarStickyHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarStickyHeader.h; path = FSCalendar/FSCalendarStickyHeader.h; sourceTree = "<group>"; };
+		0C19A2DA1E3731EF0014B01C /* FSCalendarStickyHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarStickyHeader.m; path = FSCalendar/FSCalendarStickyHeader.m; sourceTree = "<group>"; };
+		0C19A2DB1E3731EF0014B01C /* FSCalendarTransitionCoordinator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarTransitionCoordinator.h; path = FSCalendar/FSCalendarTransitionCoordinator.h; sourceTree = "<group>"; };
+		0C19A2DC1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarTransitionCoordinator.m; path = FSCalendar/FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
+		0C19A2DD1E3731EF0014B01C /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarWeekdayView.h; path = FSCalendar/FSCalendarWeekdayView.h; sourceTree = "<group>"; };
+		0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWeekdayView.m; path = FSCalendar/FSCalendarWeekdayView.m; sourceTree = "<group>"; };
+		0C91A8961E31F51E0000955E /* AppoinmentHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppoinmentHeaderCell.swift; sourceTree = "<group>"; };
+		0C91A8981E320B580000955E /* ReferealVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReferealVC.xib; sourceTree = "<group>"; };
+		0C91A89A1E320BFC0000955E /* ReferealVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferealVC.swift; sourceTree = "<group>"; };
+		0C91A8A51E3230530000955E /* PersonHistoryCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonHistoryCell.xib; sourceTree = "<group>"; };
+		0C91A8A81E32306D0000955E /* PersonHistoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PersonHistoryCell.swift; sourceTree = "<group>"; };
+		0CAC45D41E37214700C79AFA /* AssistCare-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AssistCare-Bridging-Header.h"; sourceTree = "<group>"; };
+		0CAC45D71E37219800C79AFA /* GoogleSignIn.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleSignIn.framework; sourceTree = "<group>"; };
+		0CAC45D91E3721FA00C79AFA /* GoogleSignIn.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GoogleSignIn.bundle; sourceTree = "<group>"; };
+		0CAC45DB1E3724F600C79AFA /* AddressBook.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AddressBook.framework; path = System/Library/Frameworks/AddressBook.framework; sourceTree = SDKROOT; };
+		0CAC45DD1E37250900C79AFA /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		0CAC45DF1E37252000C79AFA /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		0CAC45E11E37253C00C79AFA /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
+		0CAC45E31E37254300C79AFA /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		0CAC45E51E372E8100C79AFA /* ManagePaymentCardMethodVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagePaymentCardMethodVC.swift; sourceTree = "<group>"; };
+		0CAC45E71E372E9F00C79AFA /* ManagePaymentCardMethodVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManagePaymentCardMethodVC.xib; sourceTree = "<group>"; };
+		0CAC45E91E372EDA00C79AFA /* PaymentCardDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentCardDetailVC.xib; sourceTree = "<group>"; };
+		0CAC45EB1E372EFC00C79AFA /* PaymentCardDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCardDetailVC.swift; sourceTree = "<group>"; };
+		0CAC45ED1E372F3900C79AFA /* PaymentDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentDetailCell.swift; sourceTree = "<group>"; };
+		0CAC45EF1E372F5500C79AFA /* PaymentDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentDetailCell.xib; sourceTree = "<group>"; };
 		0CBA41E11E2CAA9A0008C8E4 /* AssistCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssistCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBA41E41E2CAA9A0008C8E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CBA41EB1E2CAA9A0008C8E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -144,23 +195,57 @@
 		0CBA42001E2CAA9A0008C8E4 /* AssistCareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AssistCareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBA42041E2CAA9A0008C8E4 /* AssistCareUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AssistCareUITests.swift; sourceTree = "<group>"; };
 		0CBA42061E2CAA9A0008C8E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-
-
-		24562A371E30860C000814C6 /* NewAppoinmentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewAppoinmentVC.xib; sourceTree = "<group>"; };
-		24562A3A1E308636000814C6 /* CareServicesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareServicesCell.xib; sourceTree = "<group>"; };
-		24562A401E308699000814C6 /* SetupServicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupServicesVC.swift; sourceTree = "<group>"; };
-		24562A8B1E308706000814C6 /* MedicationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationVC.swift; sourceTree = "<group>"; };
-		24562A8D1E30871B000814C6 /* NewAppoinmentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAppoinmentVC.swift; sourceTree = "<group>"; };
-		24562A8F1E308734000814C6 /* SetupServicesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupServicesVC.xib; sourceTree = "<group>"; };
-		24562A911E30875F000814C6 /* CareServicesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CareServicesCell.swift; path = CellControllers/CareServicesCell.swift; sourceTree = "<group>"; };
-		24562A9B1E308852000814C6 /* AppDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDesign.swift; sourceTree = "<group>"; };
-		24562A9C1E308852000814C6 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
-		24562A9F1E308897000814C6 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
-		24562AA11E3088D9000814C6 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
-		24562AA31E308900000814C6 /* cellMedication.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellMedication.xib; sourceTree = "<group>"; };
-		24562AA51E30891A000814C6 /* cellMedication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellMedication.swift; sourceTree = "<group>"; };
-		24562AA71E30899F000814C6 /* MedicationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicationVC.xib; sourceTree = "<group>"; };
-
+		24194F321E31E1B100982135 /* CreateProfileFirst.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileFirst.swift; sourceTree = "<group>"; };
+		24194F331E31E1B100982135 /* TabBarVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBarVC.swift; sourceTree = "<group>"; };
+		24194F361E31E1BD00982135 /* MapAnnotation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapAnnotation.swift; sourceTree = "<group>"; };
+		24194F381E31E1CD00982135 /* CreateProfileFirst.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateProfileFirst.xib; sourceTree = "<group>"; };
+		243130B81E2F98B9006F24D4 /* NewAppoinmentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NewAppoinmentVC.xib; sourceTree = "<group>"; };
+		243130BA1E2F98DA006F24D4 /* NewAppoinmentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewAppoinmentVC.swift; sourceTree = "<group>"; };
+		243705C41E2F49C100005416 /* CareServicesCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareServicesCell.swift; sourceTree = "<group>"; };
+		243705C71E2F49C100005416 /* CategoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryVC.swift; sourceTree = "<group>"; };
+		243705C81E2F49C100005416 /* EditProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfile.swift; sourceTree = "<group>"; };
+		243705C91E2F49C100005416 /* MedicationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MedicationVC.swift; sourceTree = "<group>"; };
+		243705CA1E2F49C100005416 /* SetupServicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupServicesVC.swift; sourceTree = "<group>"; };
+		243705CB1E2F49C100005416 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		243705CC1E2F49C100005416 /* VerificationLoadingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationLoadingVC.swift; sourceTree = "<group>"; };
+		243705CD1E2F49C100005416 /* VerificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationVC.swift; sourceTree = "<group>"; };
+		243705CF1E2F49C100005416 /* AppDesign.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDesign.swift; sourceTree = "<group>"; };
+		243705D01E2F49C100005416 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		243705D11E2F49C100005416 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		243705D41E2F49C100005416 /* CategoryVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryVC.xib; sourceTree = "<group>"; };
+		243705D61E2F49C100005416 /* CareServicesCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareServicesCell.xib; sourceTree = "<group>"; };
+		243705D71E2F49C100005416 /* cellMedication.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = cellMedication.xib; sourceTree = "<group>"; };
+		243705D81E2F49C100005416 /* EditProfile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfile.xib; sourceTree = "<group>"; };
+		243705D91E2F49C100005416 /* MedicationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MedicationVC.xib; sourceTree = "<group>"; };
+		243705DA1E2F49C100005416 /* SetupServicesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SetupServicesVC.xib; sourceTree = "<group>"; };
+		243705DB1E2F49C100005416 /* SignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
+		243705DC1E2F49C100005416 /* VerificationLoadingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationLoadingVC.xib; sourceTree = "<group>"; };
+		243705DD1E2F49C100005416 /* VerificationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationVC.xib; sourceTree = "<group>"; };
+		243705E01E2F49C100005416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		24562AA91E309608000814C6 /* AppointmentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentVC.swift; sourceTree = "<group>"; };
+		24562AAA1E309608000814C6 /* PaymentDetailsVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentDetailsVc.swift; sourceTree = "<group>"; };
+		24562AAB1E309608000814C6 /* ThanksVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksVc.swift; sourceTree = "<group>"; };
+		24562AAF1E30963B000814C6 /* AppointmentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppointmentVC.xib; sourceTree = "<group>"; };
+		24562AB01E30963B000814C6 /* PaymentDetailsVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentDetailsVc.xib; sourceTree = "<group>"; };
+		24562AB11E30963B000814C6 /* ThanksVc.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ThanksVc.xib; sourceTree = "<group>"; };
+		24562AB71E3096C4000814C6 /* cellMedication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cellMedication.swift; sourceTree = "<group>"; };
+		24562AC91E30C5F6000814C6 /* AppoinmentHeaderCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AppoinmentHeaderCell.xib; sourceTree = "<group>"; };
+		24562ACC1E30D07D000814C6 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		24562ACE1E30D0A0000814C6 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		24562AD01E30D0B5000814C6 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		24562AD21E30D0BF000814C6 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		24562AD41E30D0D3000814C6 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		24562AD61E30D0DA000814C6 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		24562AD81E30D0E2000814C6 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		24562ADA1E30D0EA000814C6 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		24562ADC1E30D0F2000814C6 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		24562ADE1E30D0F9000814C6 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		24562AE01E30D103000814C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		24562AE21E30D10B000814C6 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		24562AE41E30D111000814C6 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		24562AE61E30D128000814C6 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		24562AE81E30D132000814C6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		24562B051E30D7E8000814C6 /* GooglePlacePicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlacePicker.bundle; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +253,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24562ADF1E30D0F9000814C6 /* UIKit.framework in Frameworks */,
+				0CAC45E41E37254300C79AFA /* Security.framework in Frameworks */,
+				0CAC45E21E37253C00C79AFA /* MediaPlayer.framework in Frameworks */,
+				24562AE51E30D111000814C6 /* CoreGraphics.framework in Frameworks */,
+				24562AD91E30D0E2000814C6 /* CoreText.framework in Frameworks */,
+				0CAC45E01E37252000C79AFA /* CoreMotion.framework in Frameworks */,
+				0CAC45DE1E37250900C79AFA /* AssetsLibrary.framework in Frameworks */,
+				0CAC45DC1E3724F600C79AFA /* AddressBook.framework in Frameworks */,
+				24562AE91E30D132000814C6 /* libz.tbd in Frameworks */,
+				24562AE71E30D128000814C6 /* libc++.tbd in Frameworks */,
+				24562AE31E30D10B000814C6 /* CoreLocation.framework in Frameworks */,
+				24562AE11E30D103000814C6 /* Foundation.framework in Frameworks */,
+				24562ADD1E30D0F2000814C6 /* MapKit.framework in Frameworks */,
+				0CAC45D81E37219800C79AFA /* GoogleSignIn.framework in Frameworks */,
+				24562ADB1E30D0EA000814C6 /* CoreData.framework in Frameworks */,
+				24562AD71E30D0DA000814C6 /* GLKit.framework in Frameworks */,
+				24562AD51E30D0D3000814C6 /* ImageIO.framework in Frameworks */,
+				24562AD31E30D0BF000814C6 /* OpenGLES.framework in Frameworks */,
+				24562AD11E30D0B5000814C6 /* QuartzCore.framework in Frameworks */,
+				24562ACF1E30D0A0000814C6 /* SystemConfiguration.framework in Frameworks */,
+				24562ACD1E30D07D000814C6 /* Accelerate.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,163 +294,58 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0C6EC8DB1E2F48B6009744FF /* BusinessLayer */ = {
+		0CAC45A31E37210700C79AFA /* FSCalendar */ = {
 			isa = PBXGroup;
 			children = (
-				0C6EC8DC1E2F48B6009744FF /* Controllers */,
-				0C6EC8E81E2F48B6009744FF /* Helpers */,
+				0C19A2BF1E3731EF0014B01C /* FSCalendar.h */,
+				0C19A2C01E3731EF0014B01C /* FSCalendar.m */,
+				0C19A2C11E3731EF0014B01C /* FSCalendar+Deprecated.m */,
+				0C19A2C21E3731EF0014B01C /* FSCalendarAppearance.h */,
+				0C19A2C31E3731EF0014B01C /* FSCalendarAppearance.m */,
+				0C19A2C41E3731EF0014B01C /* FSCalendarCalculator.h */,
+				0C19A2C51E3731EF0014B01C /* FSCalendarCalculator.m */,
+				0C19A2C61E3731EF0014B01C /* FSCalendarCell.h */,
+				0C19A2C71E3731EF0014B01C /* FSCalendarCell.m */,
+				0C19A2C81E3731EF0014B01C /* FSCalendarCollectionView.h */,
+				0C19A2C91E3731EF0014B01C /* FSCalendarCollectionView.m */,
+				0C19A2CA1E3731EF0014B01C /* FSCalendarCollectionViewLayout.h */,
+				0C19A2CB1E3731EF0014B01C /* FSCalendarCollectionViewLayout.m */,
+				0C19A2CC1E3731EF0014B01C /* FSCalendarConstants.h */,
+				0C19A2CD1E3731EF0014B01C /* FSCalendarConstants.m */,
+				0C19A2CE1E3731EF0014B01C /* FSCalendarDelegationFactory.h */,
+				0C19A2CF1E3731EF0014B01C /* FSCalendarDelegationFactory.m */,
+				0C19A2D01E3731EF0014B01C /* FSCalendarDelegationProxy.h */,
+				0C19A2D11E3731EF0014B01C /* FSCalendarDelegationProxy.m */,
+				0C19A2D21E3731EF0014B01C /* FSCalendarDynamicHeader.h */,
+				0C19A2D31E3731EF0014B01C /* FSCalendarExtensions.h */,
+				0C19A2D41E3731EF0014B01C /* FSCalendarExtensions.m */,
+				0C19A2D51E3731EF0014B01C /* FSCalendarHeaderView.h */,
+				0C19A2D61E3731EF0014B01C /* FSCalendarHeaderView.m */,
+				0C19A2D71E3731EF0014B01C /* FSCalendarScopeHandle.h */,
+				0C19A2D81E3731EF0014B01C /* FSCalendarScopeHandle.m */,
+				0C19A2D91E3731EF0014B01C /* FSCalendarStickyHeader.h */,
+				0C19A2DA1E3731EF0014B01C /* FSCalendarStickyHeader.m */,
+				0C19A2DB1E3731EF0014B01C /* FSCalendarTransitionCoordinator.h */,
+				0C19A2DC1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m */,
+				0C19A2DD1E3731EF0014B01C /* FSCalendarWeekdayView.h */,
+				0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */,
 			);
-			path = BusinessLayer;
+			name = FSCalendar;
 			sourceTree = "<group>";
 		};
-		0C6EC8DC1E2F48B6009744FF /* Controllers */ = {
+		0CAC45F11E372FFA00C79AFA /* AppImages */ = {
 			isa = PBXGroup;
 			children = (
-				0C6EC8DD1E2F48B6009744FF /* CellControllers */,
-				0C6EC8DF1E2F48B6009744FF /* cellMedication.swift */,
-				0C6EC8E01E2F48B6009744FF /* ViewControllers */,
+				0C19A2AF1E3731B30014B01C /* add_button.png */,
+				0C19A2B01E3731B30014B01C /* bell.png */,
+				0C19A2B11E3731B30014B01C /* camera.png */,
+				0C19A2B21E3731B30014B01C /* go-back-left-arrow.png */,
+				0C19A2B31E3731B30014B01C /* Home-50.png */,
+				0C19A2B41E3731B30014B01C /* noimg.png */,
+				0C19A2B51E3731B30014B01C /* rightmark.png */,
+				0C19A2B61E3731B30014B01C /* visa.png */,
 			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
-		0C6EC8DD1E2F48B6009744FF /* CellControllers */ = {
-			isa = PBXGroup;
-			children = (
-				0C6EC8DE1E2F48B6009744FF /* CareServicesCell.swift */,
-			);
-			path = CellControllers;
-			sourceTree = "<group>";
-		};
-		0C6EC8E01E2F48B6009744FF /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				0C6EC8E11E2F48B6009744FF /* CategoryVC.swift */,
-				0C6EC8E21E2F48B6009744FF /* EditProfile.swift */,
-				0C6EC8E31E2F48B6009744FF /* MedicationVC.swift */,
-				0C6EC8E41E2F48B6009744FF /* SetupServicesVC.swift */,
-				0C6EC8E51E2F48B6009744FF /* SignUpVC.swift */,
-				0C6EC8E61E2F48B6009744FF /* VerificationLoadingVC.swift */,
-				0C6EC8E71E2F48B6009744FF /* VerificationVC.swift */,
-				0C6EC9141E2F5B57009744FF /* PaymentDetailsVc.swift */,
-				0C6EC91A1E2F71F1009744FF /* ThanksVc.swift */,
-				0C6EC9201E2F79B5009744FF /* AppointmentVC.swift */,
-			);
-
-			path = ViewControllers;
-
-			path = PresentationLayer;
-
-			sourceTree = "<group>";
-		};
-		0C6EC8E81E2F48B6009744FF /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-
-				0C6EC8E91E2F48B6009744FF /* AppDesign.swift */,
-				0C6EC8EA1E2F48B6009744FF /* Constant.swift */,
-				0C6EC8EB1E2F48B6009744FF /* Extension.swift */,
-
-				24562A391E308636000814C6 /* CellView */,
-				24562AA71E30899F000814C6 /* MedicationVC.xib */,
-				24562A8F1E308734000814C6 /* SetupServicesVC.xib */,
-				24562A371E30860C000814C6 /* NewAppoinmentVC.xib */,
-				0C849E711E2DFAF80078DA28 /* EditProfile.xib */,
-				0C849E611E2DF3E50078DA28 /* CategoryVC.xib */,
-				0C849E621E2DF3E50078DA28 /* SignUpVC.xib */,
-				0C849E631E2DF3E50078DA28 /* VerificationLoadingVC.xib */,
-				0C849E641E2DF3E50078DA28 /* VerificationVC.xib */,
-
-			);
-			path = Helpers;
-			sourceTree = "<group>";
-		};
-
-		0C6EC8EC1E2F48B6009744FF /* DataLayer */ = {
-			isa = PBXGroup;
-			children = (
-				0C6EC8ED1E2F48B6009744FF /* Models */,
-				0C6EC8EE1E2F48B6009744FF /* ServerAPI */,
-			);
-			path = DataLayer;
-			sourceTree = "<group>";
-		};
-		0C6EC8ED1E2F48B6009744FF /* Models */ = {
-
-		0C849E561E2DF2B20078DA28 /* BusinessLayer */ = {
-
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		0C6EC8EE1E2F48B6009744FF /* ServerAPI */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ServerAPI;
-			sourceTree = "<group>";
-		};
-
-		0C6EC8EF1E2F48B6009744FF /* PresentationLayer */ = {
-			isa = PBXGroup;
-			children = (
-				0C6EC8F01E2F48B6009744FF /* Views */,
-			);
-			path = PresentationLayer;
-			sourceTree = "<group>";
-		};
-		0C6EC8F01E2F48B6009744FF /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				0C6EC9241E2F79F8009744FF /* AppointmentVC.xib */,
-				0C6EC91E1E2F722C009744FF /* ThanksVc.xib */,
-			
-			
-				0C6EC8F21E2F48B6009744FF /* CellView */,
-				0C6EC8F51E2F48B6009744FF /* EditProfile.xib */,
-		
-				
-				
-				
-
-		0C849E591E2DF2B20078DA28 /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				24562AA11E3088D9000814C6 /* SignUpVC.swift */,
-				24562A8D1E30871B000814C6 /* NewAppoinmentVC.swift */,
-				24562A8B1E308706000814C6 /* MedicationVC.swift */,
-				24562A401E308699000814C6 /* SetupServicesVC.swift */,
-				
-				0C849E691E2DF4500078DA28 /* CategoryVC.swift */,
-				0C849E6B1E2DF4500078DA28 /* VerificationLoadingVC.swift */,
-				0C849E6C1E2DF4500078DA28 /* VerificationVC.swift */,
-
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		0C6EC8F21E2F48B6009744FF /* CellView */ = {
-			isa = PBXGroup;
-			children = (
-
-				0C6EC8F31E2F48B6009744FF /* CareServicesCell.xib */,
-				0C6EC8F41E2F48B6009744FF /* cellMedication.xib */,
-
-				24562A9F1E308897000814C6 /* Constant.swift */,
-				24562A9B1E308852000814C6 /* AppDesign.swift */,
-				24562A9C1E308852000814C6 /* Extension.swift */,
-
-			);
-			path = CellView;
-			sourceTree = "<group>";
-		};
-		0C6EC9101E2F48CB009744FF /* Base.lproj */ = {
-			isa = PBXGroup;
-			children = (
-				0C6EC9111E2F48CB009744FF /* LaunchScreen.storyboard */,
-			);
-			path = Base.lproj;
+			name = AppImages;
 			sourceTree = "<group>";
 		};
 		0CBA41D81E2CAA9A0008C8E4 = {
@@ -354,6 +355,7 @@
 				0CBA41E31E2CAA9A0008C8E4 /* AssistCare */,
 				0CBA41F81E2CAA9A0008C8E4 /* AssistCareTests */,
 				0CBA42031E2CAA9A0008C8E4 /* AssistCareUITests */,
+				24562ACB1E30D07D000814C6 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -370,18 +372,14 @@
 		0CBA41E31E2CAA9A0008C8E4 /* AssistCare */ = {
 			isa = PBXGroup;
 			children = (
-				0C6EC9101E2F48CB009744FF /* Base.lproj */,
-				0C6EC8DB1E2F48B6009744FF /* BusinessLayer */,
-				0C6EC8EC1E2F48B6009744FF /* DataLayer */,
-				0C6EC8EF1E2F48B6009744FF /* PresentationLayer */,
-				0C849E7B1E2E27CC0078DA28 /* rightmark.png */,
-				0C849E791E2DFC340078DA28 /* noimg.png */,
-
-
-				0C849E531E2DF29B0078DA28 /* PresentationLayer */,
-				0C849E561E2DF2B20078DA28 /* BusinessLayer */,
-				0C849E501E2DF28B0078DA28 /* DataLayer */,
-r
+				0CAC45F11E372FFA00C79AFA /* AppImages */,
+				24562B051E30D7E8000814C6 /* GooglePlacePicker.bundle */,
+				0CAC45D91E3721FA00C79AFA /* GoogleSignIn.bundle */,
+				0CAC45D41E37214700C79AFA /* AssistCare-Bridging-Header.h */,
+				0CAC45A31E37210700C79AFA /* FSCalendar */,
+				243705C11E2F49C100005416 /* BusinessLayer */,
+				243705D21E2F49C100005416 /* PresentationLayer */,
+				243705DE1E2F49C100005416 /* Base.lproj */,
 				0CBA41E41E2CAA9A0008C8E4 /* AppDelegate.swift */,
 				0CBA41EB1E2CAA9A0008C8E4 /* Assets.xcassets */,
 				0CBA41ED1E2CAA9A0008C8E4 /* LaunchScreen.storyboard */,
@@ -408,27 +406,149 @@ r
 			path = AssistCareUITests;
 			sourceTree = "<group>";
 		};
-
-
-		24562A391E308636000814C6 /* CellView */ = {
+		243705C11E2F49C100005416 /* BusinessLayer */ = {
 			isa = PBXGroup;
 			children = (
-				24562AA31E308900000814C6 /* cellMedication.xib */,
-				24562A3A1E308636000814C6 /* CareServicesCell.xib */,
+				243705C21E2F49C100005416 /* Controllers */,
+				243705CE1E2F49C100005416 /* Helpers */,
+			);
+			path = BusinessLayer;
+			sourceTree = "<group>";
+		};
+		243705C21E2F49C100005416 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				243705C31E2F49C100005416 /* CellControllers */,
+				243705C61E2F49C100005416 /* ViewControllers */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		243705C31E2F49C100005416 /* CellControllers */ = {
+			isa = PBXGroup;
+			children = (
+				0C91A8A81E32306D0000955E /* PersonHistoryCell.swift */,
+				0C91A8961E31F51E0000955E /* AppoinmentHeaderCell.swift */,
+				24562AB71E3096C4000814C6 /* cellMedication.swift */,
+				243705C41E2F49C100005416 /* CareServicesCell.swift */,
+				0CAC45ED1E372F3900C79AFA /* PaymentDetailCell.swift */,
+			);
+			path = CellControllers;
+			sourceTree = "<group>";
+		};
+		243705C61E2F49C100005416 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				24194F321E31E1B100982135 /* CreateProfileFirst.swift */,
+				24194F331E31E1B100982135 /* TabBarVC.swift */,
+				24562AA91E309608000814C6 /* AppointmentVC.swift */,
+				24562AAA1E309608000814C6 /* PaymentDetailsVc.swift */,
+				24562AAB1E309608000814C6 /* ThanksVc.swift */,
+				243705C71E2F49C100005416 /* CategoryVC.swift */,
+				243705C81E2F49C100005416 /* EditProfile.swift */,
+				243705C91E2F49C100005416 /* MedicationVC.swift */,
+				243705CA1E2F49C100005416 /* SetupServicesVC.swift */,
+				243705CB1E2F49C100005416 /* SignUpVC.swift */,
+				243705CC1E2F49C100005416 /* VerificationLoadingVC.swift */,
+				243705CD1E2F49C100005416 /* VerificationVC.swift */,
+				243130BA1E2F98DA006F24D4 /* NewAppoinmentVC.swift */,
+				0CAC45EB1E372EFC00C79AFA /* PaymentCardDetailVC.swift */,
+				0CAC45E51E372E8100C79AFA /* ManagePaymentCardMethodVC.swift */,
+				0C91A89A1E320BFC0000955E /* ReferealVC.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		243705CE1E2F49C100005416 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				24194F361E31E1BD00982135 /* MapAnnotation.swift */,
+				243705CF1E2F49C100005416 /* AppDesign.swift */,
+				243705D01E2F49C100005416 /* Constant.swift */,
+				243705D11E2F49C100005416 /* Extension.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		243705D21E2F49C100005416 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				243705D31E2F49C100005416 /* Views */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		243705D31E2F49C100005416 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				243705D51E2F49C100005416 /* CellView */,
+				24194F381E31E1CD00982135 /* CreateProfileFirst.xib */,
+				24562AAF1E30963B000814C6 /* AppointmentVC.xib */,
+				24562AB01E30963B000814C6 /* PaymentDetailsVc.xib */,
+				24562AB11E30963B000814C6 /* ThanksVc.xib */,
+				243705D41E2F49C100005416 /* CategoryVC.xib */,
+				243705D81E2F49C100005416 /* EditProfile.xib */,
+				243705D91E2F49C100005416 /* MedicationVC.xib */,
+				243705DA1E2F49C100005416 /* SetupServicesVC.xib */,
+				243705DB1E2F49C100005416 /* SignUpVC.xib */,
+				243705DC1E2F49C100005416 /* VerificationLoadingVC.xib */,
+				243705DD1E2F49C100005416 /* VerificationVC.xib */,
+				243130B81E2F98B9006F24D4 /* NewAppoinmentVC.xib */,
+				0CAC45E91E372EDA00C79AFA /* PaymentCardDetailVC.xib */,
+				0CAC45E71E372E9F00C79AFA /* ManagePaymentCardMethodVC.xib */,
+				0C91A8981E320B580000955E /* ReferealVC.xib */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		243705D51E2F49C100005416 /* CellView */ = {
+			isa = PBXGroup;
+			children = (
+				0CAC45EF1E372F5500C79AFA /* PaymentDetailCell.xib */,
+				24562AC91E30C5F6000814C6 /* AppoinmentHeaderCell.xib */,
+				243705D61E2F49C100005416 /* CareServicesCell.xib */,
+				243705D71E2F49C100005416 /* cellMedication.xib */,
+				0C91A8A51E3230530000955E /* PersonHistoryCell.xib */,
 			);
 			path = CellView;
 			sourceTree = "<group>";
 		};
-		24C4D6A41E2DFA8800A2267D /* CellControllers */ = {
+		243705DE1E2F49C100005416 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				24562AA51E30891A000814C6 /* cellMedication.swift */,
-				24562A911E30875F000814C6 /* CareServicesCell.swift */,
+				243705DF1E2F49C100005416 /* LaunchScreen.storyboard */,
 			);
-			name = CellControllers;
+			path = Base.lproj;
 			sourceTree = "<group>";
 		};
-
+		24562ACB1E30D07D000814C6 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				0CAC45E31E37254300C79AFA /* Security.framework */,
+				0CAC45E11E37253C00C79AFA /* MediaPlayer.framework */,
+				0CAC45DF1E37252000C79AFA /* CoreMotion.framework */,
+				0CAC45DD1E37250900C79AFA /* AssetsLibrary.framework */,
+				0CAC45DB1E3724F600C79AFA /* AddressBook.framework */,
+				0CAC45D71E37219800C79AFA /* GoogleSignIn.framework */,
+				24562AE81E30D132000814C6 /* libz.tbd */,
+				24562AE61E30D128000814C6 /* libc++.tbd */,
+				24562AE41E30D111000814C6 /* CoreGraphics.framework */,
+				24562AE21E30D10B000814C6 /* CoreLocation.framework */,
+				24562AE01E30D103000814C6 /* Foundation.framework */,
+				24562ADE1E30D0F9000814C6 /* UIKit.framework */,
+				24562ADC1E30D0F2000814C6 /* MapKit.framework */,
+				24562ADA1E30D0EA000814C6 /* CoreData.framework */,
+				24562AD81E30D0E2000814C6 /* CoreText.framework */,
+				24562AD61E30D0DA000814C6 /* GLKit.framework */,
+				24562AD41E30D0D3000814C6 /* ImageIO.framework */,
+				24562AD21E30D0BF000814C6 /* OpenGLES.framework */,
+				24562AD01E30D0B5000814C6 /* QuartzCore.framework */,
+				24562ACE1E30D0A0000814C6 /* SystemConfiguration.framework */,
+				24562ACC1E30D07D000814C6 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -544,38 +664,39 @@ r
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-				0C6EC90D1E2F48B6009744FF /* SignUpVC.xib in Resources */,
-				0C6EC9091E2F48B6009744FF /* cellMedication.xib in Resources */,
-				0C6EC9081E2F48B6009744FF /* CareServicesCell.xib in Resources */,
-				0C6EC9131E2F48CB009744FF /* LaunchScreen.storyboard in Resources */,
-
-				0C849E7A1E2DFC340078DA28 /* noimg.png in Resources */,
-				0C6EC9191E2F5C01009744FF /* PaymentDetailsVc.xib in Resources */,
-				0C6EC90B1E2F48B6009744FF /* MedicationVC.xib in Resources */,
+				243705F41E2F49C100005416 /* VerificationLoadingVC.xib in Resources */,
+				243705EE1E2F49C100005416 /* CareServicesCell.xib in Resources */,
+				0C19A2B81E3731B30014B01C /* bell.png in Resources */,
+				0C91A8991E320B580000955E /* ReferealVC.xib in Resources */,
+				243705F31E2F49C100005416 /* SignUpVC.xib in Resources */,
+				0CAC45EA1E372EDA00C79AFA /* PaymentCardDetailVC.xib in Resources */,
+				0CAC45E81E372E9F00C79AFA /* ManagePaymentCardMethodVC.xib in Resources */,
+				0CAC45F01E372F5500C79AFA /* PaymentDetailCell.xib in Resources */,
+				243130B91E2F98B9006F24D4 /* NewAppoinmentVC.xib in Resources */,
+				0C19A2BD1E3731B30014B01C /* rightmark.png in Resources */,
+				0C19A2BB1E3731B30014B01C /* Home-50.png in Resources */,
+				0C19A2BE1E3731B30014B01C /* visa.png in Resources */,
+				243705ED1E2F49C100005416 /* CategoryVC.xib in Resources */,
+				0C19A2B71E3731B30014B01C /* add_button.png in Resources */,
+				0C19A2BC1E3731B30014B01C /* noimg.png in Resources */,
+				243705F11E2F49C100005416 /* MedicationVC.xib in Resources */,
 				0CBA41EF1E2CAA9A0008C8E4 /* LaunchScreen.storyboard in Resources */,
-v
-				0C6EC90C1E2F48B6009744FF /* SetupServicesVC.xib in Resources */,
-				0C6EC9251E2F79F8009744FF /* AppointmentVC.xib in Resources */,
-				0C6EC9071E2F48B6009744FF /* CategoryVC.xib in Resources */,
-
-				24562AA41E308900000814C6 /* cellMedication.xib in Resources */,
-
-				0C849E7C1E2E27CC0078DA28 /* rightmark.png in Resources */,
-				0C6EC90F1E2F48B6009744FF /* VerificationVC.xib in Resources */,
-				0C6EC90A1E2F48B6009744FF /* EditProfile.xib in Resources */,
+				24562B061E30D7E8000814C6 /* GooglePlacePicker.bundle in Resources */,
+				243705F21E2F49C100005416 /* SetupServicesVC.xib in Resources */,
+				24562AB21E30963B000814C6 /* AppointmentVC.xib in Resources */,
 				0CBA41EC1E2CAA9A0008C8E4 /* Assets.xcassets in Resources */,
-
-
-				0C6EC91F1E2F722C009744FF /* ThanksVc.xib in Resources */,
-
-				0C849E671E2DF3E50078DA28 /* VerificationLoadingVC.xib in Resources */,
-				24562A381E30860C000814C6 /* NewAppoinmentVC.xib in Resources */,
-				0C849E721E2DFAF80078DA28 /* EditProfile.xib in Resources */,
-				24562AA81E30899F000814C6 /* MedicationVC.xib in Resources */,
-				0C849E651E2DF3E50078DA28 /* CategoryVC.xib in Resources */,
-				0C849E681E2DF3E50078DA28 /* VerificationVC.xib in Resources */,
-
+				0C91A8A71E3230530000955E /* PersonHistoryCell.xib in Resources */,
+				0C19A2BA1E3731B30014B01C /* go-back-left-arrow.png in Resources */,
+				243705F51E2F49C100005416 /* VerificationVC.xib in Resources */,
+				0CAC45DA1E3721FA00C79AFA /* GoogleSignIn.bundle in Resources */,
+				24562AB31E30963B000814C6 /* PaymentDetailsVc.xib in Resources */,
+				24194F391E31E1CD00982135 /* CreateProfileFirst.xib in Resources */,
+				0C19A2B91E3731B30014B01C /* camera.png in Resources */,
+				24562ACA1E30C5F6000814C6 /* AppoinmentHeaderCell.xib in Resources */,
+				243705F61E2F49C100005416 /* LaunchScreen.storyboard in Resources */,
+				24562AB41E30963B000814C6 /* ThanksVc.xib in Resources */,
+				243705EF1E2F49C100005416 /* cellMedication.xib in Resources */,
+				243705F01E2F49C100005416 /* EditProfile.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -678,39 +799,48 @@ v
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-				0C6EC9011E2F48B6009744FF /* SignUpVC.swift in Sources */,
-				0C6EC9031E2F48B6009744FF /* VerificationVC.swift in Sources */,
-				0C6EC91C1E2F71F1009744FF /* ThanksVc.swift in Sources */,
-				0C6EC8FB1E2F48B6009744FF /* CareServicesCell.swift in Sources */,
-				0C6EC8FF1E2F48B6009744FF /* MedicationVC.swift in Sources */,
+				243705E71E2F49C100005416 /* SignUpVC.swift in Sources */,
+				243705E91E2F49C100005416 /* VerificationVC.swift in Sources */,
+				0C19A2E61E3731EF0014B01C /* FSCalendarConstants.m in Sources */,
+				0C19A2E11E3731EF0014B01C /* FSCalendarAppearance.m in Sources */,
+				0C19A2E51E3731EF0014B01C /* FSCalendarCollectionViewLayout.m in Sources */,
+				0C19A2DF1E3731EF0014B01C /* FSCalendar.m in Sources */,
+				0C19A2EC1E3731EF0014B01C /* FSCalendarStickyHeader.m in Sources */,
+				0C19A2E31E3731EF0014B01C /* FSCalendarCell.m in Sources */,
+				24194F371E31E1BD00982135 /* MapAnnotation.swift in Sources */,
+				0C19A2E71E3731EF0014B01C /* FSCalendarDelegationFactory.m in Sources */,
+				24194F351E31E1B100982135 /* TabBarVC.swift in Sources */,
+				243705E11E2F49C100005416 /* CareServicesCell.swift in Sources */,
+				24562AAC1E309608000814C6 /* AppointmentVC.swift in Sources */,
+				243705E51E2F49C100005416 /* MedicationVC.swift in Sources */,
 				0CBA41E51E2CAA9A0008C8E4 /* AppDelegate.swift in Sources */,
-				0C6EC9221E2F79B5009744FF /* AppointmentVC.swift in Sources */,
-				0C6EC8FD1E2F48B6009744FF /* CategoryVC.swift in Sources */,
-				0C6EC9021E2F48B6009744FF /* VerificationLoadingVC.swift in Sources */,
-				0C6EC9001E2F48B6009744FF /* SetupServicesVC.swift in Sources */,
-				0C6EC8FE1E2F48B6009744FF /* EditProfile.swift in Sources */,
-				0C6EC9061E2F48B6009744FF /* Extension.swift in Sources */,
-				0C6EC9041E2F48B6009744FF /* AppDesign.swift in Sources */,
-				0C6EC8FC1E2F48B6009744FF /* cellMedication.swift in Sources */,
-				0C6EC9161E2F5B57009744FF /* PaymentDetailsVc.swift in Sources */,
-				0C6EC9051E2F48B6009744FF /* Constant.swift in Sources */,
-
-				0C849E6D1E2DF4500078DA28 /* CategoryVC.swift in Sources */,
-				24562A411E308699000814C6 /* SetupServicesVC.swift in Sources */,
-				24562A8C1E308706000814C6 /* MedicationVC.swift in Sources */,
-				24562A9E1E308852000814C6 /* Extension.swift in Sources */,
-				24562A921E30875F000814C6 /* CareServicesCell.swift in Sources */,
-				0C849E6F1E2DF4500078DA28 /* VerificationLoadingVC.swift in Sources */,
-				0C849E701E2DF4500078DA28 /* VerificationVC.swift in Sources */,
-				0CBA41E51E2CAA9A0008C8E4 /* AppDelegate.swift in Sources */,
-				24562AA61E30891A000814C6 /* cellMedication.swift in Sources */,
-				0C849E761E2DFB170078DA28 /* EditProfile.swift in Sources */,
-				24562A9D1E308852000814C6 /* AppDesign.swift in Sources */,
-				24562AA21E3088D9000814C6 /* SignUpVC.swift in Sources */,
-				24562A8E1E30871B000814C6 /* NewAppoinmentVC.swift in Sources */,
-				24562AA01E308897000814C6 /* Constant.swift in Sources */,
-
+				0C19A2EB1E3731EF0014B01C /* FSCalendarScopeHandle.m in Sources */,
+				243705E31E2F49C100005416 /* CategoryVC.swift in Sources */,
+				0C19A2E81E3731EF0014B01C /* FSCalendarDelegationProxy.m in Sources */,
+				243130BB1E2F98DA006F24D4 /* NewAppoinmentVC.swift in Sources */,
+				243705E81E2F49C100005416 /* VerificationLoadingVC.swift in Sources */,
+				243705E61E2F49C100005416 /* SetupServicesVC.swift in Sources */,
+				0C19A2E41E3731EF0014B01C /* FSCalendarCollectionView.m in Sources */,
+				0C91A89B1E320BFC0000955E /* ReferealVC.swift in Sources */,
+				0C91A8971E31F51E0000955E /* AppoinmentHeaderCell.swift in Sources */,
+				0C19A2E91E3731EF0014B01C /* FSCalendarExtensions.m in Sources */,
+				24194F341E31E1B100982135 /* CreateProfileFirst.swift in Sources */,
+				0C91A8A91E32306D0000955E /* PersonHistoryCell.swift in Sources */,
+				0CAC45E61E372E8100C79AFA /* ManagePaymentCardMethodVC.swift in Sources */,
+				0C19A2EA1E3731EF0014B01C /* FSCalendarHeaderView.m in Sources */,
+				243705E41E2F49C100005416 /* EditProfile.swift in Sources */,
+				243705EC1E2F49C100005416 /* Extension.swift in Sources */,
+				24562AB81E3096C4000814C6 /* cellMedication.swift in Sources */,
+				243705EA1E2F49C100005416 /* AppDesign.swift in Sources */,
+				24562AAE1E309608000814C6 /* ThanksVc.swift in Sources */,
+				0C19A2EE1E3731EF0014B01C /* FSCalendarWeekdayView.m in Sources */,
+				0CAC45EE1E372F3900C79AFA /* PaymentDetailCell.swift in Sources */,
+				0C19A2ED1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m in Sources */,
+				24562AAD1E309608000814C6 /* PaymentDetailsVc.swift in Sources */,
+				0C19A2E21E3731EF0014B01C /* FSCalendarCalculator.m in Sources */,
+				0C19A2E01E3731EF0014B01C /* FSCalendar+Deprecated.m in Sources */,
+				0CAC45EC1E372EFC00C79AFA /* PaymentCardDetailVC.swift in Sources */,
+				243705EB1E2F49C100005416 /* Constant.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -746,18 +876,18 @@ v
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		0C6EC9111E2F48CB009744FF /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0C6EC9121E2F48CB009744FF /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
 		0CBA41ED1E2CAA9A0008C8E4 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				0CBA41EE1E2CAA9A0008C8E4 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		243705DF1E2F49C100005416 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				243705E01E2F49C100005416 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -862,11 +992,20 @@ v
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/AssistCare",
+				);
 				INFOPLIST_FILE = AssistCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Lanetteam.AssistCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "AssistCare-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -875,11 +1014,19 @@ v
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+					"$(PROJECT_DIR)/AssistCare",
+				);
 				INFOPLIST_FILE = AssistCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 				PRODUCT_BUNDLE_IDENTIFIER = Lanetteam.AssistCare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "AssistCare-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

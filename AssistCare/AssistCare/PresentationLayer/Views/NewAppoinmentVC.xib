@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -17,6 +17,8 @@
                 <outlet property="btnDateCancel" destination="k9h-7v-B5D" id="zpC-5z-89R"/>
                 <outlet property="btnDateOk" destination="x9w-bT-7qG" id="dOZ-vP-W9k"/>
                 <outlet property="btnDuration" destination="sFX-CJ-j28" id="5DO-BA-HW5"/>
+                <outlet property="btnHour" destination="ihD-kz-LnS" id="Ewh-7g-PlW"/>
+                <outlet property="btnMinute" destination="3r1-ml-EsY" id="ppB-0h-dB4"/>
                 <outlet property="btnOkay" destination="Bqv-az-gYt" id="Mma-zb-UJu"/>
                 <outlet property="btnPM" destination="QQd-uX-qWm" id="7gP-HI-HTu"/>
                 <outlet property="btnPopUpMessage" destination="c3w-8u-MVP" id="JER-sp-0DW"/>
@@ -32,6 +34,8 @@
                 <outlet property="lbPopUpServicesProvided" destination="lYF-rW-ha4" id="Jre-pF-1J0"/>
                 <outlet property="lbPopUpTime" destination="RqP-Pe-Qe8" id="4Ru-ka-krr"/>
                 <outlet property="lbYear" destination="M9G-6W-K0o" id="6vt-5F-gve"/>
+                <outlet property="lblPopUpAmPm" destination="kcd-Qx-5OI" id="0Nx-HG-Mr9"/>
+                <outlet property="lblPopUpTopTime" destination="pGg-PJ-GI9" id="Rix-0K-GB9"/>
                 <outlet property="mapView" destination="99D-HN-rhk" id="CHN-8j-Dv1"/>
                 <outlet property="pickerView" destination="ob3-Uc-Xee" id="xWy-N2-eUe"/>
                 <outlet property="scrollNewAppoinment" destination="llj-aT-lDs" id="gZ6-Um-JH4"/>
@@ -283,7 +287,7 @@
                 </view>
                 <view hidden="YES" contentMode="scaleToFill" misplaced="YES" id="f9P-qK-bng">
                     <rect key="frame" x="16" y="20" width="288" height="440"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" misplaced="YES" id="yof-hd-Prl">
                             <rect key="frame" x="9" y="85" width="270" height="270"/>
@@ -292,7 +296,46 @@
                         </view>
                         <view contentMode="scaleToFill" misplaced="YES" id="ryI-RI-DbE">
                             <rect key="frame" x="0.0" y="0.0" width="288" height="82"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text=":" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pGg-PJ-GI9">
+                                    <rect key="frame" x="137" y="15" width="10" height="54"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kcd-Qx-5OI">
+                                    <rect key="frame" x="199" y="48" width="33" height="21"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="right" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ihD-kz-LnS">
+                                    <rect key="frame" x="80" y="16" width="59" height="53"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                    <state key="normal" title="12">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnHour:" destination="-1" eventType="touchUpInside" id="bcj-hE-NiB"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3r1-ml-EsY">
+                                    <rect key="frame" x="147" y="15" width="61" height="54"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                    <state key="normal" title="00">
+                                        <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnMinute:" destination="-1" eventType="touchUpInside" id="zON-qr-H0i"/>
+                                    </connections>
+                                </button>
+                            </subviews>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         </view>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9Ge-uS-6hh">
@@ -336,7 +379,7 @@
                                 <color key="titleColor" red="0.21176470588235294" green="0.68235294117647061" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
                             </state>
                             <connections>
-                                <action selector="btnTimeCancel:" destination="-2" eventType="touchUpInside" id="fkb-0r-fPI"/>
+                                <action selector="btnTimeCancel:" destination="-1" eventType="touchUpInside" id="3wk-j1-ush"/>
                             </connections>
                         </button>
                     </subviews>
@@ -344,7 +387,7 @@
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="677" y="339"/>
+            <point key="canvasLocation" x="405" y="-153"/>
         </view>
     </objects>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

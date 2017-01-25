@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ManagePaymentMethodVC: UIViewController, UITextFieldDelegate {
+class ManagePaymentCardMethodVC: UIViewController, UITextFieldDelegate {
  
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var txtPaymentType: UITextField!
@@ -106,7 +106,6 @@ class ManagePaymentMethodVC: UIViewController, UITextFieldDelegate {
         }
         return true
     }
-    
     
     //Here perfom validation
     func validateText(){

@@ -44,11 +44,10 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().shouldFetchBasicProfile = true
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.login")
-//                GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.me")
+        GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.me")
         //
         GIDSignIn.sharedInstance().signInSilently()
     }
-    
     
     public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         print(user.authentication)

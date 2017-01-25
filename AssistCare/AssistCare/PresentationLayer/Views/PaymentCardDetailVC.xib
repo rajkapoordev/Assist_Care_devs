@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentDetailVC" customModule="AssistCare" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentCardDetailVC" customModule="AssistCare" customModuleProvider="target">
             <connections>
                 <outlet property="tblPaymentCardDetail" destination="NZs-su-Ppx" id="0iL-B3-MHn"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Ag2-BV-8Up"/>

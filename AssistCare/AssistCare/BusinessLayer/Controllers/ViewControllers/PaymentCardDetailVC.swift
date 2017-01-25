@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PaymentDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class PaymentCardDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
     @IBOutlet var tblPaymentCardDetail: UITableView!
     
@@ -61,12 +61,12 @@ class PaymentDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let managePaymentVC = ManagePaymentMethodVC(nibName: "ManagePaymentMethodVC", bundle: nil)
+        let managePaymentVC = ManagePaymentCardMethodVC(nibName: "ManagePaymentCardMethodVC", bundle: nil)
         self.navigationController?.pushViewController(managePaymentVC, animated: true)
     }
 
     func addNewPaymentDetail() {
-        let managePaymentVC = ManagePaymentMethodVC(nibName: "ManagePaymentMethodVC", bundle: nil)
+        let managePaymentVC = ManagePaymentCardMethodVC(nibName: "ManagePaymentCardMethodVC", bundle: nil)
         self.navigationController?.pushViewController(managePaymentVC, animated: true)
     }
 
