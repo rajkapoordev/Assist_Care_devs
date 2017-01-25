@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -16,6 +16,7 @@
                 <outlet property="btnFood" destination="JTd-oG-hnD" id="4cP-Wf-6vA"/>
                 <outlet property="btnFri" destination="4o3-ey-9od" id="5mc-aG-4lg"/>
                 <outlet property="btnMon" destination="djd-C1-QA6" id="YFo-fm-0FR"/>
+                <outlet property="btnNavBack" destination="Nt7-Dx-Avc" id="Mhc-ia-a3O"/>
                 <outlet property="btnSat" destination="5j2-Aj-Dd7" id="QxV-sr-8Jt"/>
                 <outlet property="btnSun" destination="NiF-jZ-Ioq" id="qde-6r-U2b"/>
                 <outlet property="btnThur" destination="QWL-xf-8ax" id="fy3-bp-biS"/>
@@ -23,9 +24,11 @@
                 <outlet property="btnTue" destination="xQt-wP-elL" id="ELi-cz-Jq0"/>
                 <outlet property="btnWed" destination="rCF-Xh-WLA" id="HcC-Je-irR"/>
                 <outlet property="lbAddMedication" destination="zjw-uy-QeA" id="v7d-TP-yna"/>
+                <outlet property="lblNavTitle" destination="8mk-NI-obF" id="HWN-D3-Fbe"/>
                 <outlet property="pickerView" destination="tSc-LB-9O1" id="cNW-kb-7oC"/>
                 <outlet property="txtMedicationName" destination="935-qo-ekv" id="Rvs-JF-7fi"/>
                 <outlet property="view" destination="iN0-l3-epB" id="8Fu-ez-9GM"/>
+                <outlet property="vwNavBar" destination="DVp-Sh-5GT" id="ZKi-uM-bcq"/>
                 <outlet property="vwOption" destination="yxc-qy-kqD" id="i8L-8o-qXI"/>
                 <outlet property="vwSubTime" destination="TtZ-yf-nfn" id="rMw-aC-h6E"/>
             </connections>
@@ -209,11 +212,37 @@
                         <action selector="btnWed:" destination="-1" eventType="touchUpInside" id="IBI-hl-PrK"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" misplaced="YES" id="DVp-Sh-5GT">
+                    <rect key="frame" x="0.0" y="20" width="320" height="58"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Medication" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="8mk-NI-obF">
+                            <rect key="frame" x="70" y="14" width="204" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="Nt7-Dx-Avc">
+                            <rect key="frame" x="17" y="19" width="25" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="back_nav.png"/>
+                            <connections>
+                                <action selector="btnNavBack:" destination="-1" eventType="touchUpInside" id="bri-go-VU3"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86274509799999999" green="0.27058823529999998" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="33" y="104"/>
+            <point key="canvasLocation" x="-342" y="125"/>
         </view>
     </objects>
+    <resources>
+        <image name="back_nav.png" width="24" height="24"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -10,7 +10,7 @@
 		0C19A2B71E3731B30014B01C /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2AF1E3731B30014B01C /* add_button.png */; };
 		0C19A2B81E3731B30014B01C /* bell.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B01E3731B30014B01C /* bell.png */; };
 		0C19A2B91E3731B30014B01C /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B11E3731B30014B01C /* camera.png */; };
-		0C19A2BA1E3731B30014B01C /* go-back-left-arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B21E3731B30014B01C /* go-back-left-arrow.png */; };
+		0C19A2BA1E3731B30014B01C /* back_nav.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B21E3731B30014B01C /* back_nav.png */; };
 		0C19A2BB1E3731B30014B01C /* Home-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B31E3731B30014B01C /* Home-50.png */; };
 		0C19A2BC1E3731B30014B01C /* noimg.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B41E3731B30014B01C /* noimg.png */; };
 		0C19A2BD1E3731B30014B01C /* rightmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B51E3731B30014B01C /* rightmark.png */; };
@@ -47,8 +47,8 @@
 		0CAC45E81E372E9F00C79AFA /* ManagePaymentCardMethodVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAC45E71E372E9F00C79AFA /* ManagePaymentCardMethodVC.xib */; };
 		0CAC45EA1E372EDA00C79AFA /* PaymentCardDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAC45E91E372EDA00C79AFA /* PaymentCardDetailVC.xib */; };
 		0CAC45EC1E372EFC00C79AFA /* PaymentCardDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAC45EB1E372EFC00C79AFA /* PaymentCardDetailVC.swift */; };
-		0CAC45EE1E372F3900C79AFA /* PaymentDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAC45ED1E372F3900C79AFA /* PaymentDetailCell.swift */; };
-		0CAC45F01E372F5500C79AFA /* PaymentDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAC45EF1E372F5500C79AFA /* PaymentDetailCell.xib */; };
+		0CAC45EE1E372F3900C79AFA /* PaymentCardDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CAC45ED1E372F3900C79AFA /* PaymentCardDetailCell.swift */; };
+		0CAC45F01E372F5500C79AFA /* PaymentCardDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0CAC45EF1E372F5500C79AFA /* PaymentCardDetailCell.xib */; };
 		0CBA41E51E2CAA9A0008C8E4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBA41E41E2CAA9A0008C8E4 /* AppDelegate.swift */; };
 		0CBA41EC1E2CAA9A0008C8E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0CBA41EB1E2CAA9A0008C8E4 /* Assets.xcassets */; };
 		0CBA41EF1E2CAA9A0008C8E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0CBA41ED1E2CAA9A0008C8E4 /* LaunchScreen.storyboard */; };
@@ -80,7 +80,6 @@
 		243705F31E2F49C100005416 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243705DB1E2F49C100005416 /* SignUpVC.xib */; };
 		243705F41E2F49C100005416 /* VerificationLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243705DC1E2F49C100005416 /* VerificationLoadingVC.xib */; };
 		243705F51E2F49C100005416 /* VerificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243705DD1E2F49C100005416 /* VerificationVC.xib */; };
-		243705F61E2F49C100005416 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 243705DF1E2F49C100005416 /* LaunchScreen.storyboard */; };
 		24562AAC1E309608000814C6 /* AppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562AA91E309608000814C6 /* AppointmentVC.swift */; };
 		24562AAD1E309608000814C6 /* PaymentDetailsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562AAA1E309608000814C6 /* PaymentDetailsVc.swift */; };
 		24562AAE1E309608000814C6 /* ThanksVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562AAB1E309608000814C6 /* ThanksVc.swift */; };
@@ -128,7 +127,7 @@
 		0C19A2AF1E3731B30014B01C /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add_button.png; path = AppImages/add_button.png; sourceTree = "<group>"; };
 		0C19A2B01E3731B30014B01C /* bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bell.png; path = AppImages/bell.png; sourceTree = "<group>"; };
 		0C19A2B11E3731B30014B01C /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = AppImages/camera.png; sourceTree = "<group>"; };
-		0C19A2B21E3731B30014B01C /* go-back-left-arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "go-back-left-arrow.png"; path = "AppImages/go-back-left-arrow.png"; sourceTree = "<group>"; };
+		0C19A2B21E3731B30014B01C /* back_nav.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = back_nav.png; path = AppImages/back_nav.png; sourceTree = "<group>"; };
 		0C19A2B31E3731B30014B01C /* Home-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Home-50.png"; path = "AppImages/Home-50.png"; sourceTree = "<group>"; };
 		0C19A2B41E3731B30014B01C /* noimg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = noimg.png; path = AppImages/noimg.png; sourceTree = "<group>"; };
 		0C19A2B51E3731B30014B01C /* rightmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = rightmark.png; path = AppImages/rightmark.png; sourceTree = "<group>"; };
@@ -182,8 +181,8 @@
 		0CAC45E71E372E9F00C79AFA /* ManagePaymentCardMethodVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ManagePaymentCardMethodVC.xib; sourceTree = "<group>"; };
 		0CAC45E91E372EDA00C79AFA /* PaymentCardDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentCardDetailVC.xib; sourceTree = "<group>"; };
 		0CAC45EB1E372EFC00C79AFA /* PaymentCardDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCardDetailVC.swift; sourceTree = "<group>"; };
-		0CAC45ED1E372F3900C79AFA /* PaymentDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentDetailCell.swift; sourceTree = "<group>"; };
-		0CAC45EF1E372F5500C79AFA /* PaymentDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentDetailCell.xib; sourceTree = "<group>"; };
+		0CAC45ED1E372F3900C79AFA /* PaymentCardDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCardDetailCell.swift; sourceTree = "<group>"; };
+		0CAC45EF1E372F5500C79AFA /* PaymentCardDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PaymentCardDetailCell.xib; sourceTree = "<group>"; };
 		0CBA41E11E2CAA9A0008C8E4 /* AssistCare.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AssistCare.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0CBA41E41E2CAA9A0008C8E4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0CBA41EB1E2CAA9A0008C8E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -221,7 +220,6 @@
 		243705DB1E2F49C100005416 /* SignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
 		243705DC1E2F49C100005416 /* VerificationLoadingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationLoadingVC.xib; sourceTree = "<group>"; };
 		243705DD1E2F49C100005416 /* VerificationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationVC.xib; sourceTree = "<group>"; };
-		243705E01E2F49C100005416 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		24562AA91E309608000814C6 /* AppointmentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentVC.swift; sourceTree = "<group>"; };
 		24562AAA1E309608000814C6 /* PaymentDetailsVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentDetailsVc.swift; sourceTree = "<group>"; };
 		24562AAB1E309608000814C6 /* ThanksVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksVc.swift; sourceTree = "<group>"; };
@@ -339,7 +337,7 @@
 				0C19A2AF1E3731B30014B01C /* add_button.png */,
 				0C19A2B01E3731B30014B01C /* bell.png */,
 				0C19A2B11E3731B30014B01C /* camera.png */,
-				0C19A2B21E3731B30014B01C /* go-back-left-arrow.png */,
+				0C19A2B21E3731B30014B01C /* back_nav.png */,
 				0C19A2B31E3731B30014B01C /* Home-50.png */,
 				0C19A2B41E3731B30014B01C /* noimg.png */,
 				0C19A2B51E3731B30014B01C /* rightmark.png */,
@@ -431,7 +429,7 @@
 				0C91A8961E31F51E0000955E /* AppoinmentHeaderCell.swift */,
 				24562AB71E3096C4000814C6 /* cellMedication.swift */,
 				243705C41E2F49C100005416 /* CareServicesCell.swift */,
-				0CAC45ED1E372F3900C79AFA /* PaymentDetailCell.swift */,
+				0CAC45ED1E372F3900C79AFA /* PaymentCardDetailCell.swift */,
 			);
 			path = CellControllers;
 			sourceTree = "<group>";
@@ -504,7 +502,7 @@
 		243705D51E2F49C100005416 /* CellView */ = {
 			isa = PBXGroup;
 			children = (
-				0CAC45EF1E372F5500C79AFA /* PaymentDetailCell.xib */,
+				0CAC45EF1E372F5500C79AFA /* PaymentCardDetailCell.xib */,
 				24562AC91E30C5F6000814C6 /* AppoinmentHeaderCell.xib */,
 				243705D61E2F49C100005416 /* CareServicesCell.xib */,
 				243705D71E2F49C100005416 /* cellMedication.xib */,
@@ -516,7 +514,6 @@
 		243705DE1E2F49C100005416 /* Base.lproj */ = {
 			isa = PBXGroup;
 			children = (
-				243705DF1E2F49C100005416 /* LaunchScreen.storyboard */,
 			);
 			path = Base.lproj;
 			sourceTree = "<group>";
@@ -671,7 +668,7 @@
 				243705F31E2F49C100005416 /* SignUpVC.xib in Resources */,
 				0CAC45EA1E372EDA00C79AFA /* PaymentCardDetailVC.xib in Resources */,
 				0CAC45E81E372E9F00C79AFA /* ManagePaymentCardMethodVC.xib in Resources */,
-				0CAC45F01E372F5500C79AFA /* PaymentDetailCell.xib in Resources */,
+				0CAC45F01E372F5500C79AFA /* PaymentCardDetailCell.xib in Resources */,
 				243130B91E2F98B9006F24D4 /* NewAppoinmentVC.xib in Resources */,
 				0C19A2BD1E3731B30014B01C /* rightmark.png in Resources */,
 				0C19A2BB1E3731B30014B01C /* Home-50.png in Resources */,
@@ -686,14 +683,13 @@
 				24562AB21E30963B000814C6 /* AppointmentVC.xib in Resources */,
 				0CBA41EC1E2CAA9A0008C8E4 /* Assets.xcassets in Resources */,
 				0C91A8A71E3230530000955E /* PersonHistoryCell.xib in Resources */,
-				0C19A2BA1E3731B30014B01C /* go-back-left-arrow.png in Resources */,
+				0C19A2BA1E3731B30014B01C /* back_nav.png in Resources */,
 				243705F51E2F49C100005416 /* VerificationVC.xib in Resources */,
 				0CAC45DA1E3721FA00C79AFA /* GoogleSignIn.bundle in Resources */,
 				24562AB31E30963B000814C6 /* PaymentDetailsVc.xib in Resources */,
 				24194F391E31E1CD00982135 /* CreateProfileFirst.xib in Resources */,
 				0C19A2B91E3731B30014B01C /* camera.png in Resources */,
 				24562ACA1E30C5F6000814C6 /* AppoinmentHeaderCell.xib in Resources */,
-				243705F61E2F49C100005416 /* LaunchScreen.storyboard in Resources */,
 				24562AB41E30963B000814C6 /* ThanksVc.xib in Resources */,
 				243705EF1E2F49C100005416 /* cellMedication.xib in Resources */,
 				243705F01E2F49C100005416 /* EditProfile.xib in Resources */,
@@ -834,7 +830,7 @@
 				243705EA1E2F49C100005416 /* AppDesign.swift in Sources */,
 				24562AAE1E309608000814C6 /* ThanksVc.swift in Sources */,
 				0C19A2EE1E3731EF0014B01C /* FSCalendarWeekdayView.m in Sources */,
-				0CAC45EE1E372F3900C79AFA /* PaymentDetailCell.swift in Sources */,
+				0CAC45EE1E372F3900C79AFA /* PaymentCardDetailCell.swift in Sources */,
 				0C19A2ED1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m in Sources */,
 				24562AAD1E309608000814C6 /* PaymentDetailsVc.swift in Sources */,
 				0C19A2E21E3731EF0014B01C /* FSCalendarCalculator.m in Sources */,
@@ -880,14 +876,6 @@
 			isa = PBXVariantGroup;
 			children = (
 				0CBA41EE1E2CAA9A0008C8E4 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-		243705DF1E2F49C100005416 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				243705E01E2F49C100005416 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

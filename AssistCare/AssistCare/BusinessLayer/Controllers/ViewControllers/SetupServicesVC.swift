@@ -17,8 +17,12 @@ class SetupServicesVC: UIViewController,UITextFieldDelegate,UITableViewDelegate,
     @IBOutlet var lbSMedicationPrompt: UILabel!
     @IBOutlet var lbMedicationPrompt: UILabel!
     @IBOutlet var txtInstruction: UITextField!
-    
     @IBOutlet var lbMealPreparation: UILabel!
+    
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
     
     @IBAction func btnAddMedication(_ sender: Any) {
         let vc = MedicationVC(nibName: "MedicationVC", bundle: nil)
@@ -44,18 +48,13 @@ class SetupServicesVC: UIViewController,UITextFieldDelegate,UITableViewDelegate,
         // Dispose of any resources that can be recreated.
     }
     
-    func setInterface(){
+    func setInterface() {
+        self.navigationController?.navigationBar.isHidden = true
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
+        lblNavTitle.text = "SetUp Services"
         self.view.backgroundColor = getBackgroundColor()
-        let backButton = UIBarButtonItem(
-            title: "SetUp Services",
-            style: UIBarButtonItemStyle.bordered,
-            target: nil,
-            action: nil
-        );
-
-        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.tintColor = UIColor.white
+        
         txtInstruction.setBottomBorder()
         txtInstruction.backgroundColor = getBackgroundColor()
         btnContinue.isHidden = false
@@ -63,6 +62,11 @@ class SetupServicesVC: UIViewController,UITextFieldDelegate,UITableViewDelegate,
         btnContinue.backgroundColor = UIColor(red: 62/255, green: 186/255, blue: 207/255, alpha: 1)
         btnContinue.layer.cornerRadius = 2.0
         tblMedication.backgroundColor = getBackgroundColor()
+    }
+    
+    //Navigation back
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

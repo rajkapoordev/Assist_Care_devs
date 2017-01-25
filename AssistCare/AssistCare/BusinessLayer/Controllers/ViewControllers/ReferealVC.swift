@@ -27,6 +27,11 @@ class ReferealVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet var lblEarnAmount: UILabel!
     @IBOutlet var viewTopEarn: UIView!
     @IBOutlet var tblHistory: UITableView!
+   
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
     
     @IBAction func btnHistory(_ sender: UIButton) {
         activeHistory()
@@ -95,18 +100,24 @@ class ReferealVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func setInterface(){
-        self.title = "Referral"
-        self.navigationController?.navigationBar.isHidden = false
-       // self.navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.isHidden = true
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
+        
         activeInvite()
         //Register nib
-         self.tblHistory.register(UINib(nibName: "PersonHistoryCell", bundle: nil), forCellReuseIdentifier: "PersonHistoryCell")
+        
+        self.tblHistory.register(UINib(nibName: "PersonHistoryCell", bundle: nil), forCellReuseIdentifier: "PersonHistoryCell")
         self.tblHistory.dataSource = self
         self.tblHistory.delegate = self
         self.viewTopEarn.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
         self.lblEarnAmount.textColor = UIColor.white
         self.lblInfoEarn.textColor = UIColor.white
         self.automaticallyAdjustsScrollViewInsets = false
+    }
+    
+    //Navigation back
+    @IBAction func btnNavBack(_ sender: UIButton) {
     }
  
 }

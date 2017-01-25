@@ -19,6 +19,55 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
   //  @IBOutlet var btnGoogle: UIButton!
     @IBOutlet var btnFacebook: UIButton!
     
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        txtEmail.delegate = self
+        txtPassword.delegate = self
+        self.setInterface()
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: .UIKeyboardWillShow, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SignUpVC.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
+        //Google sign in
+        GIDSignIn.sharedInstance().shouldFetchBasicProfile = true
+        GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.login")
+        GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.me")
+        //
+        GIDSignIn.sharedInstance().signInSilently()
+    }
+    
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.setInterface()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
+    
+    func setInterface() {
+        self.navigationController?.navigationBar.isHidden = true
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
+        
+        txtEmail.setBottomBorder()
+        txtPassword.setBottomBorder()
+        btnSignUp.layer.cornerRadius = 2.0
+        //       btnGoogle.layer.cornerRadius = 1.0
+        btnFacebook.layer.cornerRadius = 1.0
+        shadow(button: btnSignUp)
+    }
+    
+    //Navigation back
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
+    }
+
     @IBAction func btnFacebook(_ sender: Any) {
         
     }
@@ -32,22 +81,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        txtEmail.delegate = self
-        txtPassword.delegate = self
-        self.setInterface()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(SignUpVC.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
-        
-        //Google sign in
-        GIDSignIn.sharedInstance().shouldFetchBasicProfile = true
-        GIDSignIn.sharedInstance().delegate = self
-        GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.login")
-        GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.me")
-        //
-        GIDSignIn.sharedInstance().signInSilently()
-    }
     
     public func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {
         print(user.authentication)
@@ -57,34 +90,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         else {
             //Perform navigation here
         }
-    }
-
-    
-    override func viewWillAppear(_ animated: Bool) {
-        self.setInterface()
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-    
-    func setInterface(){
-        let backButton = UIBarButtonItem(
-            title: "Sign Up",
-            style: UIBarButtonItemStyle.bordered,
-            target: nil,
-            action: nil
-        );
-        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.tintColor = UIColor.white
-        txtEmail.setBottomBorder()
-        txtPassword.setBottomBorder()
-        btnSignUp.layer.cornerRadius = 2.0
- //       btnGoogle.layer.cornerRadius = 1.0
-        btnFacebook.layer.cornerRadius = 1.0
-        shadow(button: btnSignUp)
     }
     
     func keyboardWillAppear(notification:NSNotification) {
@@ -113,6 +118,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         button.layer.masksToBounds = false
         button.layer.cornerRadius = 4.0
     }
+    
     
 }
 

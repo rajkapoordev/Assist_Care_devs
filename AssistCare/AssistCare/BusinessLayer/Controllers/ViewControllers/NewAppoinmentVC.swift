@@ -48,8 +48,12 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     @IBOutlet var btnPM: UIButton!
     @IBOutlet var btnAM: UIButton!
     
-    //Time in clock top view
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
     
+    //Time in clock top view
     @IBOutlet var lblPopUpTopTime: UILabel!
     @IBOutlet var lblPopUpAmPm: UILabel!
     
@@ -247,17 +251,12 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
     }
     
-    func setInterface(){
-        let backButton = UIBarButtonItem(
-            title: "New Appoinment",
-            style: UIBarButtonItemStyle.bordered,
-            target: nil,
-            action: nil
-        );
+    func setInterface() {
+        self.navigationController?.navigationBar.isHidden = true
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
+        lblNavTitle.text = "New Appoinment"
         
-        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.tintColor = UIColor.white
         scrollNewAppoinment.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 700)
         vwPopUp.layer.cornerRadius = 5.0
         vwCalender.layer.cornerRadius = 2.0
@@ -319,6 +318,10 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
     }
     
+    //Navigation back
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
+    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2

@@ -27,6 +27,11 @@ class ManagePaymentCardMethodVC: UIViewController, UITextFieldDelegate {
     @IBOutlet var btnCameraScan: UIButton!
     @IBOutlet var btnSave: UIButton!
     
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setInterface()
@@ -39,11 +44,11 @@ class ManagePaymentCardMethodVC: UIViewController, UITextFieldDelegate {
 
     //For setting interface design
     func setInterface() {
-        self.title = "Add Payment Method"
-        self.navigationController?.navigationBar.tintColor = UIColor.white
-        self.navigationController?.navigationBar.isHidden = false
-        
+        self.navigationController?.navigationBar.isHidden = true
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
         scrollView.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 520)
+        lblNavTitle.text = "Add Payment Method"
         
         txtPaymentType.setBottomBorder()
         txtNameOfCard.setBottomBorder()
@@ -64,7 +69,6 @@ class ManagePaymentCardMethodVC: UIViewController, UITextFieldDelegate {
         lblCardNumber.isHidden = true
         lblCardExpDate.isHidden = true
         lblCVC.isHidden = true
-        
         
     }
 
@@ -121,4 +125,8 @@ class ManagePaymentCardMethodVC: UIViewController, UITextFieldDelegate {
         button.layer.cornerRadius = 4.0
     }
 
+    //Navigation back
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
+    }
 }

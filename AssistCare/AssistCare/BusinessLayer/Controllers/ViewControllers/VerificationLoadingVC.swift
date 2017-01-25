@@ -12,6 +12,11 @@ class VerificationLoadingVC: UIViewController {
 
     @IBOutlet var lbLoading: UILabel!
     @IBOutlet var imgLoading: UIImageView!
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setInterface()
@@ -29,18 +34,17 @@ class VerificationLoadingVC: UIViewController {
     }
     
     func setInterface(){
-        let backButton = UIBarButtonItem(
-            title: "Sign Up",
-            style: UIBarButtonItemStyle.bordered,
-            target: nil,
-            action: nil
-        );
+        self.navigationController?.navigationBar.isHidden = true
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
         
-        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.tintColor = UIColor.white
         lbLoading.text = "Waiting for text message to automatically verify phone number"
         lbLoading.frame = CGRect(x: lbLoading.frame.origin.x, y: lbLoading.frame.origin.y, width: lbLoading.bounds.size.width, height: heightForView(lbLoading.text!, font: lbLoading.font, width: lbLoading.bounds.size.width))
+    }
+    
+    //Navigation back
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
     }
     
     func heightForView(_ text:String, font:UIFont, width:CGFloat) -> CGFloat{
