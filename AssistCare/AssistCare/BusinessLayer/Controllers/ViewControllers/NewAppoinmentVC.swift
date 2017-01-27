@@ -12,6 +12,7 @@ import CoreLocation
 
 class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,MKMapViewDelegate, CLLocationManagerDelegate,UIPickerViewDelegate,UIPickerViewDataSource, FSCalendarDataSource, FSCalendarDelegate,UIGestureRecognizerDelegate{
     
+    @IBOutlet var lblDay: UILabel!
     @IBOutlet var lbMonth: UILabel!
     @IBOutlet var lbDate: UILabel!
     @IBOutlet var lbYear: UILabel!
@@ -48,8 +49,12 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     @IBOutlet var btnPM: UIButton!
     @IBOutlet var btnAM: UIButton!
     
-    //Time in clock top view
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
     
+    //Time in clock top view
     @IBOutlet var lblPopUpTopTime: UILabel!
     @IBOutlet var lblPopUpAmPm: UILabel!
     
@@ -232,7 +237,6 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
         self.collPrefferedServices.register(UINib(nibName: "AppoinmentHeaderCell", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "AppoinmentHeaderCell")
         self.setInterface()
-        
     }
     
     deinit {
@@ -247,18 +251,18 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
     }
     
-    func setInterface(){
-        let backButton = UIBarButtonItem(
-            title: "New Appoinment",
-            style: UIBarButtonItemStyle.bordered,
-            target: nil,
-            action: nil
-        );
+    func setInterface() {
+        self.navigationController?.navigationBar.isHidden = true
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
+        lblNavTitle.text = "New Appoinment"
         
-        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.tintColor = UIColor.white
-        scrollNewAppoinment.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 700)
+        vwMap.layer.shadowColor = UIColor.gray.cgColor
+        vwMap.layer.shadowOffset = CGSize(width: 3, height: 3)
+        vwMap.layer.shadowOpacity = 0.7
+//        vwMap.layer.shadowRadius = 1.0;
+
+        scrollNewAppoinment.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 930)
         vwPopUp.layer.cornerRadius = 5.0
         vwCalender.layer.cornerRadius = 2.0
         btnCancelAppoinment.setTitle("CANCEL APPOINMENT", for: .normal)
@@ -282,8 +286,9 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         imgPopUpProfile.layer.cornerRadius = imgPopUpProfile.bounds.size.width/2
         btnOkay.roundedBottomRightButton()
         btnCancelAppoinment.roundedBottomLeftButton()
-        btnDate.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "timer"), scaledToSize: CGSize(width: btnDate.bounds.size.width, height: btnDate.bounds.size.height)), for: .normal)
-        
+        btnDate.setImage(imageWithImage(#imageLiteral(resourceName: "timer"), scaledToSize: CGSize(width: btnDate.bounds.size.width, height: btnDate.bounds.size.height)), for: .normal)
+       // btnDate.setBackgroundImage()
+        btnDate.contentMode = .scaleAspectFit
         //set Timer or clock
         vwClock.layer.cornerRadius = vwClock.bounds.size.width/2
         vwClock.backgroundColor = UIColor(red: 230/255, green: 234/255, blue: 236/255, alpha: 1)
@@ -319,6 +324,10 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
     }
     
+    //Navigation back
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
+    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
@@ -345,7 +354,6 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
         let numOfColumnsInRow = 3
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
         let totalSpace = flowLayout.sectionInset.left
@@ -355,7 +363,6 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
         let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(numOfColumnsInRow))
         let items = (flowLayout.minimumInteritemSpacing * CGFloat(numOfColumnsInRow - 1))
-        
         return CGSize(width: size, height: size)
     }
     
@@ -371,6 +378,16 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         case UICollectionElementKindSectionHeader:
             //3
             headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "AppoinmentHeaderCell", for: indexPath) as! AppoinmentHeaderCell
+
+            for vw in headerView.subviews{
+                if vw.isKind(of: UILabel.self){
+                    if indexPath.section == 0{
+                        (vw as! UILabel).text = "Your Prefered Services"
+                    }else if indexPath.section == 1{
+                        (vw as! UILabel).text = "Other Assist Services"
+                    }
+                }
+            }
         default:
             assert(false, "Unexpected element kind")
         }
@@ -388,20 +405,16 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
             selectedCell.vWMark.isHidden = false
             selectedCell.imgMark.isHidden = false
             callPopup()
-        }
-        else
-        {
+        }else {
             selectedCell.vWMark.isHidden = true
             selectedCell.imgMark.isHidden = true
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         let selectedCell = collectionView.cellForItem(at: indexPath) as! CareServicesCell
         selectedCell.vWMark.isHidden = true
         selectedCell.imgMark.isHidden = true
-        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -488,7 +501,6 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     }
     
     func setCalenderInterface(){
-        
         self.calendar.select(Date())
         self.calendar.scope = .month
         

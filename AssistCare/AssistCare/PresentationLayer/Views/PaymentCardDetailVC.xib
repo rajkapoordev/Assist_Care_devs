@@ -11,8 +11,12 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentCardDetailVC" customModule="AssistCare" customModuleProvider="target">
             <connections>
+                <outlet property="btnNavBack" destination="U9o-6R-rSI" id="ST2-Qg-FB1"/>
+                <outlet property="btnNavaddNewCard" destination="c3s-Bd-pSr" id="4PJ-5V-syv"/>
+                <outlet property="lblNavTitle" destination="w09-9f-ahA" id="tez-EO-Cpm"/>
                 <outlet property="tblPaymentCardDetail" destination="NZs-su-Ppx" id="0iL-B3-MHn"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Ag2-BV-8Up"/>
+                <outlet property="vwNavBar" destination="eWy-P2-wPK" id="PVm-hH-joV"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -21,14 +25,47 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="NZs-su-Ppx">
-                    <rect key="frame" x="0.0" y="90" width="320" height="390"/>
+                    <rect key="frame" x="0.0" y="95" width="320" height="385"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                 </tableView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eWy-P2-wPK">
+                    <rect key="frame" x="0.0" y="21" width="320" height="58"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w09-9f-ahA">
+                            <rect key="frame" x="70" y="14" width="184" height="30"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U9o-6R-rSI">
+                            <rect key="frame" x="17" y="19.510344827595588" width="25" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="back_nav.png"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c3s-Bd-pSr">
+                            <rect key="frame" x="275" y="17" width="25" height="25"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <state key="normal" image="add_button.png"/>
+                            <connections>
+                                <action selector="btnNavAddNewCard:" destination="-1" eventType="touchUpInside" id="VBp-DZ-3Ch"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86274509799999999" green="0.27058823529999998" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="-40" y="-59"/>
+            <point key="canvasLocation" x="-641" y="-144"/>
         </view>
     </objects>
+    <resources>
+        <image name="add_button.png" width="128" height="128"/>
+        <image name="back_nav.png" width="24" height="24"/>
+    </resources>
 </document>

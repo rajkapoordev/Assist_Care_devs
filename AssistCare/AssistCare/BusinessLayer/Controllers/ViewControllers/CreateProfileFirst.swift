@@ -143,8 +143,8 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     
     
     @IBAction func btnNextClick(_ sender: Any) {
-        let vc = CreateProfileSecond(nibName: "CreateProfileSecond", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: false)
+      //  let vc = CreateProfileSecond(nibName: "CreateProfileSecond", bundle: nil)
+      //  self.navigationController?.pushViewController(vc, animated: true)
         
     }
     @IBAction func btnSelectedCourseClick(_ sender: Any) {
@@ -153,6 +153,7 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
         vWPicker.isHidden = true
        
     }
+    
     @IBAction func btnSelectScheduleClick(_ sender: Any) {
         self.vWSchedule.alpha = 0
         self.vWSchedule.isHidden = false

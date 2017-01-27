@@ -16,7 +16,7 @@ let SILVER_COLOR:UInt = 0xF2F2F2
 let BACK_COLOR:UInt = 0xEEEEEE //textFieldBackColor
 let GRAY_COLOR:UInt = 0xE0E0E0
 let GREEN_COLOR:UInt = 0x46BCD0 // app green color
-let RED_COLOR:UInt = 0xF07374
+let RED_COLOR:UInt = 0xDC454B //0xF07374
 let screenSize = UIScreen.main.bounds
 
 
@@ -26,6 +26,16 @@ let careGiver = "CareGiver"
 
 func appDelegate() -> AppDelegate {
     return (UIApplication.shared.delegate as! AppDelegate)
+}
+
+func heightForView(text: String, font: UIFont, width: CGFloat) -> CGFloat {
+    let label: UILabel = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))
+    label.numberOfLines = 0
+    label.lineBreakMode = NSLineBreakMode.byWordWrapping
+    label.font = font
+    label.text = text
+    label.sizeToFit()
+    return label.frame.height
 }
 
 struct ScreenSize
