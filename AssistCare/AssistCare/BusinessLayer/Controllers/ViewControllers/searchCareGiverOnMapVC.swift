@@ -10,62 +10,43 @@ import UIKit
 import MapKit
 
 class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate{
-
+    
     @IBOutlet var btnNavigate: UIButton!
     @IBOutlet var vwDetail: UIView!
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var btnMealPreparation: UIButton!
     
-    
-    
-    @IBAction func btnNavigate(_ sender: Any) {
-        let vc = NewAppoinmentVC(nibName: "NewAppoinmentVC", bundle: nil)
-        self.navigationController?.popToViewController(vc, animated: true)
-    }
-    @IBAction func btnMealPreparation(_ sender: Any) {
-        
-    }
-    
-    @IBAction func btnMedicalPrompt(_ sender: Any) {
-        if(btnMedicalPrompt.backgroundColor == UIColor(red: 25/255, green: 150/255, blue: 130/255, alpha: 1))
-        {
-            btnMedicalPrompt.backgroundColor = UIColor(red: 18/255, green: 219/255, blue: 212/255, alpha: 1)
-        }else{
-            btnMedicalPrompt.backgroundColor = UIColor(red: 25/255, green: 150/255, blue: 130/255, alpha: 1)
-        }
-        
-    }
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
     
     let googleMapAPIKey = "AIzaSyCblEAKCQQZE9EFFlkTlwB8BVA4Ize8t5M"
     let kBgQueue = DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default)
     var currentCentre = CLLocationCoordinate2D()
     var currenDist:CLLocationDistance = 0
     let locationManager = CLLocationManager()
-
+    
+    @IBOutlet var btnMedicalPrompt: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setInterface()
         // Do any additional setup after loading the view.
     }
-    @IBOutlet var btnMedicalPrompt: UIButton!
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
     func setInterface(){
-        let backButton = UIBarButtonItem(
-            title: "Search Care Giver",
-            style: UIBarButtonItemStyle.bordered,
-            target: nil,
-            action: nil
-        );
+        self.navigationController?.navigationBar.isHidden = true
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
+        lblNavTitle.text = "Search Care Giver"
         
-        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.tintColor = UIColor.white
-
+        vwDetail.backgroundColor = UIColor.white
         btnMealPreparation.backgroundColor = UIColor(red: 17/255, green: 157/255, blue: 180/255, alpha: 1)
         btnMedicalPrompt.backgroundColor = UIColor(red: 25/255, green: 150/255, blue: 130/255, alpha: 1)
         btnMealPreparation.setTitle("Meal Preparation", for: .normal)
@@ -91,7 +72,28 @@ class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationMana
             print("Location services are not enabled");
         }
         mapView.delegate = self
-
+        
+    }
+    
+    //Navigation back
+    @IBAction func btnNavBack(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnNavigate(_ sender: Any) {
+        let vc = NewAppoinmentVC(nibName: "NewAppoinmentVC", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+        //self.navigationController!.popToViewController(vc, animated: true)
+    }
+    @IBAction func btnMealPreparation(_ sender: Any) {
+        
+    }
+    
+    @IBAction func btnMedicalPrompt(_ sender: Any) {
+        if (btnMedicalPrompt.backgroundColor == UIColor(red: 25/255, green: 150/255, blue: 130/255, alpha: 1)) {
+            btnMedicalPrompt.backgroundColor = UIColor(red: 18/255, green: 219/255, blue: 212/255, alpha: 1)
+        }else {
+            btnMedicalPrompt.backgroundColor = UIColor(red: 25/255, green: 150/255, blue: 130/255, alpha: 1)
+        }
     }
     
 }

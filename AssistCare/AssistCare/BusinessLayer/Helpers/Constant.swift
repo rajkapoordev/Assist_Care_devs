@@ -16,7 +16,7 @@ let SILVER_COLOR:UInt = 0xF2F2F2
 let BACK_COLOR:UInt = 0xEEEEEE //textFieldBackColor
 let GRAY_COLOR:UInt = 0xE0E0E0
 let GREEN_COLOR:UInt = 0x46BCD0 // app green color
-let RED_COLOR:UInt = 0xF07374
+let RED_COLOR:UInt = 0xDC454B //0xF07374
 let screenSize = UIScreen.main.bounds
 
 
