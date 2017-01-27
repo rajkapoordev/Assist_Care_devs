@@ -31,6 +31,7 @@
 		0C19A2EC1E3731EF0014B01C /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DA1E3731EF0014B01C /* FSCalendarStickyHeader.m */; };
 		0C19A2ED1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DC1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m */; };
 		0C19A2EE1E3731EF0014B01C /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */; };
+		0C1F60041E3B725300115264 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C1F60031E3B725300115264 /* placeholder.png */; };
 		0C3BDD741E3B05EB0039E6F0 /* facebook.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C3BDD721E3B05EB0039E6F0 /* facebook.png */; };
 		0C3BDD751E3B05EB0039E6F0 /* google-plus.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C3BDD731E3B05EB0039E6F0 /* google-plus.png */; };
 		0C3BDD771E3B09E10039E6F0 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3BDD761E3B09E10039E6F0 /* SignInVC.swift */; };
@@ -178,6 +179,7 @@
 		0C19A2DC1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarTransitionCoordinator.m; path = FSCalendar/FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
 		0C19A2DD1E3731EF0014B01C /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarWeekdayView.h; path = FSCalendar/FSCalendarWeekdayView.h; sourceTree = "<group>"; };
 		0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWeekdayView.m; path = FSCalendar/FSCalendarWeekdayView.m; sourceTree = "<group>"; };
+		0C1F60031E3B725300115264 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		0C3BDD721E3B05EB0039E6F0 /* facebook.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = facebook.png; path = AppImages/facebook.png; sourceTree = "<group>"; };
 		0C3BDD731E3B05EB0039E6F0 /* google-plus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "google-plus.png"; path = "AppImages/google-plus.png"; sourceTree = "<group>"; };
 		0C3BDD761E3B09E10039E6F0 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 		0CAC45F11E372FFA00C79AFA /* AppImages */ = {
 			isa = PBXGroup;
 			children = (
+				0C1F60031E3B725300115264 /* placeholder.png */,
 				0C3BDD721E3B05EB0039E6F0 /* facebook.png */,
 				0C3BDD731E3B05EB0039E6F0 /* google-plus.png */,
 				0C19A2AF1E3731B30014B01C /* add_button.png */,
@@ -713,6 +716,7 @@
 				0CAC45EA1E372EDA00C79AFA /* PaymentCardDetailVC.xib in Resources */,
 				0CAC45E81E372E9F00C79AFA /* ManagePaymentCardMethodVC.xib in Resources */,
 				0CAC45F01E372F5500C79AFA /* PaymentCardDetailCell.xib in Resources */,
+				0C1F60041E3B725300115264 /* placeholder.png in Resources */,
 				0CA0B7461E38B3CF0066D0EA /* CreateProfileSecond.xib in Resources */,
 				0CA0B7381E38A8060066D0EA /* searchCareGiverOnMapVC.xib in Resources */,
 				0CA0B7341E38A7DD0066D0EA /* CareGiverDetailVC.xib in Resources */,

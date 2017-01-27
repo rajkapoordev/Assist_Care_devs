@@ -8,8 +8,9 @@
 
 import UIKit
 import MapKit
+import CoreLocation
 
-class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate{
+class searchCareGiverOnMapVC: UIViewController, MKMapViewDelegate, CLLocationManagerDelegate {
     
     @IBOutlet var btnNavigate: UIButton!
     @IBOutlet var vwDetail: UIView!
@@ -21,8 +22,8 @@ class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationMana
     @IBOutlet var vwNavBar: UIView!
     @IBOutlet var lblNavTitle: UILabel!
     
-    let googleMapAPIKey = "AIzaSyCblEAKCQQZE9EFFlkTlwB8BVA4Ize8t5M"
-    let kBgQueue = DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default)
+    // let googleMapAPIKey = "AIzaSyCblEAKCQQZE9EFFlkTlwB8BVA4Ize8t5M"
+    //  let kBgQueue = DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default)
     var currentCentre = CLLocationCoordinate2D()
     var currenDist:CLLocationDistance = 0
     let locationManager = CLLocationManager()
@@ -35,12 +36,21 @@ class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationMana
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        setMapView()
+        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-    func setInterface(){
+    func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
@@ -55,7 +65,9 @@ class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationMana
         btnMedicalPrompt.tintColor = UIColor.white
         btnNavigate.backgroundColor = UIColor(red: 62/255, green: 186/255, blue: 207/255, alpha: 1)
         btnNavigate.layer.cornerRadius = btnNavigate.bounds.size.width/2
-        
+    }
+    
+    func setMapView() {
         self.mapView.showsUserLocation = true
         if (CLLocationManager.locationServicesEnabled()) {
             locationManager.delegate = self
@@ -72,8 +84,52 @@ class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationMana
             print("Location services are not enabled");
         }
         mapView.delegate = self
+       
+        //Set all anotations here accept user location
+        let pointAnnotation1 = CustomPointAnnotation()
+        pointAnnotation1.pinCustomImageName = "placeholder.png"
+        pointAnnotation1.coordinate = CLLocationCoordinate2DMake(26.889281, 75.836042)
+        pointAnnotation1.title = "other place"
+        pointAnnotation1.subtitle = "Care here"
+        let pinAnnotationView1 = MKPinAnnotationView(annotation: pointAnnotation1, reuseIdentifier: "care")
+        mapView.addAnnotation(pinAnnotationView1.annotation!)
         
+        let pointAnnotation2 = CustomPointAnnotation()
+        pointAnnotation2.pinCustomImageName = "placeholder.png"
+        pointAnnotation2.coordinate = CLLocationCoordinate2DMake(30.889281, 75.836042)
+        pointAnnotation2.title = "other place"
+        pointAnnotation2.subtitle = "Care here"
+        let pinAnnotationView2 = MKPinAnnotationView(annotation: pointAnnotation2, reuseIdentifier: "care")
+        mapView.addAnnotation(pinAnnotationView2.annotation!)
+        
+        mapView.delegate = self
+        
+    
     }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+    
+            if annotation is MKUserLocation {
+                return nil
+            }
+            if annotation is CustomPointAnnotation {
+                let identifier = "care"
+                var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+                if pinView == nil {
+                    //Create a plain MKAnnotationView if using a custom image...
+                    pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                    pinView!.canShowCallout = true
+                    pinView?.image = UIImage(named: "placeholder.png")
+                }
+                else {
+                    //Update the annotation reference if re-using a view...
+                    pinView?.annotation = annotation
+                }
+    
+                return pinView
+            }
+            return nil
+        }
     
     //Navigation back
     @IBAction func btnNavBack(_ sender: UIButton) {
@@ -96,4 +152,27 @@ class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationMana
         }
     }
     
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        locationManager.stopUpdatingLocation()
+        print("ERROR:\(error)")
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locationArray = locations as NSArray
+        let locationObj = locationArray.lastObject as! CLLocation
+        let coord = locationObj.coordinate
+        let pointAnnotation = MKPointAnnotation()
+        pointAnnotation.coordinate = coord
+        mapView.addAnnotation(pointAnnotation)
+        
+        print("longitude:\(coord.longitude)")
+        print("latitude:\(coord.latitude)")
+        
+       // locationManager.stopUpdatingLocation()
+    }
+    
+}
+
+class CustomPointAnnotation: MKPointAnnotation {
+    var pinCustomImageName:String!
 }

@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
        
-        let vc = NewAppoinmentVC(nibName: "NewAppoinmentVC", bundle: nil)
+        let vc = searchCareGiverOnMapVC(nibName: "searchCareGiverOnMapVC", bundle: nil)
         
 //       let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
         
