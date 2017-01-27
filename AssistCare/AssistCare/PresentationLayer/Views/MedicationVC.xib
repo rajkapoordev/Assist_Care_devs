@@ -168,7 +168,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PQK-YQ-0rq">
-                    <rect key="frame" x="14" y="433" width="293" height="40"/>
+                    <rect key="frame" x="14" y="421" width="293" height="40"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" red="0.27450980390000002" green="0.73725490199999999" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="ADD">
@@ -237,7 +237,7 @@
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="-528" y="-17"/>
+            <point key="canvasLocation" x="-746" y="-112"/>
         </view>
     </objects>
     <resources>

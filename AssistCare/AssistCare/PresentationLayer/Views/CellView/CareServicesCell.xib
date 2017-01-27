@@ -34,12 +34,13 @@
                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
+                        <size key="shadowOffset" width="0.0" height="0.0"/>
                     </label>
                     <view hidden="YES" contentMode="scaleToFill" misplaced="YES" id="1mN-Bz-KK8">
                         <rect key="frame" x="0.0" y="0.0" width="80" height="80"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="rightmark.png" id="c6C-xw-DJy">
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="rightmark.png" id="c6C-xw-DJy">
                                 <rect key="frame" x="25" y="25" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -56,7 +57,7 @@
                 <outlet property="vWMark" destination="1mN-Bz-KK8" id="0Qo-Aq-fKT"/>
                 <outlet property="vWServices" destination="9X9-3H-0tb" id="hTJ-rW-GUR"/>
             </connections>
-            <point key="canvasLocation" x="-69" y="44"/>
+            <point key="canvasLocation" x="-178" y="-285"/>
         </collectionViewCell>
     </objects>
     <resources>

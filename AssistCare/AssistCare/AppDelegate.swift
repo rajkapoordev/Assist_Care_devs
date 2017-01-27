@@ -20,15 +20,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = getAppColor()
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-        //        let vc = ReferealVC(nibName: "ReferealVC", bundle: nil)
-       // let vc = FriendsBookedVC(nibName: "FriendsBookedVC", bundle: nil)
+       
+        let vc = NewAppoinmentVC(nibName: "NewAppoinmentVC", bundle: nil)
         
-       // let vc = searchCareGiverOnMapVC(nibName: "searchCareGiverOnMapVC", bundle: nil)
-//        let vc = SignInVC(nibName: "SignInVC", bundle: nil)
-        
-       let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
-        //        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
-        //  let vc = ReferealVC(nibName: "ReferealVC", bundle: nil)
+//       let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         

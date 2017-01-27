@@ -60,6 +60,8 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
         lblNavTitle.text = "Medication"
         
         btnAdd.shadow()
+        btnTime.shadow()
+        btnFood.shadow()
         txtMedicationName.setBottomBorder()
         btnMon.backgroundColor = getGrayColor()
         btnTue.backgroundColor = getGrayColor()
