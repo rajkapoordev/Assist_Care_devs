@@ -11,7 +11,7 @@ import UIKit
 
 class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate{
 
-    @IBOutlet var btnAdd: UIView!
+    @IBOutlet var btnAdd: UIButton!
     @IBOutlet var btnDone: UIButton!
     @IBOutlet var pickerView: UIPickerView!
     @IBOutlet var vwOption: UIView!
@@ -59,6 +59,7 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "Medication"
         
+        btnAdd.shadow()
         txtMedicationName.setBottomBorder()
         btnMon.backgroundColor = getGrayColor()
         btnTue.backgroundColor = getGrayColor()

@@ -24,15 +24,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
        // let vc = FriendsBookedVC(nibName: "FriendsBookedVC", bundle: nil)
         
        // let vc = searchCareGiverOnMapVC(nibName: "searchCareGiverOnMapVC", bundle: nil)
+//        let vc = SignInVC(nibName: "SignInVC", bundle: nil)
         
-       let vc = NewAppoinmentVC(nibName: "NewAppoinmentVC", bundle: nil)
+       let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
         //        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
         //  let vc = ReferealVC(nibName: "ReferealVC", bundle: nil)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         let nav = UINavigationController(rootViewController: vc)
-        //nav.isNavigationBarHidden = true
+        nav.isNavigationBarHidden = true
         self.window?.isUserInteractionEnabled = true
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()
