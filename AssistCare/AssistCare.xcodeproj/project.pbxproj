@@ -31,6 +31,23 @@
 		0C19A2EC1E3731EF0014B01C /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DA1E3731EF0014B01C /* FSCalendarStickyHeader.m */; };
 		0C19A2ED1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DC1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m */; };
 		0C19A2EE1E3731EF0014B01C /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */; };
+		0C821BD01E3B0E92004642C5 /* CirtificateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C821BCE1E3B0E92004642C5 /* CirtificateCell.swift */; };
+		0C821BD11E3B0E92004642C5 /* CirtificateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C821BCF1E3B0E92004642C5 /* CirtificateCell.xib */; };
+		0C821BD31E3B1027004642C5 /* CreateProfileSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C821BD21E3B1027004642C5 /* CreateProfileSecond.swift */; };
+		0C821BD51E3B1073004642C5 /* CreateProfileSecond.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C821BD41E3B1073004642C5 /* CreateProfileSecond.xib */; };
+		0C821BD91E3B188C004642C5 /* Checked.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C821BD71E3B188C004642C5 /* Checked.png */; };
+		0C821BDA1E3B188C004642C5 /* Unchecked.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C821BD81E3B188C004642C5 /* Unchecked.png */; };
+		0C821BDC1E3B1BB0004642C5 /* Camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C821BDB1E3B1BB0004642C5 /* Camera.png */; };
+		0C821BDE1E3B23EE004642C5 /* Degree.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C821BDD1E3B23EE004642C5 /* Degree.png */; };
+		0C821BE01E3B2589004642C5 /* Sort Down-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C821BDF1E3B2589004642C5 /* Sort Down-48.png */; };
+		0C821BE31E3B46D7004642C5 /* OtherCertificateCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C821BE11E3B46D7004642C5 /* OtherCertificateCell.swift */; };
+		0C821BE41E3B46D7004642C5 /* OtherCertificateCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C821BE21E3B46D7004642C5 /* OtherCertificateCell.xib */; };
+		0C821BE71E3B4DDD004642C5 /* CreateProfileThird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C821BE51E3B4DDD004642C5 /* CreateProfileThird.swift */; };
+		0C821BE81E3B4DDD004642C5 /* CreateProfileThird.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C821BE61E3B4DDD004642C5 /* CreateProfileThird.xib */; };
+		0C821BEB1E3B5010004642C5 /* CreateProfileFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C821BE91E3B5010004642C5 /* CreateProfileFour.swift */; };
+		0C821BEC1E3B5010004642C5 /* CreateProfileFour.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C821BEA1E3B5010004642C5 /* CreateProfileFour.xib */; };
+		0C85A8B91E38DBDC00CD1CBB /* CareServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C85A8B71E38DBDC00CD1CBB /* CareServicesVC.swift */; };
+		0C85A8BA1E38DBDC00CD1CBB /* CareServicesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C85A8B81E38DBDC00CD1CBB /* CareServicesVC.xib */; };
 		0C91A8971E31F51E0000955E /* AppoinmentHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C91A8961E31F51E0000955E /* AppoinmentHeaderCell.swift */; };
 		0C91A8991E320B580000955E /* ReferealVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C91A8981E320B580000955E /* ReferealVC.xib */; };
 		0C91A89B1E320BFC0000955E /* ReferealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C91A89A1E320BFC0000955E /* ReferealVC.swift */; };
@@ -165,6 +182,23 @@
 		0C19A2DC1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarTransitionCoordinator.m; path = FSCalendar/FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
 		0C19A2DD1E3731EF0014B01C /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarWeekdayView.h; path = FSCalendar/FSCalendarWeekdayView.h; sourceTree = "<group>"; };
 		0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWeekdayView.m; path = FSCalendar/FSCalendarWeekdayView.m; sourceTree = "<group>"; };
+		0C821BCE1E3B0E92004642C5 /* CirtificateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CirtificateCell.swift; sourceTree = "<group>"; };
+		0C821BCF1E3B0E92004642C5 /* CirtificateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CirtificateCell.xib; sourceTree = "<group>"; };
+		0C821BD21E3B1027004642C5 /* CreateProfileSecond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileSecond.swift; sourceTree = "<group>"; };
+		0C821BD41E3B1073004642C5 /* CreateProfileSecond.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateProfileSecond.xib; sourceTree = "<group>"; };
+		0C821BD71E3B188C004642C5 /* Checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Checked.png; sourceTree = "<group>"; };
+		0C821BD81E3B188C004642C5 /* Unchecked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Unchecked.png; sourceTree = "<group>"; };
+		0C821BDB1E3B1BB0004642C5 /* Camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Camera.png; sourceTree = "<group>"; };
+		0C821BDD1E3B23EE004642C5 /* Degree.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Degree.png; sourceTree = "<group>"; };
+		0C821BDF1E3B2589004642C5 /* Sort Down-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Sort Down-48.png"; sourceTree = "<group>"; };
+		0C821BE11E3B46D7004642C5 /* OtherCertificateCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OtherCertificateCell.swift; sourceTree = "<group>"; };
+		0C821BE21E3B46D7004642C5 /* OtherCertificateCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherCertificateCell.xib; sourceTree = "<group>"; };
+		0C821BE51E3B4DDD004642C5 /* CreateProfileThird.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileThird.swift; sourceTree = "<group>"; };
+		0C821BE61E3B4DDD004642C5 /* CreateProfileThird.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateProfileThird.xib; sourceTree = "<group>"; };
+		0C821BE91E3B5010004642C5 /* CreateProfileFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileFour.swift; sourceTree = "<group>"; };
+		0C821BEA1E3B5010004642C5 /* CreateProfileFour.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CreateProfileFour.xib; sourceTree = "<group>"; };
+		0C85A8B71E38DBDC00CD1CBB /* CareServicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareServicesVC.swift; sourceTree = "<group>"; };
+		0C85A8B81E38DBDC00CD1CBB /* CareServicesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareServicesVC.xib; sourceTree = "<group>"; };
 		0C91A8961E31F51E0000955E /* AppoinmentHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppoinmentHeaderCell.swift; sourceTree = "<group>"; };
 		0C91A8981E320B580000955E /* ReferealVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReferealVC.xib; sourceTree = "<group>"; };
 		0C91A89A1E320BFC0000955E /* ReferealVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferealVC.swift; sourceTree = "<group>"; };
@@ -294,6 +328,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C821BD61E3B188C004642C5 /* image */ = {
+			isa = PBXGroup;
+			children = (
+				0C821BDF1E3B2589004642C5 /* Sort Down-48.png */,
+				0C821BDD1E3B23EE004642C5 /* Degree.png */,
+				0C821BDB1E3B1BB0004642C5 /* Camera.png */,
+				0C821BD71E3B188C004642C5 /* Checked.png */,
+				0C821BD81E3B188C004642C5 /* Unchecked.png */,
+			);
+			path = image;
+			sourceTree = "<group>";
+		};
 		0CAC45A31E37210700C79AFA /* FSCalendar */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +418,7 @@
 		0CBA41E31E2CAA9A0008C8E4 /* AssistCare */ = {
 			isa = PBXGroup;
 			children = (
+				0C821BD61E3B188C004642C5 /* image */,
 				0CAC45F11E372FFA00C79AFA /* AppImages */,
 				24562B051E30D7E8000814C6 /* GooglePlacePicker.bundle */,
 				0CAC45D91E3721FA00C79AFA /* GoogleSignIn.bundle */,
@@ -432,6 +479,10 @@
 				24562AB71E3096C4000814C6 /* cellMedication.swift */,
 				243705C41E2F49C100005416 /* CareServicesCell.swift */,
 				0CAC45ED1E372F3900C79AFA /* PaymentDetailCell.swift */,
+				0C821BCE1E3B0E92004642C5 /* CirtificateCell.swift */,
+				0C821BCF1E3B0E92004642C5 /* CirtificateCell.xib */,
+				0C821BE11E3B46D7004642C5 /* OtherCertificateCell.swift */,
+				0C821BE21E3B46D7004642C5 /* OtherCertificateCell.xib */,
 			);
 			path = CellControllers;
 			sourceTree = "<group>";
@@ -439,6 +490,7 @@
 		243705C61E2F49C100005416 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0C821BD21E3B1027004642C5 /* CreateProfileSecond.swift */,
 				24194F321E31E1B100982135 /* CreateProfileFirst.swift */,
 				24194F331E31E1B100982135 /* TabBarVC.swift */,
 				24562AA91E309608000814C6 /* AppointmentVC.swift */,
@@ -455,6 +507,12 @@
 				0CAC45EB1E372EFC00C79AFA /* PaymentCardDetailVC.swift */,
 				0CAC45E51E372E8100C79AFA /* ManagePaymentCardMethodVC.swift */,
 				0C91A89A1E320BFC0000955E /* ReferealVC.swift */,
+				0C85A8B71E38DBDC00CD1CBB /* CareServicesVC.swift */,
+				0C85A8B81E38DBDC00CD1CBB /* CareServicesVC.xib */,
+				0C821BE51E3B4DDD004642C5 /* CreateProfileThird.swift */,
+				0C821BE61E3B4DDD004642C5 /* CreateProfileThird.xib */,
+				0C821BE91E3B5010004642C5 /* CreateProfileFour.swift */,
+				0C821BEA1E3B5010004642C5 /* CreateProfileFour.xib */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -481,6 +539,7 @@
 		243705D31E2F49C100005416 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0C821BD41E3B1073004642C5 /* CreateProfileSecond.xib */,
 				243705D51E2F49C100005416 /* CellView */,
 				24194F381E31E1CD00982135 /* CreateProfileFirst.xib */,
 				24562AAF1E30963B000814C6 /* AppointmentVC.xib */,
@@ -668,25 +727,36 @@
 				243705EE1E2F49C100005416 /* CareServicesCell.xib in Resources */,
 				0C19A2B81E3731B30014B01C /* bell.png in Resources */,
 				0C91A8991E320B580000955E /* ReferealVC.xib in Resources */,
+				0C821BE01E3B2589004642C5 /* Sort Down-48.png in Resources */,
 				243705F31E2F49C100005416 /* SignUpVC.xib in Resources */,
+				0C821BE41E3B46D7004642C5 /* OtherCertificateCell.xib in Resources */,
+				0C821BEC1E3B5010004642C5 /* CreateProfileFour.xib in Resources */,
 				0CAC45EA1E372EDA00C79AFA /* PaymentCardDetailVC.xib in Resources */,
 				0CAC45E81E372E9F00C79AFA /* ManagePaymentCardMethodVC.xib in Resources */,
 				0CAC45F01E372F5500C79AFA /* PaymentDetailCell.xib in Resources */,
 				243130B91E2F98B9006F24D4 /* NewAppoinmentVC.xib in Resources */,
+				0C821BD51E3B1073004642C5 /* CreateProfileSecond.xib in Resources */,
 				0C19A2BD1E3731B30014B01C /* rightmark.png in Resources */,
 				0C19A2BB1E3731B30014B01C /* Home-50.png in Resources */,
 				0C19A2BE1E3731B30014B01C /* visa.png in Resources */,
+				0C821BD11E3B0E92004642C5 /* CirtificateCell.xib in Resources */,
+				0C821BDA1E3B188C004642C5 /* Unchecked.png in Resources */,
 				243705ED1E2F49C100005416 /* CategoryVC.xib in Resources */,
 				0C19A2B71E3731B30014B01C /* add_button.png in Resources */,
+				0C821BDE1E3B23EE004642C5 /* Degree.png in Resources */,
 				0C19A2BC1E3731B30014B01C /* noimg.png in Resources */,
+				0C821BE81E3B4DDD004642C5 /* CreateProfileThird.xib in Resources */,
 				243705F11E2F49C100005416 /* MedicationVC.xib in Resources */,
+				0C821BDC1E3B1BB0004642C5 /* Camera.png in Resources */,
 				0CBA41EF1E2CAA9A0008C8E4 /* LaunchScreen.storyboard in Resources */,
+				0C85A8BA1E38DBDC00CD1CBB /* CareServicesVC.xib in Resources */,
 				24562B061E30D7E8000814C6 /* GooglePlacePicker.bundle in Resources */,
 				243705F21E2F49C100005416 /* SetupServicesVC.xib in Resources */,
 				24562AB21E30963B000814C6 /* AppointmentVC.xib in Resources */,
 				0CBA41EC1E2CAA9A0008C8E4 /* Assets.xcassets in Resources */,
 				0C91A8A71E3230530000955E /* PersonHistoryCell.xib in Resources */,
 				0C19A2BA1E3731B30014B01C /* go-back-left-arrow.png in Resources */,
+				0C821BD91E3B188C004642C5 /* Checked.png in Resources */,
 				243705F51E2F49C100005416 /* VerificationVC.xib in Resources */,
 				0CAC45DA1E3721FA00C79AFA /* GoogleSignIn.bundle in Resources */,
 				24562AB31E30963B000814C6 /* PaymentDetailsVc.xib in Resources */,
@@ -799,10 +869,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C821BE71E3B4DDD004642C5 /* CreateProfileThird.swift in Sources */,
 				243705E71E2F49C100005416 /* SignUpVC.swift in Sources */,
 				243705E91E2F49C100005416 /* VerificationVC.swift in Sources */,
 				0C19A2E61E3731EF0014B01C /* FSCalendarConstants.m in Sources */,
 				0C19A2E11E3731EF0014B01C /* FSCalendarAppearance.m in Sources */,
+				0C85A8B91E38DBDC00CD1CBB /* CareServicesVC.swift in Sources */,
 				0C19A2E51E3731EF0014B01C /* FSCalendarCollectionViewLayout.m in Sources */,
 				0C19A2DF1E3731EF0014B01C /* FSCalendar.m in Sources */,
 				0C19A2EC1E3731EF0014B01C /* FSCalendarStickyHeader.m in Sources */,
@@ -814,7 +886,9 @@
 				24562AAC1E309608000814C6 /* AppointmentVC.swift in Sources */,
 				243705E51E2F49C100005416 /* MedicationVC.swift in Sources */,
 				0CBA41E51E2CAA9A0008C8E4 /* AppDelegate.swift in Sources */,
+				0C821BE31E3B46D7004642C5 /* OtherCertificateCell.swift in Sources */,
 				0C19A2EB1E3731EF0014B01C /* FSCalendarScopeHandle.m in Sources */,
+				0C821BEB1E3B5010004642C5 /* CreateProfileFour.swift in Sources */,
 				243705E31E2F49C100005416 /* CategoryVC.swift in Sources */,
 				0C19A2E81E3731EF0014B01C /* FSCalendarDelegationProxy.m in Sources */,
 				243130BB1E2F98DA006F24D4 /* NewAppoinmentVC.swift in Sources */,
@@ -832,11 +906,13 @@
 				243705EC1E2F49C100005416 /* Extension.swift in Sources */,
 				24562AB81E3096C4000814C6 /* cellMedication.swift in Sources */,
 				243705EA1E2F49C100005416 /* AppDesign.swift in Sources */,
+				0C821BD31E3B1027004642C5 /* CreateProfileSecond.swift in Sources */,
 				24562AAE1E309608000814C6 /* ThanksVc.swift in Sources */,
 				0C19A2EE1E3731EF0014B01C /* FSCalendarWeekdayView.m in Sources */,
 				0CAC45EE1E372F3900C79AFA /* PaymentDetailCell.swift in Sources */,
 				0C19A2ED1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m in Sources */,
 				24562AAD1E309608000814C6 /* PaymentDetailsVc.swift in Sources */,
+				0C821BD01E3B0E92004642C5 /* CirtificateCell.swift in Sources */,
 				0C19A2E21E3731EF0014B01C /* FSCalendarCalculator.m in Sources */,
 				0C19A2E01E3731EF0014B01C /* FSCalendar+Deprecated.m in Sources */,
 				0CAC45EC1E372EFC00C79AFA /* PaymentCardDetailVC.swift in Sources */,

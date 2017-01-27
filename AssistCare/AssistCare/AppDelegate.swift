@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = getAppColor()
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-          let vc = NewAppoinmentVC(nibName: "NewAppoinmentVC", bundle: nil)
+          let vc = CreateProfileFirst(nibName: "CreateProfileFirst", bundle: nil)
         
         
 //         let vc = PaymentCardDetailVC(nibName: "PaymentCardDetailVC", bundle: nil)
@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window = UIWindow(frame: UIScreen.main.bounds)
 
         let nav = UINavigationController(rootViewController: vc)
-        //nav.isNavigationBarHidden = true
+        nav.isNavigationBarHidden = true
         self.window?.isUserInteractionEnabled = true
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()
