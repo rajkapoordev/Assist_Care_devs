@@ -135,8 +135,8 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     }
     
     @IBAction func btnNextClick(_ sender: Any) {
-      //  let vc = CreateProfileSecond(nibName: "CreateProfileSecond", bundle: nil)
-      //  self.navigationController?.pushViewController(vc, animated: true)
+        let vc = CreateProfileSecond(nibName: "CreateProfileSecond", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: false)
         
     }
     @IBAction func btnSelectedCourseClick(_ sender: Any) {
