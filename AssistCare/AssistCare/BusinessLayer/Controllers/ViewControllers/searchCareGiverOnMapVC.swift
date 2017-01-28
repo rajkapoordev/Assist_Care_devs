@@ -84,19 +84,30 @@ class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationMana
         mapView.delegate = self
         
         //Set all anotations here accept user location
+        //Span for zoom map or clear map path
+        var span = MKCoordinateSpan()
+        span.latitudeDelta = 0.8
+        span.longitudeDelta = 0.8
+        
+        let coordinate1 = CLLocationCoordinate2DMake(28.889281, 75.836042)
+        let mapRegion1 = MKCoordinateRegion(center: coordinate1, span: span)
+        mapView.setRegion(mapRegion1, animated: true)
+        //Create a pin annotation
         let pointAnnotation1 = CustomPointAnnotation()
-        pointAnnotation1.pinCustomImageName = "placeholder.png"
-        pointAnnotation1.coordinate = CLLocationCoordinate2DMake(26.889281, 75.836042)
-        pointAnnotation1.title = "other place"
-        pointAnnotation1.subtitle = "Care here"
+        pointAnnotation1.coordinate = coordinate1
+        pointAnnotation1.title = "care1"
+        pointAnnotation1.subtitle = "Care1 here"
         let pinAnnotationView1 = MKPinAnnotationView(annotation: pointAnnotation1, reuseIdentifier: "care")
+        mapView.setRegion(mapRegion1, animated: true)
         mapView.addAnnotation(pinAnnotationView1.annotation!)
         
+        let coordinate = CLLocationCoordinate2DMake(30.889281, 75.836042)
+        let mapRegion = MKCoordinateRegion(center: coordinate, span: span)
+        mapView.setRegion(mapRegion, animated: true)
         let pointAnnotation2 = CustomPointAnnotation()
-        pointAnnotation2.pinCustomImageName = "placeholder.png"
-        pointAnnotation2.coordinate = CLLocationCoordinate2DMake(30.889281, 75.836042)
-        pointAnnotation2.title = "other place"
-        pointAnnotation2.subtitle = "Care here"
+        pointAnnotation2.coordinate = coordinate
+        pointAnnotation2.title = "care2"
+        pointAnnotation2.subtitle = "Care2 here"
         let pinAnnotationView2 = MKPinAnnotationView(annotation: pointAnnotation2, reuseIdentifier: "care")
         mapView.addAnnotation(pinAnnotationView2.annotation!)
         
@@ -115,6 +126,10 @@ class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationMana
                 pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
                 pinView!.canShowCallout = true
                 pinView?.image = UIImage(named: "placeholder.png")
+                let guester = UITapGestureRecognizer(target: self, action: #selector(self.tapPinInMap))
+                //Here set Id of care service
+                pinView?.tag = 2
+                pinView?.gestureRecognizers = [guester]
             }
             else {
                 //Update the annotation reference if re-using a view...
@@ -125,6 +140,13 @@ class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationMana
         }
         return nil
     }
+    
+    //Which pin is selected
+    func tapPinInMap(sender: UITapGestureRecognizer) {
+        let selectedPin = (sender.view)!.tag
+        print(selectedPin)
+    }
+    
     
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         locationManager.stopUpdatingLocation()
