@@ -10,72 +10,64 @@ import UIKit
 import MapKit
 
 class CareGiverDetailVC: UIViewController {
-   
-    @IBOutlet var btnViewFacebook: UIButton!
-    @IBOutlet var imgFacebook: UIImageView!
-    @IBOutlet var lbFacebook: UILabel!
-    @IBOutlet var btnViewReview: UIButton!
-    @IBOutlet var imgRating: UIImageView!
-    @IBOutlet var lbReview: UILabel!
-    @IBOutlet var btnViewProfile: UIButton!
-    @IBOutlet var btnChat: UIButton!
-    @IBOutlet var btnLike: UIButton!
-    @IBOutlet var lbCareGiverName: UILabel!
+    
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+    
+    @IBOutlet var scrollViewMain: UIScrollView!
+    
+    @IBOutlet var imgTimer: UIImageView!
+    @IBOutlet var btnSelectedDayTime: UIButton!
+    @IBOutlet var btnHour: UIButton!
+    
+    @IBOutlet var vwFirstScroll: UIView!
+    
     @IBOutlet var imgProfile: UIImageView!
     @IBOutlet var mapView: MKMapView!
-    @IBOutlet var vwDetail: UIView!
+    @IBOutlet var imgCareGiver: UIButton!
+    @IBOutlet var lblCareGiverName: UILabel!
+    @IBOutlet var btnLike: UIButton!
+    @IBOutlet var btnChat: UIButton!
+    @IBOutlet var lblFbProfileInfo: UILabel!
     
+    @IBOutlet var lblReviewInfo: UILabel!
     
-    @IBAction func btnLike(_ sender: Any) {
-        
-    }
+    @IBOutlet var imgFbIcon: UIImageView!
+    @IBOutlet var btnViewFbFriends: UIButton!
+    @IBOutlet var imgCareGiverFB: UIImageView!
     
-    @IBAction func btnChat(_ sender: Any) {
-        
-    }
+    @IBOutlet var vwInScroll: UIView!
+    @IBOutlet var cvcCareServices: UICollectionView!
     
-    @IBAction func btnViewProfile(_ sender: Any) {
-        
-    }
+    @IBOutlet var lblOwnVehicle: UILabel!
+    @IBOutlet var lblEnglish: UILabel!
+    @IBOutlet var lblSpenish: UILabel!
+    @IBOutlet var lblDetails: UILabel!
     
-    @IBAction func btnReview(_ sender: Any) {
-        
-    }
+    @IBOutlet var btnBook: UIButton!
     
-    @IBAction func btnViewFacebook(_ sender: Any) {
-        
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setInterface()
-        
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
     func setInterface(){
-        let backButton = UIBarButtonItem(
-            title: "Anna Connolly",
-            style: UIBarButtonItemStyle.bordered,
-            target: nil,
-            action: nil
-        );
-        
-        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.tintColor = UIColor.white
-
-        imgProfile.layer.cornerRadius = imgProfile.bounds.size.width/2
-        imgFacebook.layer.cornerRadius = imgFacebook.bounds.size.width/2
-        lbCareGiverName.text = "Anna Connolly"
-        lbReview.text = "15 Reviews,23 Services"
-        lbFacebook.text = "NIcole Walker and 12 other frirnds have booked Anna Connolly"
-        btnChat.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "chat"), scaledToSize: CGSize(width: btnChat.bounds.size.width, height: btnChat.bounds.size.height)), for: .normal)
-        btnLike.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "Like"), scaledToSize: CGSize(width: btnLike.bounds.size.width, height: btnLike.bounds.size.height)), for: .normal)
-        
+        self.navigationController?.navigationBar.isHidden = true
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
+        self.automaticallyAdjustsScrollViewInsets = false
+        scrollViewMain.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 780)
+    }
+    
+    //Navigation back
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
     }
 }
