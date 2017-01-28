@@ -11,6 +11,7 @@ import UIKit
 class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
     
     @IBOutlet weak var signInButton: GIDSignInButton!
+    
     @IBOutlet var scrollSignUp: UIScrollView!
     @IBOutlet var btnSignUp: UIButton!
     @IBOutlet var txtPassword: UITextField!
@@ -37,7 +38,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.me")
         //
         GIDSignIn.sharedInstance().signInSilently()
-        
     }
     
     
@@ -54,13 +54,13 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
-        scrollSignUp.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 490)
+        
         txtEmail.setBottomBorder()
         txtPassword.setBottomBorder()
         btnSignUp.layer.cornerRadius = 2.0
         //       btnGoogle.layer.cornerRadius = 1.0
         btnFacebook.layer.cornerRadius = 1.0
-        btnSignUp.shadow()
+        shadow(button: btnSignUp)
     }
     
     //Navigation back
@@ -77,8 +77,8 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
  //   }
     
     @IBAction func btnSignUp(_ sender: Any) {
-        let loginVC = SignInVC(nibName: "SignInVC", bundle: nil)
-        self.navigationController?.pushViewController(loginVC, animated: true)
+        let vc = VerificationVC(nibName: "VerificationVC", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
@@ -98,6 +98,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
             print(keyboardHeight)
      //       scrollSignUp.setContentOffset(CGPoint(x: 0.0, y: btnGoogle.frame.origin.y), animated: true)
         }
+        
     }
     
     func keyboardWillHide() {
@@ -108,6 +109,16 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         textField.resignFirstResponder()
         return true
     }
+    
+    func shadow(button:UIButton){
+        button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        button.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        button.layer.shadowOpacity = 1.0
+        button.layer.shadowRadius = 0.0
+        button.layer.masksToBounds = false
+        button.layer.cornerRadius = 4.0
+    }
+    
     
 }
 

@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "placeholder-1.png",
+      "filename" : "Christmas Star-48.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Christmas Star-49.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Christmas Star-50.png",
       "scale" : "3x"
     }
   ],

@@ -71,7 +71,6 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     var tempButton:UIButton!
     var isOpened:Bool = false
     var selectedDate = Date()
-    var selectedWeekDay = ""
     
     var arrX = NSMutableArray()
     var arrY = NSMutableArray()
@@ -85,103 +84,6 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     var isHourSelected = true
     var isMinuteSelected = true
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        self.collPrefferedServices.delegate = self
-        self.collPrefferedServices.dataSource = self
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        
-        self.collPrefferedServices.register(UINib(nibName: "CareServicesCell", bundle: nil), forCellWithReuseIdentifier: "CareServicesCell")
-        
-        self.collPrefferedServices.register(UINib(nibName: "AppoinmentHeaderCell", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "AppoinmentHeaderCell")
-        self.setInterface()
-    }
-    
-    deinit {
-        print("\(#function)")
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        setCalenderInterface()
-    }
-    
-    func setInterface() {
-        self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
-        lblNavTitle.textColor = UIColor.white
-        lblNavTitle.text = "New Appoinment"
-        self.automaticallyAdjustsScrollViewInsets = false
-        
-        scrollNewAppoinment.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 830)
-        vwPopUp.layer.cornerRadius = 5.0
-        vwCalender.layer.cornerRadius = 2.0
-        btnCancelAppoinment.setTitle("CANCEL APPOINMENT", for: .normal)
-        btnOkay.setTitle("OKAY", for: .normal)
-        btnCancelAppoinment.backgroundColor = getRedColor()
-        btnOkay.backgroundColor = getGreenColor()
-        btnCancelAppoinment.titleLabel?.numberOfLines = 0; // Dynamic number of lines
-        btnCancelAppoinment.titleLabel?.lineBreakMode = .byWordWrapping
-        btnOkay.tintColor = UIColor.white
-        btnCancelAppoinment.titleLabel?.textAlignment = .center
-        btnOkay.titleLabel?.textAlignment = .center
-        btnCancelAppoinment.tintColor = UIColor.white
-        
-        lbPopUpName.text = "Anna Connonly"
-        lbPopUpDate.text = "February 28th"
-        lbPopUpTime.text = "9:00 am - 12:00 pm"
-        lbPopUpServicesProvided.text = "Services Provided"
-        
-        btnPopUpMessage.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "chat"), scaledToSize: CGSize(width: btnPopUpMessage.bounds.size.width, height: btnPopUpMessage.bounds.size.width)), for: .normal)
-        btnPopUpaddServices.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "addMedication"), scaledToSize: CGSize(width: btnPopUpaddServices.bounds.size.width, height: btnPopUpaddServices.bounds.size.width)), for: .normal)
-        imgPopUpProfile.layer.cornerRadius = imgPopUpProfile.bounds.size.width/2
-        btnOkay.roundedBottomRightButton()
-        btnCancelAppoinment.roundedBottomLeftButton()
-        btnDate.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "timer"), scaledToSize: CGSize(width: btnDate.bounds.size.width, height: btnDate.bounds.size.height)), for: .normal)
-        
-        //set Timer or clock
-        vwClock.layer.cornerRadius = vwClock.bounds.size.width/2
-        vwClock.backgroundColor = UIColor(red: 230/255, green: 234/255, blue: 236/255, alpha: 1)
-        //  createClock()
-        vwSelectedTime.backgroundColor = UIColor(red: 54/255, green: 174/255, blue: 197/255, alpha: 1)
-        lblPopUpAmPm.textColor = UIColor.white
-        btnHour.setTitleColor(UIColor.white, for: .normal)
-        btnMinute.setTitleColor(UIColor.white, for: .normal)
-        btnHour.setTitle(String(selectedHour), for: .normal)
-        let minute = (selectedMinute < 10) ? "0"+String(selectedMinute) : String(selectedMinute)
-        btnMinute.setTitle(minute, for: .normal)
-        lblPopUpTopTime.textColor = UIColor.white
-        
-        self.setMeridiemInClock(flag: 1)
-        self.view.window?.isUserInteractionEnabled = true
-        
-        if (CLLocationManager.locationServicesEnabled()) {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.distanceFilter = kCLDistanceFilterNone
-            locationManager.requestWhenInUseAuthorization()
-            locationManager.requestAlwaysAuthorization()
-            locationManager.startMonitoringSignificantLocationChanges()
-            locationManager.startUpdatingLocation()
-            mapView.showsUserLocation = true
-            mapView.mapType = .standard
-            
-        } else {
-            print("Location services are not enabled");
-        }
-        mapView.delegate = self
-        //setCalenderInterface()
-    }
-    
-    //Navigation back
-    @IBAction func btnNavBack(_ sender: UIButton) {
-        self.navigationController!.popViewController(animated: true)
-    }
-    
     //Timer
     @IBAction func btnAM(_ sender: Any) {
         self.setMeridiemInClock(flag: 0)
@@ -190,6 +92,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     @IBAction func btnPM(_ sender: Any) {
         self.setMeridiemInClock(flag: 1)
     }
+    
     
     @IBAction func btnHour(_ sender: UIButton) {
         if isMinuteSelected {
@@ -212,21 +115,21 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     //Flag = 0 then AM else PM
     func setMeridiemInClock(flag: Int) {
         if (flag == 0) {
-            self.lblPopUpAmPm.text = "am"
+            self.lblPopUpAmPm.text = "AM"
             self.btnAM.layer.cornerRadius = self.btnAM.frame.width / 2
             self.btnAM.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1)
             self.btnAM.setTitleColor(UIColor.white, for: .normal)
-            self.meridiem = "am"
+            self.meridiem = "AM"
             
             self.btnPM.backgroundColor = UIColor.clear
             self.btnPM.setTitleColor(UIColor.black, for: .normal)
             
         }else {
-            self.lblPopUpAmPm.text = "pm"
+            self.lblPopUpAmPm.text = "PM"
             self.btnPM.layer.cornerRadius = self.btnPM.frame.width / 2
             self.btnPM.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1)
             self.btnPM.setTitleColor(UIColor.white, for: .normal)
-            self.meridiem = "pm"
+            self.meridiem = "PM"
             
             self.btnAM.backgroundColor = UIColor.clear
             self.btnAM.setTitleColor(UIColor.black, for: .normal)
@@ -240,8 +143,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     }
     
     @IBAction func btnTimeOK(_ sender: Any) {
-        let minute = (selectedMinute < 10) ? "0" + String(selectedMinute) : String(selectedMinute)
-        self.selectedTime = String(selectedHour) + ":" + minute + " " + meridiem + " " + selectedWeekDay
+        self.selectedTime = String(selectedHour) + ":" + String(selectedMinute) + " " + meridiem
         btnTime.setTitle(self.selectedTime, for: .normal)
         UIView.animate(withDuration: 0.5, animations:{self.vwTime.alpha = 0.0}, completion: { (bool) in
             self.viewGray.isHidden = true
@@ -251,28 +153,30 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     
     
     @IBAction func btnTime(_ sender: Any) {
-        //        btnHour.sendActions(for: .touchUpInside)
-        //        vwTime.isHidden = false
-        //        self.callTime()
+        btnHour.sendActions(for: .touchUpInside)
+        self.view.window?.addSubview(vwTime)
+        vwTime.isHidden = false
+        self.callTime()
+    }
+    
+    
+    
+    @IBAction func btnDate(_ sender: Any) {
+        //     self.view.window?.addSubview(vwCalender)
+        //     self.view.window?.clipsToBounds = true
         vwCalender.isHidden = false
         self.callCalender()
     }
     
-    @IBAction func btnDate(_ sender: Any) {
-//        vwCalender.isHidden = false
-//        self.callCalender()
-    }
-    
     @IBAction func btnDateOk(_ sender: Any) {
-        UIView.animate(withDuration: 0.5, animations:{self.vwCalender.alpha = 0.0}, completion: { (bool) in
-            self.vwCalender.isHidden = true
-            self.btnHour.sendActions(for: .touchUpInside)
-            self.vwTime.isHidden = false
-            self.callTime()
+        UIView.animate(withDuration: 1.0, animations:{self.vwCalender.alpha = 0.0}, completion: { (bool) in
+            self.viewGray.isHidden = true
         })
+        
     }
     
     @IBAction func btnDateCancel(_ sender: Any) {
+        // self.vwCalender.removeFromSuperview()
         UIView.animate(withDuration: 1.0, animations:{self.vwCalender.alpha = 0.0}, completion: { (bool) in
             self.viewGray.isHidden = true
         })
@@ -307,13 +211,11 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     @IBAction func btnOkay(_ sender: Any) {
         
     }
-    
     fileprivate lazy var dateFormatter: DateFormatter = {
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd"
         return formatter
     }()
-    
     fileprivate lazy var scopeGesture: UIPanGestureRecognizer = {
         [unowned self] in
         let panGesture = UIPanGestureRecognizer(target: self.calendar, action: #selector(self.calendar.handleScopeGesture(_:)))
@@ -322,6 +224,110 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         panGesture.maximumNumberOfTouches = 2
         return panGesture
         }()
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        self.collPrefferedServices.delegate = self
+        self.collPrefferedServices.dataSource = self
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        
+        self.collPrefferedServices.register(UINib(nibName: "CareServicesCell", bundle: nil), forCellWithReuseIdentifier: "CareServicesCell")
+        
+        self.collPrefferedServices.register(UINib(nibName: "AppoinmentHeaderCell", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "AppoinmentHeaderCell")
+        self.setInterface()
+    }
+    
+    deinit {
+        print("\(#function)")
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
+    
+    func setInterface() {
+        self.navigationController?.navigationBar.isHidden = true
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
+        lblNavTitle.text = "New Appoinment"
+        
+        vwMap.layer.shadowColor = UIColor.gray.cgColor
+        vwMap.layer.shadowOffset = CGSize(width: 3, height: 3)
+        vwMap.layer.shadowOpacity = 0.7
+//        vwMap.layer.shadowRadius = 1.0;
+
+        scrollNewAppoinment.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 930)
+        vwPopUp.layer.cornerRadius = 5.0
+        vwCalender.layer.cornerRadius = 2.0
+        btnCancelAppoinment.setTitle("CANCEL APPOINMENT", for: .normal)
+        btnOkay.setTitle("OKAY", for: .normal)
+        btnCancelAppoinment.backgroundColor = getRedColor()
+        btnOkay.backgroundColor = getGreenColor()
+        btnCancelAppoinment.titleLabel?.numberOfLines = 0; // Dynamic number of lines
+        btnCancelAppoinment.titleLabel?.lineBreakMode = .byWordWrapping
+        btnOkay.tintColor = UIColor.white
+        btnCancelAppoinment.titleLabel?.textAlignment = .center
+        btnOkay.titleLabel?.textAlignment = .center
+        btnCancelAppoinment.tintColor = UIColor.white
+        
+        lbPopUpName.text = "Anna Connonly"
+        lbPopUpDate.text = "February 28th"
+        lbPopUpTime.text = "9:00 am - 12:00 pm"
+        lbPopUpServicesProvided.text = "Services Provided"
+        
+        btnPopUpMessage.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "chat"), scaledToSize: CGSize(width: btnPopUpMessage.bounds.size.width, height: btnPopUpMessage.bounds.size.width)), for: .normal)
+        btnPopUpaddServices.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "addMedication"), scaledToSize: CGSize(width: btnPopUpaddServices.bounds.size.width, height: btnPopUpaddServices.bounds.size.width)), for: .normal)
+        imgPopUpProfile.layer.cornerRadius = imgPopUpProfile.bounds.size.width/2
+        btnOkay.roundedBottomRightButton()
+        btnCancelAppoinment.roundedBottomLeftButton()
+        btnDate.setImage(imageWithImage(#imageLiteral(resourceName: "timer"), scaledToSize: CGSize(width: btnDate.bounds.size.width, height: btnDate.bounds.size.height)), for: .normal)
+       // btnDate.setBackgroundImage()
+        btnDate.contentMode = .scaleAspectFit
+        //set Timer or clock
+        vwClock.layer.cornerRadius = vwClock.bounds.size.width/2
+        vwClock.backgroundColor = UIColor(red: 230/255, green: 234/255, blue: 236/255, alpha: 1)
+        //  createClock()
+        vwSelectedTime.backgroundColor = UIColor(red: 54/255, green: 174/255, blue: 197/255, alpha: 1)
+        lblPopUpAmPm.textColor = UIColor.white
+        btnHour.setTitleColor(UIColor.white, for: .normal)
+        btnMinute.setTitleColor(UIColor.white, for: .normal)
+        btnHour.setTitle(String(selectedHour), for: .normal)
+        let minute = (selectedMinute < 10) ? "0"+String(selectedMinute) : String(selectedMinute)
+        btnMinute.setTitle(minute, for: .normal)
+        lblPopUpTopTime.textColor = UIColor.white
+        
+        self.setMeridiemInClock(flag: 1)
+        self.view.window?.isUserInteractionEnabled = true
+        
+        if (CLLocationManager.locationServicesEnabled()) {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.distanceFilter = kCLDistanceFilterNone
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startMonitoringSignificantLocationChanges()
+            locationManager.startUpdatingLocation()
+            mapView.showsUserLocation = true
+            mapView.mapType = .standard
+            
+        } else {
+            print("Location services are not enabled");
+        }
+        mapView.delegate = self
+        setCalenderInterface()
+        
+    }
+    
+    //Navigation back
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
+    }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 2
@@ -372,7 +378,16 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         case UICollectionElementKindSectionHeader:
             //3
             headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "AppoinmentHeaderCell", for: indexPath) as! AppoinmentHeaderCell
-        
+
+            for vw in headerView.subviews{
+                if vw.isKind(of: UILabel.self){
+                    if indexPath.section == 0{
+                        (vw as! UILabel).text = "Your Prefered Services"
+                    }else if indexPath.section == 1{
+                        (vw as! UILabel).text = "Other Assist Services"
+                    }
+                }
+            }
         default:
             assert(false, "Unexpected element kind")
         }
@@ -386,6 +401,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
         if selectedCell.isSelected == true {
             selectedCell.vWMark.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+            
             selectedCell.vWMark.isHidden = false
             selectedCell.imgMark.isHidden = false
             callPopup()
@@ -437,14 +453,14 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     
     func callCalender(){
         self.viewGray.isHidden = false
-        UIView.animate(withDuration: 0.8, animations:{self.vwCalender.alpha = 1.0}, completion: { (bool) in
+        UIView.animate(withDuration: 1.0, animations:{self.vwCalender.alpha = 1.0}, completion: { (bool) in
             
         })
     }
     
     func callTime(){
         self.viewGray.isHidden = false
-        UIView.animate(withDuration: 0.1, animations:{self.vwTime.alpha = 1.0}, completion: { (bool) in
+        UIView.animate(withDuration: 1.0, animations:{self.vwTime.alpha = 1.0}, completion: { (bool) in
             
         })
     }
@@ -465,16 +481,15 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     }
     
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
+        //selectedDate = date
         let calendar1 = Calendar.current
-        self.selectedWeekDay = calendar1.weekdaySymbols[calendar1.component(.weekday, from: date) - 1]
-        lblDay.text = self.selectedWeekDay
         lbDate.text = String(calendar1.component(.day, from: date))
         let monthNumber  = calendar1.component(.month, from: date)
         lbMonth.text = DateFormatter().monthSymbols[monthNumber - 1]
         lbYear.text = String(calendar1.component(.year, from: date))
-        //print("did select date \(self.dateFormatter.string(from: date))")
+        print("did select date \(self.dateFormatter.string(from: date))")
         let selectedDates = calendar.selectedDates.map({self.dateFormatter.string(from: $0)})
-        //print("selected dates is \(selectedDates)")
+        print("selected dates is \(selectedDates)")
         self.selectedData = selectedDates[0]
         if monthPosition == .next || monthPosition == .previous {
             calendar.setCurrentPage(date, animated: true)
@@ -495,10 +510,8 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         let monthNumber  = calendar1.component(.month, from: date)
         lbMonth.text = DateFormatter().monthSymbols[monthNumber - 1]
         lbYear.text = String(calendar1.component(.year, from: date))
-        
-        lbDate.font = UIFont(name: lbDate.font.fontName, size: (lbDate.frame.height) - 20)
     }
-    
+  
     //Create clock
     func createClockForTimer(arr: NSArray) {
         vwClock.subviews.forEach({ $0.removeFromSuperview() })
@@ -584,7 +597,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
             self.btnHour.setTitle(String(self.selectedHour), for: .normal)
         }else{
             self.selectedMinute = (btn.tag * 5)
-            let minute = (selectedMinute < 10) ? "0"+String(selectedMinute) : String(selectedMinute)
+             let minute = (selectedMinute < 10) ? "0"+String(selectedMinute) : String(selectedMinute)
             self.btnMinute.setTitle(minute, for: .normal)
         }
         

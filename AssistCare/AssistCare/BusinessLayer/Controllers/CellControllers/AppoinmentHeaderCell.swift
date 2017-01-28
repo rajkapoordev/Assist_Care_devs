@@ -10,6 +10,7 @@ import UIKit
 
 class AppoinmentHeaderCell: UICollectionReusableView {
 
+
     @IBOutlet var lbSectionHeader: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()

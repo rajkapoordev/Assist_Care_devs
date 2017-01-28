@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MedicationVC" customModule="AssistCare" customModuleProvider="target">
             <connections>
-                <outlet property="btnAdd" destination="PQK-YQ-0rq" id="eIB-tl-dLs"/>
+                <outlet property="btnAdd" destination="PQK-YQ-0rq" id="5nF-Ec-d9C"/>
                 <outlet property="btnDone" destination="jCq-QN-a3Z" id="KLJ-et-WgJ"/>
                 <outlet property="btnFood" destination="JTd-oG-hnD" id="4cP-Wf-6vA"/>
                 <outlet property="btnFri" destination="4o3-ey-9od" id="5mc-aG-4lg"/>
@@ -168,7 +168,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PQK-YQ-0rq">
-                    <rect key="frame" x="14" y="421" width="293" height="40"/>
+                    <rect key="frame" x="14" y="433" width="293" height="40"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" red="0.27450980390000002" green="0.73725490199999999" blue="0.81568627449999997" alpha="1" colorSpace="calibratedRGB"/>
                     <state key="normal" title="ADD">
@@ -237,7 +237,7 @@
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="-746" y="-112"/>
+            <point key="canvasLocation" x="-342" y="125"/>
         </view>
     </objects>
     <resources>
