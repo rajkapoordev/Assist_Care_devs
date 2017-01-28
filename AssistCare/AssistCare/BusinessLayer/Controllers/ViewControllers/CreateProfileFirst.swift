@@ -72,20 +72,25 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == txtFname {
+        if textField == txtFname
+        {
             txtLname.becomeFirstResponder()
             return true
         }
-        else if textField == txtLname {
+        else if textField == txtLname
+        {
             txtDateOfBirth.becomeFirstResponder()
 //            scrollView.setContentOffset(CGPoint(x: 0.0, y: screenSize.width/2), animated: true)
 //            
             //            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: .UIKeyboardWillShow, object: nil)
             //            NotificationCenter.default.addObserver(self, selector: #selector(PaymentDetailsVc.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         }
-        else if textField == txtDateOfBirth {
+        else if textField == txtDateOfBirth
+        {
             txtDateOfBirth.resignFirstResponder()
-        }else {
+        }
+        else
+        {
            scrollView.setContentOffset(CGPoint(x: 0.0, y: 0), animated: true)
            // keyboardWillHide()
             textField.resignFirstResponder()
@@ -114,7 +119,8 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
         
     }
     
-    func setInterface() {
+    func setInterface()
+    {
         btnMon.backgroundColor = getGrayColor()
         btnTues.backgroundColor = getGrayColor()
         btnWed.backgroundColor = getGrayColor()
@@ -134,9 +140,11 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     
     }
     
+    
+    
     @IBAction func btnNextClick(_ sender: Any) {
-        let vc = CreateProfileSecond(nibName: "CreateProfileSecond", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: false)
+      //  let vc = CreateProfileSecond(nibName: "CreateProfileSecond", bundle: nil)
+      //  self.navigationController?.pushViewController(vc, animated: true)
         
     }
     @IBAction func btnSelectedCourseClick(_ sender: Any) {
@@ -152,6 +160,7 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
         UIView.animate(withDuration: 0.3) {
             self.vWSchedule.alpha = 1
         }
+      
     }
     
     @IBAction func btnMonClick(_ sender: Any) {

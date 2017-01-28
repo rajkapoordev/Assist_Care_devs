@@ -54,7 +54,7 @@ class SetupServicesVC: UIViewController,UITextFieldDelegate,UITableViewDelegate,
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "SetUp Services"
         self.view.backgroundColor = getBackgroundColor()
-        btnContinue.shadow()
+        
         txtInstruction.setBottomBorder()
         txtInstruction.backgroundColor = getBackgroundColor()
         btnContinue.isHidden = false
