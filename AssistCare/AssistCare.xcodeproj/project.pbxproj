@@ -31,6 +31,8 @@
 		0C19A2EC1E3731EF0014B01C /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DA1E3731EF0014B01C /* FSCalendarStickyHeader.m */; };
 		0C19A2ED1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DC1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m */; };
 		0C19A2EE1E3731EF0014B01C /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */; };
+		0C4E923A1E3CC4E600FD34E3 /* CareGiverProfileDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E92391E3CC4E600FD34E3 /* CareGiverProfileDetailVC.swift */; };
+		0C4E923C1E3CC4F400FD34E3 /* CareGiverProfileDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4E923B1E3CC4F400FD34E3 /* CareGiverProfileDetailVC.xib */; };
 		0C7A159C1E3C78790030D4D1 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A159B1E3C78790030D4D1 /* placeholder.png */; };
 		0C7A15A01E3C7D690030D4D1 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A159F1E3C7D690030D4D1 /* SignInVC.swift */; };
 		0C7A15A21E3C7D740030D4D1 /* SignInVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A15A11E3C7D740030D4D1 /* SignInVC.xib */; };
@@ -185,6 +187,8 @@
 		0C19A2DC1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarTransitionCoordinator.m; path = FSCalendar/FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
 		0C19A2DD1E3731EF0014B01C /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarWeekdayView.h; path = FSCalendar/FSCalendarWeekdayView.h; sourceTree = "<group>"; };
 		0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWeekdayView.m; path = FSCalendar/FSCalendarWeekdayView.m; sourceTree = "<group>"; };
+		0C4E92391E3CC4E600FD34E3 /* CareGiverProfileDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareGiverProfileDetailVC.swift; sourceTree = "<group>"; };
+		0C4E923B1E3CC4F400FD34E3 /* CareGiverProfileDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareGiverProfileDetailVC.xib; sourceTree = "<group>"; };
 		0C7A159B1E3C78790030D4D1 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		0C7A159F1E3C7D690030D4D1 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		0C7A15A11E3C7D740030D4D1 /* SignInVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInVC.xib; sourceTree = "<group>"; };
@@ -485,10 +489,11 @@
 		243705C61E2F49C100005416 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				243705C71E2F49C100005416 /* CategoryVC.swift */,
 				0CA0B7431E38AEE70066D0EA /* FriendsBookedVC.swift */,
 				24562AA91E309608000814C6 /* AppointmentVC.swift */,
 				0CA0B7391E38A8630066D0EA /* CareGiverDetailVC.swift */,
-				243705C71E2F49C100005416 /* CategoryVC.swift */,
+				0C4E92391E3CC4E600FD34E3 /* CareGiverProfileDetailVC.swift */,
 				24194F321E31E1B100982135 /* CreateProfileFirst.swift */,
 				0CA0B73B1E38A8780066D0EA /* CreateProfileSecond.swift */,
 				243705C81E2F49C100005416 /* EditProfile.swift */,
@@ -536,6 +541,7 @@
 				243705D51E2F49C100005416 /* CellView */,
 				24562AAF1E30963B000814C6 /* AppointmentVC.xib */,
 				0CA0B7331E38A7DD0066D0EA /* CareGiverDetailVC.xib */,
+				0C4E923B1E3CC4F400FD34E3 /* CareGiverProfileDetailVC.xib */,
 				0CA0B7451E38B3CF0066D0EA /* CreateProfileSecond.xib */,
 				243705D41E2F49C100005416 /* CategoryVC.xib */,
 				24194F381E31E1CD00982135 /* CreateProfileFirst.xib */,
@@ -756,6 +762,7 @@
 				0CBA41EC1E2CAA9A0008C8E4 /* Assets.xcassets in Resources */,
 				0C91A8A71E3230530000955E /* PersonHistoryCell.xib in Resources */,
 				0C19A2BA1E3731B30014B01C /* back_nav.png in Resources */,
+				0C4E923C1E3CC4F400FD34E3 /* CareGiverProfileDetailVC.xib in Resources */,
 				0CA0B7501E38BA950066D0EA /* google-plus.png in Resources */,
 				243705F51E2F49C100005416 /* VerificationVC.xib in Resources */,
 				0C7A15A21E3C7D740030D4D1 /* SignInVC.xib in Resources */,
@@ -908,6 +915,7 @@
 				0C19A2EA1E3731EF0014B01C /* FSCalendarHeaderView.m in Sources */,
 				243705E41E2F49C100005416 /* EditProfile.swift in Sources */,
 				243705EC1E2F49C100005416 /* Extension.swift in Sources */,
+				0C4E923A1E3CC4E600FD34E3 /* CareGiverProfileDetailVC.swift in Sources */,
 				0C7A15A01E3C7D690030D4D1 /* SignInVC.swift in Sources */,
 				24562AB81E3096C4000814C6 /* cellMedication.swift in Sources */,
 				243705EA1E2F49C100005416 /* AppDesign.swift in Sources */,

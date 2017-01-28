@@ -154,8 +154,8 @@ class CareGiverDetailVC: UIViewController,UICollectionViewDelegate,UICollectionV
     }
     
     @IBAction func btnViewProfile(_ sender: UIButton) {
-        
+        let careProfileVC = CareGiverProfileDetailVC(nibName: "CareGiverProfileDetailVC", bundle: nil)
+        self.navigationController?.pushViewController(careProfileVC, animated: true)
     }
-    
     
 }
