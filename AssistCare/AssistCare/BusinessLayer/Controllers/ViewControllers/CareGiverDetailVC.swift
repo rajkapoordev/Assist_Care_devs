@@ -9,73 +9,153 @@
 import UIKit
 import MapKit
 
-class CareGiverDetailVC: UIViewController {
-   
-    @IBOutlet var btnViewFacebook: UIButton!
-    @IBOutlet var imgFacebook: UIImageView!
-    @IBOutlet var lbFacebook: UILabel!
-    @IBOutlet var btnViewReview: UIButton!
-    @IBOutlet var imgRating: UIImageView!
-    @IBOutlet var lbReview: UILabel!
-    @IBOutlet var btnViewProfile: UIButton!
-    @IBOutlet var btnChat: UIButton!
-    @IBOutlet var btnLike: UIButton!
-    @IBOutlet var lbCareGiverName: UILabel!
+class CareGiverDetailVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+    
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+    
+    @IBOutlet var scrollViewMain: UIScrollView!
+    
+    @IBOutlet var imgTimer: UIImageView!
+    @IBOutlet var btnSelectedDayTime: UIButton!
+    @IBOutlet var btnHour: UIButton!
+    
+    @IBOutlet var vwFirstScroll: UIView!
+    
     @IBOutlet var imgProfile: UIImageView!
     @IBOutlet var mapView: MKMapView!
-    @IBOutlet var vwDetail: UIView!
+    @IBOutlet var imgCareGiver: UIButton!
+    @IBOutlet var lblCareGiverName: UILabel!
+    @IBOutlet var btnLike: UIButton!
+    @IBOutlet var btnChat: UIButton!
+    @IBOutlet var lblFbProfileInfo: UILabel!
     
+    @IBOutlet var lblReviewInfo: UILabel!
     
-    @IBAction func btnLike(_ sender: Any) {
-        
-    }
+    @IBOutlet var imgFbIcon: UIImageView!
+    @IBOutlet var btnViewFbFriends: UIButton!
+    @IBOutlet var imgCareGiverFB: UIImageView!
     
-    @IBAction func btnChat(_ sender: Any) {
-        
-    }
+    @IBOutlet var vwInScroll: UIView!
+    @IBOutlet var cvcCareServices: UICollectionView!
     
-    @IBAction func btnViewProfile(_ sender: Any) {
-        
-    }
+    @IBOutlet var lblOwnVehicle: UILabel!
+    @IBOutlet var lblEnglish: UILabel!
+    @IBOutlet var lblSpenish: UILabel!
+    @IBOutlet var lblDetails: UILabel!
     
-    @IBAction func btnReview(_ sender: Any) {
-        
-    }
+    @IBOutlet var btnBook: UIButton!
     
-    @IBAction func btnViewFacebook(_ sender: Any) {
-        
-    }
-
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setInterface()
-        
+        cvcCareServices.register(UINib(nibName:"CareServicesCell",bundle: nil) , forCellWithReuseIdentifier: "CareServicesCell")
+        cvcCareServices.delegate = self
+        cvcCareServices.dataSource = self
     }
-
+    
+    override func viewDidLayoutSubviews() {
+        self.setInterface()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-    func setInterface(){
-        let backButton = UIBarButtonItem(
-            title: "Anna Connolly",
-            style: UIBarButtonItemStyle.bordered,
-            target: nil,
-            action: nil
-        );
+    
+    func setInterface() {
+        self.navigationController?.navigationBar.isHidden = true
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
+        self.automaticallyAdjustsScrollViewInsets = false
+        scrollViewMain.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 795)
+        imgProfile.setRounded()
+        imgCareGiverFB.setRounded()
+        imgFbIcon.setRounded()
+        btnBook.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
         
-        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.tintColor = UIColor.white
-
-        imgProfile.layer.cornerRadius = imgProfile.bounds.size.width/2
-        imgFacebook.layer.cornerRadius = imgFacebook.bounds.size.width/2
-        lbCareGiverName.text = "Anna Connolly"
-        lbReview.text = "15 Reviews,23 Services"
-        lbFacebook.text = "NIcole Walker and 12 other frirnds have booked Anna Connolly"
-        btnChat.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "chat"), scaledToSize: CGSize(width: btnChat.bounds.size.width, height: btnChat.bounds.size.height)), for: .normal)
-        btnLike.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "Like"), scaledToSize: CGSize(width: btnLike.bounds.size.width, height: btnLike.bounds.size.height)), for: .normal)
-        
+        lblOwnVehicle.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        lblEnglish.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        lblSpenish.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        lblOwnVehicle.setRadius()
+        lblSpenish.setRadius()
+        lblEnglish.setRadius()
     }
+    
+    //Navigation back
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
+    }
+    
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 6
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CareServicesCell", for: indexPath) as! CareServicesCell
+        cell.vWServices.frame.size = CGSize(width: cell.frame.width , height: cell.frame.width )
+        cell.vWMark.frame = cell.vWServices.frame
+        cell.imgMark.frame = cell.vWServices.frame
+        cell.vWMark.setRounded()
+        cell.imgMark.setRounded()
+        cell.vWServices.setRounded()
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        layout collectionViewLayout: UICollectionViewLayout,
+                        sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let numOfColumnsInRow = 3
+        let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
+        let totalSpace = flowLayout.sectionInset.left
+            + flowLayout.sectionInset.right
+            + (flowLayout.minimumInteritemSpacing * CGFloat(numOfColumnsInRow - 1))
+        let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(numOfColumnsInRow))
+        let items = (flowLayout.minimumInteritemSpacing * CGFloat(numOfColumnsInRow - 1))
+        let noOfCell: Int = 6
+        cvcCareServices.frame = CGRect(x: cvcCareServices.frame.origin.x, y: cvcCareServices.frame.origin.y, width: cvcCareServices.frame.width, height: (CGFloat(size) *  CGFloat(ceil(Double(noOfCell)/3)) + (items * CGFloat(ceil(Double(noOfCell)/3)))))
+        
+        let scroll = vwFirstScroll.frame.height + vwInScroll.frame.height + collectionView.frame.height + 5
+        scrollViewMain.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: scroll)
+        vwInScroll.frame = CGRect(x: 0, y: cvcCareServices.frame.origin.y +  cvcCareServices.frame.height, width: ScreenSize.SCREEN_WIDTH, height: self.vwInScroll.frame.height)
+        return CGSize(width: size, height: size)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedCell = collectionView.cellForItem(at: indexPath) as! CareServicesCell
+        if selectedCell.isSelected == true {
+            selectedCell.vWMark.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+            
+            selectedCell.vWMark.isHidden = false
+            selectedCell.imgMark.isHidden = false
+        }else {
+            selectedCell.vWMark.isHidden = true
+            selectedCell.imgMark.isHidden = true
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
+        let selectedCell = collectionView.cellForItem(at: indexPath) as! CareServicesCell
+        selectedCell.vWMark.isHidden = true
+        selectedCell.imgMark.isHidden = true
+    }
+    
+    @IBAction func btnFacebookFriends(_ sender: UIButton) {
+        let fbFriendsVC = FriendsBookedVC(nibName: "FriendsBookedVC", bundle: nil)
+        self.navigationController?.pushViewController(fbFriendsVC, animated: false)
+    }
+    
+    @IBAction func btnBook(_ sender: UIButton) {
+    }
+    
+    @IBAction func btnViewProfile(_ sender: UIButton) {
+        let careProfileVC = CareGiverProfileDetailVC(nibName: "CareGiverProfileDetailVC", bundle: nil)
+        self.navigationController?.pushViewController(careProfileVC, animated: true)
+    }
+    
 }
