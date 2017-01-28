@@ -16,7 +16,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
     @IBOutlet var btnSignUp: UIButton!
     @IBOutlet var txtPassword: UITextField!
     @IBOutlet var txtEmail: UITextField!
-  //  @IBOutlet var btnGoogle: UIButton!
+    //  @IBOutlet var btnGoogle: UIButton!
     @IBOutlet var btnFacebook: UIButton!
     
     //Navigation Bar
@@ -60,25 +60,27 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         btnSignUp.layer.cornerRadius = 2.0
         //       btnGoogle.layer.cornerRadius = 1.0
         btnFacebook.layer.cornerRadius = 1.0
-        shadow(button: btnSignUp)
+        btnSignUp.shadow()
+        scrollSignUp.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 490)
+
     }
     
     //Navigation back
     @IBAction func btnNavBack(_ sender: UIButton) {
         self.navigationController!.popViewController(animated: true)
     }
-
+    
     @IBAction func btnFacebook(_ sender: Any) {
         
     }
     
-  //  @IBAction func btnGoogle(_ sender: Any) {
- //
- //   }
+    //  @IBAction func btnGoogle(_ sender: Any) {
+    //
+    //   }
     
     @IBAction func btnSignUp(_ sender: Any) {
-        let vc = VerificationVC(nibName: "VerificationVC", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
+        let loginVC = SignInVC(nibName: "SignInVC", bundle: nil)
+        self.navigationController?.pushViewController(loginVC, animated: true)
     }
     
     
@@ -96,7 +98,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
             let keyboardHeight = keyboardSize.height
             print(keyboardHeight)
-     //       scrollSignUp.setContentOffset(CGPoint(x: 0.0, y: btnGoogle.frame.origin.y), animated: true)
+            //       scrollSignUp.setContentOffset(CGPoint(x: 0.0, y: btnGoogle.frame.origin.y), animated: true)
         }
         
     }
@@ -109,16 +111,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         textField.resignFirstResponder()
         return true
     }
-    
-    func shadow(button:UIButton){
-        button.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-        button.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-        button.layer.shadowOpacity = 1.0
-        button.layer.shadowRadius = 0.0
-        button.layer.masksToBounds = false
-        button.layer.cornerRadius = 4.0
-    }
-    
     
 }
 

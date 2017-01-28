@@ -11,7 +11,7 @@ import UIKit
 
 class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate{
 
-    @IBOutlet var btnAdd: UIView!
+    @IBOutlet var btnAdd: UIButton!
     @IBOutlet var btnDone: UIButton!
     @IBOutlet var pickerView: UIPickerView!
     @IBOutlet var vwOption: UIView!
@@ -84,6 +84,9 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
         btnAdd.layer.cornerRadius = 2.0
         view.backgroundColor = getBackgroundColor()
         txtMedicationName.backgroundColor = getBackgroundColor()
+        btnAdd.shadow()
+        btnTime.shadow()
+        btnFood.shadow()
     }
     
     @IBAction func btnNavBack(_ sender: UIButton) {

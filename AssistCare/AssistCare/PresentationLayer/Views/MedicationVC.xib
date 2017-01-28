@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MedicationVC" customModule="AssistCare" customModuleProvider="target">
             <connections>
-                <outlet property="btnAdd" destination="PQK-YQ-0rq" id="5nF-Ec-d9C"/>
+                <outlet property="btnAdd" destination="PQK-YQ-0rq" id="7eG-WA-Eg2"/>
                 <outlet property="btnDone" destination="jCq-QN-a3Z" id="KLJ-et-WgJ"/>
                 <outlet property="btnFood" destination="JTd-oG-hnD" id="4cP-Wf-6vA"/>
                 <outlet property="btnFri" destination="4o3-ey-9od" id="5mc-aG-4lg"/>
