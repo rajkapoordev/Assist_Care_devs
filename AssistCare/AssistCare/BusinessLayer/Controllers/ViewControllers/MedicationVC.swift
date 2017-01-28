@@ -11,7 +11,7 @@ import UIKit
 
 class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate{
 
-    @IBOutlet var btnAdd: UIView!
+    @IBOutlet var btnAdd: UIButton!
     @IBOutlet var btnDone: UIButton!
     @IBOutlet var pickerView: UIPickerView!
     @IBOutlet var vwOption: UIView!
@@ -28,11 +28,70 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
     @IBOutlet var txtMedicationName: UITextField!
     @IBOutlet var lbAddMedication: UILabel!
     
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+    
     let time = ["Morning","Afternoon","Night"]
     let food = ["with Meal","With Breakfast","Before Meal","After Breakfast"]
     var selectedData:String!
     var tempButton:UIButton!
     var isOpened:Bool = false
+ 
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        pickerView.delegate = self
+        pickerView.dataSource = self
+        txtMedicationName.delegate = self
+        self.tempButton = btnTime
+        self.setInterface()
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func setInterface() {
+        self.navigationController?.navigationBar.isHidden = true
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
+        lblNavTitle.text = "Medication"
+        
+        btnAdd.shadow()
+        btnTime.shadow()
+        btnFood.shadow()
+        txtMedicationName.setBottomBorder()
+        btnMon.backgroundColor = getGrayColor()
+        btnTue.backgroundColor = getGrayColor()
+        btnWed.backgroundColor = getGrayColor()
+        btnThur.backgroundColor = getGrayColor()
+        btnFri.backgroundColor = getGrayColor()
+        btnSat.backgroundColor = getGrayColor()
+        btnSun.backgroundColor = getGrayColor()
+        
+        btnMon.layer.cornerRadius = btnMon.bounds.size.width/2
+        btnTue.layer.cornerRadius = btnTue.bounds.size.width/2
+        btnWed.layer.cornerRadius = btnWed.bounds.size.width/2
+        btnThur.layer.cornerRadius = btnThur.bounds.size.width/2
+        btnFri.layer.cornerRadius = btnFri.bounds.size.width/2
+        btnSat.layer.cornerRadius = btnSat.bounds.size.width/2
+        btnSun.layer.cornerRadius = btnSun.bounds.size.width/2
+        btnFood.setTitle(food[0], for: .normal)
+        btnTime.setTitle(time[0], for: .normal)
+        btnMon.isHighlighted = false
+        btnFood.titleLabel?.numberOfLines = 0; // Dynamic number of lines
+        btnFood.titleLabel?.lineBreakMode = .byWordWrapping
+        
+        btnAdd.layer.cornerRadius = 2.0
+        view.backgroundColor = getBackgroundColor()
+        txtMedicationName.backgroundColor = getBackgroundColor()
+    }
+    
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
+    }
     
     @IBAction func btnTime(_ sender: Any) {
         if(isOpened == false){
@@ -47,7 +106,6 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
         }
     }
 
-    
     @IBAction func btnFood(_ sender: Any) {
         if(isOpened == false){
         self.tempButton = self.btnFood
@@ -147,60 +205,7 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
             btnSun.setTitleColor(UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1), for: .normal)
         }
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        txtMedicationName.delegate = self
-        self.tempButton = btnTime
-        self.setInterface()
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func setInterface(){
-        let backButton = UIBarButtonItem(
-            title: "Medication",
-            style: UIBarButtonItemStyle.bordered,
-            target: nil,
-            action: nil
-        );
-        
-        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.tintColor = UIColor.white
-
-        txtMedicationName.setBottomBorder()
-        btnMon.backgroundColor = getGrayColor()
-        btnTue.backgroundColor = getGrayColor()
-        btnWed.backgroundColor = getGrayColor()
-        btnThur.backgroundColor = getGrayColor()
-        btnFri.backgroundColor = getGrayColor()
-        btnSat.backgroundColor = getGrayColor()
-        btnSun.backgroundColor = getGrayColor()
-        
-        btnMon.layer.cornerRadius = btnMon.bounds.size.width/2
-        btnTue.layer.cornerRadius = btnTue.bounds.size.width/2
-        btnWed.layer.cornerRadius = btnWed.bounds.size.width/2
-        btnThur.layer.cornerRadius = btnThur.bounds.size.width/2
-        btnFri.layer.cornerRadius = btnFri.bounds.size.width/2
-        btnSat.layer.cornerRadius = btnSat.bounds.size.width/2
-        btnSun.layer.cornerRadius = btnSun.bounds.size.width/2
-        btnFood.setTitle(food[0], for: .normal)
-        btnTime.setTitle(time[0], for: .normal)
-        btnMon.isHighlighted = false
-        btnFood.titleLabel?.numberOfLines = 0; // Dynamic number of lines
-        btnFood.titleLabel?.lineBreakMode = .byWordWrapping
-        
-        btnAdd.layer.cornerRadius = 2.0
-        view.backgroundColor = getBackgroundColor()
-        txtMedicationName.backgroundColor = getBackgroundColor()
-    }
-    
+   
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }

@@ -10,9 +10,9 @@ import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     var window: UIWindow?
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
         GIDSignIn.sharedInstance().clientID = "327847630381-6dbe80qbvs1s4ollt9j75qt50p4aajeu.apps.googleusercontent.com"
@@ -20,15 +20,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = getAppColor()
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-          let vc = CreateProfileFirst(nibName: "CreateProfileFirst", bundle: nil)
+
+       
+        let vc = searchCareGiverOnMapVC(nibName: "searchCareGiverOnMapVC", bundle: nil)
+
         
-        
-//         let vc = PaymentCardDetailVC(nibName: "PaymentCardDetailVC", bundle: nil)
-//        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
-      //  let vc = ReferealVC(nibName: "ReferealVC", bundle: nil)
+//       let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
-
+        
         let nav = UINavigationController(rootViewController: vc)
         nav.isNavigationBarHidden = true
         self.window?.isUserInteractionEnabled = true
@@ -36,27 +36,27 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.makeKeyAndVisible()
         return true
     }
-   
+    
     func applicationWillResignActive(_ application: UIApplication) {
         
     }
-
-    func applicationDidEnterBackground(_ application: UIApplication) {
-
-    }
-
-    func applicationWillEnterForeground(_ application: UIApplication) {
     
+    func applicationDidEnterBackground(_ application: UIApplication) {
+        
     }
-
+    
+    func applicationWillEnterForeground(_ application: UIApplication) {
+        
+    }
+    
     func applicationDidBecomeActive(_ application: UIApplication) {
-
+        
     }
-
+    
     func applicationWillTerminate(_ application: UIApplication) {
-
+        
     }
-
-
+    
+    
 }
 

@@ -12,6 +12,12 @@ class VerificationVC: UIViewController ,UITextFieldDelegate{
 
     @IBOutlet var scrollEnterNum: UIScrollView!
     @IBOutlet var txtEnterNum: UITextField!
+    
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setInterface()
@@ -30,17 +36,15 @@ class VerificationVC: UIViewController ,UITextFieldDelegate{
     }
     
     func setInterface(){
-        let backButton = UIBarButtonItem(
-            title: "Sign Up",
-            style: UIBarButtonItemStyle.bordered,
-            target: nil,
-            action: nil
-        );
-        
-        navigationController?.navigationBar.topItem?.backBarButtonItem = backButton;
-        navigationController?.navigationBar.isHidden = false
-        navigationController?.navigationBar.tintColor = UIColor.white
+        self.navigationController?.navigationBar.isHidden = true
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
         txtEnterNum.setBottomBorder()
+    }
+    
+    //Navigation back
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
     }
     
     func keyboardWillAppear(notification:NSNotification) {

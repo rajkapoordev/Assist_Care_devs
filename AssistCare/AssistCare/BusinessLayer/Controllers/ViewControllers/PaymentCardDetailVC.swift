@@ -9,39 +9,40 @@
 import UIKit
 
 class PaymentCardDetailVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
+    
     @IBOutlet var tblPaymentCardDetail: UITableView!
+    
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+    @IBOutlet var btnNavaddNewCard: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setInterface()
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
-
+    
     func setInterface() {
-        self.navigationController?.navigationBar.isHidden = false
+        self.navigationController?.navigationBar.isHidden = true
         self.automaticallyAdjustsScrollViewInsets = false
-        
-        //Right bar button
-        let button = UIButton.init(type: .custom)
-        button.setImage(UIImage.init(named: "add_button.png"), for: .normal)
-        button.addTarget(self, action:#selector(self.addNewPaymentDetail), for: UIControlEvents.touchUpInside)
-        button.frame = CGRect.init(x: 0, y: 0, width: 25, height: 25)
-        let barButton = UIBarButtonItem.init(customView: button)
-        self.navigationItem.rightBarButtonItem = barButton
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
         
         self.view.backgroundColor = appUIColorFromRGB(rgbValue: BACK_COLOR, alpha: 1.0)
         //register nib
-        tblPaymentCardDetail.register(UINib(nibName: "PaymentDetailCell", bundle:nil), forCellReuseIdentifier: "PaymentDetailCell")
+        tblPaymentCardDetail.register(UINib(nibName: "PaymentCardDetailCell", bundle:nil), forCellReuseIdentifier: "PaymentCardDetailCell")
         tblPaymentCardDetail.dataSource = self
         tblPaymentCardDetail.delegate = self
         tblPaymentCardDetail.tableFooterView = UIView()
         self.tblPaymentCardDetail.separatorStyle = .none
         tblPaymentCardDetail.backgroundColor = appUIColorFromRGB(rgbValue: BACK_COLOR, alpha: 1.0)
-
+        
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -49,10 +50,8 @@ class PaymentCardDetailVC: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell{
-        let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentDetailCell", for: indexPath) as! PaymentDetailCell
-        let lineView = UIView(frame: CGRect(x: 0, y: 60, width: ScreenSize.SCREEN_WIDTH, height: 5))
-        lineView.backgroundColor = appUIColorFromRGB(rgbValue: BACK_COLOR, alpha: 1.0)
-        cell.contentView.addSubview(lineView)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "PaymentCardDetailCell", for: indexPath) as! PaymentCardDetailCell
+        cell.vwBottomBorder.backgroundColor = appUIColorFromRGB(rgbValue: BACK_COLOR, alpha: 1.0)
         return cell
     }
     
@@ -64,10 +63,21 @@ class PaymentCardDetailVC: UIViewController, UITableViewDelegate, UITableViewDat
         let managePaymentVC = ManagePaymentCardMethodVC(nibName: "ManagePaymentCardMethodVC", bundle: nil)
         self.navigationController?.pushViewController(managePaymentVC, animated: true)
     }
-
+    
     func addNewPaymentDetail() {
         let managePaymentVC = ManagePaymentCardMethodVC(nibName: "ManagePaymentCardMethodVC", bundle: nil)
         self.navigationController?.pushViewController(managePaymentVC, animated: true)
     }
-
+    
+    
+    @IBAction func btnNavAddNewCard(_ sender: UIButton) {
+        let managePaymentVC = ManagePaymentCardMethodVC(nibName: "ManagePaymentCardMethodVC", bundle: nil)
+        self.navigationController?.pushViewController(managePaymentVC, animated: true)
+    }
+    
+    //Navigation back
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        
+    }
+    
 }

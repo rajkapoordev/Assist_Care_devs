@@ -19,36 +19,31 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UFq-0N-1Pu">
-                        <rect key="frame" x="79" y="9" width="140" height="21"/>
+                        <rect key="frame" x="79" y="10" width="140" height="21"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="16"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rBK-If-MxB">
-                        <rect key="frame" x="79" y="33" width="140" height="21"/>
+                        <rect key="frame" x="79" y="36" width="140" height="21"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="13"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Pending" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gv3-eZ-fPJ">
-                        <rect key="frame" x="227" y="18" width="73" height="32"/>
+                        <rect key="frame" x="227" y="19" width="73" height="32"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                         <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qaC-yf-ZAQ">
-                        <rect key="frame" x="21" y="9" width="50" height="50"/>
+                        <rect key="frame" x="21" y="10" width="50" height="50"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </imageView>
-                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DH3-M1-btB">
-                        <rect key="frame" x="0.0" y="66" width="320" height="4"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
                 </subviews>
             </tableViewCellContentView>
             <connections>
@@ -57,7 +52,7 @@
                 <outlet property="lblEmailId" destination="rBK-If-MxB" id="SCn-Wj-jcS"/>
                 <outlet property="lblName" destination="UFq-0N-1Pu" id="aFv-7S-ZoB"/>
             </connections>
-            <point key="canvasLocation" x="-475" y="-272"/>
+            <point key="canvasLocation" x="-534" y="-432"/>
         </tableViewCell>
     </objects>
 </document>

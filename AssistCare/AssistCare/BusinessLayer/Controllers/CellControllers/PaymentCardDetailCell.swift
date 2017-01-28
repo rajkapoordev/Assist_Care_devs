@@ -8,10 +8,12 @@
 
 import UIKit
 
-class PaymentDetailCell: UITableViewCell {
+class PaymentCardDetailCell: UITableViewCell {
     
     @IBOutlet var imgPaymentCard: UIImageView!
     @IBOutlet var lblCardInfo: UILabel!
+    
+    @IBOutlet var vwBottomBorder: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
