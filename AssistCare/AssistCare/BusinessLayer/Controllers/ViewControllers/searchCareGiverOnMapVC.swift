@@ -24,7 +24,6 @@ class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationMana
     
     //    let googleMapAPIKey = "AIzaSyCblEAKCQQZE9EFFlkTlwB8BVA4Ize8t5M"
     //    let kBgQueue = DispatchQueue.global(priority: DispatchQueue.GlobalQueuePriority.default)
-    
     var currentCentre = CLLocationCoordinate2D()
     var currenDist:CLLocationDistance = 0
     let locationManager = CLLocationManager()
