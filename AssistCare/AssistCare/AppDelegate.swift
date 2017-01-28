@@ -25,7 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
        // let vc = searchCareGiverOnMapVC(nibName: "searchCareGiverOnMapVC", bundle: nil)
         
-       let vc = DisplayReviewVC(nibName: "DisplayReviewVC", bundle: nil)
+       let vc = BookingEditVC(nibName: "BookingEditVC", bundle: nil)
         //        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
         //  let vc = ReferealVC(nibName: "ReferealVC", bundle: nil)
         

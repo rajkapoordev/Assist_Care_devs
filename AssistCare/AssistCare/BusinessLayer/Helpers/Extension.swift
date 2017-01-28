@@ -25,14 +25,27 @@ extension UITextField {
 extension UIButton{
     
     func shadow() {
-    self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
-    self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
-    self.layer.shadowOpacity = 1.0
-    self.layer.shadowRadius = 0.0
-    self.layer.masksToBounds = false
-    self.layer.cornerRadius = 4.0
+        self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        self.layer.shadowOpacity = 0.8
+        self.layer.shadowRadius = 2.0
+        self.layer.masksToBounds = false
+        self.layer.cornerRadius = 2.0
     }
-    
+    func shadowWithBorder(){
+        var shadowLayer = CAShapeLayer()
+        shadowLayer.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: 0).cgPath
+        shadowLayer.fillColor = UIColor.white.cgColor
+        
+        shadowLayer.shadowColor = UIColor.darkGray.cgColor
+        shadowLayer.shadowPath = shadowLayer.path
+        shadowLayer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        shadowLayer.shadowOpacity = 0.8
+        shadowLayer.shadowRadius = 2
+        
+        self.layer.insertSublayer(shadowLayer, at: 0)
+
+    }
     func roundedBottomLeftButton(){
             let maskPAth1 = UIBezierPath(roundedRect: self.bounds,
                                          byRoundingCorners: [.bottomLeft ],

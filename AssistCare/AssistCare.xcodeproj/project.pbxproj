@@ -122,6 +122,12 @@
 		30ACE1901E3C6E95007A331F /* TabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACE18E1E3C6E95007A331F /* TabCell.swift */; };
 		30ACE1931E3C6F0E007A331F /* TabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30ACE1921E3C6F0E007A331F /* TabCell.xib */; };
 		30ACE1971E3C6FE5007A331F /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30ACE1961E3C6FE5007A331F /* ReviewCell.xib */; };
+		30EDB3891E3C8DFD0090C5C2 /* BookingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EDB3881E3C8DFD0090C5C2 /* BookingVC.swift */; };
+		30EDB38F1E3C8EE60090C5C2 /* BookingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30EDB38E1E3C8EE60090C5C2 /* BookingVC.xib */; };
+		30EDB3911E3CB57A0090C5C2 /* BookInstructionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EDB3901E3CB57A0090C5C2 /* BookInstructionVC.swift */; };
+		30EDB3931E3CB5930090C5C2 /* BookInstructionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30EDB3921E3CB5930090C5C2 /* BookInstructionVC.xib */; };
+		30EDB3951E3CC80B0090C5C2 /* BookingEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30EDB3941E3CC80B0090C5C2 /* BookingEditVC.swift */; };
+		30EDB3971E3CC81B0090C5C2 /* BookingEditVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30EDB3961E3CC81B0090C5C2 /* BookingEditVC.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -280,6 +286,12 @@
 		30ACE18E1E3C6E95007A331F /* TabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCell.swift; sourceTree = "<group>"; };
 		30ACE1921E3C6F0E007A331F /* TabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabCell.xib; sourceTree = "<group>"; };
 		30ACE1961E3C6FE5007A331F /* ReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewCell.xib; sourceTree = "<group>"; };
+		30EDB3881E3C8DFD0090C5C2 /* BookingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingVC.swift; sourceTree = "<group>"; };
+		30EDB38E1E3C8EE60090C5C2 /* BookingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingVC.xib; sourceTree = "<group>"; };
+		30EDB3901E3CB57A0090C5C2 /* BookInstructionVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookInstructionVC.swift; sourceTree = "<group>"; };
+		30EDB3921E3CB5930090C5C2 /* BookInstructionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookInstructionVC.xib; sourceTree = "<group>"; };
+		30EDB3941E3CC80B0090C5C2 /* BookingEditVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookingEditVC.swift; sourceTree = "<group>"; };
+		30EDB3961E3CC81B0090C5C2 /* BookingEditVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BookingEditVC.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -499,6 +511,9 @@
 				243705CC1E2F49C100005416 /* VerificationLoadingVC.swift */,
 				243705CD1E2F49C100005416 /* VerificationVC.swift */,
 				30AA53891E3B65200009640C /* DisplayReviewVC.swift */,
+				30EDB3881E3C8DFD0090C5C2 /* BookingVC.swift */,
+				30EDB3901E3CB57A0090C5C2 /* BookInstructionVC.swift */,
+				30EDB3941E3CC80B0090C5C2 /* BookingEditVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -546,6 +561,9 @@
 				243705DD1E2F49C100005416 /* VerificationVC.xib */,
 				0CA0B7401E38AECB0066D0EA /* FriendsBookedVC.xib */,
 				30AA538B1E3B65480009640C /* DisplayReviewVC.xib */,
+				30EDB38E1E3C8EE60090C5C2 /* BookingVC.xib */,
+				30EDB3921E3CB5930090C5C2 /* BookInstructionVC.xib */,
+				30EDB3961E3CC81B0090C5C2 /* BookingEditVC.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -723,6 +741,7 @@
 				30ACE1931E3C6F0E007A331F /* TabCell.xib in Resources */,
 				0CA0B74E1E38BA8E0066D0EA /* facebook.png in Resources */,
 				243705F31E2F49C100005416 /* SignUpVC.xib in Resources */,
+				30EDB3931E3CB5930090C5C2 /* BookInstructionVC.xib in Resources */,
 				0CAC45EA1E372EDA00C79AFA /* PaymentCardDetailVC.xib in Resources */,
 				0CAC45E81E372E9F00C79AFA /* ManagePaymentCardMethodVC.xib in Resources */,
 				0CAC45F01E372F5500C79AFA /* PaymentCardDetailCell.xib in Resources */,
@@ -736,6 +755,8 @@
 				243705ED1E2F49C100005416 /* CategoryVC.xib in Resources */,
 				0C19A2B71E3731B30014B01C /* add_button.png in Resources */,
 				0CA0B74C1E38B9F10066D0EA /* FriendBookedCell.xib in Resources */,
+				30EDB38F1E3C8EE60090C5C2 /* BookingVC.xib in Resources */,
+				30EDB3971E3CC81B0090C5C2 /* BookingEditVC.xib in Resources */,
 				0C19A2BC1E3731B30014B01C /* noimg.png in Resources */,
 				243705F11E2F49C100005416 /* MedicationVC.xib in Resources */,
 				30ACE1971E3C6FE5007A331F /* ReviewCell.xib in Resources */,
@@ -862,6 +883,7 @@
 				243705E71E2F49C100005416 /* SignUpVC.swift in Sources */,
 				30AA53971E3B71980009640C /* ReviewCell.swift in Sources */,
 				30AA538A1E3B65200009640C /* DisplayReviewVC.swift in Sources */,
+				30EDB3891E3C8DFD0090C5C2 /* BookingVC.swift in Sources */,
 				0CA0B7491E38B9D60066D0EA /* FriendBookedCell.swift in Sources */,
 				243705E91E2F49C100005416 /* VerificationVC.swift in Sources */,
 				0C19A2E61E3731EF0014B01C /* FSCalendarConstants.m in Sources */,
@@ -881,6 +903,7 @@
 				0CBA41E51E2CAA9A0008C8E4 /* AppDelegate.swift in Sources */,
 				0C19A2EB1E3731EF0014B01C /* FSCalendarScopeHandle.m in Sources */,
 				0CA0B73A1E38A8630066D0EA /* CareGiverDetailVC.swift in Sources */,
+				30EDB3951E3CC80B0090C5C2 /* BookingEditVC.swift in Sources */,
 				243705E31E2F49C100005416 /* CategoryVC.swift in Sources */,
 				0C19A2E81E3731EF0014B01C /* FSCalendarDelegationProxy.m in Sources */,
 				243130BB1E2F98DA006F24D4 /* NewAppoinmentVC.swift in Sources */,
@@ -902,6 +925,7 @@
 				24562AAE1E309608000814C6 /* ThanksVc.swift in Sources */,
 				0C19A2EE1E3731EF0014B01C /* FSCalendarWeekdayView.m in Sources */,
 				0CAC45EE1E372F3900C79AFA /* PaymentCardDetailCell.swift in Sources */,
+				30EDB3911E3CB57A0090C5C2 /* BookInstructionVC.swift in Sources */,
 				0C19A2ED1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m in Sources */,
 				24562AAD1E309608000814C6 /* PaymentDetailsVc.swift in Sources */,
 				0C19A2E21E3731EF0014B01C /* FSCalendarCalculator.m in Sources */,

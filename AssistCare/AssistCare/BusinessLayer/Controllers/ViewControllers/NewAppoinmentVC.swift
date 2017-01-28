@@ -250,7 +250,25 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     override func viewWillAppear(_ animated: Bool) {
         
     }
-    
+    override func viewDidLayoutSubviews() {
+        btnCancelAppoinment.frame = CGRect(x: 0, y: vwPopUp.frame.size.height - 45, width: vwPopUp.frame.size.width/2, height: 45)
+        
+        btnOkay.frame = CGRect(x: vwPopUp.frame.size.width/2, y: vwPopUp.frame.size.height - 45, width: vwPopUp.frame.size.width/2, height: 45)
+        btnCancelAppoinment.setTitle("CANCEL APPOINMENT", for: .normal)
+        btnOkay.setTitle("OKAY", for: .normal)
+        btnCancelAppoinment.backgroundColor = getRedColor()
+        btnOkay.backgroundColor = getGreenColor()
+        btnCancelAppoinment.titleLabel?.numberOfLines = 0; // Dynamic number of lines
+        btnCancelAppoinment.titleLabel?.lineBreakMode = .byWordWrapping
+        btnOkay.tintColor = UIColor.white
+        btnCancelAppoinment.titleLabel?.textAlignment = .center
+        btnOkay.titleLabel?.textAlignment = .center
+        btnCancelAppoinment.tintColor = UIColor.white
+        
+        btnOkay.roundedBottomRightButton()
+        btnCancelAppoinment.roundedBottomLeftButton()
+
+    }
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
@@ -265,17 +283,8 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         scrollNewAppoinment.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 930)
         vwPopUp.layer.cornerRadius = 5.0
         vwCalender.layer.cornerRadius = 2.0
-        btnCancelAppoinment.setTitle("CANCEL APPOINMENT", for: .normal)
-        btnOkay.setTitle("OKAY", for: .normal)
-        btnCancelAppoinment.backgroundColor = getRedColor()
-        btnOkay.backgroundColor = getGreenColor()
-        btnCancelAppoinment.titleLabel?.numberOfLines = 0; // Dynamic number of lines
-        btnCancelAppoinment.titleLabel?.lineBreakMode = .byWordWrapping
-        btnOkay.tintColor = UIColor.white
-        btnCancelAppoinment.titleLabel?.textAlignment = .center
-        btnOkay.titleLabel?.textAlignment = .center
-        btnCancelAppoinment.tintColor = UIColor.white
         
+
         lbPopUpName.text = "Anna Connonly"
         lbPopUpDate.text = "February 28th"
         lbPopUpTime.text = "9:00 am - 12:00 pm"
@@ -284,8 +293,6 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         btnPopUpMessage.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "chat"), scaledToSize: CGSize(width: btnPopUpMessage.bounds.size.width, height: btnPopUpMessage.bounds.size.width)), for: .normal)
         btnPopUpaddServices.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "addMedication"), scaledToSize: CGSize(width: btnPopUpaddServices.bounds.size.width, height: btnPopUpaddServices.bounds.size.width)), for: .normal)
         imgPopUpProfile.layer.cornerRadius = imgPopUpProfile.bounds.size.width/2
-        btnOkay.roundedBottomRightButton()
-        btnCancelAppoinment.roundedBottomLeftButton()
         btnDate.setImage(imageWithImage(#imageLiteral(resourceName: "timer"), scaledToSize: CGSize(width: btnDate.bounds.size.width, height: btnDate.bounds.size.height)), for: .normal)
        // btnDate.setBackgroundImage()
         btnDate.contentMode = .scaleAspectFit
