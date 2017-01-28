@@ -24,6 +24,7 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
     var navigationVC4 = UINavigationController()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         
 
