@@ -26,7 +26,7 @@ class DisplayReviewVC: UIViewController,UICollectionViewDelegate,UICollectionVie
         // Do any additional setup after loading the view.
         self.collectionViewTabs.delegate = self
         self.collectionViewTabs.dataSource = self
-        self.collectionViewTabs.register(UINib(nibName: "tabCell", bundle: nil), forCellWithReuseIdentifier: "cell_tab")
+        self.collectionViewTabs.register(UINib(nibName: "TabCell", bundle: nil), forCellWithReuseIdentifier: "cell_tab")
         self.tableViewReviews.delegate = self
         self.tableViewReviews.dataSource = self
         self.tableViewReviews.register(UINib(nibName: "ReviewCell", bundle: nil), forCellReuseIdentifier: "ReviewCell")
@@ -49,26 +49,26 @@ class DisplayReviewVC: UIViewController,UICollectionViewDelegate,UICollectionVie
         return 3
     }
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_tab", for: indexPath) as! tabCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_tab", for: indexPath) as! TabCell
 
 //        cell.layer.shadowColor = UIColor.gray.cgColor
 //        cell.layer.shadowOffset = CGSize(width: 15, height: 15)
 //        cell.layer.shadowOpacity = 1
 
         if indexPath.item == 0{
-            cell.lb_cell.text = "RECENT"
+            cell.lb_cellTab.text = "RECENT"
         }else if indexPath.item == 1{
-            cell.lb_cell.text = "POSITIVE"
+            cell.lb_cellTab.text = "POSITIVE"
         }else if indexPath.item == 2{
-            cell.lb_cell.text = "NEGATIVE"
+            cell.lb_cellTab.text = "NEGATIVE"
         }
       
         if(indexPath == index){
             cell.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
-            cell.lb_cell.textColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+            cell.lb_cellTab.textColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
         }else{
             cell.backgroundColor = UIColor.clear
-            cell.lb_cell.textColor = UIColor.gray
+            cell.lb_cellTab.textColor = UIColor.gray
         }
        
         return cell

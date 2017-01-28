@@ -118,10 +118,10 @@
 		24562B061E30D7E8000814C6 /* GooglePlacePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24562B051E30D7E8000814C6 /* GooglePlacePicker.bundle */; };
 		30AA538A1E3B65200009640C /* DisplayReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA53891E3B65200009640C /* DisplayReviewVC.swift */; };
 		30AA538C1E3B65480009640C /* DisplayReviewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30AA538B1E3B65480009640C /* DisplayReviewVC.xib */; };
-		30AA538E1E3B6BBA0009640C /* tabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA538D1E3B6BBA0009640C /* tabCell.swift */; };
-		30AA53901E3B6BD50009640C /* tabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30AA538F1E3B6BD50009640C /* tabCell.xib */; };
 		30AA53971E3B71980009640C /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA53951E3B71980009640C /* ReviewCell.swift */; };
-		30AA53981E3B71980009640C /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30AA53961E3B71980009640C /* ReviewCell.xib */; };
+		30ACE1901E3C6E95007A331F /* TabCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30ACE18E1E3C6E95007A331F /* TabCell.swift */; };
+		30ACE1931E3C6F0E007A331F /* TabCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30ACE1921E3C6F0E007A331F /* TabCell.xib */; };
+		30ACE1971E3C6FE5007A331F /* ReviewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30ACE1961E3C6FE5007A331F /* ReviewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -276,10 +276,10 @@
 		24562B051E30D7E8000814C6 /* GooglePlacePicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlacePicker.bundle; sourceTree = "<group>"; };
 		30AA53891E3B65200009640C /* DisplayReviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayReviewVC.swift; sourceTree = "<group>"; };
 		30AA538B1E3B65480009640C /* DisplayReviewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayReviewVC.xib; sourceTree = "<group>"; };
-		30AA538D1E3B6BBA0009640C /* tabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = tabCell.swift; path = "../../../../../../pooja/Back ups/pooja/dynamicTabBar/dynamicTabBar/tabCell.swift"; sourceTree = "<group>"; };
-		30AA538F1E3B6BD50009640C /* tabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = tabCell.xib; path = "../../../../../../pooja/Back ups/pooja/dynamicTabBar/dynamicTabBar/tabCell.xib"; sourceTree = "<group>"; };
 		30AA53951E3B71980009640C /* ReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
-		30AA53961E3B71980009640C /* ReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ReviewCell.xib; path = ../../../BusinessLayer/Controllers/CellControllers/ReviewCell.xib; sourceTree = "<group>"; };
+		30ACE18E1E3C6E95007A331F /* TabCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabCell.swift; sourceTree = "<group>"; };
+		30ACE1921E3C6F0E007A331F /* TabCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TabCell.xib; sourceTree = "<group>"; };
+		30ACE1961E3C6FE5007A331F /* ReviewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReviewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -463,7 +463,6 @@
 		243705C31E2F49C100005416 /* CellControllers */ = {
 			isa = PBXGroup;
 			children = (
-				30AA538D1E3B6BBA0009640C /* tabCell.swift */,
 				0C91A8A81E32306D0000955E /* PersonHistoryCell.swift */,
 				0C91A8961E31F51E0000955E /* AppoinmentHeaderCell.swift */,
 				24562AB71E3096C4000814C6 /* cellMedication.swift */,
@@ -471,6 +470,7 @@
 				0CAC45ED1E372F3900C79AFA /* PaymentCardDetailCell.swift */,
 				0CA0B7471E38B9D60066D0EA /* FriendBookedCell.swift */,
 				30AA53951E3B71980009640C /* ReviewCell.swift */,
+				30ACE18E1E3C6E95007A331F /* TabCell.swift */,
 			);
 			path = CellControllers;
 			sourceTree = "<group>";
@@ -553,14 +553,14 @@
 		243705D51E2F49C100005416 /* CellView */ = {
 			isa = PBXGroup;
 			children = (
-				30AA538F1E3B6BD50009640C /* tabCell.xib */,
+				30ACE1961E3C6FE5007A331F /* ReviewCell.xib */,
+				30ACE1921E3C6F0E007A331F /* TabCell.xib */,
 				0CA0B74B1E38B9F10066D0EA /* FriendBookedCell.xib */,
 				0CAC45EF1E372F5500C79AFA /* PaymentCardDetailCell.xib */,
 				24562AC91E30C5F6000814C6 /* AppoinmentHeaderCell.xib */,
 				243705D61E2F49C100005416 /* CareServicesCell.xib */,
 				243705D71E2F49C100005416 /* cellMedication.xib */,
 				0C91A8A51E3230530000955E /* PersonHistoryCell.xib */,
-				30AA53961E3B71980009640C /* ReviewCell.xib */,
 			);
 			path = CellView;
 			sourceTree = "<group>";
@@ -720,8 +720,8 @@
 				243705EE1E2F49C100005416 /* CareServicesCell.xib in Resources */,
 				0C19A2B81E3731B30014B01C /* bell.png in Resources */,
 				0C91A8991E320B580000955E /* ReferealVC.xib in Resources */,
+				30ACE1931E3C6F0E007A331F /* TabCell.xib in Resources */,
 				0CA0B74E1E38BA8E0066D0EA /* facebook.png in Resources */,
-				30AA53901E3B6BD50009640C /* tabCell.xib in Resources */,
 				243705F31E2F49C100005416 /* SignUpVC.xib in Resources */,
 				0CAC45EA1E372EDA00C79AFA /* PaymentCardDetailVC.xib in Resources */,
 				0CAC45E81E372E9F00C79AFA /* ManagePaymentCardMethodVC.xib in Resources */,
@@ -738,7 +738,7 @@
 				0CA0B74C1E38B9F10066D0EA /* FriendBookedCell.xib in Resources */,
 				0C19A2BC1E3731B30014B01C /* noimg.png in Resources */,
 				243705F11E2F49C100005416 /* MedicationVC.xib in Resources */,
-				30AA53981E3B71980009640C /* ReviewCell.xib in Resources */,
+				30ACE1971E3C6FE5007A331F /* ReviewCell.xib in Resources */,
 				0CBA41EF1E2CAA9A0008C8E4 /* LaunchScreen.storyboard in Resources */,
 				24562B061E30D7E8000814C6 /* GooglePlacePicker.bundle in Resources */,
 				243705F21E2F49C100005416 /* SetupServicesVC.xib in Resources */,
@@ -877,7 +877,6 @@
 				243705E11E2F49C100005416 /* CareServicesCell.swift in Sources */,
 				0CA0B73E1E38A8950066D0EA /* searchCareGiverOnMapVC.swift in Sources */,
 				24562AAC1E309608000814C6 /* AppointmentVC.swift in Sources */,
-				30AA538E1E3B6BBA0009640C /* tabCell.swift in Sources */,
 				243705E51E2F49C100005416 /* MedicationVC.swift in Sources */,
 				0CBA41E51E2CAA9A0008C8E4 /* AppDelegate.swift in Sources */,
 				0C19A2EB1E3731EF0014B01C /* FSCalendarScopeHandle.m in Sources */,
@@ -907,6 +906,7 @@
 				24562AAD1E309608000814C6 /* PaymentDetailsVc.swift in Sources */,
 				0C19A2E21E3731EF0014B01C /* FSCalendarCalculator.m in Sources */,
 				0C19A2E01E3731EF0014B01C /* FSCalendar+Deprecated.m in Sources */,
+				30ACE1901E3C6E95007A331F /* TabCell.swift in Sources */,
 				0CAC45EC1E372EFC00C79AFA /* PaymentCardDetailVC.swift in Sources */,
 				243705EB1E2F49C100005416 /* Constant.swift in Sources */,
 			);
