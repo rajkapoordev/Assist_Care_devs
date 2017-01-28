@@ -95,3 +95,11 @@ extension UIView {
         self.layer.masksToBounds = true
     }
 }
+
+extension UILabel {
+    func setRadius() {
+        self.layer.cornerRadius = self.frame.height / 2
+        self.layer.masksToBounds = true
+    }
+}
+

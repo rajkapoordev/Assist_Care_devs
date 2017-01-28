@@ -145,6 +145,9 @@ class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationMana
     func tapPinInMap(sender: UITapGestureRecognizer) {
         let selectedPin = (sender.view)!.tag
         print(selectedPin)
+        let careGiverDetailVC = CareGiverDetailVC(nibName: "CareGiverDetailVC", bundle: nil)
+        self.navigationController!.pushViewController(careGiverDetailVC, animated: true)
+        
     }
     
     
