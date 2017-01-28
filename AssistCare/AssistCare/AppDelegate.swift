@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
 
        
-        let vc = searchCareGiverOnMapVC(nibName: "searchCareGiverOnMapVC", bundle: nil)
+        let vc = CreateProfileFirst(nibName: "CreateProfileFirst", bundle: nil)
 
         
 //       let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
