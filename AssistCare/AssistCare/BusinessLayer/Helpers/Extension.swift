@@ -44,7 +44,6 @@ extension UIButton{
         shadowLayer.shadowRadius = 2
         
         self.layer.insertSublayer(shadowLayer, at: 0)
-
     }
     func roundedBottomLeftButton(){
             let maskPAth1 = UIBezierPath(roundedRect: self.bounds,
@@ -74,7 +73,18 @@ extension UIButton{
     }
 
 }
-
+extension UIView {
+    
+    func setBottomBorderView() {
+        
+        self.layer.backgroundColor = UIColor.white.cgColor
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor(red: 209/255, green: 209/255, blue: 209/255, alpha: 1).cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 0.0
+    }
+}
 extension UITextField
 {
     
@@ -88,5 +98,31 @@ extension UITextField
         return false
     }
 
+}
+
+
+extension UIImageView {
+    
+    override func setRounded() {
+        let radius = self.frame.width / 2
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
+    }
+}
+
+extension UIView {
+    
+    func setRounded() {
+        let radius = self.frame.width / 2
+        self.layer.cornerRadius = radius
+        self.layer.masksToBounds = true
+    }
+}
+
+extension UILabel {
+    func setRadius() {
+        self.layer.cornerRadius = self.frame.height / 2
+        self.layer.masksToBounds = true
+    }
 }
 
