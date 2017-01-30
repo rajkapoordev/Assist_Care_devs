@@ -32,8 +32,9 @@ extension UIButton{
         self.layer.masksToBounds = false
         self.layer.cornerRadius = 2.0
     }
+    
     func shadowWithBorder(){
-        var shadowLayer = CAShapeLayer()
+        let shadowLayer = CAShapeLayer()
         shadowLayer.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: 0).cgPath
         shadowLayer.fillColor = UIColor.white.cgColor
         
@@ -45,6 +46,7 @@ extension UIButton{
         
         self.layer.insertSublayer(shadowLayer, at: 0)
     }
+    
     func roundedBottomLeftButton(){
         let maskPAth1 = UIBezierPath(roundedRect: self.bounds,
                                      byRoundingCorners: [.bottomLeft ],
@@ -113,7 +115,7 @@ extension UIImageView {
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
         blurEffectView.frame = self.bounds
-        
+        blurEffectView.alpha = 0.9
         blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
         self.addSubview(blurEffectView)
     }

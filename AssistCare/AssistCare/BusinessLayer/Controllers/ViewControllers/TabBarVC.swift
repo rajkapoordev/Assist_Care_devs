@@ -40,13 +40,11 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
         return Singleton.instance
     }
     
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
-    func setupTabBar()
-    {
+    func setupTabBar() {
         self.myVC1 = AppointmentVC(nibName: "AppointmentVC", bundle: nil)
         self.myVC2 = EditProfile(nibName: "EditProfile", bundle: nil)
         self.myVC4 = SignUpVC(nibName:"SignUpVC", bundle: nil)

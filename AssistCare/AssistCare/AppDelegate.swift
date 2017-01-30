@@ -21,7 +21,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
 
-       let vc = CareGiverDetailVC(nibName: "CareGiverDetailVC", bundle: nil)
+       let vc = ThanksVc(nibName: "ThanksVc", bundle: nil)
 //        let vc = DisplayReviewVC(nibName: "DisplayReviewVC", bundle: nil)
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
