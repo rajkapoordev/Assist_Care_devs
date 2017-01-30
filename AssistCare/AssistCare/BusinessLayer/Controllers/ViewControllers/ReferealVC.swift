@@ -118,6 +118,8 @@ class ReferealVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //Navigation back
     @IBAction func btnNavBack(_ sender: UIButton) {
+        navigationController?.popViewController(animated: false)
+
     }
  
 }

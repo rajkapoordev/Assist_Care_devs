@@ -11,9 +11,11 @@ import UIKit
 class EditProfile: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
 
     let imagePicker = UIImagePickerController()
+    
     @IBOutlet var btnNext: UIButton!
     @IBOutlet var vw1: UIView!
     
+    @IBOutlet var vWAddress: UIView!
     @IBOutlet var vw2: UIView!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var cvcServices: UICollectionView!
@@ -32,6 +34,8 @@ class EditProfile: UIViewController,UICollectionViewDelegate,UICollectionViewDat
         txtFirstName.delegate = self
         txtLastName.delegate = self
         txtAddress.delegate = self
+        vWAddress.setBottomBorderView()
+        
         imgProfile.layer.cornerRadius = imgProfile.frame.size.width/2
         imgProfile.clipsToBounds = true
         cvcServices?.allowsMultipleSelection = true
@@ -178,7 +182,7 @@ func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
     
     
     @IBAction func nextAction(_ sender: Any) {
-        let vc = PaymentDetailsVc(nibName: "PaymentDetailsVc", bundle: nil)
+        let vc = SetupServicesVC(nibName: "SetupServicesVC", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
        
     }
