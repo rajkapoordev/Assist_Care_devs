@@ -31,7 +31,11 @@
 		0C19A2EC1E3731EF0014B01C /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DA1E3731EF0014B01C /* FSCalendarStickyHeader.m */; };
 		0C19A2ED1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DC1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m */; };
 		0C19A2EE1E3731EF0014B01C /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */; };
-
+		0C4E923A1E3CC4E600FD34E3 /* CareGiverProfileDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E92391E3CC4E600FD34E3 /* CareGiverProfileDetailVC.swift */; };
+		0C4E923C1E3CC4F400FD34E3 /* CareGiverProfileDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4E923B1E3CC4F400FD34E3 /* CareGiverProfileDetailVC.xib */; };
+		0C7A159C1E3C78790030D4D1 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A159B1E3C78790030D4D1 /* placeholder.png */; };
+		0C7A15A01E3C7D690030D4D1 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A159F1E3C7D690030D4D1 /* SignInVC.swift */; };
+		0C7A15A21E3C7D740030D4D1 /* SignInVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A15A11E3C7D740030D4D1 /* SignInVC.xib */; };
 		0C811F4B1E3C8DBB008A578C /* CareServicesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C811F471E3C8DBB008A578C /* CareServicesVC.swift */; };
 		0C811F4C1E3C8DBB008A578C /* CreateProfileFour.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C811F481E3C8DBB008A578C /* CreateProfileFour.swift */; };
 		0C811F4D1E3C8DBB008A578C /* CreateProfileSecond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C811F491E3C8DBB008A578C /* CreateProfileSecond.swift */; };
@@ -55,13 +59,10 @@
 		0C811F741E3CAD3E008A578C /* TermAndConditionVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C811F731E3CAD3E008A578C /* TermAndConditionVC.xib */; };
 		0C811F771E3CC076008A578C /* EditProfileCareGiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C811F751E3CC076008A578C /* EditProfileCareGiver.swift */; };
 		0C811F7A1E3CC0A3008A578C /* EditProfileCareGiver.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C811F791E3CC0A3008A578C /* EditProfileCareGiver.xib */; };
-
-		0C4E923A1E3CC4E600FD34E3 /* CareGiverProfileDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C4E92391E3CC4E600FD34E3 /* CareGiverProfileDetailVC.swift */; };
-		0C4E923C1E3CC4F400FD34E3 /* CareGiverProfileDetailVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C4E923B1E3CC4F400FD34E3 /* CareGiverProfileDetailVC.xib */; };
-		0C7A159C1E3C78790030D4D1 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A159B1E3C78790030D4D1 /* placeholder.png */; };
-		0C7A15A01E3C7D690030D4D1 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A159F1E3C7D690030D4D1 /* SignInVC.swift */; };
-		0C7A15A21E3C7D740030D4D1 /* SignInVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A15A11E3C7D740030D4D1 /* SignInVC.xib */; };
-
+		0C8FB60C1E3F09B2007B7E68 /* tempimage.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB60B1E3F09B2007B7E68 /* tempimage.jpeg */; };
+		0C8FB60E1E3F0CD4007B7E68 /* temp.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB60D1E3F0CD4007B7E68 /* temp.jpg */; };
+		0C8FB6101E3F1E51007B7E68 /* share.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB60F1E3F1E51007B7E68 /* share.png */; };
+		0C8FB6121E3F21D8007B7E68 /* right.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C8FB6111E3F21D8007B7E68 /* right.png */; };
 		0C91A8971E31F51E0000955E /* AppoinmentHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C91A8961E31F51E0000955E /* AppoinmentHeaderCell.swift */; };
 		0C91A8991E320B580000955E /* ReferealVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C91A8981E320B580000955E /* ReferealVC.xib */; };
 		0C91A89B1E320BFC0000955E /* ReferealVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C91A89A1E320BFC0000955E /* ReferealVC.swift */; };
@@ -217,7 +218,11 @@
 		0C19A2DC1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarTransitionCoordinator.m; path = FSCalendar/FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
 		0C19A2DD1E3731EF0014B01C /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarWeekdayView.h; path = FSCalendar/FSCalendarWeekdayView.h; sourceTree = "<group>"; };
 		0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWeekdayView.m; path = FSCalendar/FSCalendarWeekdayView.m; sourceTree = "<group>"; };
-
+		0C4E92391E3CC4E600FD34E3 /* CareGiverProfileDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareGiverProfileDetailVC.swift; sourceTree = "<group>"; };
+		0C4E923B1E3CC4F400FD34E3 /* CareGiverProfileDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareGiverProfileDetailVC.xib; sourceTree = "<group>"; };
+		0C7A159B1E3C78790030D4D1 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
+		0C7A159F1E3C7D690030D4D1 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		0C7A15A11E3C7D740030D4D1 /* SignInVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInVC.xib; sourceTree = "<group>"; };
 		0C811F471E3C8DBB008A578C /* CareServicesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareServicesVC.swift; sourceTree = "<group>"; };
 		0C811F481E3C8DBB008A578C /* CreateProfileFour.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileFour.swift; sourceTree = "<group>"; };
 		0C811F491E3C8DBB008A578C /* CreateProfileSecond.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreateProfileSecond.swift; sourceTree = "<group>"; };
@@ -241,13 +246,10 @@
 		0C811F731E3CAD3E008A578C /* TermAndConditionVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TermAndConditionVC.xib; sourceTree = "<group>"; };
 		0C811F751E3CC076008A578C /* EditProfileCareGiver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditProfileCareGiver.swift; sourceTree = "<group>"; };
 		0C811F791E3CC0A3008A578C /* EditProfileCareGiver.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EditProfileCareGiver.xib; sourceTree = "<group>"; };
-
-		0C4E92391E3CC4E600FD34E3 /* CareGiverProfileDetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareGiverProfileDetailVC.swift; sourceTree = "<group>"; };
-		0C4E923B1E3CC4F400FD34E3 /* CareGiverProfileDetailVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareGiverProfileDetailVC.xib; sourceTree = "<group>"; };
-		0C7A159B1E3C78790030D4D1 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
-		0C7A159F1E3C7D690030D4D1 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
-		0C7A15A11E3C7D740030D4D1 /* SignInVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInVC.xib; sourceTree = "<group>"; };
-
+		0C8FB60B1E3F09B2007B7E68 /* tempimage.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = tempimage.jpeg; path = AppImages/tempimage.jpeg; sourceTree = "<group>"; };
+		0C8FB60D1E3F0CD4007B7E68 /* temp.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = temp.jpg; path = AppImages/temp.jpg; sourceTree = "<group>"; };
+		0C8FB60F1E3F1E51007B7E68 /* share.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = share.png; path = AppImages/share.png; sourceTree = "<group>"; };
+		0C8FB6111E3F21D8007B7E68 /* right.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = right.png; path = AppImages/right.png; sourceTree = "<group>"; };
 		0C91A8961E31F51E0000955E /* AppoinmentHeaderCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppoinmentHeaderCell.swift; sourceTree = "<group>"; };
 		0C91A8981E320B580000955E /* ReferealVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ReferealVC.xib; sourceTree = "<group>"; };
 		0C91A89A1E320BFC0000955E /* ReferealVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReferealVC.swift; sourceTree = "<group>"; };
@@ -440,15 +442,16 @@
 		0CAC45F11E372FFA00C79AFA /* AppImages */ = {
 			isa = PBXGroup;
 			children = (
-
+				0C8FB6111E3F21D8007B7E68 /* right.png */,
+				0C8FB60F1E3F1E51007B7E68 /* share.png */,
+				0C8FB60D1E3F0CD4007B7E68 /* temp.jpg */,
+				0C8FB60B1E3F09B2007B7E68 /* tempimage.jpeg */,
 				0C811F671E3CABE9008A578C /* Checked.png */,
 				0C811F681E3CABE9008A578C /* Degree.png */,
 				0C811F691E3CABE9008A578C /* Sort Down-48.png */,
 				0C811F6A1E3CABE9008A578C /* Unchecked.png */,
 				0C811F651E3CA14F008A578C /* plus.png */,
-
 				0C7A159B1E3C78790030D4D1 /* placeholder.png */,
-
 				0CA0B74F1E38BA950066D0EA /* google-plus.png */,
 				0CA0B74D1E38BA8E0066D0EA /* facebook.png */,
 				0C19A2AF1E3731B30014B01C /* add_button.png */,
@@ -560,14 +563,11 @@
 		243705C61E2F49C100005416 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-
 				0C811F471E3C8DBB008A578C /* CareServicesVC.swift */,
 				0C811F481E3C8DBB008A578C /* CreateProfileFour.swift */,
 				0C811F491E3C8DBB008A578C /* CreateProfileSecond.swift */,
 				0C811F4A1E3C8DBB008A578C /* CreateProfileThird.swift */,
-
 				243705C71E2F49C100005416 /* CategoryVC.swift */,
-
 				0CA0B7431E38AEE70066D0EA /* FriendsBookedVC.swift */,
 				24562AA91E309608000814C6 /* AppointmentVC.swift */,
 				0CA0B7391E38A8630066D0EA /* CareGiverDetailVC.swift */,
@@ -588,18 +588,12 @@
 				243705CC1E2F49C100005416 /* VerificationLoadingVC.swift */,
 				243705CD1E2F49C100005416 /* VerificationVC.swift */,
 				30AA53891E3B65200009640C /* DisplayReviewVC.swift */,
-
 				30EDB3881E3C8DFD0090C5C2 /* BookingVC.swift */,
 				30EDB3901E3CB57A0090C5C2 /* BookInstructionVC.swift */,
 				30EDB3941E3CC80B0090C5C2 /* BookingEditVC.swift */,
-
-
 				0C811F6F1E3CACD2008A578C /* TermAndConditionVC.swift */,
 				0C811F751E3CC076008A578C /* EditProfileCareGiver.swift */,
-
 				0C7A159F1E3C7D690030D4D1 /* SignInVC.swift */,
-
-
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -635,10 +629,7 @@
 				243705D51E2F49C100005416 /* CellView */,
 				24562AAF1E30963B000814C6 /* AppointmentVC.xib */,
 				0CA0B7331E38A7DD0066D0EA /* CareGiverDetailVC.xib */,
-
 				0C4E923B1E3CC4F400FD34E3 /* CareGiverProfileDetailVC.xib */,
-				0CA0B7451E38B3CF0066D0EA /* CreateProfileSecond.xib */,
-
 				243705D41E2F49C100005416 /* CategoryVC.xib */,
 				24194F381E31E1CD00982135 /* CreateProfileFirst.xib */,
 				243705D81E2F49C100005416 /* EditProfile.xib */,
@@ -656,13 +647,10 @@
 				243705DD1E2F49C100005416 /* VerificationVC.xib */,
 				0CA0B7401E38AECB0066D0EA /* FriendsBookedVC.xib */,
 				30AA538B1E3B65480009640C /* DisplayReviewVC.xib */,
-
 				30EDB38E1E3C8EE60090C5C2 /* BookingVC.xib */,
 				30EDB3921E3CB5930090C5C2 /* BookInstructionVC.xib */,
 				30EDB3961E3CC81B0090C5C2 /* BookingEditVC.xib */,
-
 				0C7A15A11E3C7D740030D4D1 /* SignInVC.xib */,
-
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -835,6 +823,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0C8FB6121E3F21D8007B7E68 /* right.png in Resources */,
 				0CA0B7421E38AECB0066D0EA /* FriendsBookedVC.xib in Resources */,
 				243705F41E2F49C100005416 /* VerificationLoadingVC.xib in Resources */,
 				0C811F561E3C8E11008A578C /* OtherCertificateCell.xib in Resources */,
@@ -846,22 +835,18 @@
 				30ACE1931E3C6F0E007A331F /* TabCell.xib in Resources */,
 				0CA0B74E1E38BA8E0066D0EA /* facebook.png in Resources */,
 				243705F31E2F49C100005416 /* SignUpVC.xib in Resources */,
-
 				30EDB3931E3CB5930090C5C2 /* BookInstructionVC.xib in Resources */,
-
 				0C811F621E3C9068008A578C /* CreateProfileSecond.xib in Resources */,
-
+				0C8FB60E1E3F0CD4007B7E68 /* temp.jpg in Resources */,
 				0CAC45EA1E372EDA00C79AFA /* PaymentCardDetailVC.xib in Resources */,
+				0C8FB6101E3F1E51007B7E68 /* share.png in Resources */,
 				0CAC45E81E372E9F00C79AFA /* ManagePaymentCardMethodVC.xib in Resources */,
 				0CAC45F01E372F5500C79AFA /* PaymentCardDetailCell.xib in Resources */,
 				0CA0B7381E38A8060066D0EA /* searchCareGiverOnMapVC.xib in Resources */,
 				0CA0B7341E38A7DD0066D0EA /* CareGiverDetailVC.xib in Resources */,
 				243130B91E2F98B9006F24D4 /* NewAppoinmentVC.xib in Resources */,
-
 				0C811F5E1E3C8E99008A578C /* ReferenceCell.xib in Resources */,
-
 				0C7A159C1E3C78790030D4D1 /* placeholder.png in Resources */,
-
 				0C19A2BD1E3731B30014B01C /* rightmark.png in Resources */,
 				0C811F551E3C8E11008A578C /* CirtificateCell.xib in Resources */,
 				0C19A2BB1E3731B30014B01C /* Home-50.png in Resources */,
@@ -878,6 +863,7 @@
 				0C811F6C1E3CABE9008A578C /* Degree.png in Resources */,
 				30ACE1971E3C6FE5007A331F /* ReviewCell.xib in Resources */,
 				0CBA41EF1E2CAA9A0008C8E4 /* LaunchScreen.storyboard in Resources */,
+				0C8FB60C1E3F09B2007B7E68 /* tempimage.jpeg in Resources */,
 				24562B061E30D7E8000814C6 /* GooglePlacePicker.bundle in Resources */,
 				0C811F6D1E3CABE9008A578C /* Sort Down-48.png in Resources */,
 				243705F21E2F49C100005416 /* SetupServicesVC.xib in Resources */,
@@ -885,11 +871,8 @@
 				0CBA41EC1E2CAA9A0008C8E4 /* Assets.xcassets in Resources */,
 				0C91A8A71E3230530000955E /* PersonHistoryCell.xib in Resources */,
 				0C19A2BA1E3731B30014B01C /* back_nav.png in Resources */,
-
 				0C811F5B1E3C8E45008A578C /* CreateProfileFour.xib in Resources */,
-
 				0C4E923C1E3CC4F400FD34E3 /* CareGiverProfileDetailVC.xib in Resources */,
-
 				0CA0B7501E38BA950066D0EA /* google-plus.png in Resources */,
 				243705F51E2F49C100005416 /* VerificationVC.xib in Resources */,
 				0C7A15A21E3C7D740030D4D1 /* SignInVC.xib in Resources */,
