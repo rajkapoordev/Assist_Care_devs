@@ -9,7 +9,7 @@
 import UIKit
 
 class CategoryVC: UIViewController {
-
+    
     @IBOutlet var vwPatient: UIView!
     @IBOutlet var vwCareGiver: UIView!
     @IBOutlet var vwButton: UIView!
@@ -20,12 +20,13 @@ class CategoryVC: UIViewController {
     @IBOutlet var btnPatient: UIButton!
     
     @IBAction func btnSignUp(_ sender: Any) {
-        let vc = SignUpVC(nibName: "SignUpVC", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
+        let signUpVC = SignUpVC(nibName: "SignUpVC", bundle: nil)
+        self.navigationController?.pushViewController(signUpVC, animated: true)
     }
     
     @IBAction func btnLogIn(_ sender: Any) {
-        
+        let signInVC = SignInVC(nibName: "SignInVC", bundle: nil)
+        self.navigationController?.pushViewController(signInVC, animated: true)
     }
     
     @IBAction func btnPatient(_ sender: Any) {
@@ -52,13 +53,13 @@ class CategoryVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         self.setInterface()
     }
-
+    
     func setInterface(){
         navigationController?.navigationBar.isHidden = true
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
+        
     }
     
     func setUserRole(role: String) {

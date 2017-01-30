@@ -59,6 +59,7 @@ class FriendsBookedVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     @IBAction func btnOk(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: false)
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
@@ -73,7 +74,7 @@ class FriendsBookedVC: UIViewController, UITableViewDelegate, UITableViewDataSou
     }
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
-        return 60
+        return 65
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
