@@ -289,12 +289,15 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         lbPopUpDate.text = "February 28th"
         lbPopUpTime.text = "9:00 am - 12:00 pm"
         lbPopUpServicesProvided.text = "Services Provided"
-        
+     
         btnPopUpMessage.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "chat"), scaledToSize: CGSize(width: btnPopUpMessage.bounds.size.width, height: btnPopUpMessage.bounds.size.width)), for: .normal)
         btnPopUpaddServices.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "addMedication"), scaledToSize: CGSize(width: btnPopUpaddServices.bounds.size.width, height: btnPopUpaddServices.bounds.size.width)), for: .normal)
+       
         imgPopUpProfile.layer.cornerRadius = imgPopUpProfile.bounds.size.width/2
+        
         btnDate.setImage(imageWithImage(#imageLiteral(resourceName: "timer"), scaledToSize: CGSize(width: btnDate.bounds.size.width, height: btnDate.bounds.size.height)), for: .normal)
-       // btnDate.setBackgroundImage()
+       
+        // btnDate.setBackgroundImage()
         btnDate.contentMode = .scaleAspectFit
         //set Timer or clock
         vwClock.layer.cornerRadius = vwClock.bounds.size.width/2
@@ -369,7 +372,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         flowLayout.headerReferenceSize = CGSize(width: 320, height: 50)
         
         let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(numOfColumnsInRow))
-        let items = (flowLayout.minimumInteritemSpacing * CGFloat(numOfColumnsInRow - 1))
+       // let items = (flowLayout.minimumInteritemSpacing * CGFloat(numOfColumnsInRow - 1))
         return CGSize(width: size, height: size)
     }
     
