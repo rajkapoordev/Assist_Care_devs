@@ -21,7 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
 
+
        let vc = EditProfileCareGiver(nibName: "EditProfileCareGiver", bundle: nil)
+
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         let nav = UINavigationController(rootViewController: vc)

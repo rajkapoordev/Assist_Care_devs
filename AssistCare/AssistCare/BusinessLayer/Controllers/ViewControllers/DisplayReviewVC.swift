@@ -15,6 +15,7 @@ class DisplayReviewVC: UIViewController,UICollectionViewDelegate,UICollectionVie
     var index:IndexPath!
     var height = CGFloat()
 
+    @IBOutlet var vwCollectionView: UIView!
     @IBOutlet var tableViewReviews: UITableView!
     @IBOutlet var collectionViewTabs: UICollectionView!
    
@@ -41,6 +42,13 @@ class DisplayReviewVC: UIViewController,UICollectionViewDelegate,UICollectionVie
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "Reviews"
         
+        vwCollectionView.layer.shadowColor = UIColor.darkGray.cgColor
+        vwCollectionView.layer.shadowOffset = CGSize(width: 1.0, height: 5.0)
+        vwCollectionView.layer.shadowOpacity = 0.5
+        vwCollectionView.layer.masksToBounds = false
+        //vwCollectionView.layer.shadowColor = UIColor(red: 209/255, green: 209/255, blue: 209/255, alpha: 1).cgColor
+        //vwCollectionView.layer.shadowRadius = 100
+
     }
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -51,9 +59,6 @@ class DisplayReviewVC: UIViewController,UICollectionViewDelegate,UICollectionVie
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell_tab", for: indexPath) as! TabCell
 
-//        cell.layer.shadowColor = UIColor.gray.cgColor
-//        cell.layer.shadowOffset = CGSize(width: 15, height: 15)
-//        cell.layer.shadowOpacity = 1
 
         if indexPath.item == 0{
             cell.lb_cellTab.text = "RECENT"

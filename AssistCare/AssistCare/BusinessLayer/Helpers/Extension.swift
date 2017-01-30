@@ -32,7 +32,19 @@ extension UIButton{
         self.layer.masksToBounds = false
         self.layer.cornerRadius = 2.0
     }
-    
+    func shadowWithBorder(){
+        var shadowLayer = CAShapeLayer()
+        shadowLayer.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: 0).cgPath
+        shadowLayer.fillColor = UIColor.white.cgColor
+        
+        shadowLayer.shadowColor = UIColor.darkGray.cgColor
+        shadowLayer.shadowPath = shadowLayer.path
+        shadowLayer.shadowOffset = CGSize(width: 1.0, height: 1.0)
+        shadowLayer.shadowOpacity = 0.8
+        shadowLayer.shadowRadius = 2
+        
+        self.layer.insertSublayer(shadowLayer, at: 0)
+    }
     func roundedBottomLeftButton(){
             let maskPAth1 = UIBezierPath(roundedRect: self.bounds,
                                          byRoundingCorners: [.bottomLeft ],
