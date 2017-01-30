@@ -71,6 +71,9 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
         // Dispose of any resources that can be recreated.
     }
     
+  
+    @IBAction func btnBackClick(_ sender: UIButton) {
+    }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == txtFname
         {
@@ -143,8 +146,8 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     
     
     @IBAction func btnNextClick(_ sender: Any) {
-      //  let vc = CreateProfileSecond(nibName: "CreateProfileSecond", bundle: nil)
-      //  self.navigationController?.pushViewController(vc, animated: true)
+        let vc = CreateProfileSecond(nibName: "CreateProfileSecond", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: false)
         
     }
     @IBAction func btnSelectedCourseClick(_ sender: Any) {
@@ -153,7 +156,6 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
         vWPicker.isHidden = true
        
     }
-    
     @IBAction func btnSelectScheduleClick(_ sender: Any) {
         self.vWSchedule.alpha = 0
         self.vWSchedule.isHidden = false

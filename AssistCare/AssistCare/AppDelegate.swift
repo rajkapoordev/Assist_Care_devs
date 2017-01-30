@@ -20,10 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = getAppColor()
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-       
-        let vc = CareGiverDetailVC(nibName: "CareGiverDetailVC", bundle: nil)
-//          let vc = searchCareGiverOnMapVC(nibName: "searchCareGiverOnMapVC", bundle: nil)
-        
+
+       let vc = EditProfileCareGiver(nibName: "EditProfileCareGiver", bundle: nil)
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         let nav = UINavigationController(rootViewController: vc)
