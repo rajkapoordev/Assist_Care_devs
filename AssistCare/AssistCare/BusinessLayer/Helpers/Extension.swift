@@ -21,6 +21,16 @@ extension UITextField {
         self.layer.shadowOpacity = 1.0
         self.layer.shadowRadius = 0.0
     }
+    
+    func setBottomBorderGreen(){
+        self.borderStyle = .none
+        self.layer.backgroundColor = UIColor(red: 0/255, green: 132/255, blue: 117/255, alpha: 1).cgColor
+        self.layer.masksToBounds = false
+        self.layer.shadowColor = UIColor(red: 209/255, green: 209/255, blue: 209/255, alpha: 1).cgColor
+        self.layer.shadowOffset = CGSize(width: 0.0, height: 2.0)
+        self.layer.shadowOpacity = 1.0
+        self.layer.shadowRadius = 0.0
+    }
 }
 extension UIButton{
     
@@ -32,8 +42,9 @@ extension UIButton{
         self.layer.masksToBounds = false
         self.layer.cornerRadius = 2.0
     }
+    
     func shadowWithBorder(){
-        var shadowLayer = CAShapeLayer()
+        let shadowLayer = CAShapeLayer()
         shadowLayer.path = UIBezierPath(roundedRect: self.bounds, cornerRadius: 0).cgPath
         shadowLayer.fillColor = UIColor.white.cgColor
         
@@ -45,14 +56,15 @@ extension UIButton{
         
         self.layer.insertSublayer(shadowLayer, at: 0)
     }
+    
     func roundedBottomLeftButton(){
-            let maskPAth1 = UIBezierPath(roundedRect: self.bounds,
-                                         byRoundingCorners: [.bottomLeft ],
-                                         cornerRadii:CGSize(width: 8.0, height: 8.0))
-            let maskLayer1 = CAShapeLayer()
-            maskLayer1.frame = self.bounds
-            maskLayer1.path = maskPAth1.cgPath
-            self.layer.mask = maskLayer1
+        let maskPAth1 = UIBezierPath(roundedRect: self.bounds,
+                                     byRoundingCorners: [.bottomLeft ],
+                                     cornerRadii:CGSize(width: 8.0, height: 8.0))
+        let maskLayer1 = CAShapeLayer()
+        maskLayer1.frame = self.bounds
+        maskLayer1.path = maskPAth1.cgPath
+        self.layer.mask = maskLayer1
     }
     
     func roundedBottomRightButton(){
@@ -71,7 +83,7 @@ extension UIButton{
         mask.path = path.cgPath
         self.layer.mask = mask
     }
-
+    
 }
 extension UIView {
     
@@ -97,7 +109,7 @@ extension UITextField
         }
         return false
     }
-
+    
 }
 
 
@@ -107,6 +119,15 @@ extension UIImageView {
         let radius = self.frame.width / 2
         self.layer.cornerRadius = radius
         self.layer.masksToBounds = true
+    }
+    
+    func addBlurEffect() {
+        let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
+        let blurEffectView = UIVisualEffectView(effect: blurEffect)
+        blurEffectView.frame = self.bounds
+        blurEffectView.alpha = 0.6
+        blurEffectView.autoresizingMask = [.flexibleWidth, .flexibleHeight] // for supporting device rotation
+        self.addSubview(blurEffectView)
     }
 }
 

@@ -33,6 +33,7 @@ class CareGiverDetailVC: UIViewController,UICollectionViewDelegate,UICollectionV
     @IBOutlet var lblFbProfileInfo: UILabel!
     
     @IBOutlet var lblReviewInfo: UILabel!
+
     
     @IBOutlet var imgFbIcon: UIImageView!
     @IBOutlet var btnViewFbFriends: UIButton!
@@ -47,6 +48,7 @@ class CareGiverDetailVC: UIViewController,UICollectionViewDelegate,UICollectionV
     @IBOutlet var lblDetails: UILabel!
     
     @IBOutlet var btnBook: UIButton!
+    @IBOutlet var btnViewReview: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -151,6 +153,13 @@ class CareGiverDetailVC: UIViewController,UICollectionViewDelegate,UICollectionV
     }
     
     @IBAction func btnBook(_ sender: UIButton) {
+        let bookInstructionVC = BookInstructionVC(nibName: "BookInstructionVC", bundle: nil)
+        self.navigationController?.pushViewController(bookInstructionVC, animated: true)
+    }
+    
+    @IBAction func btnViewReview(_ sender: Any) {
+        let displayReviewVC = DisplayReviewVC(nibName: "DisplayReviewVC", bundle: nil)
+        self.navigationController?.pushViewController(displayReviewVC,animated: true)
     }
     
     @IBAction func btnViewProfile(_ sender: UIButton) {

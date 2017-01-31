@@ -48,7 +48,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     @IBOutlet var vwSelectedTime: UIView!
     @IBOutlet var btnPM: UIButton!
     @IBOutlet var btnAM: UIButton!
-    
+    @IBOutlet var btnSearch: UIButton!
     //Navigation Bar
     @IBOutlet var btnNavBack: UIButton!
     @IBOutlet var vwNavBar: UIView!
@@ -103,6 +103,9 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         }
     }
     
+    @IBAction func btnSearch(_ sender: Any) {
+        
+    }
     @IBAction func btnMinute(_ sender: UIButton) {
         if isHourSelected {
             let arr: NSArray = [0,5,10,15,20,25,30,35,40,45,50,55]
@@ -145,7 +148,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     @IBAction func btnTimeOK(_ sender: Any) {
         self.selectedTime = String(selectedHour) + ":" + String(selectedMinute) + " " + meridiem
         btnTime.setTitle(self.selectedTime, for: .normal)
-        UIView.animate(withDuration: 0.5, animations:{self.vwTime.alpha = 0.0}, completion: { (bool) in
+        UIView.animate(withDuration: 0.0, animations:{self.vwTime.alpha = 0.0}, completion: { (bool) in
             self.viewGray.isHidden = true
         })
         
@@ -157,6 +160,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         self.view.window?.addSubview(vwTime)
         vwTime.isHidden = false
         self.callTime()
+        
     }
     
     
@@ -169,8 +173,17 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     }
     
     @IBAction func btnDateOk(_ sender: Any) {
-        UIView.animate(withDuration: 1.0, animations:{self.vwCalender.alpha = 0.0}, completion: { (bool) in
-            self.viewGray.isHidden = true
+        UIView.animate(withDuration: 0.0, animations:{self.vwCalender.alpha = 0.0}, completion: { (bool) in
+            self.view.window?.addSubview(self.vwTime)
+            self.vwTime.isHidden = false
+            self.callTime()
+            
+                let arr: NSArray = [12,1,2,3,4,5,6,7,8,9,10,11]
+                self.isHourSelected = true
+                self.isMinuteSelected = false
+                self.createClockForTimer(arr: arr)
+            
+            //self.viewGray.isHidden = true
         })
         
     }
@@ -309,6 +322,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         btnMinute.setTitle(minute, for: .normal)
         lblPopUpTopTime.textColor = UIColor.white
         
+        
         self.setMeridiemInClock(flag: 1)
         self.view.window?.isUserInteractionEnabled = true
         
@@ -354,7 +368,8 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         cell.vWServices.setRounded()
         
         collPrefferedServices.frame = CGRect(x: self.collPrefferedServices.frame.origin.x, y: self.collPrefferedServices.frame.origin.y, width: self.collPrefferedServices.bounds.size.width, height: collPrefferedServices.contentSize.height)
-        
+        btnSearch.frame = CGRect(x: self.btnSearch.frame.origin.x, y: self.collPrefferedServices.bounds.size.height + self.collPrefferedServices.frame.origin.y + 10, width: self.btnSearch.bounds.size.width, height: self.btnSearch.bounds.size.height)
+        scrollNewAppoinment.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: self.btnSearch.bounds.size.height + self.btnSearch.frame.origin.y)
         return cell
     }
     

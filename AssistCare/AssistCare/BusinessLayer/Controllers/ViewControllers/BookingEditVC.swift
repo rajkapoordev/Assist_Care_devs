@@ -15,9 +15,11 @@ class BookingEditVC: UIViewController {
     @IBOutlet var vwUser: UIView!
     @IBOutlet var vwDays: UIView!
 
+    @IBOutlet var btnDays: [UIButton]!
     @IBOutlet var vwBottom: UIView!
     @IBOutlet var scrollViewEditBooking: UIScrollView!
     
+    @IBOutlet var btnContinue: UIButton!
     @IBOutlet var swBook: UISwitch!
     
     override func viewDidLoad() {
@@ -27,6 +29,7 @@ class BookingEditVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
+   
     @IBAction func bookingChanged(_ sender: Any) {
         if swBook.isOn{
             vwDays.isHidden = false
@@ -40,8 +43,30 @@ class BookingEditVC: UIViewController {
 
         }
     }
+    @IBAction func btnDayClicked(_ sender: UIButton) {
+        let tag = sender.tag
+        
+        if tag == 1{
+            print("Monday")
+        }else if tag == 2{
+            print("Tuesday")
+        }else if tag == 3{
+            print("Wednesday")
+        }else if tag == 4{
+            print("Thursday")
+        }else if tag == 5{
+            print("Friday")
+        }else if tag == 6{
+            print("Saturday")
+        }else if tag == 7{
+            print("Sunday")
+        }
+    }
     override func viewDidLayoutSubviews() {
         scrollViewEditBooking.contentSize = CGSize(width:UIScreen.main.bounds.size.width, height: 400)
+        for btn in btnDays{
+            btn.layer.cornerRadius = btn.frame.size.width/2
+        }
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -61,21 +86,18 @@ class BookingEditVC: UIViewController {
     }
 
     @IBAction func btnBackClicked(_ sender: Any) {
+        
     }
+    
+    @IBAction func btnContinue(_ sender: UIButton) {
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
