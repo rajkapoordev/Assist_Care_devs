@@ -30,7 +30,7 @@ class SetupServicesVC: UIViewController,UITextFieldDelegate,UITableViewDelegate,
     }
     
     @IBAction func btnContinue(_ sender: Any) {
-        let vc = NewAppoinmentVC(nibName: "NewAppoinmentVC", bundle: nil)
+        let vc = PaymentDetailsVc(nibName: "PaymentDetailsVc", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

@@ -79,8 +79,16 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
     //   }
     
     @IBAction func btnSignUp(_ sender: Any) {
+        let defaults = UserDefaults.standard
+//        defaults.set(role, forKey: "UserRole")
+//        defaults.synchronize()
+//        let page = defaults.value(forKey: "UserRole") as! String
+//        if (page == "Patient")
+//        {
+        
         let loginVC = SignInVC(nibName: "SignInVC", bundle: nil)
         self.navigationController?.pushViewController(loginVC, animated: true)
+        //}
     }
     
     

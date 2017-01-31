@@ -62,6 +62,7 @@ class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationMana
     
     //Navigation back
     @IBAction func btnNavBack(_ sender: UIButton) {
+        navigationController?.popViewController(animated: false)
     }
     
     func setMapView() {

@@ -13,7 +13,7 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
     var selectedVC: Int = Int()
     var myVC1 = AppointmentVC()
     var myVC2 = EditProfile()
-    var myVC3 = CreateProfileFirst()
+    var myVC3 = NewAppoinmentVC()
     var myVC4 = SignUpVC()
     let heightOfTabBar : CGFloat = 50
     
@@ -50,7 +50,7 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
         self.myVC1 = AppointmentVC(nibName: "AppointmentVC", bundle: nil)
         self.myVC2 = EditProfile(nibName: "EditProfile", bundle: nil)
         self.myVC4 = SignUpVC(nibName:"SignUpVC", bundle: nil)
-        self.myVC3 = CreateProfileFirst(nibName:"CreateProfileFirst", bundle: nil)
+        self.myVC3 = NewAppoinmentVC(nibName:"NewAppoinmentVC", bundle: nil)
         
         self.navigationVC1 = UINavigationController(rootViewController: myVC1)
         self.navigationVC2 = UINavigationController(rootViewController: myVC2)

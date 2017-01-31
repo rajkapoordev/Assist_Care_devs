@@ -239,7 +239,7 @@ class CreateProfileSecond: UIViewController,UITableViewDelegate,UITableViewDataS
         // copy bytes into array
         imageData.getBytes(&bytes, length:count * MemoryLayout<UInt8>.size)
         
-        var byteArray:NSMutableArray = NSMutableArray()
+        let byteArray:NSMutableArray = NSMutableArray()
         
 //        for var j in 0..<headerTitle.count
 //        {
