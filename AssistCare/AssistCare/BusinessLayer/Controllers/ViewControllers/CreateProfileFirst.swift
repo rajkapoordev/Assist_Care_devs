@@ -13,6 +13,9 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     @IBOutlet var imgProfile: UIImageView!
     @IBOutlet var scrollView: UIScrollView!
     
+    @IBOutlet var vWEducation: UIView!
+    
+    @IBOutlet var vWLocation: UIView!
     @IBOutlet var lblTimeDisplay: UILabel!
     @IBOutlet var lblDayDisplay: UILabel!
     @IBOutlet var vWSchedule: UIView!
@@ -124,6 +127,12 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     
     func setInterface()
     {
+        
+        txtFname.setBottomBorder()
+        txtLname.setBottomBorder()
+        txtDateOfBirth.setBottomBorder()
+        vWLocation.setBottomBorderView()
+        vWEducation.setBottomBorderView()
         btnMon.backgroundColor = getGrayColor()
         btnTues.backgroundColor = getGrayColor()
         btnWed.backgroundColor = getGrayColor()

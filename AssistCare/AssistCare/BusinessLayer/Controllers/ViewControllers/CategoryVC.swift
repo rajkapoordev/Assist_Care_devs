@@ -47,6 +47,7 @@ class CategoryVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUserRole(role: patient)
         self.setInterface()
     }
     
@@ -63,6 +64,7 @@ class CategoryVC: UIViewController {
     }
     
     func setUserRole(role: String) {
+        
         let defaults = UserDefaults.standard
         defaults.set(role, forKey: "UserRole")
         defaults.synchronize()

@@ -1,8 +1,8 @@
 //
-//  AppointmentVC.swift
+//  CareGiverAgendaVC.swift
 //  AssistCare
 //
-//  Created by LaNet on 1/18/17.
+//  Created by LaNet on 1/30/17.
 //  Copyright © 2017 Lanetteam. All rights reserved.
 //
 
@@ -11,24 +11,17 @@ import MapKit
 import Foundation
 import CoreLocation
 
-class AppointmentVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
-
-    @IBOutlet var btnHomeTab: UITabBarItem!
-    @IBOutlet var btnMsgTab: UITabBarItem!
-    @IBOutlet var btnCalTab: UITabBarItem!
-    @IBOutlet var btnNotifyTab: UITabBarItem!
-    
-    @IBOutlet var topLeftBarButton: UIButton!
-    @IBOutlet var topRightBarButton: UIButton!
-    @IBOutlet var btnPlus: UIButton!
-    @IBOutlet var mapView: MKMapView!
-    @IBOutlet var tabBar: UITabBar!
+class CareGiverAgendaVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource {
     var locationManager = CLLocationManager()
 
+    @IBOutlet var tblView: UITableView!
+    @IBOutlet var vWDetail: UIView!
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
-
+        
         let initialLocation = CLLocation(latitude: 21.17, longitude: 72.83)
         
         let regionRadius: CLLocationDistance = 1000
@@ -40,9 +33,9 @@ class AppointmentVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegat
             centerMapOnLocation(location: initialLocation)
             
             let artwork = MapAnnotation(title: "King David Kalakaua",
-                                  locationName: "Waikiki Gateway Park",
-                                  discipline: "Sculpture",
-                                  coordinate: CLLocationCoordinate2D(latitude: 21.17, longitude: 72.83))
+                                        locationName: "Waikiki Gateway Park",
+                                        discipline: "Sculpture",
+                                        coordinate: CLLocationCoordinate2D(latitude: 21.17, longitude: 72.83))
             
             mapView.addAnnotation(artwork)
             
@@ -66,30 +59,14 @@ class AppointmentVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegat
                 print("Location services are not enabled");
             }
             mapView.delegate = self
-
+            
         }
+        
+
 
         // Do any additional setup after loading the view.
     }
     
-    
-    
-    @IBAction func btnBack(_ sender: UIButton) {
-        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)    }
-    
-    
-    @IBAction func btnPlusAction(_ sender: Any) {
-        let vc = searchCareGiverOnMapVC(nibName: "searchCareGiverOnMapVC", bundle: nil)
-        self.navigationController?.pushViewController(vc, animated: true)
-    }
-    
-    @IBAction func btnTopLeftBarAction(_ sender: Any) {
-    }
-    
-  
-    @IBAction func btnTopRightBarAction(_ sender: Any) {
-    }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
@@ -100,27 +77,6 @@ class AppointmentVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegat
         self.locationManager.stopUpdatingLocation()
         
     }
-    
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        
-//        let userLocation: CLLocation = locations[0]
-//        let latitude = userLocation.coordinate.latitude
-//        let longitude = userLocation.coordinate.longitude
-//        
-//        let latDelta: CLLocationDegrees = 0.05
-//        let longDelta: CLLocationDegrees = 0.05
-//        
-//        let span = MKCoordinateSpanMake(latDelta, longDelta)
-//        
-//        let location = CLLocationCoordinate2DMake(latitude, longitude)
-//        let region = MKCoordinateRegionMake(location, span)
-//        
-//        self.mapView.setRegion(region, animated: true)
-//        
-//        self.locationManager.stopUpdatingLocation() 
-//    }
-//    
-    
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? MapAnnotation {
             let identifier = "pin"
@@ -144,10 +100,40 @@ class AppointmentVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegat
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Errors " + error.localizedDescription)
     }
+    
+    
+    
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
 
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        tableView.register(UINib(nibName: "OtherCertificateCell", bundle: nil), forCellReuseIdentifier: "OtherCertificateCell")
+     var cell = tableView.dequeueReusableCell(withIdentifier: "OtherCertificateCell", for: indexPath) as! OtherCertificateCell
+        return cell
+        
+
+        
+    }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+
+    /*
+    // MARK: - Navigation
+
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
+    }
+    */
 
 }

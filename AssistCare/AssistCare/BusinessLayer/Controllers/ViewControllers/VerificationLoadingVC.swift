@@ -21,9 +21,23 @@ class VerificationLoadingVC: UIViewController {
         super.viewDidLoad()
         self.setInterface()
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1) ){
+            let defaults = UserDefaults.standard
+            //        defaults.set(role, forKey: "UserRole")
+            //        defaults.synchronize()
+            
+            let page = defaults.value(forKey: "UserRole") as! String
+            if (page == "Patient")
+            {
 //          let vc = EditProfile(nibName: "EditProfile", bundle: nil)
-            let vc = SetupServicesVC(nibName: "SetupServicesVC", bundle: nil)
+            let vc = EditProfile(nibName: "EditProfile", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
+            }
+            else
+            {
+                let vc = CreateProfileFirst(nibName: "CreateProfileFirst", bundle: nil)
+                self.navigationController?.pushViewController(vc, animated: true)
+            
+            }
         }
         // Do any additional setup after loading the view.
     }

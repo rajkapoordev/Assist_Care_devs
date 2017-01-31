@@ -19,6 +19,7 @@
                 <outlet property="txtAddress" destination="Oqo-7w-udD" id="Fj9-ei-lnB"/>
                 <outlet property="txtFirstName" destination="2vi-cm-IEe" id="Hnm-Z5-uxH"/>
                 <outlet property="txtLastName" destination="Zef-2U-MTM" id="rHW-lt-Vqv"/>
+                <outlet property="vWAddress" destination="ayI-pW-Jsv" id="TkA-RN-pO6"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="vw1" destination="MKd-jO-rFG" id="0BB-Oj-UHr"/>
                 <outlet property="vw2" destination="knf-yX-RTl" id="qaN-JL-yPY"/>
@@ -41,14 +42,14 @@
                                     <rect key="frame" x="5" y="33" width="80" height="80"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 </imageView>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="First Name" textAlignment="natural" minimumFontSize="17" id="2vi-cm-IEe">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" id="2vi-cm-IEe">
                                     <rect key="frame" x="123" y="22" width="110" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
                                 </textField>
-                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" id="Zef-2U-MTM">
+                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" id="Zef-2U-MTM">
                                     <rect key="frame" x="257" y="22" width="110" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                     <nil key="textColor"/>
@@ -56,26 +57,21 @@
                                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                 </textField>
                                 <view contentMode="scaleToFill" misplaced="YES" id="ayI-pW-Jsv">
-                                    <rect key="frame" x="123" y="75" width="244" height="47"/>
+                                    <rect key="frame" x="123" y="79" width="244" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="8Jf-gp-bNs">
-                                            <rect key="frame" x="208" y="6" width="36" height="35"/>
+                                            <rect key="frame" x="208" y="5" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                                             <color key="backgroundColor" red="0.0" green="0.58431372550000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Address" textAlignment="natural" minimumFontSize="17" id="Oqo-7w-udD">
-                                            <rect key="frame" x="0.0" y="12" width="200" height="30"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="30"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" returnKeyType="done"/>
                                         </textField>
-                                        <view contentMode="scaleToFill" misplaced="YES" id="BMM-UB-IW9">
-                                            <rect key="frame" x="0.0" y="47" width="246" height="1"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
-                                            <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                                        </view>
                                     </subviews>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mR9-0N-XpU">
@@ -210,10 +206,10 @@
                     <rect key="frame" x="0.0" y="20" width="375" height="45"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xPa-lf-J8n">
-                            <rect key="frame" x="8" y="8" width="46" height="30"/>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xPa-lf-J8n">
+                            <rect key="frame" x="19" y="11" width="24" height="24"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <state key="normal" title="Back"/>
+                            <state key="normal" image="back_nav.png"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7ia-Wh-7cx">
                             <rect key="frame" x="70" y="12" width="125" height="21"/>
@@ -231,6 +227,7 @@
         </view>
     </objects>
     <resources>
+        <image name="back_nav.png" width="24" height="24"/>
         <image name="noimg.png" width="299" height="267"/>
     </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">

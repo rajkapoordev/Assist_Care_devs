@@ -28,10 +28,14 @@ class TermAndConditionVC: UIViewController {
 
     }
     @IBAction func btnDisagreeClick(_ sender: UIButton) {
+        let vc = EditProfileCareGiver(nibName: "EditProfileCareGiver", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     
     @IBAction func btnAgree(_ sender: UIButton) {
+        let vc = EditProfileCareGiver(nibName: "EditProfileCareGiver", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

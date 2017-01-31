@@ -71,10 +71,10 @@ class SignInVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
     }
     
     @IBAction func btnSignIn(_ sender: UIButton) {
-        let varificationVC = VerificationVC(nibName: "VerificationVC", bundle: nil)
+        
+              let varificationVC = VerificationVC(nibName: "VerificationVC", bundle: nil)
         self.navigationController?.pushViewController(varificationVC, animated: true)
-        //        let appinmentVC = AppointmentVC(nibName: "AppointmentVC", bundle: nil)
-        //        self.navigationController?.pushViewController(appinmentVC, animated: true)
+
     }
     
     
