@@ -22,7 +22,6 @@ class BookingEditVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setInterface()
 
         // Do any additional setup after loading the view.
