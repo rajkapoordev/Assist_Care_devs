@@ -46,7 +46,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="U0N-kt-Vfp">
-                    <rect key="frame" x="0.0" y="64" width="320" height="416"/>
+                    <rect key="frame" x="0.0" y="71" width="320" height="409"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" misplaced="YES" id="68F-al-6cI">
@@ -145,7 +145,7 @@
                             </subviews>
                         </view>
                         <view contentMode="scaleToFill" misplaced="YES" id="PB3-2Y-RWr">
-                            <rect key="frame" x="0.0" y="287" width="320" height="17"/>
+                            <rect key="frame" x="0.0" y="287" width="320" height="16"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Availability Schedule" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zPT-Zs-QFH">
@@ -167,7 +167,7 @@
                                     <color key="backgroundColor" red="0.0" green="0.82352941180000006" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rtr-cw-MSo">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="17"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="16"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <connections>
                                         <action selector="btnSelectScheduleClick:" destination="-1" eventType="touchUpInside" id="4gO-3B-32Q"/>
@@ -272,8 +272,8 @@
                             <rect key="frame" x="1" y="63" width="322" height="22"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="hV2-6L-Z0E">
-                                    <rect key="frame" x="8" y="18" width="21" height="0.0"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="hV2-6L-Z0E">
+                                    <rect key="frame" x="8" y="7" width="21" height="24"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" red="0.24832046029999999" green="0.73438870909999998" blue="0.81627410649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </imageView>
@@ -294,6 +294,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h3Z-Sj-cEb">
                                     <rect key="frame" x="6" y="0.0" width="33" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <state key="normal" title="Mon"/>
                                     <connections>
                                         <action selector="btnMonClick:" destination="-1" eventType="touchUpInside" id="jSl-fY-KTs"/>
@@ -302,6 +303,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0a1-Yt-5ay">
                                     <rect key="frame" x="46" y="0.0" width="33" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <state key="normal" title="Tues"/>
                                     <connections>
                                         <action selector="btnTuesClick:" destination="-1" eventType="touchUpInside" id="8Qi-oJ-eeh"/>
@@ -310,6 +312,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nVn-lO-HEv">
                                     <rect key="frame" x="87" y="0.0" width="33" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <state key="normal" title="Wed"/>
                                     <connections>
                                         <action selector="btnWedClick:" destination="-1" eventType="touchUpInside" id="Prr-Yr-Xhf"/>
@@ -318,6 +321,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ezG-oR-fvn">
                                     <rect key="frame" x="126" y="0.0" width="37" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <state key="normal" title="Thur"/>
                                     <connections>
                                         <action selector="btnThurClick:" destination="-1" eventType="touchUpInside" id="9Za-sT-LJa"/>
@@ -326,6 +330,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tpi-j9-Q9f">
                                     <rect key="frame" x="173" y="0.0" width="36" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <state key="normal" title="Fri"/>
                                     <connections>
                                         <action selector="btnFriClick:" destination="-1" eventType="touchUpInside" id="aSs-GW-cSW"/>
@@ -334,6 +339,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xEE-Rs-syP">
                                     <rect key="frame" x="218" y="0.0" width="37" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <state key="normal" title="Sat"/>
                                     <connections>
                                         <action selector="btnSatClick:" destination="-1" eventType="touchUpInside" id="tp7-7g-wze"/>
@@ -342,6 +348,7 @@
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XtP-q9-0H1">
                                     <rect key="frame" x="266" y="0.0" width="38" height="34"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <state key="normal" title="Sun"/>
                                     <connections>
                                         <action selector="btnSunClick:" destination="-1" eventType="touchUpInside" id="0r2-Ov-viG"/>
@@ -399,18 +406,18 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" misplaced="YES" id="VGh-Ga-TSZ">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ORq-Og-MuX">
-                                    <rect key="frame" x="3" y="5" width="84" height="13"/>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ORq-Og-MuX">
+                                    <rect key="frame" x="1" y="0.0" width="87" height="35"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oDf-WK-caf">
-                                    <rect key="frame" x="241" y="5" width="71" height="13"/>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oDf-WK-caf">
+                                    <rect key="frame" x="239" y="0.0" width="71" height="35"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                     <state key="normal" title="Done">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -434,19 +441,19 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view contentMode="scaleToFill" misplaced="YES" id="3hb-4i-I8G">
-                    <rect key="frame" x="0.0" y="14" width="320" height="45"/>
+                    <rect key="frame" x="0.0" y="20" width="320" height="58"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wUX-H3-3Ks">
-                            <rect key="frame" x="15" y="10" width="24" height="24"/>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="wUX-H3-3Ks">
+                            <rect key="frame" x="0.0" y="12" width="50" height="35"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="back_nav.png"/>
                             <connections>
                                 <action selector="btnBackClick:" destination="-1" eventType="touchUpInside" id="5rr-XV-PFh"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ibR-rG-Vbq">
-                            <rect key="frame" x="70" y="12" width="125" height="21"/>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Create Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ibR-rG-Vbq">
+                            <rect key="frame" x="70" y="19.053475935828715" width="213.99999999999991" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

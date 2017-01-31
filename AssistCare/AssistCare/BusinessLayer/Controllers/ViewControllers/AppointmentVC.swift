@@ -29,45 +29,64 @@ class AppointmentVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegat
         super.viewDidLoad()
         mapView.delegate = self
 
-        let initialLocation = CLLocation(latitude: 21.17, longitude: 72.83)
+        btnPlus.setRounded()
+//        let initialLocation = CLLocation(latitude: 21.17, longitude: 72.83)
+//        
+//        let regionRadius: CLLocationDistance = 1000
+//        func centerMapOnLocation(location: CLLocation) {
+//            let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
+//                                                                      regionRadius * 2.0, regionRadius * 2.0)
+//            
+//            mapView.setRegion(coordinateRegion, animated: true)
+//            centerMapOnLocation(location: initialLocation)
+//            
+//            let artwork = MapAnnotation(title: "King David Kalakaua",
+//                                  locationName: "Waikiki Gateway Park",
+//                                  discipline: "Sculpture",
+//                                  coordinate: CLLocationCoordinate2D(latitude: 21.17, longitude: 72.83))
+//            
+//            mapView.addAnnotation(artwork)
+//            
+//            let annotation = MKPointAnnotation()
+//            annotation.coordinate = CLLocationCoordinate2D(latitude: 21.17, longitude: 72.83)
+//            mapView.addAnnotation(annotation)
+//            
+//            self.mapView.showsUserLocation = true
+//            if (CLLocationManager.locationServicesEnabled()) {
+//                locationManager.delegate = self
+//                locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//                locationManager.distanceFilter = kCLDistanceFilterNone
+//                locationManager.requestWhenInUseAuthorization()
+//                locationManager.requestAlwaysAuthorization()
+//                locationManager.startMonitoringSignificantLocationChanges()
+//                locationManager.startUpdatingLocation()
+//                mapView.showsUserLocation = true
+//                mapView.mapType = .standard
+//                
+//            } else {
+//                print("Location services are not enabled");
+//            }
+//            mapView.delegate = self
+//
+//        }
         
-        let regionRadius: CLLocationDistance = 1000
-        func centerMapOnLocation(location: CLLocation) {
-            let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-                                                                      regionRadius * 2.0, regionRadius * 2.0)
+        self.mapView.showsUserLocation = true
+        if (CLLocationManager.locationServicesEnabled()) {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.distanceFilter = kCLDistanceFilterNone
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startMonitoringSignificantLocationChanges()
+            locationManager.startUpdatingLocation()
+            mapView.showsUserLocation = true
+            mapView.mapType = .standard
             
-            mapView.setRegion(coordinateRegion, animated: true)
-            centerMapOnLocation(location: initialLocation)
-            
-            let artwork = MapAnnotation(title: "King David Kalakaua",
-                                  locationName: "Waikiki Gateway Park",
-                                  discipline: "Sculpture",
-                                  coordinate: CLLocationCoordinate2D(latitude: 21.17, longitude: 72.83))
-            
-            mapView.addAnnotation(artwork)
-            
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2D(latitude: 21.17, longitude: 72.83)
-            mapView.addAnnotation(annotation)
-            
-            self.mapView.showsUserLocation = true
-            if (CLLocationManager.locationServicesEnabled()) {
-                locationManager.delegate = self
-                locationManager.desiredAccuracy = kCLLocationAccuracyBest
-                locationManager.distanceFilter = kCLDistanceFilterNone
-                locationManager.requestWhenInUseAuthorization()
-                locationManager.requestAlwaysAuthorization()
-                locationManager.startMonitoringSignificantLocationChanges()
-                locationManager.startUpdatingLocation()
-                mapView.showsUserLocation = true
-                mapView.mapType = .standard
-                
-            } else {
-                print("Location services are not enabled");
-            }
-            mapView.delegate = self
-
+        } else {
+            print("Location services are not enabled");
         }
+       // mapView.delegate = self
+
 
         // Do any additional setup after loading the view.
     }

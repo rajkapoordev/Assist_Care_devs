@@ -18,8 +18,10 @@ class ThanksVc: UIViewController {
     }
     
     func setInterface() {
+        
         let msg = NSString(string: "We personally review everyone that signs up before allowing use of the app in order to ensure a safe experience.\n\nYou'll recieve a notification and be able to book an appointment within 24 hours.")
         lblMsg.text = msg as String
+        btnOk.shadow()
         self.navigationController?.navigationBar.isHidden = true
     }
 

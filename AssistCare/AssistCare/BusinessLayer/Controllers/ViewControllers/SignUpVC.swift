@@ -59,7 +59,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         txtPassword.setBottomBorder()
         btnSignUp.layer.cornerRadius = 2.0
         //       btnGoogle.layer.cornerRadius = 1.0
-        btnFacebook.layer.cornerRadius = 1.0
+        btnFacebook.layer.cornerRadius = 2.0
         btnSignUp.shadow()
         scrollSignUp.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 490)
 
@@ -86,7 +86,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
 //        if (page == "Patient")
 //        {
         
-        let loginVC = SignInVC(nibName: "SignInVC", bundle: nil)
+        let loginVC = VerificationVC(nibName: "VerificationVC", bundle: nil)
         self.navigationController?.pushViewController(loginVC, animated: true)
         //}
     }

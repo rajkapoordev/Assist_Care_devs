@@ -75,6 +75,8 @@ class ManagePaymentCardMethodVC: UIViewController, UITextFieldDelegate {
     //Save payment method
     @IBAction func btnSave(_ sender: UIButton) {
         btnSave.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        let vc = PaymentCardDetailVC(nibName:"PaymentCardDetailVC", bundle: nil)
+        navigationController?.pushViewController(vc, animated: false)
     }
     
     func textFieldDidBeginEditing(_ textField: UITextField) {
