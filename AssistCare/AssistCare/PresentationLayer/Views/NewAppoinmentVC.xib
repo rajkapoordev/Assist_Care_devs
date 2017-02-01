@@ -43,6 +43,7 @@
                 <outlet property="mapView" destination="99D-HN-rhk" id="CHN-8j-Dv1"/>
                 <outlet property="pickerView" destination="ob3-Uc-Xee" id="xWy-N2-eUe"/>
                 <outlet property="scrollNewAppoinment" destination="llj-aT-lDs" id="gZ6-Um-JH4"/>
+                <outlet property="vWSearch" destination="LQL-EG-4fM" id="c2Z-YZ-P2f"/>
                 <outlet property="view" destination="iN0-l3-epB" id="G8c-iW-KbB"/>
                 <outlet property="viewGray" destination="l4V-g5-DbN" id="7rY-zZ-CJ5"/>
                 <outlet property="vwCalender" destination="DfL-3a-ms9" id="OAC-kd-ZXX"/>
@@ -96,6 +97,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="207"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 </mapView>
+                                <view contentMode="scaleToFill" misplaced="YES" id="LQL-EG-4fM">
+                                    <rect key="frame" x="8" y="39" width="304" height="47"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </view>
                             </subviews>
                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                         </view>

@@ -10,8 +10,12 @@ import UIKit
 import MapKit
 import CoreLocation
 
-class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,MKMapViewDelegate, CLLocationManagerDelegate,UIPickerViewDelegate,UIPickerViewDataSource, FSCalendarDataSource, FSCalendarDelegate,UIGestureRecognizerDelegate{
+protocol HandleMapSearch {
+    func dropPinZoomIn(placemark:MKPlacemark)
+}
+class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIPickerViewDelegate,UIPickerViewDataSource, FSCalendarDataSource, FSCalendarDelegate,UIGestureRecognizerDelegate,UISearchBarDelegate{
     
+    @IBOutlet var vWSearch: UIView!
     @IBOutlet var lblDay: UILabel!
     @IBOutlet var lbMonth: UILabel!
     @IBOutlet var lbDate: UILabel!
@@ -84,6 +88,8 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     var isHourSelected = true
     var isMinuteSelected = true
     
+    var resultSearchController:UISearchController? = nil
+    var selectedPin:MKPlacemark? = nil
     //Timer
     @IBAction func btnAM(_ sender: Any) {
         self.setMeridiemInClock(flag: 0)
@@ -241,6 +247,45 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let locationManager = CLLocationManager()
+        var resultSearchController:UISearchController? = nil
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        
+        
+        let locationSearchTable = SearchResultVC(nibName: "SearchResultVC", bundle: nil)
+        
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable
+        
+        let searchBar = resultSearchController!.searchBar
+        searchBar.sizeToFit()
+        searchBar.placeholder = "Search for places"
+        //vWSearch.addSubview(searchBar)
+        
+       navigationItem.titleView = resultSearchController?.searchBar
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        resultSearchController?.dimsBackgroundDuringPresentation = true
+        definesPresentationContext = true
+        locationSearchTable.mapView = mapView
+        locationSearchTable.handleMapSearchDelegate = self
+
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
         self.collPrefferedServices.delegate = self
         self.collPrefferedServices.dataSource = self
         pickerView.delegate = self
@@ -326,21 +371,21 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         self.setMeridiemInClock(flag: 1)
         self.view.window?.isUserInteractionEnabled = true
         
-        if (CLLocationManager.locationServicesEnabled()) {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.distanceFilter = kCLDistanceFilterNone
-            locationManager.requestWhenInUseAuthorization()
-            locationManager.requestAlwaysAuthorization()
-            locationManager.startMonitoringSignificantLocationChanges()
-            locationManager.startUpdatingLocation()
-            mapView.showsUserLocation = true
-            mapView.mapType = .standard
-            
-        } else {
-            print("Location services are not enabled");
-        }
-        mapView.delegate = self
+//        if (CLLocationManager.locationServicesEnabled()) {
+//            locationManager.delegate = self
+//            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//            locationManager.distanceFilter = kCLDistanceFilterNone
+//            locationManager.requestWhenInUseAuthorization()
+//            locationManager.requestAlwaysAuthorization()
+//            locationManager.startMonitoringSignificantLocationChanges()
+//            locationManager.startUpdatingLocation()
+//            mapView.showsUserLocation = true
+//            mapView.mapType = .standard
+//            
+//        } else {
+//            print("Location services are not enabled");
+//        }
+        //mapView.delegate = self
         setCalenderInterface()
         
     }
@@ -634,3 +679,49 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         }
     }
 }
+
+
+
+
+extension NewAppoinmentVC: HandleMapSearch {
+    func dropPinZoomIn(placemark:MKPlacemark){
+        // cache the pin
+        selectedPin = placemark
+        // clear existing pins
+        mapView.removeAnnotations(mapView.annotations)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = placemark.coordinate
+        annotation.title = placemark.name
+        if let city = placemark.locality,
+            let state = placemark.administrativeArea {
+            annotation.subtitle = "(city) (state)"
+        }
+        mapView.addAnnotation(annotation)
+        let span = MKCoordinateSpanMake(0.05, 0.05)
+        let region = MKCoordinateRegionMake(placemark.coordinate, span)
+        mapView.setRegion(region, animated: true)
+    }
+}
+
+
+extension NewAppoinmentVC : CLLocationManagerDelegate {
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            locationManager.requestLocation()
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            let span = MKCoordinateSpanMake(0.05, 0.05)
+            let region = MKCoordinateRegion(center: location.coordinate, span: span)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("error:: \(error)")
+    }
+}
+
+
