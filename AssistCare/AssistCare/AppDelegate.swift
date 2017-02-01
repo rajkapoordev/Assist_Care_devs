@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
 
 
-       let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
+       let vc = CareGiverAgendaVC(nibName: "CareGiverAgendaVC", bundle: nil)
 
         self.window = UIWindow(frame: UIScreen.main.bounds)
         

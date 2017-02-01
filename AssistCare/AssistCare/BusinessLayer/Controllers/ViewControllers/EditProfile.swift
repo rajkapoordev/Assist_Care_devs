@@ -53,6 +53,11 @@ class EditProfile: UIViewController,UICollectionViewDelegate,UICollectionViewDat
         // Dispose of any resources that can be recreated.
     }
     
+    
+    @IBAction func btnBackClick(_ sender: UIButton) {
+        navigationController?.popViewController(animated: false)
+    }
+    
     @IBAction func pickDocument(_ sender: Any) {
         imagePicker.allowsEditing = false
         imagePicker.sourceType = .photoLibrary

@@ -14,6 +14,9 @@ import CoreLocation
 class CareGiverAgendaVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource {
     var locationManager = CLLocationManager()
 
+    @IBOutlet var lblTime: UILabel!
+    @IBOutlet var lblName: MKMapView!
+    @IBOutlet var imgProfile: UIImageView!
     @IBOutlet var tblView: UITableView!
     @IBOutlet var vWDetail: UIView!
     @IBOutlet var scrollView: UIScrollView!
@@ -21,27 +24,8 @@ class CareGiverAgendaVC: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        imgProfile.setRounded()
         
-        let initialLocation = CLLocation(latitude: 21.17, longitude: 72.83)
-        
-        let regionRadius: CLLocationDistance = 1000
-        func centerMapOnLocation(location: CLLocation) {
-            let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-                                                                      regionRadius * 2.0, regionRadius * 2.0)
-            
-            mapView.setRegion(coordinateRegion, animated: true)
-            centerMapOnLocation(location: initialLocation)
-            
-            let artwork = MapAnnotation(title: "King David Kalakaua",
-                                        locationName: "Waikiki Gateway Park",
-                                        discipline: "Sculpture",
-                                        coordinate: CLLocationCoordinate2D(latitude: 21.17, longitude: 72.83))
-            
-            mapView.addAnnotation(artwork)
-            
-            let annotation = MKPointAnnotation()
-            annotation.coordinate = CLLocationCoordinate2D(latitude: 21.17, longitude: 72.83)
-            mapView.addAnnotation(annotation)
             
             self.mapView.showsUserLocation = true
             if (CLLocationManager.locationServicesEnabled()) {
@@ -60,7 +44,6 @@ class CareGiverAgendaVC: UIViewController,MKMapViewDelegate,CLLocationManagerDel
             }
             mapView.delegate = self
             
-        }
         
 
 
@@ -68,6 +51,11 @@ class CareGiverAgendaVC: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     }
     
     
+    @IBAction func btnMyWayClick(_ sender: UIButton) {
+        let vc = CareGiverBeginServices(nibName: "CareGiverBeginServices", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true)
+        
+    }
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let location = locations.last
         let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
@@ -109,16 +97,22 @@ class CareGiverAgendaVC: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        tblView.frame = CGRect(x: tblView.frame.origin.x, y: tblView.frame.origin.y, width: tblView.frame.width, height: (65 * 10))
+        scrollView.contentSize = CGSize(width: 0, height: (mapView.frame.height + tblView.frame.height + (vWDetail.frame.height * 2)))
+        return 10
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        tableView.register(UINib(nibName: "OtherCertificateCell", bundle: nil), forCellReuseIdentifier: "OtherCertificateCell")
-     var cell = tableView.dequeueReusableCell(withIdentifier: "OtherCertificateCell", for: indexPath) as! OtherCertificateCell
+        tableView.register(UINib(nibName: "CareGiverAgendaCell", bundle: nil), forCellReuseIdentifier: "CareGiverAgendaCell")
+     let cell = tableView.dequeueReusableCell(withIdentifier: "CareGiverAgendaCell", for: indexPath) as! CareGiverAgendaCell
         return cell
         
 
         
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 65
     }
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

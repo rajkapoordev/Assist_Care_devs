@@ -57,6 +57,11 @@ class ReferealVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             return cell
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = ManagePaymentCardMethodVC(nibName: "ManagePaymentCardMethodVC", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat{
         return 70
     }
