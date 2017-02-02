@@ -11,7 +11,12 @@ import MapKit
 import Foundation
 import CoreLocation
 
-class AppointmentVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
+
+class AppointmentVC: UIViewController,MKMapViewDelegate,UISearchBarDelegate {
+
+    let locationManager = CLLocationManager()
+    var resultSearchController:UISearchController? = nil
+    var selectedPin:MKPlacemark? = nil
 
     @IBOutlet var btnHomeTab: UITabBarItem!
     @IBOutlet var btnMsgTab: UITabBarItem!
@@ -23,68 +28,59 @@ class AppointmentVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegat
     @IBOutlet var btnPlus: UIButton!
     @IBOutlet var mapView: MKMapView!
     @IBOutlet var tabBar: UITabBar!
-    var locationManager = CLLocationManager()
+   
 
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
 
         btnPlus.setRounded()
-//        let initialLocation = CLLocation(latitude: 21.17, longitude: 72.83)
-//        
-//        let regionRadius: CLLocationDistance = 1000
-//        func centerMapOnLocation(location: CLLocation) {
-//            let coordinateRegion = MKCoordinateRegionMakeWithDistance(location.coordinate,
-//                                                                      regionRadius * 2.0, regionRadius * 2.0)
-//            
-//            mapView.setRegion(coordinateRegion, animated: true)
-//            centerMapOnLocation(location: initialLocation)
-//            
-//            let artwork = MapAnnotation(title: "King David Kalakaua",
-//                                  locationName: "Waikiki Gateway Park",
-//                                  discipline: "Sculpture",
-//                                  coordinate: CLLocationCoordinate2D(latitude: 21.17, longitude: 72.83))
-//            
-//            mapView.addAnnotation(artwork)
-//            
-//            let annotation = MKPointAnnotation()
-//            annotation.coordinate = CLLocationCoordinate2D(latitude: 21.17, longitude: 72.83)
-//            mapView.addAnnotation(annotation)
-//            
-//            self.mapView.showsUserLocation = true
-//            if (CLLocationManager.locationServicesEnabled()) {
-//                locationManager.delegate = self
-//                locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//                locationManager.distanceFilter = kCLDistanceFilterNone
-//                locationManager.requestWhenInUseAuthorization()
-//                locationManager.requestAlwaysAuthorization()
-//                locationManager.startMonitoringSignificantLocationChanges()
-//                locationManager.startUpdatingLocation()
-//                mapView.showsUserLocation = true
-//                mapView.mapType = .standard
-//                
-//            } else {
-//                print("Location services are not enabled");
-//            }
-//            mapView.delegate = self
-//
-//        }
         
-        self.mapView.showsUserLocation = true
-        if (CLLocationManager.locationServicesEnabled()) {
-            locationManager.delegate = self
-            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-            locationManager.distanceFilter = kCLDistanceFilterNone
-            locationManager.requestWhenInUseAuthorization()
-            locationManager.requestAlwaysAuthorization()
-            locationManager.startMonitoringSignificantLocationChanges()
-            locationManager.startUpdatingLocation()
-            mapView.showsUserLocation = true
-            mapView.mapType = .standard
-            
-        } else {
-            print("Location services are not enabled");
-        }
+        
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        // locationManager.requestLocation()
+        let locationSearchTable = SearchResultVC(nibName: "SearchResultVC", bundle: nil)
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable
+        
+        let searchBar = resultSearchController!.searchBar
+        searchBar.sizeToFit()
+        searchBar.placeholder = "Search for places"
+        //vWSearch.addSubview(searchBar)
+        navigationItem.titleView = resultSearchController?.searchBar
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        resultSearchController?.dimsBackgroundDuringPresentation = true
+        definesPresentationContext = true
+        locationSearchTable.mapView = mapView
+        locationSearchTable.handleMapSearchDelegate = self
+        
+        
+        
+        
+        
+        
+        
+        
+        
+
+        
+//        self.mapView.showsUserLocation = true
+//        if (CLLocationManager.locationServicesEnabled()) {
+//            locationManager.delegate = self
+//            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+//            locationManager.distanceFilter = kCLDistanceFilterNone
+//            locationManager.requestWhenInUseAuthorization()
+//            locationManager.requestAlwaysAuthorization()
+//            locationManager.startMonitoringSignificantLocationChanges()
+//            locationManager.startUpdatingLocation()
+//            mapView.showsUserLocation = true
+//            mapView.mapType = .standard
+//            
+//        } else {
+//            print("Location services are not enabled");
+//        }
        // mapView.delegate = self
 
 
@@ -122,26 +118,7 @@ class AppointmentVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegat
         
     }
     
-//    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
-//        
-//        let userLocation: CLLocation = locations[0]
-//        let latitude = userLocation.coordinate.latitude
-//        let longitude = userLocation.coordinate.longitude
-//        
-//        let latDelta: CLLocationDegrees = 0.05
-//        let longDelta: CLLocationDegrees = 0.05
-//        
-//        let span = MKCoordinateSpanMake(latDelta, longDelta)
-//        
-//        let location = CLLocationCoordinate2DMake(latitude, longitude)
-//        let region = MKCoordinateRegionMake(location, span)
-//        
-//        self.mapView.setRegion(region, animated: true)
-//        
-//        self.locationManager.stopUpdatingLocation() 
-//    }
-//    
-    
+
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? MapAnnotation {
             let identifier = "pin"
@@ -172,3 +149,47 @@ class AppointmentVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegat
     }
 
 }
+
+
+extension AppointmentVC: HandleMapSearch {
+    func dropPinZoomIn(placemark:MKPlacemark){
+        // cache the pin
+        selectedPin = placemark
+        // clear existing pins
+        mapView.removeAnnotations(mapView.annotations)
+        let annotation = MKPointAnnotation()
+        annotation.coordinate = placemark.coordinate
+        annotation.title = placemark.name
+        if let city = placemark.locality,
+            let state = placemark.administrativeArea {
+            annotation.subtitle = "(city) (state)"
+        }
+        mapView.addAnnotation(annotation)
+        let span = MKCoordinateSpanMake(0.05, 0.05)
+        let region = MKCoordinateRegionMake(placemark.coordinate, span)
+        mapView.setRegion(region, animated: true)
+    }
+}
+
+
+extension AppointmentVC : CLLocationManagerDelegate {
+    func locationManager(manager: CLLocationManager, didChangeAuthorizationStatus status: CLAuthorizationStatus) {
+        if status == .authorizedWhenInUse {
+            locationManager.requestLocation()
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        if let location = locations.first {
+            let span = MKCoordinateSpanMake(0.05, 0.05)
+            let region = MKCoordinateRegion(center: location.coordinate, span: span)
+            mapView.setRegion(region, animated: true)
+        }
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("error:: \(error)")
+    }
+}
+
+

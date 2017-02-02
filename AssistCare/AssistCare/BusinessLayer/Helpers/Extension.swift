@@ -121,6 +121,8 @@ extension UIImageView {
         self.layer.masksToBounds = true
     }
     
+  
+    
     func addBlurEffect() {
         let blurEffect = UIBlurEffect(style: UIBlurEffectStyle.light)
         let blurEffectView = UIVisualEffectView(effect: blurEffect)
@@ -130,6 +132,7 @@ extension UIImageView {
         self.addSubview(blurEffectView)
     }
 }
+
 
 extension UIView {
     
