@@ -77,7 +77,7 @@
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="9XB-2X-EMV">
                             <rect key="frame" x="270" y="8" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="user.png"/>
                             <connections>
                                 <action selector="btnTopRightBarAction:" destination="-1" eventType="touchUpInside" id="Gk4-c3-mDp"/>
@@ -92,7 +92,7 @@
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="7kW-zY-OO6">
                             <rect key="frame" x="20" y="8" width="30" height="30"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="add_button"/>
                             <connections>
                                 <action selector="btnBack:" destination="-1" eventType="touchUpInside" id="F3A-so-wZf"/>

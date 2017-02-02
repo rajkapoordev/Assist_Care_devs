@@ -27,6 +27,7 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setInterface()
     }
 
     override func didReceiveMemoryWarning() {

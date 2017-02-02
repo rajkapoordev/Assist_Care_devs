@@ -157,19 +157,14 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         UIView.animate(withDuration: 0.0, animations:{self.vwTime.alpha = 0.0}, completion: { (bool) in
             self.viewGray.isHidden = true
         })
-        
     }
-    
     
     @IBAction func btnTime(_ sender: Any) {
         btnHour.sendActions(for: .touchUpInside)
         self.view.window?.addSubview(vwTime)
         vwTime.isHidden = false
         self.callTime()
-        
     }
-    
-    
     
     @IBAction func btnDate(_ sender: Any) {
         //     self.view.window?.addSubview(vwCalender)
@@ -184,10 +179,10 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
             self.vwTime.isHidden = false
             self.callTime()
             
-                let arr: NSArray = [12,1,2,3,4,5,6,7,8,9,10,11]
-                self.isHourSelected = true
-                self.isMinuteSelected = false
-                self.createClockForTimer(arr: arr)
+            let arr: NSArray = [12,1,2,3,4,5,6,7,8,9,10,11]
+            self.isHourSelected = true
+            self.isMinuteSelected = false
+            self.createClockForTimer(arr: arr)
             
             //self.viewGray.isHidden = true
         })
@@ -266,25 +261,12 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         searchBar.placeholder = "Search for places"
         //vWSearch.addSubview(searchBar)
         
-       navigationItem.titleView = resultSearchController?.searchBar
+        navigationItem.titleView = resultSearchController?.searchBar
         resultSearchController?.hidesNavigationBarDuringPresentation = false
         resultSearchController?.dimsBackgroundDuringPresentation = true
         definesPresentationContext = true
         locationSearchTable.mapView = mapView
         locationSearchTable.handleMapSearchDelegate = self
-
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
         
         self.collPrefferedServices.delegate = self
         self.collPrefferedServices.dataSource = self
@@ -325,7 +307,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
         btnOkay.roundedBottomRightButton()
         btnCancelAppoinment.roundedBottomLeftButton()
-
+        
     }
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
@@ -336,13 +318,13 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         vwMap.layer.shadowColor = UIColor.gray.cgColor
         vwMap.layer.shadowOffset = CGSize(width: 3, height: 3)
         vwMap.layer.shadowOpacity = 0.7
-//        vwMap.layer.shadowRadius = 1.0;
-
+        //        vwMap.layer.shadowRadius = 1.0;
+        
         scrollNewAppoinment.contentSize = CGSize(width: UIScreen.main.bounds.size.width, height: 930)
         vwPopUp.layer.cornerRadius = 5.0
         vwCalender.layer.cornerRadius = 2.0
         
-
+        
         lbPopUpName.text = "Anna Connonly"
         lbPopUpDate.text = "February 28th"
         lbPopUpTime.text = "9:00 am - 12:00 pm"
@@ -352,7 +334,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         btnPopUpaddServices.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "addMedication"), scaledToSize: CGSize(width: btnPopUpaddServices.bounds.size.width, height: btnPopUpaddServices.bounds.size.width)), for: .normal)
         imgPopUpProfile.layer.cornerRadius = imgPopUpProfile.bounds.size.width/2
         btnDate.setImage(imageWithImage(#imageLiteral(resourceName: "timer"), scaledToSize: CGSize(width: btnDate.bounds.size.width, height: btnDate.bounds.size.height)), for: .normal)
-       // btnDate.setBackgroundImage()
+        // btnDate.setBackgroundImage()
         btnDate.contentMode = .scaleAspectFit
         //set Timer or clock
         vwClock.layer.cornerRadius = vwClock.bounds.size.width/2
@@ -371,20 +353,20 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         self.setMeridiemInClock(flag: 1)
         self.view.window?.isUserInteractionEnabled = true
         
-//        if (CLLocationManager.locationServicesEnabled()) {
-//            locationManager.delegate = self
-//            locationManager.desiredAccuracy = kCLLocationAccuracyBest
-//            locationManager.distanceFilter = kCLDistanceFilterNone
-//            locationManager.requestWhenInUseAuthorization()
-//            locationManager.requestAlwaysAuthorization()
-//            locationManager.startMonitoringSignificantLocationChanges()
-//            locationManager.startUpdatingLocation()
-//            mapView.showsUserLocation = true
-//            mapView.mapType = .standard
-//            
-//        } else {
-//            print("Location services are not enabled");
-//        }
+        //        if (CLLocationManager.locationServicesEnabled()) {
+        //            locationManager.delegate = self
+        //            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        //            locationManager.distanceFilter = kCLDistanceFilterNone
+        //            locationManager.requestWhenInUseAuthorization()
+        //            locationManager.requestAlwaysAuthorization()
+        //            locationManager.startMonitoringSignificantLocationChanges()
+        //            locationManager.startUpdatingLocation()
+        //            mapView.showsUserLocation = true
+        //            mapView.mapType = .standard
+        //
+        //        } else {
+        //            print("Location services are not enabled");
+        //        }
         //mapView.delegate = self
         setCalenderInterface()
         
@@ -445,7 +427,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         case UICollectionElementKindSectionHeader:
             //3
             headerView = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "AppoinmentHeaderCell", for: indexPath) as! AppoinmentHeaderCell
-
+            
             for vw in headerView.subviews{
                 if vw.isKind(of: UILabel.self){
                     if indexPath.section == 0{
@@ -578,7 +560,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         lbMonth.text = DateFormatter().monthSymbols[monthNumber - 1]
         lbYear.text = String(calendar1.component(.year, from: date))
     }
-  
+    
     //Create clock
     func createClockForTimer(arr: NSArray) {
         vwClock.subviews.forEach({ $0.removeFromSuperview() })
@@ -664,7 +646,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
             self.btnHour.setTitle(String(self.selectedHour), for: .normal)
         }else{
             self.selectedMinute = (btn.tag * 5)
-             let minute = (selectedMinute < 10) ? "0"+String(selectedMinute) : String(selectedMinute)
+            let minute = (selectedMinute < 10) ? "0"+String(selectedMinute) : String(selectedMinute)
             self.btnMinute.setTitle(minute, for: .normal)
         }
         
