@@ -693,7 +693,7 @@ extension NewAppoinmentVC: HandleMapSearch {
         annotation.coordinate = placemark.coordinate
         annotation.title = placemark.name
         if let city = placemark.locality,
-            let state = placemark.administrativeArea {
+            let _ = placemark.administrativeArea {
             annotation.subtitle = "(city) (state)"
         }
         mapView.addAnnotation(annotation)

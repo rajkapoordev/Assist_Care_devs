@@ -11,10 +11,10 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentDetailsVc" customModule="AssistCare" customModuleProvider="target">
             <connections>
-                <outlet property="btnBack" destination="2PN-Ak-gZ7" id="OlV-v9-D7X"/>
+                <outlet property="btnNavBack" destination="2PN-Ak-gZ7" id="08n-tT-5Iw"/>
                 <outlet property="btnSave" destination="jzH-iP-0XQ" id="46I-Jz-OD7"/>
                 <outlet property="btnSkipForNow" destination="Qaz-4j-gw3" id="MU9-ul-XTX"/>
-                <outlet property="lblTitle" destination="W3U-MB-cG2" id="qdw-Am-pY6"/>
+                <outlet property="lblNavTitle" destination="W3U-MB-cG2" id="Eba-hH-Bfh"/>
                 <outlet property="scrollView" destination="eRc-8f-Ftz" id="NtD-co-Yhf"/>
                 <outlet property="txtCVC" destination="95D-W1-slL" id="Zon-ON-N4C"/>
                 <outlet property="txtCardName" destination="feK-9q-yOH" id="hIl-lT-GuD"/>
@@ -22,6 +22,7 @@
                 <outlet property="txtDate" destination="0Sd-Wt-x25" id="JmB-lK-eZH"/>
                 <outlet property="txtPromoCode" destination="fx1-4D-09S" id="Al8-ZN-nbG"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="vwNavBar" destination="xy9-Fz-Tj9" id="gJ0-BF-eOF"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -162,6 +163,9 @@
                             <rect key="frame" x="14" y="12" width="24" height="23"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="back_nav.png"/>
+                            <connections>
+                                <action selector="btnNavBack:" destination="-1" eventType="touchUpInside" id="9pd-1B-mY4"/>
+                            </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="W3U-MB-cG2">
                             <rect key="frame" x="70" y="12" width="198" height="21"/>
@@ -176,7 +180,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-470" y="-104"/>
+            <point key="canvasLocation" x="-592" y="-99"/>
         </view>
     </objects>
     <resources>
