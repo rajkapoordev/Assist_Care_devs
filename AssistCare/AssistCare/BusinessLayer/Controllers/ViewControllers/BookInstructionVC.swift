@@ -74,7 +74,7 @@ class BookInstructionVC: UIViewController,UITextViewDelegate {
         txvInstructions.superview!.insertSubview(border, aboveSubview: textView)
     }
     @IBAction func btnBackClicked(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController!.popViewController(animated: true)
     }
     
     

@@ -13,11 +13,9 @@ class NumOfReservationVC: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet var btnOK: UIButton!
     @IBOutlet var tblReservation: UITableView!
     
-    
     @IBAction func btnOK(_ sender: UIButton) {
         
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()

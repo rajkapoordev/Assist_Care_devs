@@ -110,8 +110,10 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
     }
     
     @IBAction func btnSearch(_ sender: Any) {
-        
+        let searchVC = searchCareGiverOnMapVC(nibName: "searchCareGiverOnMapVC",bundle: nil)
+        self.navigationController!.pushViewController(searchVC, animated: true)
     }
+                
     @IBAction func btnMinute(_ sender: UIButton) {
         if isHourSelected {
             let arr: NSArray = [0,5,10,15,20,25,30,35,40,45,50,55]
