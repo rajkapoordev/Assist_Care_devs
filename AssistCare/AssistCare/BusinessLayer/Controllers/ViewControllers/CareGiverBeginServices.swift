@@ -65,7 +65,7 @@ class CareGiverBeginServices: UIViewController,MKMapViewDelegate,CLLocationManag
     @IBAction func btnBack(_ sender: UIButton) {
     }
     @IBAction func btnArrivedClick(_ sender: UIButton) {
-        var vc = CarePlanVC(nibName: "CarePlanVC", bundle: nil)
+        let vc = CarePlanVC(nibName: "CarePlanVC", bundle: nil)
         navigationController?.pushViewController(vc, animated: true)
     }
     override func didReceiveMemoryWarning() {
