@@ -45,6 +45,13 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Hhn-sg-zoK">
+                                <rect key="frame" x="276" y="9" width="65" height="15"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -53,6 +60,7 @@
             <connections>
                 <outlet property="btnMsg" destination="1Ho-SI-vxe" id="Wvj-LT-Tyo"/>
                 <outlet property="imgProfile" destination="fdU-cM-Y1f" id="57A-tO-Mox"/>
+                <outlet property="lbDate" destination="Hhn-sg-zoK" id="UM6-kB-L6Z"/>
                 <outlet property="lblName" destination="Sjl-zH-LGx" id="daO-D4-6rm"/>
                 <outlet property="lblTime" destination="CXT-yr-JA7" id="k9W-AI-2A5"/>
             </connections>

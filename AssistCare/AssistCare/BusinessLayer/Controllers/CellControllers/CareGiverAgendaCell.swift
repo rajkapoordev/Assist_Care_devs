@@ -10,6 +10,7 @@ import UIKit
 
 class CareGiverAgendaCell: UITableViewCell {
 
+    @IBOutlet var lbDate: UILabel!
     @IBOutlet var btnMsg: UIButton!
     @IBOutlet var lblName: UILabel!
     @IBOutlet var imgProfile: UIImageView!
