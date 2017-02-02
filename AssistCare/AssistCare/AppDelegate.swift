@@ -21,10 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().barTintColor = getAppColor()
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-
-
-       let vc = PatientCalendarAppointmentVC(nibName: "PatientCalendarAppointmentVC", bundle: nil)
-
+        
+        let vc = PaymentDetailsVc(nibName: "PaymentDetailsVc", bundle: nil)
+        
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         let nav = UINavigationController(rootViewController: vc)
@@ -98,7 +97,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
-
+    
     
     
 }

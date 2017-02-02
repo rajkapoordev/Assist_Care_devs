@@ -23,6 +23,7 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        scrollView.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 503)
         txtCVC.delegate = self
         txtDate.delegate = self
         txtCardName.delegate = self
@@ -34,7 +35,6 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
         txtPromoCode.setBottomBorder()
         txtDate.setBottomBorder()
         txtCardName.setBottomBorder()
-        
         btnSkipForNow.shadow()
         btnSave.shadow()
         
@@ -45,6 +45,8 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == txtPromoCode
