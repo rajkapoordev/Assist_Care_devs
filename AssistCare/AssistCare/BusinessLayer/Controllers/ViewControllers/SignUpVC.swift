@@ -38,6 +38,8 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().signInSilently()
     }
     
+    override func viewWillLayoutSubviews() {
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         self.setInterface()
@@ -45,7 +47,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
     
     func setInterface() {

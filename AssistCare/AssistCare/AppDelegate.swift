@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         
-        let vc = AppointmentVC(nibName: "AppointmentVC", bundle: nil)
+        let vc = ThanksVc(nibName: "ThanksVc", bundle: nil)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         

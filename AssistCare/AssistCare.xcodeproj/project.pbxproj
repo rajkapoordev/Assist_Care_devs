@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C0A90281E434C9400342BA1 /* bell_tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0A90241E434C9400342BA1 /* bell_tab.png */; };
+		0C0A90291E434C9400342BA1 /* calendar_tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0A90251E434C9400342BA1 /* calendar_tab.png */; };
+		0C0A902A1E434C9400342BA1 /* chat_tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0A90261E434C9400342BA1 /* chat_tab.png */; };
+		0C0A902B1E434C9400342BA1 /* home_tab.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C0A90271E434C9400342BA1 /* home_tab.png */; };
 		0C19A2B71E3731B30014B01C /* add_button.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2AF1E3731B30014B01C /* add_button.png */; };
 		0C19A2B81E3731B30014B01C /* bell.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B01E3731B30014B01C /* bell.png */; };
 		0C19A2B91E3731B30014B01C /* camera.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C19A2B11E3731B30014B01C /* camera.png */; };
@@ -220,6 +224,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0C0A90241E434C9400342BA1 /* bell_tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bell_tab.png; path = AppImages/bell_tab.png; sourceTree = "<group>"; };
+		0C0A90251E434C9400342BA1 /* calendar_tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar_tab.png; path = AppImages/calendar_tab.png; sourceTree = "<group>"; };
+		0C0A90261E434C9400342BA1 /* chat_tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = chat_tab.png; path = AppImages/chat_tab.png; sourceTree = "<group>"; };
+		0C0A90271E434C9400342BA1 /* home_tab.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = home_tab.png; path = AppImages/home_tab.png; sourceTree = "<group>"; };
 		0C19A2AF1E3731B30014B01C /* add_button.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = add_button.png; path = AppImages/add_button.png; sourceTree = "<group>"; };
 		0C19A2B01E3731B30014B01C /* bell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bell.png; path = AppImages/bell.png; sourceTree = "<group>"; };
 		0C19A2B11E3731B30014B01C /* camera.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = camera.png; path = AppImages/camera.png; sourceTree = "<group>"; };
@@ -592,6 +600,10 @@
 		0CAC45F11E372FFA00C79AFA /* AppImages */ = {
 			isa = PBXGroup;
 			children = (
+				0C0A90241E434C9400342BA1 /* bell_tab.png */,
+				0C0A90251E434C9400342BA1 /* calendar_tab.png */,
+				0C0A90261E434C9400342BA1 /* chat_tab.png */,
+				0C0A90271E434C9400342BA1 /* home_tab.png */,
 				0C3CD1DD1E43210500B24536 /* address.png */,
 				0C3CD1DE1E43210500B24536 /* language.png */,
 				0C3CD1DF1E43210500B24536 /* payment.png */,
@@ -1004,8 +1016,10 @@
 				243705F41E2F49C100005416 /* VerificationLoadingVC.xib in Resources */,
 				0C811F561E3C8E11008A578C /* OtherCertificateCell.xib in Resources */,
 				0C6744F71E42F8BF0085C831 /* MedicationPrompt.xib in Resources */,
+				0C0A902B1E434C9400342BA1 /* home_tab.png in Resources */,
 				243705EE1E2F49C100005416 /* CareServicesCell.xib in Resources */,
 				0C19A2B81E3731B30014B01C /* bell.png in Resources */,
+				0C0A902A1E434C9400342BA1 /* chat_tab.png in Resources */,
 				0C811F7A1E3CC0A3008A578C /* EditProfileCareGiver.xib in Resources */,
 				0C811F661E3CA14F008A578C /* plus.png in Resources */,
 				0C6745011E42F8CF0085C831 /* CareGiverAgendaVC.xib in Resources */,
@@ -1035,6 +1049,7 @@
 				0C811F741E3CAD3E008A578C /* TermAndConditionVC.xib in Resources */,
 				0C6744F91E42F8BF0085C831 /* SearchResultCell.xib in Resources */,
 				243705ED1E2F49C100005416 /* CategoryVC.xib in Resources */,
+				0C0A90281E434C9400342BA1 /* bell_tab.png in Resources */,
 				0C19A2B71E3731B30014B01C /* add_button.png in Resources */,
 				0C811F641E3C9167008A578C /* CreateProfileThird.xib in Resources */,
 				0CA0B74C1E38B9F10066D0EA /* FriendBookedCell.xib in Resources */,
@@ -1042,6 +1057,7 @@
 				30EDB3971E3CC81B0090C5C2 /* BookingEditVC.xib in Resources */,
 				0C6745031E42F8CF0085C831 /* CareGiverChartViewProgressVC.xib in Resources */,
 				0C36E9441E433B2100AA288A /* IQKeyboardManager.bundle in Resources */,
+				0C0A90291E434C9400342BA1 /* calendar_tab.png in Resources */,
 				0C19A2BC1E3731B30014B01C /* noimg.png in Resources */,
 				243705F11E2F49C100005416 /* MedicationVC.xib in Resources */,
 				0C811F6C1E3CABE9008A578C /* Degree.png in Resources */,
