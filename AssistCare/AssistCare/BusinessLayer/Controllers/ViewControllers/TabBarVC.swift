@@ -13,8 +13,8 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
     var selectedVC: Int = Int()
     var myVC1 = AppointmentVC()
     var myVC2 = EditProfile()
-    var myVC3 = NewAppoinmentVC()
-    var myVC4 = SignUpVC()
+    var myVC3 = CareGiverNotificationVC()
+    var myVC4 = CareGiverMessageVC()
     let heightOfTabBar : CGFloat = 50
     
     var navigationVC1 = UINavigationController()
@@ -44,8 +44,8 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
         self.tabBar.tintColor = UIColor.white
         self.myVC1 = AppointmentVC(nibName: "AppointmentVC", bundle: nil)
         self.myVC2 = EditProfile(nibName: "EditProfile", bundle: nil)
-        self.myVC4 = SignUpVC(nibName:"SignUpVC", bundle: nil)
-        self.myVC3 = NewAppoinmentVC(nibName:"NewAppoinmentVC", bundle: nil)
+        self.myVC3 = CareGiverNotificationVC(nibName:"CareGiverNotificationVC", bundle: nil)
+        self.myVC4 = CareGiverMessageVC(nibName:"CareGiverMessageVC", bundle: nil)
         
         self.navigationVC1 = UINavigationController(rootViewController: myVC1)
         self.navigationVC2 = UINavigationController(rootViewController: myVC2)
@@ -60,19 +60,19 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
         self.myVC1.tabBarItem = UITabBarItem(
             title: "Home",
             image: UIImage(named: "home_tab.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal),tag: 0)
-        //        self.myVC1.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+        self.myVC1.tabBarItem.imageInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
         
         
         self.myVC2.tabBarItem = UITabBarItem(
             title: "",
-            image: UIImage(named: "bell_tab.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
+            image: UIImage(named: "calendar_tab.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal)
             ,            tag: 1)
-        //        self.myVC2.tabBarItem.imageInsets = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+        self.myVC2.tabBarItem.imageInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
         
         
         self.myVC3.tabBarItem = UITabBarItem(
             title: "",
-            image:  UIImage(named: "calendar_tab.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal),
+            image:  UIImage(named: "bell_tab.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal),
             tag:2)
         self.myVC3.tabBarItem.imageInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
         
@@ -80,8 +80,7 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
             title: "",
             image:  UIImage(named: "chat_tab.png")?.withRenderingMode(UIImageRenderingMode.alwaysOriginal),
             tag:3)
-        
-        //        self.myVC4.tabBarItem.imageInsets  = UIEdgeInsets(top: 5, left: 0, bottom: -5, right: 0)
+        self.myVC4.tabBarItem.imageInsets = UIEdgeInsets(top: 3, left: 3, bottom: 3, right: 3)
         
         //  let tabBarItemSize = CGSize(width: tabBar.frame.width / 4, height: heightOfTabBar)
         // tabBar.selectionIndicatorImage = imageWithColor(color: getGrayColor(), size: tabBarItemSize)

@@ -47,6 +47,8 @@
 		0C35140A1E4442E80005E773 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3514081E4442E80005E773 /* Validation.swift */; };
 		0C35140C1E4445FF0005E773 /* PatientCalendarAppointmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C35140B1E4445FF0005E773 /* PatientCalendarAppointmentVC.xib */; };
 		0C35140E1E44461A0005E773 /* PatientCalendarAppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35140D1E44461A0005E773 /* PatientCalendarAppointmentVC.swift */; };
+		0C3514101E4476BF0005E773 /* CareGiverMessageVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C35140F1E4476BF0005E773 /* CareGiverMessageVC.xib */; };
+		0C3514121E4476DA0005E773 /* CareGiverMessageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3514111E4476DA0005E773 /* CareGiverMessageVC.swift */; };
 		0C36E9341E433B2100AA288A /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C36E91E1E433B2100AA288A /* IQNSArray+Sort.swift */; };
 		0C36E9351E433B2100AA288A /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C36E91F1E433B2100AA288A /* IQUIScrollView+Additions.swift */; };
 		0C36E9361E433B2100AA288A /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C36E9201E433B2100AA288A /* IQUITextFieldView+Additions.swift */; };
@@ -290,6 +292,8 @@
 		0C3514081E4442E80005E773 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
 		0C35140B1E4445FF0005E773 /* PatientCalendarAppointmentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientCalendarAppointmentVC.xib; sourceTree = "<group>"; };
 		0C35140D1E44461A0005E773 /* PatientCalendarAppointmentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientCalendarAppointmentVC.swift; sourceTree = "<group>"; };
+		0C35140F1E4476BF0005E773 /* CareGiverMessageVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareGiverMessageVC.xib; sourceTree = "<group>"; };
+		0C3514111E4476DA0005E773 /* CareGiverMessageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareGiverMessageVC.swift; sourceTree = "<group>"; };
 		0C36E91E1E433B2100AA288A /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		0C36E91F1E433B2100AA288A /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
 		0C36E9201E433B2100AA288A /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
@@ -794,6 +798,7 @@
 				0C811F6F1E3CACD2008A578C /* TermAndConditionVC.swift */,
 				0C811F751E3CC076008A578C /* EditProfileCareGiver.swift */,
 				0C7A159F1E3C7D690030D4D1 /* SignInVC.swift */,
+				0C3514111E4476DA0005E773 /* CareGiverMessageVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -864,6 +869,7 @@
 				30EDB3921E3CB5930090C5C2 /* BookInstructionVC.xib */,
 				30EDB3961E3CC81B0090C5C2 /* BookingEditVC.xib */,
 				0C7A15A11E3C7D740030D4D1 /* SignInVC.xib */,
+				0C35140F1E4476BF0005E773 /* CareGiverMessageVC.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -1126,6 +1132,7 @@
 				24562AB41E30963B000814C6 /* ThanksVc.xib in Resources */,
 				0C3513FD1E4442450005E773 /* PatientCareGiverRoute.xib in Resources */,
 				30AA538C1E3B65480009640C /* DisplayReviewVC.xib in Resources */,
+				0C3514101E4476BF0005E773 /* CareGiverMessageVC.xib in Resources */,
 				243705EF1E2F49C100005416 /* cellMedication.xib in Resources */,
 				243705F01E2F49C100005416 /* EditProfile.xib in Resources */,
 			);
@@ -1273,6 +1280,7 @@
 				0C3514031E4442600005E773 /* CareGiverCalenderAppoinmentVC.swift in Sources */,
 				0C3514051E4442600005E773 /* PatientCareGiverRoute.swift in Sources */,
 				24562AAC1E309608000814C6 /* AppointmentVC.swift in Sources */,
+				0C3514121E4476DA0005E773 /* CareGiverMessageVC.swift in Sources */,
 				243705E51E2F49C100005416 /* MedicationVC.swift in Sources */,
 				0C811F4E1E3C8DBB008A578C /* CreateProfileThird.swift in Sources */,
 				0CBA41E51E2CAA9A0008C8E4 /* AppDelegate.swift in Sources */,

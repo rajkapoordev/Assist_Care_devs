@@ -80,7 +80,7 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
                     
                     let latitude = locationManager.location?.coordinate.latitude
                     let longitude = locationManager.location?.coordinate.longitude
-                    let coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
+                    let coordinate = CLLocationCoordinate2DMake(21.17, 20.12)
                     let mapRegion = MKCoordinateRegion(center: coordinate, span: span)
                     mapView.setRegion(mapRegion, animated: true)
                     //Create a pin annotation
@@ -206,7 +206,9 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
     }
 
 
-    
+    func cancelClick() {
+        
+    }
    
     func okClick() {
         
