@@ -178,6 +178,12 @@
 		243705F31E2F49C100005416 /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243705DB1E2F49C100005416 /* SignUpVC.xib */; };
 		243705F41E2F49C100005416 /* VerificationLoadingVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243705DC1E2F49C100005416 /* VerificationLoadingVC.xib */; };
 		243705F51E2F49C100005416 /* VerificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 243705DD1E2F49C100005416 /* VerificationVC.xib */; };
+		244EF6711E445E8300F14724 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244EF6701E445E8300F14724 /* Bolts.framework */; };
+		244EF6731E445E8800F14724 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244EF6721E445E8800F14724 /* FBSDKCoreKit.framework */; };
+		244EF6751E445E8B00F14724 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244EF6741E445E8B00F14724 /* FBSDKLoginKit.framework */; };
+		244EF6771E445E8F00F14724 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 244EF6761E445E8F00F14724 /* FBSDKShareKit.framework */; };
+		244EF67D1E44771600F14724 /* TblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 244EF67C1E44771600F14724 /* TblCell.swift */; };
+		244EF67F1E44772800F14724 /* TblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 244EF67E1E44772800F14724 /* TblCell.xib */; };
 		24562AAC1E309608000814C6 /* AppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562AA91E309608000814C6 /* AppointmentVC.swift */; };
 		24562AAD1E309608000814C6 /* PaymentDetailsVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562AAA1E309608000814C6 /* PaymentDetailsVc.swift */; };
 		24562AAE1E309608000814C6 /* ThanksVc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24562AAB1E309608000814C6 /* ThanksVc.swift */; };
@@ -429,6 +435,12 @@
 		243705DB1E2F49C100005416 /* SignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
 		243705DC1E2F49C100005416 /* VerificationLoadingVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationLoadingVC.xib; sourceTree = "<group>"; };
 		243705DD1E2F49C100005416 /* VerificationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VerificationVC.xib; sourceTree = "<group>"; };
+		244EF6701E445E8300F14724 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		244EF6721E445E8800F14724 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		244EF6741E445E8B00F14724 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		244EF6761E445E8F00F14724 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		244EF67C1E44771600F14724 /* TblCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TblCell.swift; sourceTree = "<group>"; };
+		244EF67E1E44772800F14724 /* TblCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TblCell.xib; sourceTree = "<group>"; };
 		24562AA91E309608000814C6 /* AppointmentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppointmentVC.swift; sourceTree = "<group>"; };
 		24562AAA1E309608000814C6 /* PaymentDetailsVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentDetailsVc.swift; sourceTree = "<group>"; };
 		24562AAB1E309608000814C6 /* ThanksVc.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ThanksVc.swift; sourceTree = "<group>"; };
@@ -484,13 +496,17 @@
 				24562AE71E30D128000814C6 /* libc++.tbd in Frameworks */,
 				24562AE31E30D10B000814C6 /* CoreLocation.framework in Frameworks */,
 				24562AE11E30D103000814C6 /* Foundation.framework in Frameworks */,
+				244EF6771E445E8F00F14724 /* FBSDKShareKit.framework in Frameworks */,
 				24562ADD1E30D0F2000814C6 /* MapKit.framework in Frameworks */,
 				0CAC45D81E37219800C79AFA /* GoogleSignIn.framework in Frameworks */,
+				244EF6751E445E8B00F14724 /* FBSDKLoginKit.framework in Frameworks */,
 				24562ADB1E30D0EA000814C6 /* CoreData.framework in Frameworks */,
 				24562AD71E30D0DA000814C6 /* GLKit.framework in Frameworks */,
 				24562AD51E30D0D3000814C6 /* ImageIO.framework in Frameworks */,
 				24562AD31E30D0BF000814C6 /* OpenGLES.framework in Frameworks */,
 				24562AD11E30D0B5000814C6 /* QuartzCore.framework in Frameworks */,
+				244EF6711E445E8300F14724 /* Bolts.framework in Frameworks */,
+				244EF6731E445E8800F14724 /* FBSDKCoreKit.framework in Frameworks */,
 				24562ACF1E30D0A0000814C6 /* SystemConfiguration.framework in Frameworks */,
 				24562ACD1E30D07D000814C6 /* Accelerate.framework in Frameworks */,
 			);
@@ -729,6 +745,7 @@
 		243705C31E2F49C100005416 /* CellControllers */ = {
 			isa = PBXGroup;
 			children = (
+				244EF67C1E44771600F14724 /* TblCell.swift */,
 				0C6744E61E42F8A60085C831 /* CareGiverAgendaCell.swift */,
 				0C6744E71E42F8A60085C831 /* MealPreparation.swift */,
 				0C6744E81E42F8A60085C831 /* MedicationPrompt.swift */,
@@ -822,6 +839,7 @@
 		243705D31E2F49C100005416 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				243705D51E2F49C100005416 /* CellView */,
 				0C35140B1E4445FF0005E773 /* PatientCalendarAppointmentVC.xib */,
 				0C3513F71E4442450005E773 /* CareGiverCalenderAppoinmentVC.xib */,
 				0C3513F81E4442450005E773 /* CareGiverNotificationVC.xib */,
@@ -839,7 +857,6 @@
 				0C811F611E3C9068008A578C /* CreateProfileSecond.xib */,
 				0C811F571E3C8E45008A578C /* CareServicesVC.xib */,
 				0C811F581E3C8E45008A578C /* CreateProfileFour.xib */,
-				243705D51E2F49C100005416 /* CellView */,
 				24562AAF1E30963B000814C6 /* AppointmentVC.xib */,
 				0CA0B7331E38A7DD0066D0EA /* CareGiverDetailVC.xib */,
 				0C4E923B1E3CC4F400FD34E3 /* CareGiverProfileDetailVC.xib */,
@@ -871,6 +888,7 @@
 		243705D51E2F49C100005416 /* CellView */ = {
 			isa = PBXGroup;
 			children = (
+				244EF67E1E44772800F14724 /* TblCell.xib */,
 				0C6744F01E42F8BF0085C831 /* CareGiverAgendaCell.xib */,
 				0C6744F11E42F8BF0085C831 /* MealPreparation.xib */,
 				0C6744F21E42F8BF0085C831 /* MedicationPrompt.xib */,
@@ -901,6 +919,10 @@
 		24562ACB1E30D07D000814C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				244EF6761E445E8F00F14724 /* FBSDKShareKit.framework */,
+				244EF6741E445E8B00F14724 /* FBSDKLoginKit.framework */,
+				244EF6721E445E8800F14724 /* FBSDKCoreKit.framework */,
+				244EF6701E445E8300F14724 /* Bolts.framework */,
 				0CAC45E31E37254300C79AFA /* Security.framework */,
 				0CAC45E11E37253C00C79AFA /* MediaPlayer.framework */,
 				0CAC45DF1E37252000C79AFA /* CoreMotion.framework */,
@@ -1051,6 +1073,7 @@
 				0C19A2B81E3731B30014B01C /* bell.png in Resources */,
 				0C0A902A1E434C9400342BA1 /* chat_tab.png in Resources */,
 				0C811F7A1E3CC0A3008A578C /* EditProfileCareGiver.xib in Resources */,
+				244EF67F1E44772800F14724 /* TblCell.xib in Resources */,
 				0C811F661E3CA14F008A578C /* plus.png in Resources */,
 				0C6745011E42F8CF0085C831 /* CareGiverAgendaVC.xib in Resources */,
 				0C91A8991E320B580000955E /* ReferealVC.xib in Resources */,
@@ -1285,6 +1308,7 @@
 				243705E31E2F49C100005416 /* CategoryVC.swift in Sources */,
 				0C36E9361E433B2100AA288A /* IQUITextFieldView+Additions.swift in Sources */,
 				0C19A2E81E3731EF0014B01C /* FSCalendarDelegationProxy.m in Sources */,
+				244EF67D1E44771600F14724 /* TblCell.swift in Sources */,
 				0C811F771E3CC076008A578C /* EditProfileCareGiver.swift in Sources */,
 				243130BB1E2F98DA006F24D4 /* NewAppoinmentVC.swift in Sources */,
 				243705E81E2F49C100005416 /* VerificationLoadingVC.swift in Sources */,
@@ -1480,7 +1504,7 @@
 				INFOPLIST_FILE = AssistCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = Lanetteam.AssistCare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.assistcare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "AssistCare-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1502,7 +1526,7 @@
 				INFOPLIST_FILE = AssistCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = Lanetteam.AssistCare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.assistcare;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "AssistCare-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
