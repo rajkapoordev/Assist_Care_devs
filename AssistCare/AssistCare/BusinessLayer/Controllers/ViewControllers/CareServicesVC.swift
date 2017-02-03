@@ -85,17 +85,8 @@ class CareServicesVC: UIViewController,UICollectionViewDelegate,UICollectionView
         
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
     @IBAction func btnBackClick(_ sender: UIButton) {
-      navigationController?.popViewController(animated: false)
+      navigationController!.popViewController(animated: false)
     }
     @IBAction func btnNextClick(_ sender: Any) {
         let vc = CreateProfileThird(nibName: "CreateProfileThird", bundle: nil)

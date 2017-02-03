@@ -59,7 +59,7 @@ class CreateProfileFour: UIViewController,UITextFieldDelegate {
     
     
     @IBAction func btnBackClick(_ sender: UIButton) {
-         navigationController?.popViewController(animated: false)
+         navigationController!.popViewController(animated: false)
       
     }
     @IBAction func btnSubmitClick(_ sender: Any) {

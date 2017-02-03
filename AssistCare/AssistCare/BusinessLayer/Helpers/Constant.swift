@@ -19,6 +19,10 @@ let GREEN_COLOR:UInt = 0x46BCD0 // app green color
 let RED_COLOR:UInt = 0xDC454B //0xF07374
 let screenSize = UIScreen.main.bounds
 
+let TAB_ORANGE_COLOR: UInt = 0xFC7C63 //chat
+let TAB_BLUE_COLOR: UInt = 0x3FBBD0  //calender
+let TAB_GREEN_COLOR: UInt = 0x3CA192 //notification
+let TAB_RED_COLOR: UInt = 0xE34E52 //home
 
 // define for user role
 let patient = "Patient"

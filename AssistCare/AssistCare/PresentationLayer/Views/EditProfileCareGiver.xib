@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -36,20 +36,20 @@
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" misplaced="YES" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" misplaced="YES" id="7On-yf-DmV">
-                    <rect key="frame" x="0.0" y="20" width="375" height="58"/>
+                    <rect key="frame" x="0.0" y="14" width="320" height="44"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="4hb-3J-178">
-                            <rect key="frame" x="0.0" y="13" width="50" height="35"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <rect key="frame" x="17" y="12" width="25" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <state key="normal" image="back_nav.png"/>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="n6O-rH-2cl">
-                            <rect key="frame" x="70" y="19" width="220" height="21"/>
+                            <rect key="frame" x="70" y="12" width="220" height="21"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -59,19 +59,19 @@
                     <color key="backgroundColor" red="0.90321761369999998" green="0.30882829429999997" blue="0.32724136110000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="6cs-Q7-Ny0">
-                    <rect key="frame" x="0.0" y="78" width="375" height="589"/>
+                    <rect key="frame" x="0.0" y="66" width="320" height="414"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" misplaced="YES" id="rKa-Rb-Yv7">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="299"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="210"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" misplaced="YES" id="fAF-1F-I3b">
-                                    <rect key="frame" x="0.0" y="242" width="378" height="66"/>
+                                    <rect key="frame" x="0.0" y="242" width="323" height="0.0"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Care Services You Can Provide" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6zE-Cy-obU">
-                                            <rect key="frame" x="74" y="0.0" width="268" height="21"/>
+                                            <rect key="frame" x="74" y="0.0" width="220" height="21"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
@@ -79,7 +79,7 @@
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Select the care services you will require" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hqT-43-XdN">
-                                            <rect key="frame" x="74" y="22" width="268" height="45"/>
+                                            <rect key="frame" x="74" y="22" width="220" height="45"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -99,18 +99,18 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
                                 </imageView>
                                 <view contentMode="scaleToFill" misplaced="YES" id="K78-Al-fPs">
-                                    <rect key="frame" x="115" y="53" width="250" height="29"/>
+                                    <rect key="frame" x="98" y="53" width="212" height="18"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="First Name" textAlignment="natural" minimumFontSize="17" id="S90-n0-tUw">
-                                            <rect key="frame" x="0.0" y="0.0" width="117" height="29"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="99" height="19"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
                                         </textField>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" id="xgw-YM-N4a">
-                                            <rect key="frame" x="133" y="0.0" width="117" height="29"/>
+                                            <rect key="frame" x="113" y="0.0" width="99" height="19"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -120,23 +120,23 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Date of birth(DD/MM/YYYY)" textAlignment="natural" minimumFontSize="17" id="zZL-7f-UoU">
-                                    <rect key="frame" x="115" y="100" width="250" height="30"/>
+                                    <rect key="frame" x="98" y="100" width="212" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                     <nil key="textColor"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                     <textInputTraits key="textInputTraits" returnKeyType="next"/>
                                 </textField>
                                 <view contentMode="scaleToFill" misplaced="YES" id="7Uo-BP-Zpx">
-                                    <rect key="frame" x="115" y="148" width="250" height="30"/>
+                                    <rect key="frame" x="98" y="148" width="212" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="bNb-9S-pE4">
-                                            <rect key="frame" x="220" y="4" width="24" height="24"/>
+                                            <rect key="frame" x="186" y="4" width="20" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES"/>
                                             <color key="backgroundColor" red="0.0" green="0.58431372550000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location area" textAlignment="natural" minimumFontSize="17" id="XXY-sA-N52">
-                                            <rect key="frame" x="0.0" y="0.0" width="213" height="30"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="181" height="30"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -146,18 +146,18 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <view contentMode="scaleToFill" misplaced="YES" id="NKL-ci-WPY">
-                                    <rect key="frame" x="115" y="193" width="250" height="30"/>
+                                    <rect key="frame" x="98" y="193" width="212" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Education" textAlignment="natural" minimumFontSize="17" id="aBM-xN-F9T">
-                                            <rect key="frame" x="0.0" y="0.0" width="213" height="30"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="181" height="30"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <nil key="textColor"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="UW2-js-d4m">
-                                            <rect key="frame" x="0.0" y="0.0" width="250" height="30"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="212" height="30"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <connections>
@@ -165,7 +165,7 @@
                                             </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Sort Down-48.png" id="pY7-0b-D2i">
-                                            <rect key="frame" x="220" y="5" width="24" height="24"/>
+                                            <rect key="frame" x="187" y="5" width="20" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </imageView>
@@ -183,7 +183,7 @@
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" scrollEnabled="NO" dataMode="none" id="eP2-u3-OKe">
-                            <rect key="frame" x="8" y="314" width="359" height="41"/>
+                            <rect key="frame" x="8" y="314" width="304" height="15"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="lo3-Ij-4UO">
@@ -198,20 +198,20 @@
                             </connections>
                         </collectionView>
                         <view contentMode="scaleToFill" misplaced="YES" id="UEa-IB-fGg">
-                            <rect key="frame" x="0.0" y="389" width="375" height="253"/>
+                            <rect key="frame" x="0.0" y="283" width="320" height="184"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                             <subviews>
                                 <view contentMode="scaleToFill" misplaced="YES" id="oc6-ok-Qq6">
-                                    <rect key="frame" x="0.0" y="0.0" width="377" height="25"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="322" height="18"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="language.png" id="E5A-Ke-Di2">
-                                            <rect key="frame" x="5" y="0.0" width="24" height="24"/>
+                                            <rect key="frame" x="5" y="0.0" width="20" height="24"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Languages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="MFK-Le-PfL">
-                                            <rect key="frame" x="42" y="0.0" width="330" height="25"/>
+                                            <rect key="frame" x="36" y="0.0" width="281" height="25"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
@@ -221,16 +221,16 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <view contentMode="scaleToFill" id="xKl-sU-stP">
-                                    <rect key="frame" x="43" y="40" width="139" height="57"/>
+                                    <rect key="frame" x="43" y="40" width="116" height="39"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Sort Down-48.png" id="n9K-Mp-r0L">
-                                            <rect key="frame" x="114" y="29" width="24" height="23"/>
+                                            <rect key="frame" x="95" y="29" width="20" height="5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Xya-Ss-ZQs">
-                                            <rect key="frame" x="0.0" y="7" width="139" height="42"/>
+                                            <rect key="frame" x="0.0" y="7" width="116" height="27"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -245,16 +245,16 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <view contentMode="scaleToFill" misplaced="YES" id="njc-WU-AM2">
-                                    <rect key="frame" x="212" y="40" width="139" height="57"/>
+                                    <rect key="frame" x="179" y="40" width="117" height="39"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Sort Down-48.png" id="s0R-yP-SBQ">
-                                            <rect key="frame" x="110" y="29" width="22" height="23"/>
+                                            <rect key="frame" x="92" y="29" width="18" height="5"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </imageView>
                                         <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="bottom" buttonType="roundedRect" lineBreakMode="middleTruncation" id="OwA-YG-DXW">
-                                            <rect key="frame" x="0.0" y="7" width="139" height="42"/>
+                                            <rect key="frame" x="0.0" y="7" width="117" height="27"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
@@ -269,7 +269,7 @@
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 </view>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="F9N-Vo-8cJ">
-                                    <rect key="frame" x="11" y="107" width="347" height="44"/>
+                                    <rect key="frame" x="11" y="107" width="295" height="44"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <state key="normal" title="LOGOUT">
@@ -280,7 +280,7 @@
                                     </connections>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="1cj-dT-285">
-                                    <rect key="frame" x="0.0" y="186" width="375" height="65"/>
+                                    <rect key="frame" x="0.0" y="135" width="320" height="47"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                                     <color key="backgroundColor" red="0.0" green="0.58431372550000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                     <state key="normal" title="SAVE">
@@ -296,15 +296,15 @@
                     </subviews>
                 </scrollView>
                 <view hidden="YES" contentMode="scaleToFill" misplaced="YES" id="nGx-xe-AAT">
-                    <rect key="frame" x="0.0" y="510" width="375" height="157"/>
+                    <rect key="frame" x="0.0" y="367" width="320" height="113"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="PGK-cC-c4s">
-                            <rect key="frame" x="-1" y="-2" width="375" height="27"/>
+                            <rect key="frame" x="-1" y="-2" width="320" height="20"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Iys-v5-L57">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="27"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                     <state key="normal" title="Done">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -317,7 +317,7 @@
                             <color key="backgroundColor" red="0.0" green="0.43137254899999999" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
                         <pickerView contentMode="scaleToFill" id="zx5-W9-UJp">
-                            <rect key="frame" x="-1" y="24" width="375" height="124"/>
+                            <rect key="frame" x="-1" y="24" width="320" height="124"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         </pickerView>
                     </subviews>
@@ -337,6 +337,6 @@
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
-        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+        <simulatedScreenMetrics key="destination"/>
     </simulatedMetricsContainer>
 </document>
