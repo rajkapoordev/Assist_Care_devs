@@ -38,7 +38,7 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         subTitle.add("Meal preparation instructions")
         subTitle.add("Medication administration insructions")
         subTitle.add("Notes from past visits")
-        for var j in 0..<headerTitle.count
+        for _ in 0..<headerTitle.count
         {
             isArrExpand.add(false)
         }

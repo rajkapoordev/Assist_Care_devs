@@ -20,7 +20,7 @@
                 <subviews>
                     <view contentMode="scaleToFill" misplaced="YES" id="xk8-eW-pvy">
                         <rect key="frame" x="0.0" y="0.0" width="337" height="57"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="Aog-2a-ACc">
                                 <rect key="frame" x="8" y="9" width="40" height="40"/>

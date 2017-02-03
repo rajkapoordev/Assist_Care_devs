@@ -8,8 +8,12 @@
 
 import UIKit
 import MapKit
-class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
+import CoreLocation
 
+class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,DialogDelegate,MKMapViewDelegate,CLLocationManagerDelegate  {
+
+    let locationManager = CLLocationManager()
+    var selectedPin:MKPlacemark? = nil
     @IBOutlet var vWFirst: UIView!
     @IBOutlet var scrollView: UIScrollView!
     
@@ -24,7 +28,7 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
     @IBOutlet var lblAddress: UILabel!
     
     @IBOutlet var lblGeneralCareDescription: UILabel!
-    
+    var dialog:CustomDialogClass = CustomDialogClass()
     @IBOutlet var vWInner: UIView!
     @IBOutlet var btnCancelAppointment: UIButton!
     @IBOutlet var lblLanguage2: UILabel!
@@ -33,6 +37,7 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
     @IBOutlet var cvcServices: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         scrollView.contentSize = CGSize(width:0, height: 5 + vWFirst.frame.height + vWSecond.frame.height + cvcServices.frame.height + 100)
          cvcServices.register(UINib(nibName:"CareServicesCell",bundle: nil) , forCellWithReuseIdentifier: "CareServicesCell")
@@ -43,17 +48,99 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
         vWInner.layer.shadowOffset = CGSize(width: 5, height: 5)
         vWInner.layer.shadowOpacity = 0.7;
         vWInner.layer.shadowRadius = 1.0;
-        
         lblLanguage1.layer.cornerRadius = 10
         lblLanguage1.layer.masksToBounds = true
         lblLanguage2.layer.cornerRadius = 10
         lblLanguage2.layer.masksToBounds = true
+        dialog.delegate = self
+        dialog.view.frame = self.view.frame
+        
+        mapView.delegate = self
+        
+        
+        
+        self.mapView.showsUserLocation = true
+                if (CLLocationManager.locationServicesEnabled()) {
+                    locationManager.delegate = self
+                    locationManager.desiredAccuracy = kCLLocationAccuracyBest
+                    locationManager.distanceFilter = kCLDistanceFilterNone
+                    locationManager.requestWhenInUseAuthorization()
+                    locationManager.requestAlwaysAuthorization()
+                    locationManager.startMonitoringSignificantLocationChanges()
+                    locationManager.startUpdatingLocation()
+                    mapView.showsUserLocation = true
+                    mapView.mapType = .standard
+                    
+                    var span = MKCoordinateSpan()
+                    span.latitudeDelta = 0.8
+                    span.longitudeDelta = 0.8
+                    
+                
 
-//        vWInner.layer.shadowColor = UIColor.gray.cgColor
-//        vWInner.layer.shadowOffset = CGSize(width: 3, height: 3)
-//        vWInner.layer.shadowOpacity = 0.7
-        // Do any additional setup after loading the view.
+                    
+                    let latitude = locationManager.location?.coordinate.latitude
+                    let longitude = locationManager.location?.coordinate.longitude
+                    let coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
+                    let mapRegion = MKCoordinateRegion(center: coordinate, span: span)
+                    mapView.setRegion(mapRegion, animated: true)
+                    //Create a pin annotation
+                    let pointAnnotation = CustomPointAnnotation()
+                    pointAnnotation.coordinate = coordinate
+                    pointAnnotation.title = "Title"
+                    pointAnnotation.subtitle = "SubTitle"
+                    let pinAnnotationView = MKPinAnnotationView(annotation: pointAnnotation, reuseIdentifier: "care")
+                    mapView.setRegion(mapRegion, animated: true)
+                    mapView.addAnnotation(pinAnnotationView.annotation!)
+        
+                } else {
+                    print("Location services are not enabled");
+                }
+        
+        
+        
+        
+        
+
     }
+    
+    
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        
+        if annotation is MKUserLocation {
+            return nil
+        }
+        if annotation is CustomPointAnnotation {
+            let identifier = "care"
+            var pinView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+            if pinView == nil {
+                //Create a plain MKAnnotationView if using a custom image...
+                pinView = MKAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                pinView!.canShowCallout = true
+                pinView?.image = UIImage(named: "placeholder.png")
+                let guester = UITapGestureRecognizer(target: self, action: #selector(self.tapPinInMap))
+                //Here set Id of care service
+                pinView?.tag = 2
+                pinView?.gestureRecognizers = [guester]
+            }
+            else {
+                //Update the annotation reference if re-using a view...
+                pinView?.annotation = annotation
+            }
+            
+            return pinView
+        }
+        return nil
+    }
+    
+    
+    func tapPinInMap(sender: UITapGestureRecognizer) {
+        let selectedPin = (sender.view)!.tag
+        print(selectedPin)
+        
+        
+    }
+
     
     
     
@@ -62,6 +149,7 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
     @IBAction func btnMessageClick(_ sender: UIButton) {
     }
     @IBAction func btnCancelAppointmentClick(_ sender: UIButton) {
+        dialog.displayAlert(strTitle : "Cancel All Recurring?",  strMsg: "Do You want to cancel all recurring booking or just the one for 2/28?", btnOkText: "ALL RECURRING", btnCancelText: "JUST ONE",type: "")
     }
     @IBAction func btnBackClick(_ sender: UIButton) {
     }
@@ -107,49 +195,21 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
         
         
     }
-
-    
-    func DisplayPopUp()
-    {
-        let vwMain = UIView()
-        vwMain.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
-
-       let DynamicView = UIView()
-       DynamicView.frame = CGRect(x: (16 * screenSize.height )/736, y: (screenSize.width * 200)/414, width: (380 * screenSize.width)/414, height: 200 * (screenSize.height )/736)
-        DynamicView.layer.cornerRadius = 3
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let location = locations.last
+        let center = CLLocationCoordinate2D(latitude: location!.coordinate.latitude, longitude: location!.coordinate.longitude)
+        let region = MKCoordinateRegion(center: center, span: MKCoordinateSpan(latitudeDelta: 21.17, longitudeDelta: 72.83))
         
+        self.mapView.setRegion(region, animated: true)
+        self.locationManager.stopUpdatingLocation()
         
-        let lbTitle = UILabel()
-        lbTitle.frame = CGRect(x: 10, y: DynamicView.frame.width - 20, width: 20, height: (50 * screenSize.height)/736)
-        lbTitle.text = ""
-        lbTitle.numberOfLines = 0
-        lbTitle.textAlignment = .center
-        lbTitle.backgroundColor = UIColor.clear
-        lbTitle.font = UIFont(name: "Avenir", size: 18)
-        lbTitle.textColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1)
-        
-        let btnOK = UIButton()
-        btnOK.frame = CGRect(x: 0, y: ((DynamicView.frame.height) - ((50 * screenSize.width)/414) ), width: DynamicView.frame.width/2, height: (50 * screenSize.width)/414)
-        
-        btnOK.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1)
-        btnOK.setTitle("", for: .normal)
-        btnOK.addTarget(self, action: #selector(ok), for: .touchUpInside)
-        btnOK.titleLabel?.font = UIFont(name: "Dense", size: 25)
-        //        btnOK.vie
-        btnOK.titleLabel!.lineBreakMode = .byWordWrapping;
-        
-        btnOK.titleLabel?.textColor = UIColor(red: 123/255, green: 123/255, blue: 123/255, alpha: 1)
-        btnOK.titleLabel!.textAlignment = .center
-        btnOK.titleLabel!.numberOfLines = 1;
-        btnOK.titleLabel!.adjustsFontSizeToFitWidth = true;
-        btnOK.titleLabel!.lineBreakMode = .byClipping;
-        btnOK.titleEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
-    
     }
-   
-    func ok()
-    {
+
+
     
+   
+    func okClick() {
+        
     }
     
     override func didReceiveMemoryWarning() {
@@ -169,3 +229,4 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
     */
 
 }
+
