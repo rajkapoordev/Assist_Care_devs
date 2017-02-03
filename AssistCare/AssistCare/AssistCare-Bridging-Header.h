@@ -6,7 +6,7 @@
 #define SwiftExample_Objc_Bridge_Header_h
 
 #import "FSCalendar.h"
-#import "HCSStarRatingView.h"
+
 #import <GoogleSignIn/GoogleSignIn.h>
 
 

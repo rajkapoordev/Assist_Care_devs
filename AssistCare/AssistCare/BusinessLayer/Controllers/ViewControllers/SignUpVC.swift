@@ -30,7 +30,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         txtPassword.delegate = self
         self.setInterface()
         //Google sign in
-      
         GIDSignIn.sharedInstance().shouldFetchBasicProfile = true
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.login")
@@ -89,16 +88,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         let loginVC = VerificationVC(nibName: "VerificationVC", bundle: nil)
         self.navigationController?.pushViewController(loginVC, animated: true)
         //}
-    }
-    
-    func signIn(signIn: GIDSignIn!, didSignInForUser user: GIDGoogleUser!,
-                withError error: NSError!) {
-        if (error == nil) {
-            // Perform any operations on signed in user here.
-            // ...
-        } else {
-            print("\(error.localizedDescription)")
-        }
     }
     
     

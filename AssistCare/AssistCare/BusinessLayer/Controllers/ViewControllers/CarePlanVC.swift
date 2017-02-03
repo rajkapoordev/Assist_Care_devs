@@ -10,25 +10,18 @@ import UIKit
 
 class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
 
-    @IBOutlet var btnCheck: UIButton!
-    @IBOutlet var btnFinish: UIButton!
-    @IBOutlet var btnNevermind: UIButton!
     @IBOutlet var tblView: UITableView!
     var customView = UIView()
     var headerTitle = NSMutableArray()
     var isArrExpand = NSMutableArray()
     var reference = NSMutableArray()
     var subTitle = NSMutableArray()
-    
-    @IBOutlet var vWPopup: UIView!
-    
     var str = "The table view is not reloaded after the move operation - UITableView trusts you to change the underlying model list accordingly. If you have a bug in your implementation, the UI will show the moved cell as moved by the user, but the data object will have a different order. To check for the correctness of your implementation, use NSLog or reload the table after the move "
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setValue()
         addCustomeView()
-        setInterface()
         tblView.tableFooterView = customView
         
 
@@ -36,53 +29,6 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         // Do any additional setup after loading the view.
     }
     
-    
-   
-    @IBAction func btnCheckClick(_ sender: UIButton) {
-    }
- 
-    
-    @IBAction func btnNevermindClick(_ sender: UIButton) {
-    }
-    
-    
-    @IBAction func btnFinishClick(_ sender: UIButton) {
-    }
-    
-    
-    func setInterface() {
-        self.navigationController?.navigationBar.isHidden = true
-        self.vWPopup.layer.cornerRadius = 5;
-        let transperentView = UIView(frame: UIScreen.main.bounds)
-        transperentView.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.35)
-        
-        if !self.view.subviews.contains(transperentView) {
-            self.view.addSubview(transperentView)
-            self.view.addSubview(vWPopup)
-            
-            vWPopup.layer.shadowColor = UIColor.gray.cgColor
-            vWPopup.layer.shadowOpacity = 2
-            vWPopup.layer.shadowOffset = CGSize.zero
-            vWPopup.layer.shadowRadius = 5
-            
-            let rectShape = CAShapeLayer()
-            rectShape.bounds = self.btnNevermind.frame
-            rectShape.position = self.btnNevermind.center
-            rectShape.path = UIBezierPath(roundedRect: self.btnNevermind.bounds, byRoundingCorners: [.bottomLeft , .bottomRight], cornerRadii: CGSize(width: 5, height: 5)).cgPath
-            self.btnNevermind.layer.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0).cgColor
-            self.btnNevermind.layer.mask = rectShape
-            
-            
-           
-            rectShape.bounds = self.btnFinish.frame
-            rectShape.position = self.btnFinish.center
-            rectShape.path = UIBezierPath(roundedRect: self.btnFinish.bounds, byRoundingCorners: [.bottomLeft , .bottomRight], cornerRadii: CGSize(width: 5, height: 5)).cgPath
-            self.btnFinish.layer.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0).cgColor
-            self.btnFinish.layer.mask = rectShape
-           
-        }
-        
-    }
     func setValue()
     {
         
@@ -142,15 +88,6 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         
         
         
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vwMain = UIView()
-        vwMain.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
-         vWPopup.center = CGPoint(x: vwMain.frame.size.width  / 2, y: vwMain.frame.size.height / 2)
-        vwMain.addSubview(vWPopup)
-        appDelegate().window?.addSubview(vwMain)
-//        self.view.addSubview(vwMain)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

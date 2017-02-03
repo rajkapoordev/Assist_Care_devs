@@ -24,10 +24,10 @@
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.lanetteam.assistcare</string>
+			<string>com.lanet.GoogleSDKTry</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>com.lanetteam.assistcare</string>
+				<string>327847630381-6dbe80qbvs1s4ollt9j75qt50p4aajeu.apps.googleusercontent.com</string>
 			</array>
 		</dict>
 	</array>
