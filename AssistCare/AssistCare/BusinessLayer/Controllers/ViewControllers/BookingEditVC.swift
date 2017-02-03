@@ -85,6 +85,11 @@ class BookingEditVC: UIViewController {
 
     }
 
+    @IBAction func btnChangeCard(_ sender: Any) {
+        let paymentCardVc = PaymentCardDetailVC(nibName: "PaymentCardDetailVC", bundle: nil)
+        self.navigationController?.pushViewController(paymentCardVc, animated: true)
+    }
+    
     @IBAction func btnBackClicked(_ sender: Any) {
         
     }

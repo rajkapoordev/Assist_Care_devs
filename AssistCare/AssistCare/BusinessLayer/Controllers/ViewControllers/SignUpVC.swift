@@ -29,8 +29,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         txtEmail.delegate = self
         txtPassword.delegate = self
         self.setInterface()
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(SignUpVC.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         //Google sign in
         GIDSignIn.sharedInstance().shouldFetchBasicProfile = true
         GIDSignIn.sharedInstance().delegate = self
@@ -40,6 +38,8 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         GIDSignIn.sharedInstance().signInSilently()
     }
     
+    override func viewWillLayoutSubviews() {
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         self.setInterface()
@@ -47,7 +47,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        
     }
     
     func setInterface() {
@@ -100,19 +99,6 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         else {
             //Perform navigation here
         }
-    }
-    
-    func keyboardWillAppear(notification:NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            let keyboardHeight = keyboardSize.height
-            print(keyboardHeight)
-            //       scrollSignUp.setContentOffset(CGPoint(x: 0.0, y: btnGoogle.frame.origin.y), animated: true)
-        }
-        
-    }
-    
-    func keyboardWillHide() {
-        scrollSignUp.setContentOffset(CGPoint(x: 0.0, y: -65), animated: true)
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {

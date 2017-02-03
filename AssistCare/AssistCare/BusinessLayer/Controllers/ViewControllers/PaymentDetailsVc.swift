@@ -11,8 +11,12 @@ import UIKit
 class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
 
     @IBOutlet var scrollView: UIScrollView!
-    @IBOutlet var btnBack: UIButton!
-    @IBOutlet var lblTitle: UILabel!
+    
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+    
     @IBOutlet var btnSave: UIButton!
     @IBOutlet var btnSkipForNow: UIButton!
     @IBOutlet var txtCVC: UITextField!
@@ -20,9 +24,25 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
     @IBOutlet var txtDate: UITextField!
     @IBOutlet var txtCardName: UITextField!
     @IBOutlet var txtPromoCode: UITextField!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setInterface()
+    }
 
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    
+    func setInterface(){
+        self.navigationController?.navigationBar.isHidden = true
+        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
+        lblNavTitle.text = "Edit Profile"
+        self.automaticallyAdjustsScrollViewInsets = false
+        scrollView.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 503)
         txtCVC.delegate = self
         txtDate.delegate = self
         txtCardName.delegate = self
@@ -34,16 +54,14 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
         txtPromoCode.setBottomBorder()
         txtDate.setBottomBorder()
         txtCardName.setBottomBorder()
-        
         btnSkipForNow.shadow()
         btnSave.shadow()
-        
-        // Do any additional setup after loading the view.
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    //Navigation back
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        navigationController!.popViewController(animated: false)
+        
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
@@ -97,15 +115,5 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
     @IBAction func btnSkipAction(_ sender: Any) {
         
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

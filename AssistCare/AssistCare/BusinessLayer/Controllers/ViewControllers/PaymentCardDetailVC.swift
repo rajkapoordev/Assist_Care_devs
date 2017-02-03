@@ -77,7 +77,7 @@ class PaymentCardDetailVC: UIViewController, UITableViewDelegate, UITableViewDat
     
     //Navigation back
     @IBAction func btnNavBack(_ sender: UIButton) {
-       navigationController?.popViewController(animated: false)
+       navigationController!.popViewController(animated: false)
     }
     
 }

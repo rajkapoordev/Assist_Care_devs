@@ -64,7 +64,6 @@ class CategoryVC: UIViewController {
     }
     
     func setUserRole(role: String) {
-        
         let defaults = UserDefaults.standard
         defaults.set(role, forKey: "UserRole")
         defaults.synchronize()

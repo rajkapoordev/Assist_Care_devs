@@ -24,7 +24,7 @@ class TermAndConditionVC: UIViewController {
     
     
     @IBAction func btnBackClick(_ sender: UIButton) {
-        navigationController?.popViewController(animated: false)
+        navigationController!.popViewController(animated: false)
 
     }
     @IBAction func btnDisagreeClick(_ sender: UIButton) {

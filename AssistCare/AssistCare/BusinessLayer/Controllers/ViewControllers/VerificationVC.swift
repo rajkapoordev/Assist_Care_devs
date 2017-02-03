@@ -10,7 +10,6 @@ import UIKit
 
 class VerificationVC: UIViewController ,UITextFieldDelegate{
 
-    @IBOutlet var scrollEnterNum: UIScrollView!
     @IBOutlet var txtEnterNum: UITextField!
     
     //Navigation Bar
@@ -22,8 +21,6 @@ class VerificationVC: UIViewController ,UITextFieldDelegate{
         super.viewDidLoad()
         self.setInterface()
         txtEnterNum.delegate = self
-        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: .UIKeyboardWillShow, object: nil)
-        NotificationCenter.default.addObserver(self, selector: #selector(VerificationVC.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
     }
 
     override func didReceiveMemoryWarning() {
@@ -46,20 +43,6 @@ class VerificationVC: UIViewController ,UITextFieldDelegate{
     @IBAction func btnNavBack(_ sender: UIButton) {
         self.navigationController!.popViewController(animated: true)
     }
-    
-    func keyboardWillAppear(notification:NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            let keyboardHeight = keyboardSize.height
-            print(keyboardHeight)
-            scrollEnterNum.setContentOffset(CGPoint(x: 0.0, y: txtEnterNum.frame.origin.y-90), animated: true)
-        }
-        
-    }
-    
-    func keyboardWillHide() {
-        scrollEnterNum.setContentOffset(CGPoint(x: 0.0, y: -65), animated: true)
-    }
-
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
