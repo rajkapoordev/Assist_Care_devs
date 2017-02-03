@@ -27,7 +27,7 @@ class CareGiverCalenderAppoinmentVC: UIViewController,UICollectionViewDelegate,U
     @IBOutlet var scrollData: UIScrollView!
     @IBOutlet var vwPopUp: UIView!
     @IBOutlet var vwGray: UIView!
-    var isFlag:Bool!
+    var isFlag = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
