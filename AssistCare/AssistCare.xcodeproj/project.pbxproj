@@ -35,6 +35,18 @@
 		0C19A2EC1E3731EF0014B01C /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DA1E3731EF0014B01C /* FSCalendarStickyHeader.m */; };
 		0C19A2ED1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DC1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m */; };
 		0C19A2EE1E3731EF0014B01C /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */; };
+		0C3513FB1E4442450005E773 /* CareGiverCalenderAppoinmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3513F71E4442450005E773 /* CareGiverCalenderAppoinmentVC.xib */; };
+		0C3513FC1E4442450005E773 /* CareGiverNotificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3513F81E4442450005E773 /* CareGiverNotificationVC.xib */; };
+		0C3513FD1E4442450005E773 /* PatientCareGiverRoute.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3513F91E4442450005E773 /* PatientCareGiverRoute.xib */; };
+		0C3513FE1E4442450005E773 /* PatientEditProfile.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3513FA1E4442450005E773 /* PatientEditProfile.xib */; };
+		0C3514031E4442600005E773 /* CareGiverCalenderAppoinmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3513FF1E4442600005E773 /* CareGiverCalenderAppoinmentVC.swift */; };
+		0C3514041E4442600005E773 /* CareGiverNotificationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3514001E4442600005E773 /* CareGiverNotificationVC.swift */; };
+		0C3514051E4442600005E773 /* PatientCareGiverRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3514011E4442600005E773 /* PatientCareGiverRoute.swift */; };
+		0C3514061E4442600005E773 /* PatientEditProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3514021E4442600005E773 /* PatientEditProfile.swift */; };
+		0C3514091E4442E80005E773 /* CustomDialogClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3514071E4442E80005E773 /* CustomDialogClass.swift */; };
+		0C35140A1E4442E80005E773 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C3514081E4442E80005E773 /* Validation.swift */; };
+		0C35140C1E4445FF0005E773 /* PatientCalendarAppointmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C35140B1E4445FF0005E773 /* PatientCalendarAppointmentVC.xib */; };
+		0C35140E1E44461A0005E773 /* PatientCalendarAppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C35140D1E44461A0005E773 /* PatientCalendarAppointmentVC.swift */; };
 		0C36E9341E433B2100AA288A /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C36E91E1E433B2100AA288A /* IQNSArray+Sort.swift */; };
 		0C36E9351E433B2100AA288A /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C36E91F1E433B2100AA288A /* IQUIScrollView+Additions.swift */; };
 		0C36E9361E433B2100AA288A /* IQUITextFieldView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C36E9201E433B2100AA288A /* IQUITextFieldView+Additions.swift */; };
@@ -64,7 +76,6 @@
 		0C6744E11E42F8980085C831 /* CareGiverChartViewProgressVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6744DA1E42F8980085C831 /* CareGiverChartViewProgressVC.swift */; };
 		0C6744E21E42F8980085C831 /* CarePlanVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6744DB1E42F8980085C831 /* CarePlanVC.swift */; };
 		0C6744E31E42F8980085C831 /* NumOfReservationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6744DC1E42F8980085C831 /* NumOfReservationVC.swift */; };
-		0C6744E41E42F8980085C831 /* PatientCalendarAppointmentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6744DD1E42F8980085C831 /* PatientCalendarAppointmentVC.swift */; };
 		0C6744E51E42F8980085C831 /* SearchResultVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6744DE1E42F8980085C831 /* SearchResultVC.swift */; };
 		0C6744EB1E42F8A60085C831 /* CareGiverAgendaCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6744E61E42F8A60085C831 /* CareGiverAgendaCell.swift */; };
 		0C6744EC1E42F8A60085C831 /* MealPreparation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6744E71E42F8A60085C831 /* MealPreparation.swift */; };
@@ -81,7 +92,6 @@
 		0C6745031E42F8CF0085C831 /* CareGiverChartViewProgressVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6744FC1E42F8CF0085C831 /* CareGiverChartViewProgressVC.xib */; };
 		0C6745041E42F8CF0085C831 /* CarePlanVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6744FD1E42F8CF0085C831 /* CarePlanVC.xib */; };
 		0C6745051E42F8CF0085C831 /* NumOfReservationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6744FE1E42F8CF0085C831 /* NumOfReservationVC.xib */; };
-		0C6745061E42F8CF0085C831 /* PatientCalendarAppointmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6744FF1E42F8CF0085C831 /* PatientCalendarAppointmentVC.xib */; };
 		0C6745071E42F8CF0085C831 /* SearchResultVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C6745001E42F8CF0085C831 /* SearchResultVC.xib */; };
 		0C7A159C1E3C78790030D4D1 /* placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 0C7A159B1E3C78790030D4D1 /* placeholder.png */; };
 		0C7A15A01E3C7D690030D4D1 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C7A159F1E3C7D690030D4D1 /* SignInVC.swift */; };
@@ -268,6 +278,18 @@
 		0C19A2DC1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarTransitionCoordinator.m; path = FSCalendar/FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
 		0C19A2DD1E3731EF0014B01C /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarWeekdayView.h; path = FSCalendar/FSCalendarWeekdayView.h; sourceTree = "<group>"; };
 		0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWeekdayView.m; path = FSCalendar/FSCalendarWeekdayView.m; sourceTree = "<group>"; };
+		0C3513F71E4442450005E773 /* CareGiverCalenderAppoinmentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareGiverCalenderAppoinmentVC.xib; sourceTree = "<group>"; };
+		0C3513F81E4442450005E773 /* CareGiverNotificationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareGiverNotificationVC.xib; sourceTree = "<group>"; };
+		0C3513F91E4442450005E773 /* PatientCareGiverRoute.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientCareGiverRoute.xib; sourceTree = "<group>"; };
+		0C3513FA1E4442450005E773 /* PatientEditProfile.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientEditProfile.xib; sourceTree = "<group>"; };
+		0C3513FF1E4442600005E773 /* CareGiverCalenderAppoinmentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareGiverCalenderAppoinmentVC.swift; sourceTree = "<group>"; };
+		0C3514001E4442600005E773 /* CareGiverNotificationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareGiverNotificationVC.swift; sourceTree = "<group>"; };
+		0C3514011E4442600005E773 /* PatientCareGiverRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientCareGiverRoute.swift; sourceTree = "<group>"; };
+		0C3514021E4442600005E773 /* PatientEditProfile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientEditProfile.swift; sourceTree = "<group>"; };
+		0C3514071E4442E80005E773 /* CustomDialogClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDialogClass.swift; sourceTree = "<group>"; };
+		0C3514081E4442E80005E773 /* Validation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
+		0C35140B1E4445FF0005E773 /* PatientCalendarAppointmentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientCalendarAppointmentVC.xib; sourceTree = "<group>"; };
+		0C35140D1E44461A0005E773 /* PatientCalendarAppointmentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientCalendarAppointmentVC.swift; sourceTree = "<group>"; };
 		0C36E91E1E433B2100AA288A /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		0C36E91F1E433B2100AA288A /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
 		0C36E9201E433B2100AA288A /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
@@ -298,7 +320,6 @@
 		0C6744DA1E42F8980085C831 /* CareGiverChartViewProgressVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareGiverChartViewProgressVC.swift; sourceTree = "<group>"; };
 		0C6744DB1E42F8980085C831 /* CarePlanVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarePlanVC.swift; sourceTree = "<group>"; };
 		0C6744DC1E42F8980085C831 /* NumOfReservationVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NumOfReservationVC.swift; sourceTree = "<group>"; };
-		0C6744DD1E42F8980085C831 /* PatientCalendarAppointmentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientCalendarAppointmentVC.swift; sourceTree = "<group>"; };
 		0C6744DE1E42F8980085C831 /* SearchResultVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchResultVC.swift; sourceTree = "<group>"; };
 		0C6744E61E42F8A60085C831 /* CareGiverAgendaCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareGiverAgendaCell.swift; sourceTree = "<group>"; };
 		0C6744E71E42F8A60085C831 /* MealPreparation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MealPreparation.swift; sourceTree = "<group>"; };
@@ -315,7 +336,6 @@
 		0C6744FC1E42F8CF0085C831 /* CareGiverChartViewProgressVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareGiverChartViewProgressVC.xib; sourceTree = "<group>"; };
 		0C6744FD1E42F8CF0085C831 /* CarePlanVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarePlanVC.xib; sourceTree = "<group>"; };
 		0C6744FE1E42F8CF0085C831 /* NumOfReservationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NumOfReservationVC.xib; sourceTree = "<group>"; };
-		0C6744FF1E42F8CF0085C831 /* PatientCalendarAppointmentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientCalendarAppointmentVC.xib; sourceTree = "<group>"; };
 		0C6745001E42F8CF0085C831 /* SearchResultVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SearchResultVC.xib; sourceTree = "<group>"; };
 		0C7A159B1E3C78790030D4D1 /* placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = placeholder.png; sourceTree = "<group>"; };
 		0C7A159F1E3C7D690030D4D1 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
@@ -732,12 +752,16 @@
 		243705C61E2F49C100005416 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0C35140D1E44461A0005E773 /* PatientCalendarAppointmentVC.swift */,
+				0C3513FF1E4442600005E773 /* CareGiverCalenderAppoinmentVC.swift */,
+				0C3514001E4442600005E773 /* CareGiverNotificationVC.swift */,
+				0C3514011E4442600005E773 /* PatientCareGiverRoute.swift */,
+				0C3514021E4442600005E773 /* PatientEditProfile.swift */,
 				0C6744D81E42F8980085C831 /* CareGiverAgendaVC.swift */,
 				0C6744D91E42F8980085C831 /* CareGiverBeginServices.swift */,
 				0C6744DA1E42F8980085C831 /* CareGiverChartViewProgressVC.swift */,
 				0C6744DB1E42F8980085C831 /* CarePlanVC.swift */,
 				0C6744DC1E42F8980085C831 /* NumOfReservationVC.swift */,
-				0C6744DD1E42F8980085C831 /* PatientCalendarAppointmentVC.swift */,
 				0C6744DE1E42F8980085C831 /* SearchResultVC.swift */,
 				0C811F471E3C8DBB008A578C /* CareServicesVC.swift */,
 				0C811F481E3C8DBB008A578C /* CreateProfileFour.swift */,
@@ -777,6 +801,8 @@
 		243705CE1E2F49C100005416 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0C3514071E4442E80005E773 /* CustomDialogClass.swift */,
+				0C3514081E4442E80005E773 /* Validation.swift */,
 				24194F361E31E1BD00982135 /* MapAnnotation.swift */,
 				243705CF1E2F49C100005416 /* AppDesign.swift */,
 				243705D01E2F49C100005416 /* Constant.swift */,
@@ -796,12 +822,16 @@
 		243705D31E2F49C100005416 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				0C35140B1E4445FF0005E773 /* PatientCalendarAppointmentVC.xib */,
+				0C3513F71E4442450005E773 /* CareGiverCalenderAppoinmentVC.xib */,
+				0C3513F81E4442450005E773 /* CareGiverNotificationVC.xib */,
+				0C3513F91E4442450005E773 /* PatientCareGiverRoute.xib */,
+				0C3513FA1E4442450005E773 /* PatientEditProfile.xib */,
 				0C6744FA1E42F8CF0085C831 /* CareGiverAgendaVC.xib */,
 				0C6744FB1E42F8CF0085C831 /* CareGiverBeginServices.xib */,
 				0C6744FC1E42F8CF0085C831 /* CareGiverChartViewProgressVC.xib */,
 				0C6744FD1E42F8CF0085C831 /* CarePlanVC.xib */,
 				0C6744FE1E42F8CF0085C831 /* NumOfReservationVC.xib */,
-				0C6744FF1E42F8CF0085C831 /* PatientCalendarAppointmentVC.xib */,
 				0C6745001E42F8CF0085C831 /* SearchResultVC.xib */,
 				0C811F791E3CC0A3008A578C /* EditProfileCareGiver.xib */,
 				0C811F731E3CAD3E008A578C /* TermAndConditionVC.xib */,
@@ -1031,8 +1061,9 @@
 				243705F31E2F49C100005416 /* SignUpVC.xib in Resources */,
 				30EDB3931E3CB5930090C5C2 /* BookInstructionVC.xib in Resources */,
 				0C811F621E3C9068008A578C /* CreateProfileSecond.xib in Resources */,
-				0C6745061E42F8CF0085C831 /* PatientCalendarAppointmentVC.xib in Resources */,
+				0C3513FE1E4442450005E773 /* PatientEditProfile.xib in Resources */,
 				0CAC45EA1E372EDA00C79AFA /* PaymentCardDetailVC.xib in Resources */,
+				0C35140C1E4445FF0005E773 /* PatientCalendarAppointmentVC.xib in Resources */,
 				0CAC45E81E372E9F00C79AFA /* ManagePaymentCardMethodVC.xib in Resources */,
 				0CAC45F01E372F5500C79AFA /* PaymentCardDetailCell.xib in Resources */,
 				0CA0B7381E38A8060066D0EA /* searchCareGiverOnMapVC.xib in Resources */,
@@ -1051,6 +1082,7 @@
 				243705ED1E2F49C100005416 /* CategoryVC.xib in Resources */,
 				0C0A90281E434C9400342BA1 /* bell_tab.png in Resources */,
 				0C19A2B71E3731B30014B01C /* add_button.png in Resources */,
+				0C3513FC1E4442450005E773 /* CareGiverNotificationVC.xib in Resources */,
 				0C811F641E3C9167008A578C /* CreateProfileThird.xib in Resources */,
 				0CA0B74C1E38B9F10066D0EA /* FriendBookedCell.xib in Resources */,
 				30EDB38F1E3C8EE60090C5C2 /* BookingVC.xib in Resources */,
@@ -1067,6 +1099,7 @@
 				24562B061E30D7E8000814C6 /* GooglePlacePicker.bundle in Resources */,
 				0C811F6D1E3CABE9008A578C /* Sort Down-48.png in Resources */,
 				243705F21E2F49C100005416 /* SetupServicesVC.xib in Resources */,
+				0C3513FB1E4442450005E773 /* CareGiverCalenderAppoinmentVC.xib in Resources */,
 				0C6744F61E42F8BF0085C831 /* MealPreparation.xib in Resources */,
 				24562AB21E30963B000814C6 /* AppointmentVC.xib in Resources */,
 				0C3CD1E61E43210500B24536 /* Verified.png in Resources */,
@@ -1091,6 +1124,7 @@
 				0C6745051E42F8CF0085C831 /* NumOfReservationVC.xib in Resources */,
 				0C811F6E1E3CABE9008A578C /* Unchecked.png in Resources */,
 				24562AB41E30963B000814C6 /* ThanksVc.xib in Resources */,
+				0C3513FD1E4442450005E773 /* PatientCareGiverRoute.xib in Resources */,
 				30AA538C1E3B65480009640C /* DisplayReviewVC.xib in Resources */,
 				243705EF1E2F49C100005416 /* cellMedication.xib in Resources */,
 				243705F01E2F49C100005416 /* EditProfile.xib in Resources */,
@@ -1203,10 +1237,13 @@
 				0C6744EB1E42F8A60085C831 /* CareGiverAgendaCell.swift in Sources */,
 				30AA538A1E3B65200009640C /* DisplayReviewVC.swift in Sources */,
 				0C36E93D1E433B2100AA288A /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				0C35140A1E4442E80005E773 /* Validation.swift in Sources */,
 				0C6744EF1E42F8A60085C831 /* SearchResultCell.swift in Sources */,
 				0C6744DF1E42F8980085C831 /* CareGiverAgendaVC.swift in Sources */,
 				30EDB3891E3C8DFD0090C5C2 /* BookingVC.swift in Sources */,
+				0C3514061E4442600005E773 /* PatientEditProfile.swift in Sources */,
 				0CA0B7491E38B9D60066D0EA /* FriendBookedCell.swift in Sources */,
+				0C3514041E4442600005E773 /* CareGiverNotificationVC.swift in Sources */,
 				0C36E9371E433B2100AA288A /* IQUIView+Hierarchy.swift in Sources */,
 				243705E91E2F49C100005416 /* VerificationVC.swift in Sources */,
 				0C811F601E3C8EA2008A578C /* ReferenceCell.swift in Sources */,
@@ -1224,6 +1261,7 @@
 				0C36E9391E433B2100AA288A /* IQUIWindow+Hierarchy.swift in Sources */,
 				0C19A2E31E3731EF0014B01C /* FSCalendarCell.m in Sources */,
 				0C36E93B1E433B2100AA288A /* IQKeyboardManagerConstantsInternal.swift in Sources */,
+				0C35140E1E44461A0005E773 /* PatientCalendarAppointmentVC.swift in Sources */,
 				0C36E9381E433B2100AA288A /* IQUIViewController+Additions.swift in Sources */,
 				0C36E9401E433B2100AA288A /* IQPreviousNextView.swift in Sources */,
 				24194F371E31E1BD00982135 /* MapAnnotation.swift in Sources */,
@@ -1232,6 +1270,8 @@
 				24194F351E31E1B100982135 /* TabBarVC.swift in Sources */,
 				243705E11E2F49C100005416 /* CareServicesCell.swift in Sources */,
 				0CA0B73E1E38A8950066D0EA /* searchCareGiverOnMapVC.swift in Sources */,
+				0C3514031E4442600005E773 /* CareGiverCalenderAppoinmentVC.swift in Sources */,
+				0C3514051E4442600005E773 /* PatientCareGiverRoute.swift in Sources */,
 				24562AAC1E309608000814C6 /* AppointmentVC.swift in Sources */,
 				243705E51E2F49C100005416 /* MedicationVC.swift in Sources */,
 				0C811F4E1E3C8DBB008A578C /* CreateProfileThird.swift in Sources */,
@@ -1261,7 +1301,6 @@
 				24194F341E31E1B100982135 /* CreateProfileFirst.swift in Sources */,
 				0C91A8A91E32306D0000955E /* PersonHistoryCell.swift in Sources */,
 				0CAC45E61E372E8100C79AFA /* ManagePaymentCardMethodVC.swift in Sources */,
-				0C6744E41E42F8980085C831 /* PatientCalendarAppointmentVC.swift in Sources */,
 				0C19A2EA1E3731EF0014B01C /* FSCalendarHeaderView.m in Sources */,
 				0C36E93E1E433B2100AA288A /* IQTextView.swift in Sources */,
 				243705E41E2F49C100005416 /* EditProfile.swift in Sources */,
@@ -1275,6 +1314,7 @@
 				24562AB81E3096C4000814C6 /* cellMedication.swift in Sources */,
 				243705EA1E2F49C100005416 /* AppDesign.swift in Sources */,
 				0C811F4C1E3C8DBB008A578C /* CreateProfileFour.swift in Sources */,
+				0C3514091E4442E80005E773 /* CustomDialogClass.swift in Sources */,
 				24562AAE1E309608000814C6 /* ThanksVc.swift in Sources */,
 				0C19A2EE1E3731EF0014B01C /* FSCalendarWeekdayView.m in Sources */,
 				0CAC45EE1E372F3900C79AFA /* PaymentCardDetailCell.swift in Sources */,
