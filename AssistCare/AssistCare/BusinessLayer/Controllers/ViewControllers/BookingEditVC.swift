@@ -80,6 +80,7 @@ class BookingEditVC: UIViewController {
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "Book"
+        self.tabBarController?.tabBar.isHidden = true
         
         self.automaticallyAdjustsScrollViewInsets = false
 
@@ -91,11 +92,12 @@ class BookingEditVC: UIViewController {
     }
     
     @IBAction func btnBackClicked(_ sender: Any) {
-        
+        self.navigationController!.popViewController(animated: true)
     }
     
     @IBAction func btnContinue(_ sender: UIButton) {
-        
+        let displayVC = NumOfReservationVC(nibName: "NumOfReservationVC", bundle: nil)
+        self.navigationController?.pushViewController(displayVC, animated: true)
     }
     
     override func didReceiveMemoryWarning() {

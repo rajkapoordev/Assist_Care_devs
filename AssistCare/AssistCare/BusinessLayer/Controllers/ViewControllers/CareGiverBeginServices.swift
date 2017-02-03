@@ -23,6 +23,7 @@ class CareGiverBeginServices: UIViewController,MKMapViewDelegate,CLLocationManag
         
         mapView.delegate = self
         imgProfile.setRounded()
+        self.tabBarController?.tabBar.isHidden = true
         
         self.mapView.showsUserLocation = true
         if (CLLocationManager.locationServicesEnabled()) {

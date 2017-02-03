@@ -35,6 +35,7 @@ class CareGiverMessageVC: UIViewController, UITableViewDataSource, UITableViewDe
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: TAB_ORANGE_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
+        self.tabBarController?.tabBar.isHidden = false
         lblNavTitle.text = "Messages"
     }
     

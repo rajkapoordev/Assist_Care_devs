@@ -12,7 +12,7 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
     
     var selectedVC: Int = Int()
     var myVC1 = AppointmentVC()
-    var myVC2 = EditProfile()
+    var myVC2 = CalenderGraphVC()
     var myVC3 = CareGiverNotificationVC()
     var myVC4 = CareGiverMessageVC()
     let heightOfTabBar : CGFloat = 50
@@ -43,7 +43,7 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
     {
         self.tabBar.tintColor = UIColor.white
         self.myVC1 = AppointmentVC(nibName: "AppointmentVC", bundle: nil)
-        self.myVC2 = EditProfile(nibName: "EditProfile", bundle: nil)
+        self.myVC2 = CalenderGraphVC(nibName: "CalenderGraphVC", bundle: nil)
         self.myVC3 = CareGiverNotificationVC(nibName:"CareGiverNotificationVC", bundle: nil)
         self.myVC4 = CareGiverMessageVC(nibName:"CareGiverMessageVC", bundle: nil)
         

@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditProfile" customModule="AssistCare" customModuleProvider="target">
             <connections>
-                <outlet property="btnNext" destination="z2m-RI-KHK" id="rlS-h5-crL"/>
+                <outlet property="btnNext" destination="osX-VZ-sFx" id="t2T-cq-uRc"/>
                 <outlet property="cvcServices" destination="5vg-0s-Jk5" id="z6c-KC-Fuy"/>
                 <outlet property="imgAddress" destination="8Jf-gp-bNs" id="TCB-xw-7YK"/>
                 <outlet property="imgProfile" destination="7z5-XT-0sR" id="2i9-mQ-n2A"/>
@@ -30,6 +30,28 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" id="u1p-iU-0c3">
+                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xPa-lf-J8n">
+                            <rect key="frame" x="19" y="11" width="24" height="23"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                            <state key="normal" image="back_nav.png"/>
+                            <connections>
+                                <action selector="btnBackClick:" destination="-1" eventType="touchUpInside" id="UZg-Lg-zCa"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7ia-Wh-7cx">
+                            <rect key="frame" x="70" y="12" width="199" height="21"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.903217613697052" green="0.30882829427719116" blue="0.32724136114120483" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="rkN-88-dOZ">
                     <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -189,42 +211,21 @@
                                 <outlet property="delegate" destination="-1" id="4n2-px-V7t"/>
                             </connections>
                         </collectionView>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="z2m-RI-KHK">
-                            <rect key="frame" x="8" y="543" width="359" height="47"/>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="osX-VZ-sFx">
+                            <rect key="frame" x="37" y="550" width="300" height="35"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.24832046031951904" green="0.73438870906829834" blue="0.81627410650253296" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                            <state key="normal" title="Next">
+                            <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                            <state key="normal" title="NEXT">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
-                                <action selector="nextAction:" destination="-1" eventType="touchUpInside" id="W6D-lH-UpH"/>
+                                <action selector="btnNext:" destination="-1" eventType="touchUpInside" id="DGF-EE-gVT"/>
                             </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </scrollView>
-                <view contentMode="scaleToFill" misplaced="YES" id="u1p-iU-0c3">
-                    <rect key="frame" x="0.0" y="20" width="375" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                    <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="xPa-lf-J8n">
-                            <rect key="frame" x="19" y="11" width="24" height="23"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
-                            <state key="normal" image="back_nav.png"/>
-                            <connections>
-                                <action selector="btnBackClick:" destination="-1" eventType="touchUpInside" id="UZg-Lg-zCa"/>
-                            </connections>
-                        </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Edit Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="7ia-Wh-7cx">
-                            <rect key="frame" x="70" y="12" width="199" height="21"/>
-                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                    </subviews>
-                    <color key="backgroundColor" red="0.903217613697052" green="0.30882829427719116" blue="0.32724136114120483" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                </view>
             </subviews>
             <color key="backgroundColor" red="0.81242185831069946" green="0.23217248916625977" blue="0.26842150092124939" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <point key="canvasLocation" x="27.5" y="241.5"/>

@@ -49,6 +49,7 @@ class ManagePaymentCardMethodVC: UIViewController, UITextFieldDelegate {
         lblNavTitle.textColor = UIColor.white
         scrollView.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 520)
         lblNavTitle.text = "Add Payment Method"
+        self.tabBarController?.tabBar.isHidden = true
         
         txtPaymentType.setBottomBorder()
         txtNameOfCard.setBottomBorder()

@@ -47,6 +47,7 @@ class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationMana
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "Search Care Giver"
+        self.tabBarController?.tabBar.isHidden = true
         
         vwDetail.backgroundColor = UIColor.white
         btnMealPreparation.backgroundColor = UIColor(red: 17/255, green: 157/255, blue: 180/255, alpha: 1)

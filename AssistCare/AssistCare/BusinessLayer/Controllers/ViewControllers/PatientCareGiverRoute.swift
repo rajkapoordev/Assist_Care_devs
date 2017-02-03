@@ -20,11 +20,7 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
         super.viewDidLoad()
         tblView.register(UINib(nibName:"MedicationPrompt",bundle : nil), forCellReuseIdentifier: "MedicationPrompt")
         scrollView.contentSize = CGSize(width: 0, height: (vWTop.frame.height + tblView.frame.height))
-        
-        
-        
-
-        // Do any additional setup after loading the view.
+        self.tabBarController?.tabBar.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -61,16 +57,5 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
         let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationPrompt", for: indexPath) as! MedicationPrompt
         return cell
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

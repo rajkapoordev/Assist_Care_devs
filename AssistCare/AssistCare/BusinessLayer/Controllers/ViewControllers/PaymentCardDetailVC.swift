@@ -33,6 +33,7 @@ class PaymentCardDetailVC: UIViewController, UITableViewDelegate, UITableViewDat
         self.automaticallyAdjustsScrollViewInsets = false
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
+        self.tabBarController?.tabBar.isHidden = true
         
         self.view.backgroundColor = appUIColorFromRGB(rgbValue: BACK_COLOR, alpha: 1.0)
         //register nib
@@ -60,8 +61,13 @@ class PaymentCardDetailVC: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let managePaymentVC = ManagePaymentCardMethodVC(nibName: "ManagePaymentCardMethodVC", bundle: nil)
-        self.navigationController?.pushViewController(managePaymentVC, animated: true)
+//        let managePaymentVC = ManagePaymentCardMethodVC(nibName: "ManagePaymentCardMethodVC", bundle: nil)
+//        self.navigationController?.pushViewController(managePaymentVC, animated: true)
+        tblPaymentCardDetail.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+    }
+    
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+        tblPaymentCardDetail.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
     }
     
     func addNewPaymentDetail() {

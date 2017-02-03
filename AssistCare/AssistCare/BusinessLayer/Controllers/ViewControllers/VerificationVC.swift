@@ -16,16 +16,16 @@ class VerificationVC: UIViewController ,UITextFieldDelegate{
     @IBOutlet var btnNavBack: UIButton!
     @IBOutlet var vwNavBar: UIView!
     @IBOutlet var lblNavTitle: UILabel!
+    @IBOutlet var btnNext: UIButton!
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setInterface()
-        txtEnterNum.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,6 +37,8 @@ class VerificationVC: UIViewController ,UITextFieldDelegate{
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
         txtEnterNum.setBottomBorder()
+        txtEnterNum.delegate = self
+        btnNext.shadow()
     }
     
     //Navigation back
@@ -46,8 +48,12 @@ class VerificationVC: UIViewController ,UITextFieldDelegate{
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
-        let vc = VerificationLoadingVC(nibName: "VerificationLoadingVC", bundle: nil)
-        navigationController?.pushViewController(vc, animated: true)
         return true
     }
+    
+    @IBAction func btnNext(_ sender: UIButton) {
+        let vc = VerificationLoadingVC(nibName: "VerificationLoadingVC", bundle: nil)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
 }

@@ -26,7 +26,7 @@ class BookInstructionVC: UIViewController,UITextViewDelegate {
         super.viewDidLoad()
        
         txvInstructions.delegate = self
-        
+        txvInstructions.becomeFirstResponder()
         setInterface()
     }
     override func viewDidAppear(_ animated: Bool) {
@@ -40,12 +40,13 @@ class BookInstructionVC: UIViewController,UITextViewDelegate {
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "Book"
+        self.tabBarController?.tabBar.isHidden = true
         
         lbAnyInstructions.text = "Any Instructions for USER?"
     
         txvInstructions.text = "Instructions"
         txvInstructions.textColor = UIColor.gray
-
+        
     }
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView.textColor == UIColor.gray {
@@ -54,8 +55,6 @@ class BookInstructionVC: UIViewController,UITextViewDelegate {
         }
 
         lbInstruction.isHidden = false
-        
-        
         border.frame = CGRect(x: txvInstructions.frame.origin.x, y: txvInstructions.frame.origin.y+txvInstructions.frame.height-2, width: textView.frame.width, height: 2)
         border.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
         txvInstructions.superview!.insertSubview(border, aboveSubview: textView)

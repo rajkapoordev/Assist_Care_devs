@@ -59,23 +59,36 @@ class CareGiverNotificationVC: UIViewController,UITableViewDataSource,UITableVie
         vwPopup.frame = CGRect(x: 20, y: (UIScreen.main.bounds.size.height/2)-100, width: UIScreen.main.bounds.size.width - 40, height: self.vwPopup.frame.height)
         imgPopUp.image = UIImage(named: "userprofile")
         imgPopUp.layer.cornerRadius = imgPopUp.bounds.size.width / 2
+        imgPopUp.clipsToBounds = true
         lbPopUpName.text = "Maude Floyd"
         lbPopUpDate.text = "Wednesday,3/28/2016"
         lbPopUpTime.text = "9:00 am - 11:00 am"
         vwPopup.layer.cornerRadius = 5
         
+        let shapeLayer1 = CAShapeLayer()
+        shapeLayer1.bounds = btnPopUpNO.frame
+        shapeLayer1.position = self.btnPopUpNO.center
+        shapeLayer1.path = UIBezierPath(roundedRect: self.btnPopUpNO.bounds, byRoundingCorners: [.bottomLeft], cornerRadii: CGSize(width: 5, height: 5)).cgPath
+        btnPopUpNO.layer.mask = shapeLayer1
+        
+        let shapeLayer2 = CAShapeLayer()
+        shapeLayer2.bounds = btnPopUpYes.frame
+        shapeLayer2.position = self.btnPopUpYes.center
+        shapeLayer2.path = UIBezierPath(roundedRect: self.btnPopUpYes.bounds, byRoundingCorners: [.bottomRight], cornerRadii: CGSize(width: 5, height: 5)).cgPath
+        btnPopUpYes.layer.mask = shapeLayer2
     }
     
     func setInterface(){
         tblNotification.dataSource = self
         tblNotification.delegate = self
         self.automaticallyAdjustsScrollViewInsets = false
+        self.tabBarController?.tabBar.isHidden = false
         tblNotification.register(UINib(nibName: "CareGiverAgendaCell", bundle: nil), forCellReuseIdentifier: "CareGiverAgendaCell")
         
         vwNavigation.backgroundColor = appUIColorFromRGB(rgbValue: TAB_GREEN_COLOR, alpha: 1.0)//UIColor(red: 68/255, green: 184/255, blue: 167/255, alpha: 1)
         
         lbNavigation.text = "Notification"
-    
+        
         transperentView = UIView(frame: UIScreen.main.bounds)
         transperentView.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.5)
         

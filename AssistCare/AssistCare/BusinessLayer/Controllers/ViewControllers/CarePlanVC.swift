@@ -9,7 +9,7 @@
 import UIKit
 
 class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
-
+    
     @IBOutlet var tblView: UITableView!
     var customView = UIView()
     var headerTitle = NSMutableArray()
@@ -23,10 +23,7 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         setValue()
         addCustomeView()
         tblView.tableFooterView = customView
-        
-
-
-        // Do any additional setup after loading the view.
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     func setValue()
@@ -44,7 +41,7 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         }
         
     }
-
+    
     
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -54,7 +51,7 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if (isArrExpand[section] as! Bool == true)
         {
-           
+            
             return 1
             
         }
@@ -63,17 +60,17 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-
+        
         if indexPath.section == 1
         {
             tblView.register(UINib(nibName:"MedicationPrompt",bundle : nil), forCellReuseIdentifier: "MedicationPrompt")
             let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationPrompt", for: indexPath) as! MedicationPrompt
-//            cell.lblDescription.text = str
-//            cell.lblDescription.numberOfLines = 0
-//            cell.lblDescription.lineBreakMode = NSLineBreakMode.byWordWrapping
-//            cell.lblDescription.sizeToFit()
+            //            cell.lblDescription.text = str
+            //            cell.lblDescription.numberOfLines = 0
+            //            cell.lblDescription.lineBreakMode = NSLineBreakMode.byWordWrapping
+            //            cell.lblDescription.sizeToFit()
             return cell
-
+            
         }
         else
         {
@@ -83,7 +80,7 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
             cell.lblDescription.numberOfLines = 0
             cell.lblDescription.lineBreakMode = NSLineBreakMode.byWordWrapping
             cell.lblDescription.sizeToFit()
-        return cell
+            return cell
         }
         
         
@@ -96,10 +93,10 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-      if indexPath.section == 1{
-        return 100
-     }else{
-        return str.height(constraintedWidth: tableView.frame.size.width, font: UIFont.systemFont(ofSize: 15))
+        if indexPath.section == 1{
+            return 100
+        }else{
+            return str.height(constraintedWidth: tableView.frame.size.width, font: UIFont.systemFont(ofSize: 15))
         }
     }
     
@@ -149,7 +146,7 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     }
     
     
-
+    
     func btnClick(sender:UIButton)
     {
         let isExp = isArrExpand[sender.tag] as! Bool
@@ -185,25 +182,25 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         self.navigationController?.pushViewController(vc, animated: false)
         
     }
-
     
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
     
-
+    
     /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+     // MARK: - Navigation
+     
+     // In a storyboard-based application, you will often want to do a little preparation before navigation
+     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+     // Get the new view controller using segue.destinationViewController.
+     // Pass the selected object to the new view controller.
+     }
+     */
+    
 }
 extension String {
     func height(constraintedWidth width: CGFloat, font: UIFont) -> CGFloat {

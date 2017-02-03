@@ -108,6 +108,7 @@ class ReferealVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
+        self.tabBarController?.tabBar.isHidden = true
         
         activeInvite()
         //Register nib
@@ -123,7 +124,7 @@ class ReferealVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //Navigation back
     @IBAction func btnNavBack(_ sender: UIButton) {
-        navigationController?.popViewController(animated: false)
+        navigationController!.popViewController(animated: false)
 
     }
  
