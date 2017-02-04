@@ -122,7 +122,7 @@
                             <color key="textColor" red="0.38823529411764707" green="0.38823529411764707" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y4Y-bn-uGp">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="userprofile" translatesAutoresizingMaskIntoConstraints="NO" id="y4Y-bn-uGp">
                             <rect key="frame" x="18" y="18" width="45" height="45"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -138,11 +138,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-318" y="351"/>
+            <point key="canvasLocation" x="-599" y="283"/>
         </view>
     </objects>
     <resources>
         <image name="Gift Card" width="52" height="52"/>
         <image name="user.png" width="64" height="64"/>
+        <image name="userprofile" width="250" height="250"/>
     </resources>
 </document>

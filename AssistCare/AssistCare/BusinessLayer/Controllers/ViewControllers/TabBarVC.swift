@@ -86,9 +86,10 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
         // tabBar.selectionIndicatorImage = imageWithColor(color: getGrayColor(), size: tabBarItemSize)
         
         UITabBar.appearance().isTranslucent = true
-        UITabBar.appearance().barTintColor = appUIColorFromRGB(rgbValue: TAB_RED_COLOR, alpha: 1.0) //UIColor(red: 0.0/255.0, gree: 176.0/255.0, blue:171.0/255.0, alpha: 1.0)
+        UITabBar.appearance().barTintColor = AppColor.redColor
+        //UIColor(red: 0.0/255.0, gree: 176.0/255.0, blue:171.0/255.0, alpha: 1.0)
         let arrControllers = [self.navigationVC1,self.navigationVC2,self.navigationVC3,self.navigationVC4]
-        self.tabBar.backgroundColor = UIColor(red: 0.0/255.0, green: 176.0/255.0, blue:171.0/255.0, alpha: 1.0)
+        //self.tabBar.backgroundColor = UIColor(red: 0.0/255.0, green: 176.0/255.0, blue:171.0/255.0, alpha: 1.0)
         self.viewControllers = arrControllers
         delegate = self
     }
@@ -124,17 +125,17 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
         self.myVC4.tabBarItem.title = ""
         if (item.tag == 0) {
             item.title = "Home"
-            self.tabBar.barTintColor = appUIColorFromRGB(rgbValue: TAB_RED_COLOR, alpha: 1.0)
+            self.tabBar.barTintColor = AppColor.redColor
         }else if (item.tag == 1) {
             item.title = "Calender"
-            self.tabBar.barTintColor = appUIColorFromRGB(rgbValue: TAB_BLUE_COLOR, alpha: 1.0)
+            self.tabBar.barTintColor = AppColor.skyColor
         }
         else if (item.tag == 2) {
             item.title = "Notifications"
-            self.tabBar.barTintColor = appUIColorFromRGB(rgbValue: TAB_GREEN_COLOR, alpha: 1.0)
+            self.tabBar.barTintColor = AppColor.greenColor
         }else {
             item.title = "Messages"
-            self.tabBar.barTintColor = appUIColorFromRGB(rgbValue: TAB_ORANGE_COLOR, alpha: 1.0)
+            self.tabBar.barTintColor = AppColor.orangeColor
         }
     }
     

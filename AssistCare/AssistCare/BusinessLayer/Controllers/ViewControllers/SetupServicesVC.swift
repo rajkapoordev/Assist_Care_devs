@@ -50,18 +50,18 @@ class SetupServicesVC: UIViewController,UITextFieldDelegate,UITableViewDelegate,
     
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "SetUp Services"
-        self.view.backgroundColor = getBackgroundColor()
+        self.view.backgroundColor = AppColor.backColor
         btnContinue.shadow()
         txtInstruction.setBottomBorder()
-        txtInstruction.backgroundColor = getBackgroundColor()
+        txtInstruction.backgroundColor = AppColor.backColor
         btnContinue.isHidden = false
         btnAddMedication.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "addMedication"), scaledToSize: CGSize(width: btnAddMedication.bounds.size.width, height: btnAddMedication.bounds.size.height)), for: .normal)
         btnContinue.backgroundColor = UIColor(red: 62/255, green: 186/255, blue: 207/255, alpha: 1)
         btnContinue.layer.cornerRadius = 2.0
-        tblMedication.backgroundColor = getBackgroundColor()
+        tblMedication.backgroundColor = AppColor.backColor
     }
     
     //Navigation back

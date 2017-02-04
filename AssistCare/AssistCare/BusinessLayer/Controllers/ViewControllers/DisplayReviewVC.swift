@@ -38,7 +38,7 @@ class DisplayReviewVC: UIViewController,UICollectionViewDelegate,UICollectionVie
     
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "Reviews"
         self.tabBarController?.tabBar.isHidden = true
@@ -70,8 +70,8 @@ class DisplayReviewVC: UIViewController,UICollectionViewDelegate,UICollectionVie
         }
       
         if(indexPath == index){
-            cell.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
-            cell.lb_cellTab.textColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+            cell.backgroundColor = AppColor.skyColor
+            cell.lb_cellTab.textColor = AppColor.skyColor
         }else{
             cell.backgroundColor = UIColor.clear
             cell.lb_cellTab.textColor = UIColor.gray

@@ -38,7 +38,7 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
     
     func setInterface(){
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "Edit Profile"
         self.tabBarController?.tabBar.isHidden = true
@@ -75,7 +75,7 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
         else if textField == txtCardName
         {
             txtCardNumber.becomeFirstResponder()
-            scrollView.setContentOffset(CGPoint(x: 0.0, y: screenSize.width/2), animated: true)
+            scrollView.setContentOffset(CGPoint(x: 0.0, y: ScreenSize.SCREEN_WIDTH/2), animated: true)
         }
         else if textField == txtCardNumber
         {

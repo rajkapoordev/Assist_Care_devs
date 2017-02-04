@@ -44,7 +44,7 @@ class AppointmentVC: UIViewController,MKMapViewDelegate, UISearchBarDelegate {
     
     func setInterface(){
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         mapView.delegate = self
         

@@ -25,11 +25,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //For keyboard manager
         IQKeyboardManager.sharedManager().enable = true
         
-        UINavigationBar.appearance().barTintColor = getAppColor()
-        UINavigationBar.appearance().tintColor = UIColor.white
-        UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
-        
-        let vc = ThanksVc(nibName: "ThanksVc", bundle: nil)
+        let vc = MedicationVC(nibName: "MedicationVC", bundle: nil)
       
         self.window = UIWindow(frame: UIScreen.main.bounds)
         

@@ -9,20 +9,14 @@
 import Foundation
 import UIKit
 
-let FONT_COLOR:UInt = 0x6D6D6D
-let INFO_FONT_COLOR:UInt = 0x6F7179
-let APP_COLOR:UInt = 0xE44754 //App red color
-let SILVER_COLOR:UInt = 0xF2F2F2
+//let FONT_COLOR:UInt = 0x6D6D6D
+//let INFO_FONT_COLOR:UInt = 0x6F7179
+//let APP_COLOR:UInt = 0xE44754 //App red color
+//let SILVER_COLOR:UInt = 0xF2F2F2
 let BACK_COLOR:UInt = 0xEEEEEE //textFieldBackColor
-let GRAY_COLOR:UInt = 0xE0E0E0
-let GREEN_COLOR:UInt = 0x46BCD0 // app green color
-let RED_COLOR:UInt = 0xDC454B //0xF07374
-let screenSize = UIScreen.main.bounds
-
-let TAB_ORANGE_COLOR: UInt = 0xFC7C63 //chat
-let TAB_BLUE_COLOR: UInt = 0x3FBBD0  //calender
-let TAB_GREEN_COLOR: UInt = 0x3CA192 //notification
-let TAB_RED_COLOR: UInt = 0xE34E52 //home
+//let GRAY_COLOR:UInt = 0xE0E0E0
+//let GREEN_COLOR:UInt = 0x46BCD0 // app green color
+//let RED_COLOR:UInt = 0xDC454B //0xF07374
 
 // define for user role
 let patient = "Patient"
@@ -40,6 +34,15 @@ func heightForView(text: String, font: UIFont, width: CGFloat) -> CGFloat {
     label.text = text
     label.sizeToFit()
     return label.frame.height
+}
+
+struct AppColor {
+    static let redColor = UIColor(red: 221/255, green: 55/255, blue: 66/255, alpha: 1.0)
+    static let skyColor = UIColor(red: 54/255, green: 174/255, blue: 197/255, alpha: 1.0)
+    static let greenColor = UIColor(red: 58/255, green: 173/255, blue: 151/255, alpha: 1.0)
+    static let orangeColor = UIColor(red: 249/255, green: 101/255, blue: 81/255, alpha: 1.0)
+    static let backColor = UIColor(red: 234/255, green: 234/255, blue: 234/255, alpha: 1.0)
+    static let grayColor = UIColor(red: 224/255, green: 224/255, blue: 224/255, alpha: 1.0)
 }
 
 struct ScreenSize

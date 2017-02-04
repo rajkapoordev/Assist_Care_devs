@@ -51,7 +51,7 @@ class PatientRatingServiceFilled: UIViewController,UICollectionViewDataSource,UI
             rectShape.bounds = self.btnContinue.frame
             rectShape.position = self.btnContinue.center
             rectShape.path = UIBezierPath(roundedRect: self.btnContinue.bounds, byRoundingCorners: [.bottomLeft , .bottomRight], cornerRadii: CGSize(width: 5, height: 5)).cgPath
-            self.btnContinue.layer.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0).cgColor
+            self.btnContinue.layer.backgroundColor = AppColor.skyColor.cgColor
             self.btnContinue.layer.mask = rectShape
             imgProfile.setRounded()
         }

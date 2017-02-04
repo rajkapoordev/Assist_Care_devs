@@ -44,7 +44,9 @@ class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationMana
     
     func setInterface(){
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        
+        vwNavBar.backgroundColor = AppColor.redColor
+        
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "Search Care Giver"
         self.tabBarController?.tabBar.isHidden = true

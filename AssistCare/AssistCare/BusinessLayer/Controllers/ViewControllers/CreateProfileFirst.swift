@@ -106,7 +106,7 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
 
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         if textField == txtAddress {
-                    scrollView.setContentOffset(CGPoint(x: 0.0, y: screenSize.width/3), animated: true)
+                    scrollView.setContentOffset(CGPoint(x: 0.0, y: ScreenSize.SCREEN_WIDTH/3), animated: true)
         }
         return true
     }
@@ -133,13 +133,13 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
         txtDateOfBirth.setBottomBorder()
         vWLocation.setBottomBorderView()
         vWEducation.setBottomBorderView()
-        btnMon.backgroundColor = getGrayColor()
-        btnTues.backgroundColor = getGrayColor()
-        btnWed.backgroundColor = getGrayColor()
-        btnThur.backgroundColor = getGrayColor()
-        btnFri.backgroundColor = getGrayColor()
-        btnSat.backgroundColor = getGrayColor()
-        btnSun.backgroundColor = getGrayColor()
+        btnMon.backgroundColor = AppColor.grayColor
+        btnTues.backgroundColor = AppColor.grayColor
+        btnWed.backgroundColor = AppColor.grayColor
+        btnThur.backgroundColor = AppColor.grayColor
+        btnFri.backgroundColor = AppColor.grayColor
+        btnSat.backgroundColor = AppColor.grayColor
+        btnSun.backgroundColor = AppColor.grayColor
         
         btnMon.layer.cornerRadius = btnMon.bounds.size.width/2
         btnTues.layer.cornerRadius = btnTues.bounds.size.width/2
@@ -152,19 +152,18 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     
     }
     
-    
-    
     @IBAction func btnNextClick(_ sender: Any) {
         let vc = CreateProfileSecond(nibName: "CreateProfileSecond", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: false)
         
     }
+    
     @IBAction func btnSelectedCourseClick(_ sender: Any) {
         txtAddress.becomeFirstResponder()
-        scrollView.setContentOffset(CGPoint(x: 0.0, y: screenSize.width/3), animated: true)
+        scrollView.setContentOffset(CGPoint(x: 0.0, y: ScreenSize.SCREEN_WIDTH/3), animated: true)
         vWPicker.isHidden = true
-       
     }
+
     @IBAction func btnSelectScheduleClick(_ sender: Any) {
         self.vWSchedule.alpha = 0
         self.vWSchedule.isHidden = false
@@ -175,23 +174,23 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     }
     
     @IBAction func btnMonClick(_ sender: Any) {
-        if(btnMon.backgroundColor == getGrayColor() ){
-            btnMon.backgroundColor = getGreenColor()
+        if(btnMon.backgroundColor == AppColor.grayColor ){
+            btnMon.backgroundColor = AppColor.skyColor
             btnMon.setTitleColor(UIColor.white, for: .normal)
         }else{
             
-            btnMon.backgroundColor = getGrayColor()
+            btnMon.backgroundColor = AppColor.grayColor
             btnMon.setTitleColor(UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1), for: .normal)
         }
     }
     
     @IBAction func btnTuesClick(_ sender: Any) {
-        if(btnTues.backgroundColor == getGrayColor() ){
-            btnTues.backgroundColor = getGreenColor()
+        if(btnTues.backgroundColor == AppColor.grayColor ){
+            btnTues.backgroundColor = AppColor.skyColor
             btnTues.setTitleColor(UIColor.white, for: .normal)
         }else{
             
-            btnTues.backgroundColor = getGrayColor()
+            btnTues.backgroundColor = AppColor.grayColor
             btnTues.setTitleColor(UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1), for: .normal)
         }
 
@@ -199,23 +198,23 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     
 
     @IBAction func btnWedClick(_ sender: Any) {
-        if(btnWed.backgroundColor == getGrayColor() ){
-            btnWed.backgroundColor = getGreenColor()
+        if(btnWed.backgroundColor == AppColor.grayColor ){
+            btnWed.backgroundColor = AppColor.skyColor
             btnWed.setTitleColor(UIColor.white, for: .normal)
         }else{
             
-            btnWed.backgroundColor = getGrayColor()
+            btnWed.backgroundColor = AppColor.grayColor
             btnWed.setTitleColor(UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1), for: .normal)
         }
     }
     
     @IBAction func btnThurClick(_ sender: Any) {
-        if(btnThur.backgroundColor == getGrayColor() ){
-            btnThur.backgroundColor = getGreenColor()
+        if(btnThur.backgroundColor == AppColor.grayColor ){
+            btnThur.backgroundColor = AppColor.skyColor
             btnThur.setTitleColor(UIColor.white, for: .normal)
         }else{
             
-            btnThur.backgroundColor = getGrayColor()
+            btnThur.backgroundColor = AppColor.grayColor
             btnThur.setTitleColor(UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1), for: .normal)
         }
 
@@ -223,35 +222,35 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     
     
     @IBAction func btnFriClick(_ sender: Any) {
-        if(btnFri.backgroundColor == getGrayColor() ){
-            btnFri.backgroundColor = getGreenColor()
+        if(btnFri.backgroundColor == AppColor.grayColor ){
+            btnFri.backgroundColor = AppColor.skyColor
             btnFri.setTitleColor(UIColor.white, for: .normal)
         }else{
             
-            btnFri.backgroundColor = getGrayColor()
+            btnFri.backgroundColor = AppColor.grayColor
             btnFri.setTitleColor(UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1), for: .normal)
         }
     }
     
     
     @IBAction func btnSatClick(_ sender: Any) {
-        if(btnSat.backgroundColor == getGrayColor() ){
-            btnSat.backgroundColor = getGreenColor()
+        if(btnSat.backgroundColor == AppColor.grayColor ){
+            btnSat.backgroundColor = AppColor.skyColor
             btnSat.setTitleColor(UIColor.white, for: .normal)
         }else{
             
-            btnSat.backgroundColor = getGrayColor()
+            btnSat.backgroundColor = AppColor.grayColor
             btnSat.setTitleColor(UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1), for: .normal)
         }
     }
     
     @IBAction func btnSunClick(_ sender: Any) {
-        if(btnSun.backgroundColor == getGrayColor() ){
-            btnSun.backgroundColor = getGreenColor()
+        if(btnSun.backgroundColor == AppColor.grayColor ){
+            btnSun.backgroundColor = AppColor.skyColor
             btnSun.setTitleColor(UIColor.white, for: .normal)
         }else{
             
-            btnSun.backgroundColor = getGrayColor()
+            btnSun.backgroundColor = AppColor.grayColor
             btnSun.setTitleColor(UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1), for: .normal)
         }
     }

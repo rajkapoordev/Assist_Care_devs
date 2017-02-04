@@ -49,7 +49,7 @@ class VerificationLoadingVC: UIViewController {
     
     func setInterface(){
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         
         lbLoading.text = "Waiting for text message to automatically verify phone number"

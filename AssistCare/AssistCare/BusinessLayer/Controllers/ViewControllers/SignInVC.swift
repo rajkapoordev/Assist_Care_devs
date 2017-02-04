@@ -43,7 +43,7 @@ class SignInVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
     
     func setInterface(){
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor//appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
         scrollViewMain.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 490)
         

@@ -71,8 +71,8 @@ class ReferealVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tabInvite.isHidden = true
         viewHistory.isHidden = false
         tabHistory.isHidden = false
-        btnInvite.setTitleColor(appUIColorFromRGB(rgbValue: FONT_COLOR, alpha: 1.0), for: .normal)
-        btnHistory.setTitleColor(appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0), for: .normal)
+        btnInvite.setTitleColor(UIColor.gray, for: .normal)
+        btnHistory.setTitleColor(AppColor.skyColor, for: .normal)
     }
     
     func activeInvite() {
@@ -80,8 +80,8 @@ class ReferealVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tabInvite.isHidden = false
         viewHistory.isHidden = true
         tabHistory.isHidden = true
-        btnInvite.setTitleColor(appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0), for: .normal)
-        btnHistory.setTitleColor(appUIColorFromRGB(rgbValue: FONT_COLOR, alpha: 1.0), for: .normal)
+        btnInvite.setTitleColor(AppColor.skyColor, for: .normal)
+        btnHistory.setTitleColor(UIColor.gray, for: .normal)
     }
     
     func setShadow(globeButton: UIView, color: UIColor) {
@@ -106,7 +106,7 @@ class ReferealVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func setInterface(){
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         self.tabBarController?.tabBar.isHidden = true
         
@@ -116,7 +116,7 @@ class ReferealVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.tblHistory.register(UINib(nibName: "PersonHistoryCell", bundle: nil), forCellReuseIdentifier: "PersonHistoryCell")
         self.tblHistory.dataSource = self
         self.tblHistory.delegate = self
-        self.viewTopEarn.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        self.viewTopEarn.backgroundColor = AppColor.skyColor
         self.lblEarnAmount.textColor = UIColor.white
         self.lblInfoEarn.textColor = UIColor.white
         self.automaticallyAdjustsScrollViewInsets = false

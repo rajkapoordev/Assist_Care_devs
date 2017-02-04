@@ -28,11 +28,11 @@ class CustomDialogClass: UIViewController{
     
     func  displayAlert(strTitle : String ,strMsg : String,btnOkText : String,btnCancelText: String,type:String )
     {
-        let screenWidth = screenSize.width
-        let screenHeight = screenSize.height
+        let screenWidth = ScreenSize.SCREEN_WIDTH
+        let screenHeight = ScreenSize.SCREEN_HEIGHT
         
         let vwMain = UIView()
-        vwMain.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenSize.height)
+        vwMain.frame = CGRect(x: 0, y: 0, width: screenWidth, height: screenHeight)
         
         let DynamicView = UIView()
         DynamicView.frame = CGRect(x: (16 * screenHeight )/736, y: (screenWidth * 200)/414, width: (380 * screenWidth)/414, height: 200 * (screenHeight )/736)

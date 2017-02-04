@@ -9,35 +9,6 @@
 import Foundation
 import UIKit
 
-func getFontColor() -> UIColor{
-    return appUIColorFromRGB(rgbValue: FONT_COLOR, alpha: 1)
-}
-
-func  getInfoFontColor() -> UIColor{
-    return appUIColorFromRGB(rgbValue: INFO_FONT_COLOR, alpha: 1)
-}
-
-func getAppColor() -> UIColor{
-        return appUIColorFromRGB(rgbValue: APP_COLOR, alpha: 1)
-}
-
-func getBackgroundColor() -> UIColor {
-    return appUIColorFromRGB(rgbValue: BACK_COLOR, alpha: 1)
-}
-
-func getGrayColor()->UIColor{
-    return appUIColorFromRGB(rgbValue: GRAY_COLOR, alpha: 1)
-}
-
-func getGreenColor()->UIColor{
-    return appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1)
-}
-
-func getRedColor()->UIColor{
-    return appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1)
-}
-
-
 /*func SAAppFontRegular(x:CGFloat) -> UIFont {
     return UIFont(name: "OpenSans", size: x)!
 }

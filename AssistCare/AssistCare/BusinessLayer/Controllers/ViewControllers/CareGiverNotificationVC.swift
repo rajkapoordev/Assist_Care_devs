@@ -85,7 +85,7 @@ class CareGiverNotificationVC: UIViewController,UITableViewDataSource,UITableVie
         self.tabBarController?.tabBar.isHidden = false
         tblNotification.register(UINib(nibName: "CareGiverAgendaCell", bundle: nil), forCellReuseIdentifier: "CareGiverAgendaCell")
         
-        vwNavigation.backgroundColor = appUIColorFromRGB(rgbValue: TAB_GREEN_COLOR, alpha: 1.0)//UIColor(red: 68/255, green: 184/255, blue: 167/255, alpha: 1)
+        vwNavigation.backgroundColor = AppColor.greenColor
         
         lbNavigation.text = "Notification"
         

@@ -10,14 +10,11 @@ import UIKit
 import MapKit
 
 import CoreLocation
-class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDataSource,CLLocationManagerDelegate,MKMapViewDelegate {
+class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDataSource,CLLocationManagerDelegate,MKMapViewDelegate, UITextViewDelegate {
+
     @IBOutlet var scrollView: UIScrollView!
 
     let locationManager = CLLocationManager()
-
-class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDataSource, UITextViewDelegate {
-    @IBOutlet var scrollView: UIScrollView!
-
     
     @IBOutlet var txtVwInstruction: UITextView!
     @IBOutlet var btnSkip: UIButton!
@@ -109,7 +106,7 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
 
 
     override func viewDidLayoutSubviews() {
-        vwPopupWentWrong.frame = CGRect(x: 20, y: (screenSize.height/2) - (self.vwPopupWentWrong.bounds.size.height / 2), width: screenSize.width - 40, height: self.vwPopupWentWrong.bounds.size.height)
+        vwPopupWentWrong.frame = CGRect(x: 20, y: (ScreenSize.SCREEN_HEIGHT/2) - (self.vwPopupWentWrong.bounds.size.height / 2), width: ScreenSize.SCREEN_WIDTH - 40, height: self.vwPopupWentWrong.bounds.size.height)
     }
     
     override func didReceiveMemoryWarning() {
@@ -154,7 +151,7 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
         }
         
         border.frame = CGRect(x: txtVwInstruction.frame.origin.x, y: txtVwInstruction.frame.origin.y+txtVwInstruction.frame.height-2, width: textView.frame.width, height: 2)
-        border.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        border.backgroundColor = AppColor.skyColor
         txtVwInstruction.superview!.insertSubview(border, aboveSubview: textView)
         
     }
@@ -175,7 +172,7 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
         txtVwInstruction.frame = CGRect(x: txtVwInstruction.frame.origin.x, y: txtVwInstruction.frame.origin.y, width: txtVwInstruction.frame.size.width, height: height+10)
         
         border.frame = CGRect(x: txtVwInstruction.frame.origin.x, y: txtVwInstruction.frame.origin.y+txtVwInstruction.frame.height-2, width: textView.frame.width, height: 2)
-        border.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        border.backgroundColor = AppColor.skyColor
         txtVwInstruction.superview!.insertSubview(border, aboveSubview: textView)
 
     }

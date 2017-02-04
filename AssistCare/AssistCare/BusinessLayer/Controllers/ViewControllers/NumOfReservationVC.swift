@@ -55,7 +55,7 @@ class NumOfReservationVC: UIViewController,UITableViewDelegate,UITableViewDataSo
 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let vw = UIView()
-        vw.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: 50)
+        vw.frame = CGRect(x: 0, y: 0, width: ScreenSize.SCREEN_WIDTH, height: 50)
         vw.backgroundColor = UIColor(red: 55/255, green: 186/255, blue: 208/255, alpha: 1)
         let label = UILabel()
         label.numberOfLines = 0
@@ -63,8 +63,8 @@ class NumOfReservationVC: UIViewController,UITableViewDelegate,UITableViewDataSo
         label.textColor = UIColor.white
         label.font = label.font.withSize(14)
         label.text = "The following reservation has been received:"
-        let height = heightForView(text: label.text!, font: label.font, width:screenSize.width)
-        label.frame = (frame: CGRect(x: 10, y: 40 - height, width: screenSize.width - 20, height: height))
+        let height = heightForView(text: label.text!, font: label.font, width: ScreenSize.SCREEN_WIDTH)
+        label.frame = (frame: CGRect(x: 10, y: 40 - height, width: ScreenSize.SCREEN_WIDTH - 20, height: height))
         label.textAlignment = .justified
         vw.addSubview(label)
 
@@ -80,8 +80,8 @@ class NumOfReservationVC: UIViewController,UITableViewDelegate,UITableViewDataSo
         label.textColor = UIColor.white
         label.font = label.font.withSize(14)
         label.text = "We will notify you as soon as Anna connonlly has accepted your booking.To update tis or any other bookings you may have,please visit Booking section of the app."
-        let height = heightForView(text: label.text!, font: label.font, width:screenSize.width)
-        label.frame = (frame: CGRect(x: 10, y: 5, width: screenSize.width - 20, height: height))
+        let height = heightForView(text: label.text!, font: label.font, width: ScreenSize.SCREEN_WIDTH)
+        label.frame = (frame: CGRect(x: 10, y: 5, width: ScreenSize.SCREEN_WIDTH - 20, height: height))
         label.textAlignment = .justified
         vw.addSubview(label)
         return vw

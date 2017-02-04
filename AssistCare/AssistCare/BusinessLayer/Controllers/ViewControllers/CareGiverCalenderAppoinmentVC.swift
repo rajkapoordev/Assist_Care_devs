@@ -45,7 +45,7 @@ class CareGiverCalenderAppoinmentVC: UIViewController,UICollectionViewDelegate,U
         collServiceProvided.delegate = self
         collServiceProvided.dataSource = self
         collServiceProvided.register(UINib(nibName: "CareServicesCell", bundle: nil), forCellWithReuseIdentifier: "CareServicesCell")
-        scrollData.contentSize = CGSize(width: screenSize.width, height: btnCancelAppoinment.bounds.size.height + btnCancelAppoinment.frame.origin.y + 20)
+        scrollData.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: btnCancelAppoinment.bounds.size.height + btnCancelAppoinment.frame.origin.y + 20)
         btnEnglish.layer.cornerRadius = btnEnglish.bounds.size.height / 2
         btnSpanish.layer.cornerRadius = btnEnglish.bounds.size.height / 2
         btnCancelAppoinment.layer.borderWidth = 1.0

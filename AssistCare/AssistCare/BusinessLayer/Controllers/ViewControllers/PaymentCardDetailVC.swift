@@ -31,7 +31,7 @@ class PaymentCardDetailVC: UIViewController, UITableViewDelegate, UITableViewDat
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
         self.automaticallyAdjustsScrollViewInsets = false
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         self.tabBarController?.tabBar.isHidden = true
         
@@ -63,11 +63,13 @@ class PaymentCardDetailVC: UIViewController, UITableViewDelegate, UITableViewDat
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let managePaymentVC = ManagePaymentCardMethodVC(nibName: "ManagePaymentCardMethodVC", bundle: nil)
 //        self.navigationController?.pushViewController(managePaymentVC, animated: true)
-        tblPaymentCardDetail.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+        let cell = tblPaymentCardDetail.cellForRow(at: indexPath) as! PaymentCardDetailCell
+        cell.imgSelected.isHidden = false
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-        tblPaymentCardDetail.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+        let cell = tblPaymentCardDetail.cellForRow(at: indexPath) as! PaymentCardDetailCell
+        cell.imgSelected.isHidden = true
     }
     
     func addNewPaymentDetail() {
