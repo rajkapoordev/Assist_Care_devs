@@ -42,6 +42,19 @@ func heightForView(text: String, font: UIFont, width: CGFloat) -> CGFloat {
     return label.frame.height
 }
 
+struct AppColor {
+    static let redColor = UIColor(red: 230/255, green: 79/255, blue: 83/255, alpha: 1.0)
+    static let skyColor = UIColor(red: 63/255, green: 187/255, blue: 208/255, alpha: 1.0)
+    static let greenColor = UIColor(red: 69/255, green: 185/255, blue: 168/255, alpha: 1.0)
+    static let orangeColor = UIColor(red: 252/255, green: 124/255, blue: 99/255, alpha: 1.0)
+    static let backColor = UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1.0)
+    static let grayColor = UIColor(red: 216/255, green: 216/255, blue: 216/255, alpha: 1.0)
+    
+    static let redStatusBar = UIColor(red: 207/255, green: 59/255, blue: 68/255, alpha: 1.0)
+    static let skyStatusBar = UIColor(red: 17/255, green: 157/255, blue: 180/255, alpha: 1.0)
+    static let greenStatusBar = UIColor(red: 25/255, green: 150/255, blue: 130/255, alpha: 1.0)
+    static let orangeStatusBar = UIColor(red: 245/255, green: 90/255, blue: 63/255, alpha: 1.0)
+}
 struct ScreenSize
 {
     static let SCREEN_WIDTH = UIScreen.main.bounds.size.width
