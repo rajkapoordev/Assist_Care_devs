@@ -185,13 +185,10 @@ func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
 
     
     
-    
-    @IBAction func nextAction(_ sender: Any) {
+    @IBAction func btnNext(_ sender: UIButton) {
         let vc = SetupServicesVC(nibName: "SetupServicesVC", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
-       
     }
-    
 
 }
 

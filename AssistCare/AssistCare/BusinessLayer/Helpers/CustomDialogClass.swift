@@ -93,10 +93,7 @@ class CustomDialogClass: UIViewController{
         }
         else
         {
-           btnOK.frame = CGRect(x: 0, y: (lbDescription.frame.height + lbDescription.frame.origin.y + 20), width: DynamicView.frame.width, height: (50 * screenWidth)/414)
-            
-            
-            
+           btnOK.frame = CGRect(x: 0, y: (lbDescription.frame.height + lbDescription.frame.origin.y + 20), width: DynamicView.frame.width, height: (50 * screenWidth)/414)   
         }
          DynamicView.addSubview(btnOK)
          DynamicView.addSubview(lbTitle)
@@ -115,10 +112,7 @@ class CustomDialogClass: UIViewController{
         self.view.addSubview(vwMain)
         vwMain.tag = 456321
         appDelegate().window?.addSubview(vwMain)
-
-        
-        }
-    
+    }
     
     func removeView()
     {
@@ -153,17 +147,6 @@ class CustomDialogClass: UIViewController{
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 //extension String {

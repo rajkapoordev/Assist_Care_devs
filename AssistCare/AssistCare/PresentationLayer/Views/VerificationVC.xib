@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="VerificationVC" customModule="AssistCare" customModuleProvider="target">
             <connections>
                 <outlet property="btnNavBack" destination="2WG-eK-9Yk" id="DJ2-Z7-W0N"/>
+                <outlet property="btnNext" destination="GDu-JE-Pha" id="KwA-Uy-d9X"/>
                 <outlet property="lblNavTitle" destination="nFC-5t-oS5" id="qEN-NN-hdF"/>
                 <outlet property="txtEnterNum" destination="B8N-xd-pn9" id="8Ps-gn-fv1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -53,6 +54,18 @@
                     </subviews>
                     <color key="backgroundColor" red="0.86274509799999999" green="0.27058823529999998" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GDu-JE-Pha">
+                    <rect key="frame" x="15" y="420" width="290" height="35"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                    <color key="backgroundColor" red="0.92941176469999998" green="0.92941176469999998" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
+                    <state key="normal" title="NEXT">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                    <connections>
+                        <action selector="btnNext:" destination="-1" eventType="touchUpInside" id="W8E-JU-44H"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <point key="canvasLocation" x="-843" y="-508"/>

@@ -41,6 +41,8 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "Edit Profile"
+        self.tabBarController?.tabBar.isHidden = true
+        
         self.automaticallyAdjustsScrollViewInsets = false
         scrollView.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 503)
         txtCVC.delegate = self
@@ -74,9 +76,6 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
         {
             txtCardNumber.becomeFirstResponder()
             scrollView.setContentOffset(CGPoint(x: 0.0, y: screenSize.width/2), animated: true)
-      
-//            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: .UIKeyboardWillShow, object: nil)
-//            NotificationCenter.default.addObserver(self, selector: #selector(PaymentDetailsVc.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         }
         else if textField == txtCardNumber
         {
@@ -88,23 +87,9 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
         }
         else
         {
-            keyboardWillHide()
             textField.resignFirstResponder()
         }
         return true
-    }
-
-    func keyboardWillAppear(notification:NSNotification) {
-        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.cgRectValue {
-            let keyboardHeight = keyboardSize.height
-            print(keyboardHeight)
-           scrollView.setContentOffset(CGPoint(x: 0.0, y: screenSize.width/2), animated: true)
-        }
-        
-    }
-
-    func keyboardWillHide() {
-        scrollView.setContentOffset(CGPoint(x: 0.0, y: 0), animated: true)
     }
     
     @IBAction func btnSaveAction(_ sender: Any) {

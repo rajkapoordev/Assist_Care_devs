@@ -80,7 +80,7 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
                     
                     let latitude = locationManager.location?.coordinate.latitude
                     let longitude = locationManager.location?.coordinate.longitude
-                    let coordinate = CLLocationCoordinate2DMake(latitude!, longitude!)
+                    let coordinate = CLLocationCoordinate2DMake(21.17, 20.12)
                     let mapRegion = MKCoordinateRegion(center: coordinate, span: span)
                     mapView.setRegion(mapRegion, animated: true)
                     //Create a pin annotation
@@ -206,7 +206,9 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
     }
 
 
-    
+    func cancelClick() {
+        
+    }
    
     func okClick() {
         
@@ -216,17 +218,6 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 

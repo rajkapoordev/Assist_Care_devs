@@ -3,11 +3,7 @@
 
 class CareServicesVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIPickerViewDelegate,UIPickerViewDataSource {
     
-    
-    
     @IBOutlet var vWLanguage: UIView!
-    
-   
     
     @IBOutlet var pickerView: UIPickerView!
     

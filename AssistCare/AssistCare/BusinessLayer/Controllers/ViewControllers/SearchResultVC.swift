@@ -18,9 +18,9 @@ class SearchResultVC: UIViewController,UITableViewDataSource,UITableViewDelegate
         super.viewDidLoad()
         tblView.delegate = self
         tblView.dataSource = self
+        self.tabBarController?.tabBar.isHidden = true
         // tblView.register(UINib(nibName:"TblCell",bundle : nil ), forCellReuseIdentifier: "TblCell")
 
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

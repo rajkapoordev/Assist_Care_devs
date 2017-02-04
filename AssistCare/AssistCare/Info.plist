@@ -2,6 +2,18 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbauth2</string>
+	</array>
+	<key>NSHumanReadableCopyright</key>
+	<string></string>
+	<key>CFBundleGetInfoString</key>
+	<string></string>
+	<key>FacebookDisplayName</key>
+	<string>Assist Care</string>
+	<key>FacebookAppID</key>
+	<string>1895583467344589</string>
 	<key> NSLocationWhenInUseUsageDescription</key>
 	<string>This app wants access your location</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -21,6 +33,7 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
@@ -28,9 +41,18 @@
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.lanetteam.assistcare</string>
+
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1895583467344589</string>
+
 			</array>
 		</dict>
 	</array>
+	<key>CFBundleDisplayName</key>
+	<string></string>
+	<key>LSApplicationCategoryType</key>
+	<string></string>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
@@ -38,7 +60,7 @@
 	<key>NSLocationAlwaysUsageDescription</key>
 	<string>This application requires location services to work</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>This application requires location services to work</string>
+	<string></string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string></string>
 	<key>Privacy - Photo Library Usage Description [ NSPhotoLibraryUsageDescription ]</key>

@@ -261,9 +261,9 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         let searchBar = resultSearchController!.searchBar
         searchBar.sizeToFit()
         searchBar.placeholder = "Search for places"
-        //vWSearch.addSubview(searchBar)
-        
-        navigationItem.titleView = resultSearchController?.searchBar
+        vWSearch.addSubview(searchBar)
+        //self.view.bringSubview(toFront: locationSearchTable)
+        //navigationItem.titleView = resultSearchController?.searchBar
         resultSearchController?.hidesNavigationBarDuringPresentation = false
         resultSearchController?.dimsBackgroundDuringPresentation = true
         definesPresentationContext = true
@@ -316,6 +316,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "New Appoinment"
+        self.tabBarController?.tabBar.isHidden = true
         
         vwMap.layer.shadowColor = UIColor.gray.cgColor
         vwMap.layer.shadowOffset = CGSize(width: 3, height: 3)

@@ -24,6 +24,7 @@ class CareGiverAgendaVC: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     override func viewDidLoad() {
         super.viewDidLoad()
         mapView.delegate = self
+        self.tabBarController?.tabBar.isHidden = true
         imgProfile.setRounded()
         
             

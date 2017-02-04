@@ -35,7 +35,8 @@ class PatientEditProfile: UIViewController,UITableViewDataSource,UITableViewDele
         tblView.tableHeaderView = vWTblHeader
         tblView.tableFooterView = vWFooter
         setUpUI()
-        // Do any additional setup after loading the view.
+        self.tabBarController?.tabBar.isHidden = true
+
     }
 
     override func didReceiveMemoryWarning() {

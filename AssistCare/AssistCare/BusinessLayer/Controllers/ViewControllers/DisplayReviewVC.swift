@@ -41,6 +41,7 @@ class DisplayReviewVC: UIViewController,UICollectionViewDelegate,UICollectionVie
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "Reviews"
+        self.tabBarController?.tabBar.isHidden = true
         
         vwCollectionView.layer.shadowColor = UIColor.darkGray.cgColor
         vwCollectionView.layer.shadowOffset = CGSize(width: 1.0, height: 5.0)
