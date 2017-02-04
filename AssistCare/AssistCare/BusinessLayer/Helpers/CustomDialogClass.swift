@@ -54,7 +54,8 @@ class CustomDialogClass: UIViewController{
         lbDescription.lineBreakMode = NSLineBreakMode.byWordWrapping
         lbDescription.textColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1)
         
-        let btnOK = UIButton()
+         let btnOK = UIButton()
+         let btnCancel = UIButton()
         btnOK.frame = CGRect(x: 0, y: (lbDescription.frame.height + lbDescription.frame.origin.y + 20), width: DynamicView.frame.width/2, height: (50 * screenWidth)/414)
         
         btnOK.backgroundColor = UIColor(red: 52/255, green: 52/255, blue: 52/255, alpha: 1)
@@ -69,28 +70,34 @@ class CustomDialogClass: UIViewController{
         btnOK.titleLabel!.adjustsFontSizeToFitWidth = true;
         btnOK.titleLabel!.lineBreakMode = .byClipping;
         btnOK.titleEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
+       
+
+        if type == "two"
+        {
+            
+            btnCancel.frame = CGRect(x:(btnOK.frame.width - 2 ), y:(lbDescription.frame.height + lbDescription.frame.origin.y + 20),width: (DynamicView.frame.width/2) + 2, height: (50 * screenWidth)/414)
+            btnCancel.backgroundColor = UIColor(red: 0/255, green: 110/255, blue: 177/255, alpha: 1)
+            
+            btnCancel.layer.borderColor = UIColor.black.cgColor
+            btnCancel.setTitle(btnCancelText, for: .normal)
+            btnCancel.addTarget(self, action: #selector(cancel), for: .touchUpInside)
+            btnCancel.titleLabel?.font = UIFont(name: "Dense", size: 25)
+            btnCancel.titleLabel?.textColor = UIColor(red: 252/255, green: 250/255, blue: 251/255, alpha: 1)
+            btnCancel.titleLabel!.lineBreakMode = .byWordWrapping;
+            btnCancel.titleLabel!.textAlignment = .center
+            btnCancel.titleLabel!.numberOfLines = 1;
+            btnCancel.titleLabel!.adjustsFontSizeToFitWidth = true;
+            btnCancel.titleLabel!.lineBreakMode = .byClipping;
+            btnCancel.titleEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
+            DynamicView.addSubview(btnCancel)
+        }
+        else
+        {
+           btnOK.frame = CGRect(x: 0, y: (lbDescription.frame.height + lbDescription.frame.origin.y + 20), width: DynamicView.frame.width, height: (50 * screenWidth)/414)   
+        }
+         DynamicView.addSubview(btnOK)
+         DynamicView.addSubview(lbTitle)
         
-        
-        
-        let btnCancel = UIButton()
-        btnCancel.frame = CGRect(x:(btnOK.frame.width - 2 ), y:(lbDescription.frame.height + lbDescription.frame.origin.y + 20),width: (DynamicView.frame.width/2) + 2, height: (50 * screenWidth)/414)
-        btnCancel.backgroundColor = UIColor(red: 0/255, green: 110/255, blue: 177/255, alpha: 1)
-        
-        btnCancel.layer.borderColor = UIColor.black.cgColor
-        btnCancel.setTitle(btnCancelText, for: .normal)
-        btnCancel.addTarget(self, action: #selector(cancel), for: .touchUpInside)
-        btnCancel.titleLabel?.font = UIFont(name: "Dense", size: 25)
-        btnCancel.titleLabel?.textColor = UIColor(red: 252/255, green: 250/255, blue: 251/255, alpha: 1)
-        btnCancel.titleLabel!.lineBreakMode = .byWordWrapping;
-        btnCancel.titleLabel!.textAlignment = .center
-        btnCancel.titleLabel!.numberOfLines = 1;
-        btnCancel.titleLabel!.adjustsFontSizeToFitWidth = true;
-        btnCancel.titleLabel!.lineBreakMode = .byClipping;
-        btnCancel.titleEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
-        
-        DynamicView.addSubview(lbTitle)
-        DynamicView.addSubview(btnCancel)
-        DynamicView.addSubview(btnOK)
         
         DynamicView.backgroundColor=UIColor.white
         vwMain.backgroundColor = UIColor.init(colorLiteralRed: 50/255, green: 50/255, blue: 50/255, alpha: 0.70)
@@ -100,15 +107,12 @@ class CustomDialogClass: UIViewController{
         DynamicView.frame = CGRect(x: (16 * screenHeight )/736, y: (screenWidth * 200)/414, width: (380 * screenWidth)/414, height: (btnOK.frame.origin.y + btnOK.frame.height))
         
         DynamicView.center = CGPoint(x: vwMain.frame.size.width  / 2, y: vwMain.frame.size.height / 2)
-       
+        
         
         self.view.addSubview(vwMain)
         vwMain.tag = 456321
         appDelegate().window?.addSubview(vwMain)
-
-        
     }
-    
     
     func removeView()
     {

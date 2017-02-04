@@ -9,6 +9,12 @@
 import UIKit
 import MapKit
 
+import CoreLocation
+class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDataSource,CLLocationManagerDelegate,MKMapViewDelegate {
+    @IBOutlet var scrollView: UIScrollView!
+
+    let locationManager = CLLocationManager()
+
 class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDataSource, UITextViewDelegate {
     @IBOutlet var scrollView: UIScrollView!
 
@@ -20,6 +26,7 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
     @IBOutlet var lbNameWentWrong: UILabel!
     @IBOutlet var imgProfileWentWrong: UIImageView!
     @IBOutlet var vwPopupWentWrong: UIView!
+
     @IBOutlet var tblView: UITableView!
     @IBOutlet var vWTop: UIView!
     @IBOutlet var mapView: MKMapView!
@@ -38,8 +45,68 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
         tblView.register(UINib(nibName:"MedicationPrompt",bundle : nil), forCellReuseIdentifier: "MedicationPrompt")
         scrollView.contentSize = CGSize(width: 0, height: (vWTop.frame.height + tblView.frame.height))
 
+        
+        self.mapView.showsUserLocation = true
+        if (CLLocationManager.locationServicesEnabled()) {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.distanceFilter = kCLDistanceFilterNone
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startMonitoringSignificantLocationChanges()
+            locationManager.startUpdatingLocation()
+            mapView.showsUserLocation = true
+            mapView.mapType = .standard
+            
+        } else {
+            print("Location services are not enabled");
+        }
+        mapView.delegate = self
+        
+
+
         self.tabBarController?.tabBar.isHidden = true
     }
+
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        let locationArray = locations as NSArray
+        let locationObj = locationArray.lastObject as! CLLocation
+        let coord = locationObj.coordinate
+        let pointAnnotation = MKPointAnnotation()
+        pointAnnotation.coordinate = coord
+        mapView.addAnnotation(pointAnnotation)
+        
+        print("longitude:\(coord.longitude)")
+        print("latitude:\(coord.latitude)")
+        
+        // locationManager.stopUpdatingLocation()
+    }
+    
+    func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
+        if let annotation = annotation as? MapAnnotation {
+            let identifier = "pin"
+            var view: MKPinAnnotationView
+            if let dequeuedView = mapView.dequeueReusableAnnotationView(withIdentifier: identifier)
+                as? MKPinAnnotationView { // 2
+                dequeuedView.annotation = annotation
+                view = dequeuedView
+            } else {
+                // 3
+                view = MKPinAnnotationView(annotation: annotation, reuseIdentifier: identifier)
+                view.canShowCallout = true
+                view.calloutOffset = CGPoint(x: -5, y: 5)
+                
+            }
+            return view
+        }
+        return nil
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        print("Errors " + error.localizedDescription)
+    }
+    
+
 
     override func viewDidLayoutSubviews() {
         vwPopupWentWrong.frame = CGRect(x: 20, y: (screenSize.height/2) - (self.vwPopupWentWrong.bounds.size.height / 2), width: screenSize.width - 40, height: self.vwPopupWentWrong.bounds.size.height)
@@ -91,7 +158,14 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
         txtVwInstruction.superview!.insertSubview(border, aboveSubview: textView)
         
     }
-    
+  
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let vc = PatientRatingServiceFilled(nibName: "PatientRatingServiceFilled", bundle: nil)
+        vc.modalPresentationStyle = .overCurrentContext
+//        let next:PatientRatingServiceFilled = PatientRatingServiceFilled()
+        self.present(vc, animated: true, completion: nil)
+        
+    }
     
     func textViewDidChange(_ textView: UITextView) {
         if txtVwInstruction.subviews.contains(border){
@@ -103,6 +177,7 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
         border.frame = CGRect(x: txtVwInstruction.frame.origin.x, y: txtVwInstruction.frame.origin.y+txtVwInstruction.frame.height-2, width: textView.frame.width, height: 2)
         border.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
         txtVwInstruction.superview!.insertSubview(border, aboveSubview: textView)
+
     }
 
 }

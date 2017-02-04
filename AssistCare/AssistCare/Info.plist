@@ -33,9 +33,19 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.lanetteam.assistcare</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.lanetteam.assistcare</string>
+
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>fb1895583467344589</string>
+
 			</array>
 		</dict>
 	</array>

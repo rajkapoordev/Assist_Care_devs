@@ -10,11 +10,21 @@ import UIKit
 
 class PatientEditProfile: UIViewController,UITableViewDataSource,UITableViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
+    @IBOutlet var txtFname: UITextField!
+    
+    @IBOutlet var imgProfile: UIImageView!
+    
+    @IBOutlet var txtAddress: UITextField!
+    @IBOutlet var vWAddress: UIView!
+    @IBOutlet var txtLname: UITextField!
+    @IBOutlet var btnSave: UIButton!
     @IBOutlet var vWTblHeader: UIView!
     @IBOutlet var vWSecond: UIView!
     @IBOutlet var vWTop: UIView!
     @IBOutlet var scrollView: UIScrollView!
     
+    @IBOutlet var btnLogout: UIButton!
+    @IBOutlet var vWFooter: UIView!
     @IBOutlet var tblView: UITableView!
     @IBOutlet var cvcServices: UICollectionView!
     override func viewDidLoad() {
@@ -23,7 +33,10 @@ class PatientEditProfile: UIViewController,UITableViewDataSource,UITableViewDele
 
         tblView.register(UINib(nibName: "cellMedication", bundle: nil), forCellReuseIdentifier: "cellMedication")
         tblView.tableHeaderView = vWTblHeader
+        tblView.tableFooterView = vWFooter
+        setUpUI()
         self.tabBarController?.tabBar.isHidden = true
+
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,17 +44,26 @@ class PatientEditProfile: UIViewController,UITableViewDataSource,UITableViewDele
         // Dispose of any resources that can be recreated.
     }
     
+    func setUpUI()
+    {
+        btnLogout.shadow()
+        txtFname.setBottomBorder()
+        txtLname.setBottomBorder()
+        vWAddress.setBottomBorderView()
+        imgProfile.setRounded()
+    }
+    
     
     
     ////////////////TableView Methods/////////////////////
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        tblView.frame = CGRect(x: tblView.frame.origin.x, y: tblView.frame.origin.x, width: tblView.frame.width, height: 85 * 2)
+        tblView.frame = CGRect(x: tblView.frame.origin.x, y: tblView.frame.origin.x, width: tblView.frame.width, height: (55 * 5) + 256)
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 2
+        return 5
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -96,7 +118,7 @@ class PatientEditProfile: UIViewController,UITableViewDataSource,UITableViewDele
         let items = (flowLayout.minimumInteritemSpacing * CGFloat(numOfColumnsInRow - 1))
         
         cvcServices.frame = CGRect(x: cvcServices.frame.origin.x, y: cvcServices.frame.origin.y, width: cvcServices.frame.width, height: (CGFloat(size) *  CGFloat(ceil(13/3)) + (items * CGFloat(ceil(13/3)))))
-        scrollView.contentSize = CGSize(width:0, height: 5 + vWTop.frame.height + vWSecond.frame.height + cvcServices.frame.height + tblView.frame.height +  100)
+        scrollView.contentSize = CGSize(width:0, height: 5 + vWTop.frame.height + vWSecond.frame.height + cvcServices.frame.height + tblView.frame.height + 50)
         tblView.frame = CGRect(x: tblView.frame.origin.x, y: (cvcServices.frame.origin.y + cvcServices.frame.height), width: tblView.frame.width, height: tblView.frame.height)
         
         return CGSize(width: size, height: size)
@@ -135,8 +157,18 @@ class PatientEditProfile: UIViewController,UITableViewDataSource,UITableViewDele
     
 
     
+  
+    @IBAction func btnAddMedicationRequireClick(_ sender: UIButton) {
+        
+        
+    }
+    
+    @IBAction func btnLogoutClick(_ sender: Any) {
+    }
     
 
+    @IBAction func btnSaveClick(_ sender: Any) {
+    }
     /*
     // MARK: - Navigation
 
