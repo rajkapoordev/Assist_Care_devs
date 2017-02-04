@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,7 +11,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpVC" customModule="AssistCare" customModuleProvider="target">
             <connections>
-                <outlet property="btnFacebook" destination="Zph-2A-2l3" id="VlL-SS-giP"/>
+                <outlet property="btnFacebook" destination="Zph-2A-2l3" id="r8r-8O-8hJ"/>
                 <outlet property="btnNavBack" destination="HNX-iY-xrO" id="OH3-if-NmZ"/>
                 <outlet property="btnSignUp" destination="3DU-Wu-BwI" id="ksQ-h5-8Z4"/>
                 <outlet property="lblNavTitle" destination="uz7-Tx-U4X" id="7wg-9m-F7i"/>
@@ -57,17 +57,14 @@
                                 <action selector="btnSignUp:" destination="-1" eventType="touchUpInside" id="XRn-WL-n46"/>
                             </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zph-2A-2l3">
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Zph-2A-2l3" customClass="FBSDKLoginButton">
                             <rect key="frame" x="24" y="71" width="272" height="40"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <color key="backgroundColor" red="0.22745098039215686" green="0.37254901960784315" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                             <state key="normal" title="SIGN UP WITH FACEBOOK">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <connections>
-                                <action selector="btnFacebook:" destination="-1" eventType="touchUpInside" id="MZ8-IY-Pfr"/>
-                            </connections>
                         </button>
                         <view contentMode="scaleToFill" misplaced="YES" id="Rtp-ov-wqa" customClass="GIDSignInButton">
                             <rect key="frame" x="24" y="135" width="274" height="40"/>

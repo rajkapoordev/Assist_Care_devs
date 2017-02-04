@@ -261,9 +261,9 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         let searchBar = resultSearchController!.searchBar
         searchBar.sizeToFit()
         searchBar.placeholder = "Search for places"
-        //vWSearch.addSubview(searchBar)
-        
-        navigationItem.titleView = resultSearchController?.searchBar
+        vWSearch.addSubview(searchBar)
+        //self.view.bringSubview(toFront: locationSearchTable)
+        //navigationItem.titleView = resultSearchController?.searchBar
         resultSearchController?.hidesNavigationBarDuringPresentation = false
         resultSearchController?.dimsBackgroundDuringPresentation = true
         definesPresentationContext = true
