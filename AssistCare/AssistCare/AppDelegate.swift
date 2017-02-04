@@ -8,11 +8,16 @@
 
 import UIKit
 import CoreData
+import FBSDKLoginKit
+import FBSDKShareKit
+import FBSDKCoreKit
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     var window: UIWindow?
+    var fbToken:NSString = ""
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         
@@ -24,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         
-        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
+        let vc = BookInstructionVC(nibName: "BookInstructionVC", bundle: nil)
         
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
@@ -33,6 +38,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.window?.isUserInteractionEnabled = true
         self.window?.rootViewController = nav
         self.window?.makeKeyAndVisible()
+        
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        if (FBSDKAccessToken.current() != nil) {
+            self.fbToken = FBSDKAccessToken.current()!.tokenString as NSString
+            UserDefaults.standard.setValue(fbToken, forKey: "token")
+        } else {
+            //            if you are not logged
+        }
         return true
     }
     
