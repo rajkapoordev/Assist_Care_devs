@@ -116,7 +116,7 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="WBd-RS-0ay">
-                    <rect key="frame" x="0.0" y="143" width="320" height="278"/>
+                    <rect key="frame" x="0.0" y="143" width="320" height="293"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
                         <view contentMode="scaleToFill" id="dJV-FW-9fy">

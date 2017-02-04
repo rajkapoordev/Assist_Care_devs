@@ -111,6 +111,8 @@ class AppointmentVC: UIViewController,MKMapViewDelegate, UISearchBarDelegate {
     }
   
     @IBAction func btnTopRightBarAction(_ sender: Any) {
+        let userVC = EditProfileCareGiver(nibName: "EditProfileCareGiver", bundle: nil)
+        self.navigationController?.pushViewController(userVC, animated: true)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

@@ -66,12 +66,10 @@ class CreateProfileFour: UIViewController,UITextFieldDelegate {
         txtAccountName.delegate = self
         txtAccountEmail.delegate = self
         txtAccountNumber.delegate = self
-    
     }
     
     @IBAction func btnPreviousClick(_ sender: Any) {
     }
-    
     
     @IBAction func btnBackClick(_ sender: UIButton) {
          navigationController!.popViewController(animated: false)
