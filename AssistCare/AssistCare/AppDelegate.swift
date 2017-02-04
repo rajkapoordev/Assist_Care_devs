@@ -29,8 +29,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UINavigationBar.appearance().tintColor = UIColor.white
         UINavigationBar.appearance().titleTextAttributes = [NSForegroundColorAttributeName : UIColor.white]
         
-        let vc = BookInstructionVC(nibName: "BookInstructionVC", bundle: nil)
-        
+        let vc = ThanksVc(nibName: "ThanksVc", bundle: nil)
+      
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
         let nav = UINavigationController(rootViewController: vc)

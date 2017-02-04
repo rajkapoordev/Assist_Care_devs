@@ -47,6 +47,7 @@ class BookingVC: UIViewController {
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "Booking"
+        self.tabBarController?.tabBar.isHidden = true
         
         self.automaticallyAdjustsScrollViewInsets = false
     }
@@ -84,16 +85,5 @@ class BookingVC: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

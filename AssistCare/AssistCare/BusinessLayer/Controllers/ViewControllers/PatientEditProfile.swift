@@ -23,8 +23,7 @@ class PatientEditProfile: UIViewController,UITableViewDataSource,UITableViewDele
 
         tblView.register(UINib(nibName: "cellMedication", bundle: nil), forCellReuseIdentifier: "cellMedication")
         tblView.tableHeaderView = vWTblHeader
-        
-        // Do any additional setup after loading the view.
+        self.tabBarController?.tabBar.isHidden = true
     }
 
     override func didReceiveMemoryWarning() {

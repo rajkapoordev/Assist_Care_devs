@@ -14,7 +14,8 @@ class NumOfReservationVC: UIViewController,UITableViewDelegate,UITableViewDataSo
     @IBOutlet var tblReservation: UITableView!
     
     @IBAction func btnOK(_ sender: UIButton) {
-        
+        let homeVC = AppointmentVC(nibName: "AppointmentVC", bundle: nil)
+        self.navigationController?.pushViewController(homeVC, animated: true)
     }
     
     override func viewDidLoad() {
@@ -27,6 +28,7 @@ class NumOfReservationVC: UIViewController,UITableViewDelegate,UITableViewDataSo
     func setInterface(){
         self.tblReservation.delegate = self
         self.tblReservation.dataSource = self
+        self.tabBarController?.tabBar.isHidden = true
         self.tblReservation.estimatedSectionHeaderHeight = 50
         self.tblReservation.register(UINib(nibName: "ReservationCell", bundle: nil), forCellReuseIdentifier: "ReservationCell")
         btnOK.layer.cornerRadius = 2.0

@@ -316,6 +316,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "New Appoinment"
+        self.tabBarController?.tabBar.isHidden = true
         
         vwMap.layer.shadowColor = UIColor.gray.cgColor
         vwMap.layer.shadowOffset = CGSize(width: 3, height: 3)

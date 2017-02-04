@@ -10,7 +10,6 @@ import UIKit
 
 class CareGiverChartViewProgressVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
 
-    
     @IBOutlet var lbProgessReport: UILabel!
     @IBOutlet var lbProgressUpdate: UILabel!
     @IBOutlet var imgProgressUpdate: UIImageView!
@@ -36,6 +35,8 @@ class CareGiverChartViewProgressVC: UIViewController,UICollectionViewDelegate,UI
         self.collServicesProvided.dataSource = self
         self.collServicesProvided.register(UINib(nibName: "CareServicesCell", bundle: nil), forCellWithReuseIdentifier: "CareServicesCell")
         imgPatient.layer.cornerRadius = imgPatient.bounds.size.width / 2
+        self.tabBarController?.tabBar.isHidden = true
+        
     }
 
     override func didReceiveMemoryWarning() {
