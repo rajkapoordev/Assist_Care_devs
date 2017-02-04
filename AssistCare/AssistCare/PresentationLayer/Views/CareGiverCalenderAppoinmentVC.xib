@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -13,11 +13,13 @@
             <connections>
                 <outlet property="btnCancelAppoinment" destination="0uF-Od-ezG" id="0pK-4R-biM"/>
                 <outlet property="btnEnglish" destination="Q8j-km-sc2" id="nG9-zL-mJd"/>
+                <outlet property="btnNavBack" destination="OBo-mU-FTO" id="L6c-rV-RMq"/>
                 <outlet property="btnSpanish" destination="KUN-jD-MMH" id="8Oj-ew-7FW"/>
                 <outlet property="collServiceProvided" destination="P3o-4y-h74" id="mkh-bX-fW6"/>
                 <outlet property="imgLanguage" destination="ajn-Wq-dRk" id="4Gt-2n-uD3"/>
                 <outlet property="lbGeneralCare" destination="SIR-Z5-kTd" id="vc5-Cu-kgz"/>
                 <outlet property="lbGeneralCareInfo" destination="I1O-B8-SpZ" id="5al-Ib-1t8"/>
+                <outlet property="lblNavTitle" destination="Dba-n0-t5q" id="OTr-gU-Iaz"/>
                 <outlet property="mapView" destination="WtB-px-JvC" id="Jqo-9q-eaz"/>
                 <outlet property="scrollData" destination="jgk-Cs-TAN" id="Nzb-Pg-kTF"/>
                 <outlet property="view" destination="iN0-l3-epB" id="nz4-ya-7DE"/>
@@ -25,9 +27,10 @@
                 <outlet property="vwCharged" destination="5DK-WH-nGr" id="TAP-gf-AeW"/>
                 <outlet property="vwDetail" destination="w2q-Xs-Cz8" id="aid-Vx-DaH"/>
                 <outlet property="vwGray" destination="rru-wM-1t6" id="spH-Wd-QVt"/>
-                <outlet property="vwNavigation" destination="goq-k3-0Sl" id="QR9-eb-Z25"/>
+                <outlet property="vwNavBar" destination="e9K-Ch-H7z" id="tYL-dj-OzY"/>
                 <outlet property="vwPopUp" destination="Ge8-yD-hTW" id="GxI-60-B6z"/>
                 <outlet property="vwServicesProvided" destination="iUq-mS-OuX" id="CW0-OH-P2f"/>
+                <outlet property="vwStatusBar" destination="ALX-jX-JUd" id="vz0-RL-UuV"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -35,31 +38,35 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" id="e9K-Ch-H7z">
+                    <rect key="frame" x="0.0" y="20" width="320" height="44"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Apponiment Accepted" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Dba-n0-t5q">
+                            <rect key="frame" x="70" y="12" width="230" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="OBo-mU-FTO">
+                            <rect key="frame" x="17" y="12" width="25" height="20"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="back_nav.png"/>
+                            <connections>
+                                <action selector="btnNavBack:" destination="-1" eventType="touchUpInside" id="GlS-wk-kg0"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.86274509799999999" green="0.27058823529999998" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" id="jgk-Cs-TAN">
-                    <rect key="frame" x="0.0" y="20" width="320" height="467"/>
+                    <rect key="frame" x="0.0" y="64" width="320" height="416"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <subviews>
-                        <view contentMode="scaleToFill" id="goq-k3-0Sl">
-                            <rect key="frame" x="-1" y="4" width="319" height="44"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="zsu-Q9-yNn">
-                                    <rect key="frame" x="15" y="10" width="12" height="24"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                    <state key="normal" image="back_nav.png"/>
-                                </button>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Appoinment Accepted" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="gKU-jD-Ps1">
-                                    <rect key="frame" x="57" y="10" width="204" height="24"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                            </subviews>
-                            <color key="backgroundColor" red="0.90321761369999998" green="0.30882829429999997" blue="0.32724136110000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        </view>
                         <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" mapType="standard" id="WtB-px-JvC">
-                            <rect key="frame" x="-1" y="52" width="319" height="204"/>
+                            <rect key="frame" x="-1" y="52" width="319" height="179"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                         </mapView>
                         <view contentMode="scaleToFill" id="w2q-Xs-Cz8">
@@ -210,9 +217,14 @@
                     </subviews>
                 </scrollView>
                 <view hidden="YES" alpha="0.5" contentMode="scaleToFill" misplaced="YES" id="rru-wM-1t6">
-                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" misplaced="YES" id="ALX-jX-JUd">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
                 <view alpha="0.0" contentMode="scaleToFill" misplaced="YES" id="Ge8-yD-hTW">
                     <rect key="frame" x="16" y="140" width="288" height="200"/>
@@ -246,7 +258,7 @@
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="32" y="100"/>
+            <point key="canvasLocation" x="32" y="125"/>
         </view>
     </objects>
     <resources>

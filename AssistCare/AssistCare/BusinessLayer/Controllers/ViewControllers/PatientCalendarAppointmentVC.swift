@@ -12,6 +12,8 @@ import CoreLocation
 
 class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,DialogDelegate,MKMapViewDelegate,CLLocationManagerDelegate  {
 
+    
+    @IBOutlet var vwStatusBar: UIView!
     let locationManager = CLLocationManager()
     var selectedPin:MKPlacemark? = nil
     @IBOutlet var vWFirst: UIView!
@@ -38,6 +40,7 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         scrollView.contentSize = CGSize(width:0, height: 5 + vWFirst.frame.height + vWSecond.frame.height + cvcServices.frame.height + 100)
          cvcServices.register(UINib(nibName:"CareServicesCell",bundle: nil) , forCellWithReuseIdentifier: "CareServicesCell")
 
@@ -53,8 +56,6 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
         dialog.view.frame = self.view.frame
         
         mapView.delegate = self
-        
-        
         
         self.mapView.showsUserLocation = true
                 if (CLLocationManager.locationServicesEnabled()) {

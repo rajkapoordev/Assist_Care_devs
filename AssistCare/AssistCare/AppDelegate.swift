@@ -12,7 +12,6 @@ import FBSDKLoginKit
 import FBSDKShareKit
 import FBSDKCoreKit
 
-
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -25,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //For keyboard manager
         IQKeyboardManager.sharedManager().enable = true
         
-        let vc = MedicationVC(nibName: "MedicationVC", bundle: nil)
+        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
       
         self.window = UIWindow(frame: UIScreen.main.bounds)
         

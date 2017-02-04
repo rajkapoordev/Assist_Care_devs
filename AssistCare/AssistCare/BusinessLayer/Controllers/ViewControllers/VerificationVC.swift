@@ -12,6 +12,7 @@ class VerificationVC: UIViewController ,UITextFieldDelegate{
 
     @IBOutlet var txtEnterNum: UITextField!
     
+    @IBOutlet var vwStatusBar: UIView!
     //Navigation Bar
     @IBOutlet var btnNavBack: UIButton!
     @IBOutlet var vwNavBar: UIView!
@@ -33,6 +34,7 @@ class VerificationVC: UIViewController ,UITextFieldDelegate{
     }
     
     func setInterface(){
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white

@@ -81,12 +81,9 @@ class PatientRatingServiceFilled: UIViewController,UICollectionViewDataSource,UI
 
     }
     
-    
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,
                         sizeForItemAt indexPath: IndexPath) -> CGSize {
-        
-        
         let numOfColumnsInRow = 3
         let flowLayout = collectionViewLayout as! UICollectionViewFlowLayout
         let totalSpace = flowLayout.sectionInset.left

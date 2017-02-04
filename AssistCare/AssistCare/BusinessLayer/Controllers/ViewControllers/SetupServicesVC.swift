@@ -10,6 +10,7 @@ import UIKit
 
 class SetupServicesVC: UIViewController,UITextFieldDelegate,UITableViewDelegate,UITableViewDataSource{
 
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var tblMedication: UITableView!
     @IBOutlet var btnContinue: UIButton!
     @IBOutlet var btnAddMedication: UIButton!
@@ -49,6 +50,7 @@ class SetupServicesVC: UIViewController,UITextFieldDelegate,UITableViewDelegate,
     }
     
     func setInterface() {
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white

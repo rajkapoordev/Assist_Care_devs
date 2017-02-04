@@ -13,6 +13,8 @@ import CoreLocation
 
 class AppointmentVC: UIViewController,MKMapViewDelegate, UISearchBarDelegate {
 
+    @IBOutlet var vwStatusBar: UIView!
+    
     @IBOutlet var vwNavBar: UIView!
     @IBOutlet var lblNavTitle: UILabel!
 
@@ -43,6 +45,7 @@ class AppointmentVC: UIViewController,MKMapViewDelegate, UISearchBarDelegate {
     }
     
     func setInterface(){
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white

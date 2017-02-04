@@ -17,6 +17,7 @@
                 <outlet property="txtEnterNum" destination="B8N-xd-pn9" id="8Ps-gn-fv1"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="vwNavBar" destination="zL8-Of-f05" id="vai-7d-Afl"/>
+                <outlet property="vwStatusBar" destination="ge6-M3-LsY" id="OyC-tH-22I"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -66,6 +67,11 @@
                         <action selector="btnNext:" destination="-1" eventType="touchUpInside" id="W8E-JU-44H"/>
                     </connections>
                 </button>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ge6-M3-LsY">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <point key="canvasLocation" x="-843" y="-508"/>

@@ -10,6 +10,12 @@ import UIKit
 
 class CreateProfileFour: UIViewController,UITextFieldDelegate {
 
+    @IBOutlet var vwStatusBar: UIView!
+    
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+
     @IBOutlet var txtAccountEmail: UITextField!
     
     @IBOutlet var txtBSB: UITextField!
@@ -33,6 +39,11 @@ class CreateProfileFour: UIViewController,UITextFieldDelegate {
     }
     func setUI()
     {
+        
+        self.navigationController?.navigationBar.isHidden = true
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
+        vwNavBar.backgroundColor = AppColor.redColor
+        lblNavTitle.textColor = UIColor.white
         txtBSB.setBottomBorder()
         txtPromoCode.setBottomBorder()
         txtFileNumber.setBottomBorder()
@@ -41,8 +52,12 @@ class CreateProfileFour: UIViewController,UITextFieldDelegate {
         txtAccountNumber.setBottomBorder()
         btnSubmit.shadow()
         btnPrevious.shadow()
-    
     }
+    
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
+    }
+    
     func setDeledate()
     {
         txtBSB.delegate = self

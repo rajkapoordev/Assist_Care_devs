@@ -12,6 +12,7 @@ import CoreLocation
 
 class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationManagerDelegate{
     
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var btnNavigate: UIButton!
     @IBOutlet var vwDetail: UIView!
     @IBOutlet var mapView: MKMapView!
@@ -43,6 +44,7 @@ class searchCareGiverOnMapVC: UIViewController,MKMapViewDelegate, CLLocationMana
     }
     
     func setInterface(){
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
         
         vwNavBar.backgroundColor = AppColor.redColor

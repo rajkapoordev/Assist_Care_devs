@@ -10,6 +10,7 @@ import UIKit
 
 class CareGiverMessageVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet var vwStatusBar: UIView!
     //Navigation Bar
     @IBOutlet var vwNavBar: UIView!
     @IBOutlet var lblNavTitle: UILabel!
@@ -32,6 +33,7 @@ class CareGiverMessageVC: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func setInterface(){
+        vwStatusBar.backgroundColor = AppColor.orangeStatusBar
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = AppColor.orangeColor
         lblNavTitle.textColor = UIColor.white

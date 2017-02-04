@@ -12,6 +12,13 @@ class EditProfileCareGiver: UIViewController,UICollectionViewDelegate,UICollecti
 
     var imagePicker = UIImagePickerController()
     
+    @IBOutlet var vwStatusBar: UIView!
+    
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+    
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var vWPersonalInfo: UIView!
     
@@ -57,6 +64,10 @@ class EditProfileCareGiver: UIViewController,UICollectionViewDelegate,UICollecti
     
     func setUI()
     {
+        self.navigationController?.navigationBar.isHidden = true
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
+        vwNavBar.backgroundColor = AppColor.redColor
+        lblNavTitle.textColor = UIColor.white
         btnLogout.shadow()
         imgProfile.setRounded()
         txtFName.setBottomBorder()
@@ -68,6 +79,9 @@ class EditProfileCareGiver: UIViewController,UICollectionViewDelegate,UICollecti
         vWEducation.setBottomBorderView()
     }
     
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
+    }
     
     @IBAction func btnSelectEducationClick(_ sender: UIButton) {
         self.vWPicker.alpha = 0

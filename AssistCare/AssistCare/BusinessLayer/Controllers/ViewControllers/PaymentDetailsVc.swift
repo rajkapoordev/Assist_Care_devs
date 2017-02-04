@@ -12,6 +12,7 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
 
     @IBOutlet var scrollView: UIScrollView!
     
+    @IBOutlet var vwStatusBar: UIView!
     //Navigation Bar
     @IBOutlet var btnNavBack: UIButton!
     @IBOutlet var vwNavBar: UIView!
@@ -37,6 +38,7 @@ class PaymentDetailsVc: UIViewController,UITextFieldDelegate {
     
     
     func setInterface(){
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white

@@ -10,6 +10,15 @@ import UIKit
 
 class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     let imagePicker = UIImagePickerController()
+    
+    @IBOutlet var vwStatusBar: UIView!
+    
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+
+    
     @IBOutlet var imgProfile: UIImageView!
     @IBOutlet var scrollView: UIScrollView!
     
@@ -49,8 +58,7 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     var isFrom = false
     override func viewDidLoad() {
         super.viewDidLoad()
-       // timePicker.isHidden = true
-       // vWDone.isHidden = true
+
         pickerView.delegate = self
         
         pickerView.dataSource = self
@@ -64,9 +72,6 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
         txtDateOfBirth.delegate = self
         imgProfile.setRounded()
          setInterface()
-
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -77,6 +82,7 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
   
     @IBAction func btnBackClick(_ sender: UIButton) {
     }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         if textField == txtFname
         {
@@ -86,10 +92,6 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
         else if textField == txtLname
         {
             txtDateOfBirth.becomeFirstResponder()
-//            scrollView.setContentOffset(CGPoint(x: 0.0, y: screenSize.width/2), animated: true)
-//            
-            //            NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillAppear), name: .UIKeyboardWillShow, object: nil)
-            //            NotificationCenter.default.addObserver(self, selector: #selector(PaymentDetailsVc.keyboardWillHide), name: NSNotification.Name.UIKeyboardWillHide, object: nil)
         }
         else if textField == txtDateOfBirth
         {
@@ -127,7 +129,10 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     
     func setInterface()
     {
-        
+        self.navigationController?.navigationBar.isHidden = true
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
+        vwNavBar.backgroundColor = AppColor.redColor
+        lblNavTitle.textColor = UIColor.white
         txtFname.setBottomBorder()
         txtLname.setBottomBorder()
         txtDateOfBirth.setBottomBorder()

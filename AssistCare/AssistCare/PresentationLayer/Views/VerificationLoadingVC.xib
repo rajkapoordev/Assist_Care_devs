@@ -17,6 +17,7 @@
                 <outlet property="lblNavTitle" destination="EpP-AF-39o" id="Uiy-Oc-EAU"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="Qnk-BI-6c1"/>
                 <outlet property="vwNavBar" destination="HIP-xu-5QE" id="YZL-fs-3Er"/>
+                <outlet property="vwStatusBar" destination="XRr-2m-AOK" id="cZw-ma-wb6"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -58,9 +59,14 @@
                     </subviews>
                     <color key="backgroundColor" red="0.86274509799999999" green="0.27058823529999998" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                 </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XRr-2m-AOK">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="-97" y="175"/>
+            <point key="canvasLocation" x="-24" y="165"/>
         </view>
     </objects>
     <resources>

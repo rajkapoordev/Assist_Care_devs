@@ -10,6 +10,7 @@ import UIKit
 
 class ManagePaymentCardMethodVC: UIViewController, UITextFieldDelegate {
  
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var txtPaymentType: UITextField!
     @IBOutlet var txtNameOfCard: UITextField!
@@ -39,11 +40,11 @@ class ManagePaymentCardMethodVC: UIViewController, UITextFieldDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     //For setting interface design
     func setInterface() {
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white

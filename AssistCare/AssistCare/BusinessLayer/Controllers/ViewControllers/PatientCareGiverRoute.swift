@@ -12,6 +12,8 @@ import MapKit
 import CoreLocation
 class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDataSource,CLLocationManagerDelegate,MKMapViewDelegate, UITextViewDelegate {
 
+    
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var scrollView: UIScrollView!
 
     let locationManager = CLLocationManager()
@@ -37,6 +39,7 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         txtVwInstruction.delegate = self
         vwPopupWentWrong.layer.cornerRadius = 5.0
         tblView.register(UINib(nibName:"MedicationPrompt",bundle : nil), forCellReuseIdentifier: "MedicationPrompt")
@@ -59,9 +62,6 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
             print("Location services are not enabled");
         }
         mapView.delegate = self
-        
-
-
         self.tabBarController?.tabBar.isHidden = true
     }
 

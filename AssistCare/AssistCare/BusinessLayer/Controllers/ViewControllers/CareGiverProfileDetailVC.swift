@@ -80,13 +80,12 @@ class CareGiverProfileDetailVC: UIViewController,UICollectionViewDelegate,UIColl
         self.navigationController!.popViewController(animated: true)
     }
     
-    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

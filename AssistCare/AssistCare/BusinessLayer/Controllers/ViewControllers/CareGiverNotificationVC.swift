@@ -10,6 +10,7 @@ import UIKit
 
 class CareGiverNotificationVC: UIViewController,UITableViewDataSource,UITableViewDelegate{
     
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var btnPopUpYes: UIButton!
     @IBOutlet var btnPopUpNO: UIButton!
     @IBOutlet var lbPopUpTime: UILabel!
@@ -79,6 +80,7 @@ class CareGiverNotificationVC: UIViewController,UITableViewDataSource,UITableVie
     }
     
     func setInterface(){
+        vwStatusBar.backgroundColor = AppColor.greenStatusBar
         tblNotification.dataSource = self
         tblNotification.delegate = self
         self.automaticallyAdjustsScrollViewInsets = false

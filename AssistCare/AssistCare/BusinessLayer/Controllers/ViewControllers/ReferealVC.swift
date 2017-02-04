@@ -10,6 +10,8 @@ import UIKit
 
 class ReferealVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var btnInvite: UIButton!
     @IBOutlet var btnHistory: UIButton!
     @IBOutlet var tabInvite: UIView!
@@ -101,10 +103,10 @@ class ReferealVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     func setInterface(){
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white

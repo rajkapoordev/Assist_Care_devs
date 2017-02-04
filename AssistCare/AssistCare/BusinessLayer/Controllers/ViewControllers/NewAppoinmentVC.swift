@@ -15,6 +15,8 @@ protocol HandleMapSearch {
 }
 class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIPickerViewDelegate,UIPickerViewDataSource, FSCalendarDataSource, FSCalendarDelegate,UIGestureRecognizerDelegate,UISearchBarDelegate{
     
+    
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var vWSearch: UIView!
     @IBOutlet var lblDay: UILabel!
     @IBOutlet var lbMonth: UILabel!
@@ -312,6 +314,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
     }
     func setInterface() {
+        vwStatusBar.backgroundColor = AppColor.skyStatusBar
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = AppColor.skyColor
         lblNavTitle.textColor = UIColor.white

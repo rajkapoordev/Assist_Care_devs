@@ -17,6 +17,7 @@
                 <outlet property="tblPaymentCardDetail" destination="NZs-su-Ppx" id="0iL-B3-MHn"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Ag2-BV-8Up"/>
                 <outlet property="vwNavBar" destination="eWy-P2-wPK" id="PVm-hH-joV"/>
+                <outlet property="vwStatusBar" destination="gR0-wV-m7d" id="Gmw-X4-uvL"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -61,6 +62,11 @@
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.86274509799999999" green="0.27058823529999998" blue="0.29411764709999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gR0-wV-m7d">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

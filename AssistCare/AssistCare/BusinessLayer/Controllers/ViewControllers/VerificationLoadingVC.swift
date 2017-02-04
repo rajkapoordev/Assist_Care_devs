@@ -10,6 +10,8 @@ import UIKit
 
 class VerificationLoadingVC: UIViewController {
 
+    
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var lbLoading: UILabel!
     @IBOutlet var imgLoading: UIImageView!
     //Navigation Bar
@@ -39,7 +41,6 @@ class VerificationLoadingVC: UIViewController {
             
             }
         }
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,7 +48,8 @@ class VerificationLoadingVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func setInterface(){
+    func setInterface() {
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white

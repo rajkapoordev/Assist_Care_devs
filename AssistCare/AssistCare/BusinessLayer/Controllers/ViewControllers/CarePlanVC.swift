@@ -10,6 +10,13 @@ import UIKit
 
 class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
+    @IBOutlet var vwStatusBar: UIView!
+   
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+    
     @IBOutlet var btnCheck: UIButton!
     @IBOutlet var btnFinish: UIButton!
     @IBOutlet var btnNevermind: UIButton!
@@ -34,8 +41,6 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         self.tabBarController?.tabBar.isHidden = true
     }
     
-    
-    
     @IBAction func btnCheckClick(_ sender: UIButton) {
     }
     
@@ -50,6 +55,10 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
+        vwNavBar.backgroundColor = AppColor.redColor
+        lblNavTitle.textColor = UIColor.white
+
         self.vWPopup.layer.cornerRadius = 5;
         let transperentView = UIView(frame: UIScreen.main.bounds)
         transperentView.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.35)
@@ -204,7 +213,9 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         
     }
     
-    
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
+    }
     
     func btnClick(sender:UIButton)
     {
@@ -248,17 +259,6 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
 extension String {

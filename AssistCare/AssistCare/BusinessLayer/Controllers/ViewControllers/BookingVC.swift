@@ -9,7 +9,8 @@
 import UIKit
 
 class BookingVC: UIViewController {
-
+    
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var btnBack: UIButton!
     @IBOutlet var vwNavBar: UIView!
     @IBOutlet var lblNavTitle: UILabel!
@@ -27,9 +28,8 @@ class BookingVC: UIViewController {
         super.viewDidLoad()
         
         setInterface()
-
-        // Do any additional setup after loading the view.
     }
+    
     override func viewDidLayoutSubviews() {
         scrollViewBooking.contentSize = CGSize(width:UIScreen.main.bounds.size.width, height: 630 + self.collectionViewBooking.bounds.size.height)
         
@@ -43,6 +43,7 @@ class BookingVC: UIViewController {
 
     }
     func setInterface() {
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white

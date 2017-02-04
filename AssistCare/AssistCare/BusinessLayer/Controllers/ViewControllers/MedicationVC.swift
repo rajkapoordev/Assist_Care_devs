@@ -11,6 +11,7 @@ import UIKit
 
 class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate{
 
+    @IBOutlet var vwStausBar: UIView!
     @IBOutlet var btnAdd: UIButton!
     @IBOutlet var btnDone: UIButton!
     @IBOutlet var pickerView: UIPickerView!
@@ -54,6 +55,7 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
     }
     
     func setInterface() {
+        vwStausBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
         vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white

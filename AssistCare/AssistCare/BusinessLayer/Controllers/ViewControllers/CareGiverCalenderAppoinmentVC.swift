@@ -11,6 +11,12 @@ import MapKit
 
 class CareGiverCalenderAppoinmentVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource{
 
+    @IBOutlet var vwStatusBar: UIView!
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+
     @IBOutlet var btnCancelAppoinment: UIButton!
     @IBOutlet var lbGeneralCareInfo: UILabel!
     @IBOutlet var lbGeneralCare: UILabel!
@@ -23,7 +29,6 @@ class CareGiverCalenderAppoinmentVC: UIViewController,UICollectionViewDelegate,U
     @IBOutlet var vwAddress: UIView!
     @IBOutlet var vwCharged: UIView!
     @IBOutlet var vwDetail: UIView!
-    @IBOutlet var vwNavigation: UIView!
     @IBOutlet var scrollData: UIScrollView!
     @IBOutlet var vwPopUp: UIView!
     @IBOutlet var vwGray: UIView!
@@ -39,9 +44,14 @@ class CareGiverCalenderAppoinmentVC: UIViewController,UICollectionViewDelegate,U
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
 
     func setInterface(){
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
+        self.navigationController?.navigationBar.isHidden = true
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
+        vwNavBar.backgroundColor = AppColor.redColor//appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        lblNavTitle.textColor = UIColor.white
+        lblNavTitle.text = "Appoinment Accepted"
         collServiceProvided.delegate = self
         collServiceProvided.dataSource = self
         collServiceProvided.register(UINib(nibName: "CareServicesCell", bundle: nil), forCellWithReuseIdentifier: "CareServicesCell")
@@ -63,7 +73,10 @@ class CareGiverCalenderAppoinmentVC: UIViewController,UICollectionViewDelegate,U
                 
             })
         }
-        
+    }
+    
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

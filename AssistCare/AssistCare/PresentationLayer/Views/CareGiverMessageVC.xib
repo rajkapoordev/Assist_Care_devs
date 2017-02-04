@@ -15,6 +15,7 @@
                 <outlet property="tblMessages" destination="yU3-EP-9dy" id="6lC-yD-kbb"/>
                 <outlet property="view" destination="iN0-l3-epB" id="Gqx-yn-GBa"/>
                 <outlet property="vwNavBar" destination="pzc-9b-18j" id="H2w-a8-hMs"/>
+                <outlet property="vwStatusBar" destination="XXD-ZU-9ef" id="6Ee-fO-hDA"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -51,6 +52,11 @@
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </tableView>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XXD-ZU-9ef">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <point key="canvasLocation" x="-14" y="-331"/>

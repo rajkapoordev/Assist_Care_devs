@@ -9,6 +9,9 @@
 import UIKit
 
 class DisplayReservationVC: UIViewController {
+    
+    
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var lbDate: UILabel!
     @IBOutlet var btnOk: UIButton!
 
@@ -16,9 +19,8 @@ class DisplayReservationVC: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+        vwStatusBar.backgroundColor = AppColor.skyStatusBar
+   }
     
     override func viewDidLayoutSubviews() {
     }

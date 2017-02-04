@@ -10,6 +10,8 @@ import UIKit
 
 class NumOfReservationVC: UIViewController,UITableViewDelegate,UITableViewDataSource{
 
+    
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var btnOK: UIButton!
     @IBOutlet var tblReservation: UITableView!
     
@@ -26,6 +28,7 @@ class NumOfReservationVC: UIViewController,UITableViewDelegate,UITableViewDataSo
 
     
     func setInterface(){
+        vwStatusBar.backgroundColor = AppColor.skyStatusBar
         self.tblReservation.delegate = self
         self.tblReservation.dataSource = self
         self.tabBarController?.tabBar.isHidden = true

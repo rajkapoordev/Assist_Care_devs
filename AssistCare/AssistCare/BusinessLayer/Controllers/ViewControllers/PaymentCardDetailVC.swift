@@ -12,6 +12,7 @@ class PaymentCardDetailVC: UIViewController, UITableViewDelegate, UITableViewDat
     
     @IBOutlet var tblPaymentCardDetail: UITableView!
     
+    @IBOutlet var vwStatusBar: UIView!
     //Navigation Bar
     @IBOutlet var btnNavBack: UIButton!
     @IBOutlet var vwNavBar: UIView!
@@ -29,6 +30,7 @@ class PaymentCardDetailVC: UIViewController, UITableViewDelegate, UITableViewDat
     }
     
     func setInterface() {
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
         self.automaticallyAdjustsScrollViewInsets = false
         vwNavBar.backgroundColor = AppColor.redColor

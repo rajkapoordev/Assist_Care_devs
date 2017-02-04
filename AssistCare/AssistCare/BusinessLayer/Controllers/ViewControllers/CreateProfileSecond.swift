@@ -9,6 +9,9 @@
 import UIKit
 
 class CreateProfileSecond: UIViewController,UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+    
+    @IBOutlet var vwStatusBar: UIView!
+    
     @IBOutlet var scrollView: UIScrollView!
     var customView = UIView()
     @IBOutlet var lbl1: UILabel!
@@ -25,6 +28,8 @@ class CreateProfileSecond: UIViewController,UITableViewDelegate,UITableViewDataS
     @IBOutlet var pickerView: UIPickerView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         imagePicker.delegate = self
         setHeaderValue()
         pickerView.delegate = self

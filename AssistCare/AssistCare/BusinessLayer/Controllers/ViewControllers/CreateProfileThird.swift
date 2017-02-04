@@ -10,6 +10,8 @@ import UIKit
 
 class CreateProfileThird: UIViewController,UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource {
     
+    
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var pickerView: UIPickerView!
     @IBOutlet var vWPicker: UITableView!
     @IBOutlet var tblView: UITableView!
@@ -22,11 +24,11 @@ class CreateProfileThird: UIViewController,UITableViewDelegate,UITableViewDataSo
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         setValue()
         addCustomeView()
         tblView.tableFooterView = customView
         pickerView.delegate = self
-        // Do any additional setup after loading the view.
     }
     
     
@@ -54,7 +56,7 @@ class CreateProfileThird: UIViewController,UITableViewDelegate,UITableViewDataSo
     
     
     @IBAction func btnBackClick(_ sender: UIButton) {
-        navigationController?.popViewController(animated: false)
+        self.navigationController!.popViewController(animated: false)
     }
     func nextAction()
     {
@@ -114,21 +116,21 @@ class CreateProfileThird: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         return 0
     }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if(indexPath.section == 0)
         {
         tableView.register(UINib(nibName : "ReferenceCell", bundle : nil), forCellReuseIdentifier: "ReferenceCell")
-        var cell = tableView.dequeueReusableCell(withIdentifier: "ReferenceCell", for: indexPath) as! ReferenceCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReferenceCell", for: indexPath) as! ReferenceCell
         cell.lblTitle.text = reference[indexPath.row] as! String
         return cell
         }
         else
         {
             tableView.register(UINib(nibName : "CirtificateCell", bundle : nil), forCellReuseIdentifier: "CirtificateCell")
-            var cell = tableView.dequeueReusableCell(withIdentifier: "CirtificateCell", for: indexPath) as! CirtificateCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CirtificateCell", for: indexPath) as! CirtificateCell
             return cell
         }
-        
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -289,19 +291,5 @@ class CreateProfileThird: UIViewController,UITableViewDelegate,UITableViewDataSo
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         
     }
-    
-    
-    
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
