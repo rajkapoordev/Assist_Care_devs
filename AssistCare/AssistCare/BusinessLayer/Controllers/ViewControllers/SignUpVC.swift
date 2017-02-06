@@ -11,7 +11,7 @@ import FBSDKLoginKit
 import FBSDKCoreKit
 import FBSDKShareKit
 
-class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate , FBSDKLoginButtonDelegate{
+class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate , GIDSignInUIDelegate ,FBSDKLoginButtonDelegate{
     
     @IBOutlet weak var signInButton: GIDSignInButton!
     
@@ -46,6 +46,8 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate , FBSDK
       
         GIDSignIn.sharedInstance().shouldFetchBasicProfile = true
         GIDSignIn.sharedInstance().delegate = self
+        GIDSignIn.sharedInstance().uiDelegate = self
+        GIDSignIn.sharedInstance().clientID = "94840686265-tgvf57a49r5pve4l8lpe9cfkva05jepv.apps.googleusercontent.com"
         GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.login")
         GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.me")
         //
@@ -116,6 +118,10 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate , FBSDK
         }
     }
     
+    func signIn(signIn: GIDSignIn!, didDisconnectWithUser user: GIDGoogleUser!, withError error: NSError!) {
+        
+    }
+    
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         textField.resignFirstResponder()
         return true
@@ -180,8 +186,8 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate , FBSDK
     
     
     func loginButton(_ loginButton: FBSDKLoginButton!, didCompleteWith result: FBSDKLoginManagerLoginResult!, error: Error!) {
-        //let vc = NextPage(nibName: "NextPage", bundle: nil)
-        //self.navigationController?.pushViewController(vc, animated: true)
+        let vc = ThanksVc(nibName: "ThanksVc", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     func getFacebookUserInfo() {

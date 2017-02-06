@@ -60,7 +60,7 @@ extension UIButton{
     func roundedBottomLeftButton(){
         let maskPAth1 = UIBezierPath(roundedRect: self.bounds,
                                      byRoundingCorners: [.bottomLeft ],
-                                     cornerRadii:CGSize(width: 8.0, height: 8.0))
+                                     cornerRadii:CGSize(width: 5.0, height: 5.0))
         let maskLayer1 = CAShapeLayer()
         maskLayer1.frame = self.bounds
         maskLayer1.path = maskPAth1.cgPath
@@ -70,7 +70,7 @@ extension UIButton{
     func roundedBottomRightButton(){
         let maskPAth1 = UIBezierPath(roundedRect: self.bounds,
                                      byRoundingCorners: [.bottomRight ],
-                                     cornerRadii:CGSize(width: 8.0, height: 8.0))
+                                     cornerRadii:CGSize(width: 5.0, height: 5.0))
         let maskLayer1 = CAShapeLayer()
         maskLayer1.frame = self.bounds
         maskLayer1.path = maskPAth1.cgPath
