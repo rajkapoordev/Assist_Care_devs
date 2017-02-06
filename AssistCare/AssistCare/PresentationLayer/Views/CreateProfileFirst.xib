@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,18 +11,27 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateProfileFirst" customModule="AssistCare" customModuleProvider="target">
             <connections>
-                <outlet property="btnFri" destination="tpi-j9-Q9f" id="U1b-gS-9p8"/>
+                <outlet property="btnAddSchedule" destination="pPF-1U-zbA" id="ld3-t0-ClD"/>
+                <outlet property="btnEducation" destination="uUW-K1-5D1" id="PI3-bX-UFZ"/>
+                <outlet property="btnFri" destination="6dV-Rb-0V7" id="2gq-jA-wjr"/>
                 <outlet property="btnFromTime" destination="yha-IA-LFi" id="b9M-rp-SkN"/>
-                <outlet property="btnMon" destination="h3Z-Sj-cEb" id="dke-HS-tQ0"/>
+                <outlet property="btnLocation" destination="zgx-eX-kze" id="HMu-a8-YOv"/>
+                <outlet property="btnMon" destination="KhG-x3-f4O" id="Lpn-ps-EtS"/>
                 <outlet property="btnNavBack" destination="wUX-H3-3Ks" id="ciX-Zs-VKo"/>
                 <outlet property="btnNext" destination="3MV-JV-I0p" id="5RR-6U-FKz"/>
-                <outlet property="btnSat" destination="xEE-Rs-syP" id="Hcw-RP-waN"/>
-                <outlet property="btnSun" destination="XtP-q9-0H1" id="LmO-OO-Xia"/>
-                <outlet property="btnThur" destination="ezG-oR-fvn" id="OU7-0Z-gIW"/>
+                <outlet property="btnSat" destination="Knz-LX-GDe" id="XIl-0a-8AI"/>
+                <outlet property="btnSun" destination="jnG-29-pst" id="uPv-IJ-biv"/>
+                <outlet property="btnThur" destination="daE-bc-wcR" id="TI6-H7-sWP"/>
                 <outlet property="btnToTime" destination="zYF-er-4jh" id="3oh-Ey-tpL"/>
-                <outlet property="btnTues" destination="0a1-Yt-5ay" id="Ln8-Ke-PR1"/>
-                <outlet property="btnWed" destination="nVn-lO-HEv" id="mlc-w6-0eK"/>
+                <outlet property="btnTues" destination="j8n-GY-LVB" id="9lF-uH-yVy"/>
+                <outlet property="btnWed" destination="JGQ-1c-bmU" id="4g5-Qc-wfW"/>
+                <outlet property="imageTime" destination="XkN-lo-mPz" id="uQ0-h4-ydT"/>
+                <outlet property="imgAdd" destination="wWH-IU-GZV" id="GVV-vB-X9w"/>
+                <outlet property="imgEducation" destination="LsF-tm-a9g" id="DOf-cZ-ei5"/>
+                <outlet property="imgLocation" destination="z4s-qt-7ab" id="c3N-Lw-ApR"/>
                 <outlet property="imgProfile" destination="lss-r0-QCB" id="0kD-nA-uKP"/>
+                <outlet property="imgRecurring" destination="hV2-6L-Z0E" id="6yK-2e-Ns2"/>
+                <outlet property="imgSchedule" destination="H9M-aX-sxF" id="Pd1-pb-CfB"/>
                 <outlet property="lblDayDisplay" destination="FMi-X8-2NA" id="SED-Ss-rvq"/>
                 <outlet property="lblNavTitle" destination="ibR-rG-Vbq" id="AD9-l3-vMu"/>
                 <outlet property="lblTimeDisplay" destination="AXs-83-dlj" id="4Dg-9P-hb9"/>
@@ -110,9 +119,8 @@
                                             </connections>
                                         </button>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="LsF-tm-a9g">
-                                            <rect key="frame" x="192" y="3" width="24" height="24"/>
+                                            <rect key="frame" x="186" y="3" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                            <color key="backgroundColor" red="0.0" green="0.58431372550000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -122,10 +130,17 @@
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMinY="YES"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="z4s-qt-7ab">
-                                            <rect key="frame" x="194" y="4" width="24" height="24"/>
+                                            <rect key="frame" x="186" y="4" width="24" height="24"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES"/>
-                                            <color key="backgroundColor" red="0.0" green="0.58431372550000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                         </imageView>
+                                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="zgx-eX-kze">
+                                            <rect key="frame" x="186" y="4" width="24" height="24"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <state key="normal" title="Button"/>
+                                            <connections>
+                                                <action selector="btnLocation:" destination="-1" eventType="touchUpInside" id="wlQ-nH-wFy"/>
+                                            </connections>
+                                        </button>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Location area" textAlignment="natural" minimumFontSize="17" id="NVb-AF-T0e">
                                             <rect key="frame" x="-2" y="0.0" width="189" height="30"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -162,14 +177,12 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="H9M-aX-sxF">
-                                    <rect key="frame" x="8" y="9" width="20" height="24"/>
+                                    <rect key="frame" x="11" y="9" width="22" height="22"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.0" green="0.58431372550000005" blue="0.90980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 </imageView>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="wWH-IU-GZV">
-                                    <rect key="frame" x="296" y="9" width="20" height="24"/>
+                                    <rect key="frame" x="287" y="8" width="22" height="22"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxY="YES"/>
-                                    <color key="backgroundColor" red="0.0" green="0.82352941180000006" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
                                 </imageView>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="rtr-cw-MSo">
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="17"/>
@@ -199,10 +212,10 @@
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </scrollView>
                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3MV-JV-I0p">
-                    <rect key="frame" x="8" y="442" width="304" height="34"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                    <rect key="frame" x="11" y="420" width="296" height="35"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                     <color key="backgroundColor" red="0.24832046029999999" green="0.73438870909999998" blue="0.81627410649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                    <state key="normal" title="Next">
+                    <state key="normal" title="NEXT">
                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                     <connections>
@@ -213,8 +226,8 @@
                     <rect key="frame" x="0.0" y="268" width="320" height="209"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pPF-1U-zbA">
-                            <rect key="frame" x="1" y="170" width="318" height="40"/>
+                        <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pPF-1U-zbA">
+                            <rect key="frame" x="0.0" y="170" width="320" height="46"/>
                             <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES"/>
                             <color key="backgroundColor" red="0.0" green="0.43137254899999999" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
                             <state key="normal" title="ADD">
@@ -228,10 +241,9 @@
                             <rect key="frame" x="1" y="13" width="326" height="35"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="XkN-lo-mPz">
-                                    <rect key="frame" x="8" y="13" width="21" height="24"/>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="XkN-lo-mPz">
+                                    <rect key="frame" x="8" y="13" width="22" height="22"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES"/>
-                                    <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </imageView>
                                 <view contentMode="scaleToFill" misplaced="YES" id="dmt-wR-07C">
                                     <rect key="frame" x="41" y="13" width="277" height="10"/>
@@ -278,14 +290,13 @@
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" id="hV2-6L-Z0E">
-                                    <rect key="frame" x="8" y="7" width="21" height="24"/>
+                                    <rect key="frame" x="8" y="1" width="22" height="22"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
-                                    <color key="backgroundColor" red="0.24832046029999999" green="0.73438870909999998" blue="0.81627410649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </imageView>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recurring Availability" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CrI-U4-DV4">
-                                    <rect key="frame" x="37" y="7" width="278" height="11"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Recurring Availability" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CrI-U4-DV4">
+                                    <rect key="frame" x="37" y="4" width="278" height="17"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
@@ -296,133 +307,121 @@
                             <rect key="frame" x="1" y="109" width="322" height="29"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="h3Z-Sj-cEb">
-                                    <rect key="frame" x="6" y="0.0" width="33" height="34"/>
-                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <state key="normal" title="Mon"/>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Knz-LX-GDe">
+                                    <rect key="frame" x="208" y="-2" width="32" height="32"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Sat">
+                                        <color key="titleColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
                                     <connections>
-                                        <action selector="btnMonClick:" destination="-1" eventType="touchUpInside" id="jSl-fY-KTs"/>
+                                        <action selector="btnSatClick:" destination="-1" eventType="touchUpInside" id="Amw-8U-7km"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0a1-Yt-5ay">
-                                    <rect key="frame" x="46" y="0.0" width="33" height="34"/>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="j8n-GY-LVB">
+                                    <rect key="frame" x="48" y="-2" width="32" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <state key="normal" title="Tues"/>
+                                    <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Tue">
+                                        <color key="titleColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
                                     <connections>
-                                        <action selector="btnTuesClick:" destination="-1" eventType="touchUpInside" id="8Qi-oJ-eeh"/>
+                                        <action selector="btnTuesClick:" destination="-1" eventType="touchUpInside" id="Wxv-6N-eRc"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nVn-lO-HEv">
-                                    <rect key="frame" x="87" y="0.0" width="33" height="34"/>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JGQ-1c-bmU">
+                                    <rect key="frame" x="88" y="-2" width="32" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <state key="normal" title="Wed"/>
+                                    <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Wed">
+                                        <color key="titleColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
                                     <connections>
-                                        <action selector="btnWedClick:" destination="-1" eventType="touchUpInside" id="Prr-Yr-Xhf"/>
+                                        <action selector="btnWedClick:" destination="-1" eventType="touchUpInside" id="UX2-yC-mTP"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ezG-oR-fvn">
-                                    <rect key="frame" x="126" y="0.0" width="37" height="34"/>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KhG-x3-f4O">
+                                    <rect key="frame" x="8" y="-2" width="32" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <state key="normal" title="Thur"/>
+                                    <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Mon">
+                                        <color key="titleColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
                                     <connections>
-                                        <action selector="btnThurClick:" destination="-1" eventType="touchUpInside" id="9Za-sT-LJa"/>
+                                        <action selector="btnMonClick:" destination="-1" eventType="touchUpInside" id="0E6-wz-a3D"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="tpi-j9-Q9f">
-                                    <rect key="frame" x="173" y="0.0" width="36" height="34"/>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6dV-Rb-0V7">
+                                    <rect key="frame" x="168" y="-2" width="32" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <state key="normal" title="Fri"/>
+                                    <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Fri">
+                                        <color key="titleColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
                                     <connections>
-                                        <action selector="btnFriClick:" destination="-1" eventType="touchUpInside" id="aSs-GW-cSW"/>
+                                        <action selector="btnFriClick:" destination="-1" eventType="touchUpInside" id="Y2N-7X-vdr"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="xEE-Rs-syP">
-                                    <rect key="frame" x="218" y="0.0" width="37" height="34"/>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="daE-bc-wcR">
+                                    <rect key="frame" x="128" y="-2" width="32" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <state key="normal" title="Sat"/>
+                                    <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Thur">
+                                        <color key="titleColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
                                     <connections>
-                                        <action selector="btnSatClick:" destination="-1" eventType="touchUpInside" id="tp7-7g-wze"/>
+                                        <action selector="btnThurClick:" destination="-1" eventType="touchUpInside" id="1Bi-We-fw5"/>
                                     </connections>
                                 </button>
-                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="XtP-q9-0H1">
-                                    <rect key="frame" x="266" y="0.0" width="38" height="34"/>
+                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jnG-29-pst">
+                                    <rect key="frame" x="248" y="-3" width="32" height="32"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                    <state key="normal" title="Sun"/>
+                                    <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                    <state key="normal" title="Sun">
+                                        <color key="titleColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
                                     <connections>
-                                        <action selector="btnSunClick:" destination="-1" eventType="touchUpInside" id="0r2-Ov-viG"/>
+                                        <action selector="btnSunClick:" destination="-1" eventType="touchUpInside" id="gv4-Km-nLX"/>
                                     </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         </view>
-                        <view contentMode="scaleToFill" misplaced="YES" id="oGt-c0-cHs">
-                            <rect key="frame" x="1" y="127" width="319" height="83"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                            <subviews>
-                                <view contentMode="scaleToFill" misplaced="YES" id="63q-4X-TSg">
-                                    <rect key="frame" x="0.0" y="0.0" width="323" height="16"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                    <subviews>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9qW-vX-wYJ">
-                                            <rect key="frame" x="4" y="5" width="84" height="0.0"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
-                                            <state key="normal" title="Cancel">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="btnCancelClick:" destination="-1" eventType="touchUpInside" id="EIS-Bd-SB7"/>
-                                            </connections>
-                                        </button>
-                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dKP-y5-GBD">
-                                            <rect key="frame" x="243" y="5" width="72" height="0.0"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
-                                            <state key="normal" title="Done">
-                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            </state>
-                                            <connections>
-                                                <action selector="btnDoneClick:" destination="-1" eventType="touchUpInside" id="fpU-tt-EHy"/>
-                                            </connections>
-                                        </button>
-                                    </subviews>
-                                    <color key="backgroundColor" red="0.0" green="0.43137254899999999" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
-                                </view>
-                                <datePicker contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" id="K0u-K1-hR4">
-                                    <rect key="frame" x="0.0" y="16" width="319" height="70"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
-                                    <date key="date" timeIntervalSinceReferenceDate="506594193.06598598">
-                                        <!--2017-01-20 08:36:33 +0000-->
-                                    </date>
-                                </datePicker>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
-                <view hidden="YES" contentMode="scaleToFill" misplaced="YES" id="uFK-xR-LkO">
-                    <rect key="frame" x="0.0" y="286" width="320" height="216"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                <view contentMode="scaleToFill" misplaced="YES" id="uFK-xR-LkO">
+                    <rect key="frame" x="0.0" y="497" width="320" height="120"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                     <subviews>
+                        <pickerView contentMode="scaleToFill" misplaced="YES" id="Pir-TO-xlN">
+                            <rect key="frame" x="0.0" y="30" width="320" height="88"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="kLz-YT-Cim"/>
+                                <outlet property="delegate" destination="-1" id="kfJ-X2-eRH"/>
+                            </connections>
+                        </pickerView>
                         <view contentMode="scaleToFill" misplaced="YES" id="VGh-Ga-TSZ">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="35"/>
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="30"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="ORq-Og-MuX">
-                                    <rect key="frame" x="1" y="0.0" width="87" height="35"/>
+                                    <rect key="frame" x="1" y="0.0" width="87" height="30"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                                     <state key="normal" title="Cancel">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                 </button>
                                 <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="oDf-WK-caf">
-                                    <rect key="frame" x="239" y="0.0" width="71" height="35"/>
+                                    <rect key="frame" x="239" y="0.0" width="71" height="30"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
                                     <state key="normal" title="Done">
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -432,16 +431,49 @@
                                     </connections>
                                 </button>
                             </subviews>
-                            <color key="backgroundColor" red="0.0" green="0.43137254899999999" blue="0.69411764710000001" alpha="1" colorSpace="calibratedRGB"/>
+                            <color key="backgroundColor" red="0.21176470588235294" green="0.68235294117647061" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
                         </view>
-                        <pickerView contentMode="scaleToFill" misplaced="YES" id="Pir-TO-xlN">
-                            <rect key="frame" x="0.0" y="30" width="320" height="185"/>
-                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            <connections>
-                                <outlet property="dataSource" destination="-1" id="kLz-YT-Cim"/>
-                                <outlet property="delegate" destination="-1" id="kfJ-X2-eRH"/>
-                            </connections>
-                        </pickerView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
+                <view contentMode="scaleToFill" misplaced="YES" id="oGt-c0-cHs">
+                    <rect key="frame" x="0.0" y="497" width="319" height="120"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" id="63q-4X-TSg">
+                            <rect key="frame" x="0.0" y="0.0" width="323" height="35"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="9qW-vX-wYJ">
+                                    <rect key="frame" x="4" y="5" width="84" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                    <state key="normal" title="Cancel">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnCancelClick:" destination="-1" eventType="touchUpInside" id="EIS-Bd-SB7"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="dKP-y5-GBD">
+                                    <rect key="frame" x="243" y="5" width="72" height="35"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" heightSizable="YES"/>
+                                    <state key="normal" title="Done">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="btnDoneClick:" destination="-1" eventType="touchUpInside" id="fpU-tt-EHy"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.21176470588235294" green="0.68235294117647061" blue="0.77254901960784317" alpha="1" colorSpace="calibratedRGB"/>
+                        </view>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" id="K0u-K1-hR4">
+                            <rect key="frame" x="0.0" y="32" width="319" height="88"/>
+                            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" heightSizable="YES"/>
+                            <date key="date" timeIntervalSinceReferenceDate="506594193.06598598">
+                                <!--2017-01-20 08:36:33 +0000-->
+                            </date>
+                        </datePicker>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
@@ -474,7 +506,7 @@
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-            <point key="canvasLocation" x="-11" y="-322"/>
+            <point key="canvasLocation" x="140" y="-79"/>
         </view>
     </objects>
     <resources>

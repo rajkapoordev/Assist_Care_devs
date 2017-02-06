@@ -48,6 +48,7 @@ struct AppColor {
     static let skyStatusBar = UIColor(red: 17/255, green: 157/255, blue: 180/255, alpha: 1.0)
     static let greenStatusBar = UIColor(red: 25/255, green: 150/255, blue: 130/255, alpha: 1.0)
     static let orangeStatusBar = UIColor(red: 245/255, green: 90/255, blue: 63/255, alpha: 1.0)
+    static let darkBlueColor = UIColor(red: 43/255, green: 45/255, blue: 58/255, alpha: 1.0)
 }
 
 struct ScreenSize

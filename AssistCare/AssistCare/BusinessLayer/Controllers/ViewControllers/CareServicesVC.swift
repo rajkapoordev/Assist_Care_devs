@@ -46,25 +46,28 @@ class CareServicesVC: UIViewController,UICollectionViewDelegate,UICollectionView
         super.viewDidLoad()
         vwStatusBar.backgroundColor = AppColor.redStatusBar
         vwNavBar.backgroundColor = AppColor.redColor
-        self.vWLanguage.setBottomBorderView()
-        
-        vWadd.setBottomBorderView()
-        
-        btnNext.shadow()
-        
-        btnPrevious.shadow()
-       
         pickerView.delegate = self
-        
+        self.vWLanguage.setBottomBorderView()
+        vWadd.setBottomBorderView()
+        btnNext.shadow()
+        btnPrevious.shadow()
         cvcCareServices?.allowsMultipleSelection = true
-        
         cvcCareServices.register(UINib(nibName:"CareServicesCell",bundle: nil) , forCellWithReuseIdentifier: "CareServicesCell")
        
         scrollView.contentSize = CGSize(width:0, height: 5 + vWTop.frame.height + vWTop.frame.height + cvcCareServices.frame.height + btnNext.frame.height + 100 + vWBottom.frame.height)
+        let defaults = UserDefaults.standard
+        let page = defaults.value(forKey: "UserRole") as! String
+        if !(page == "Care Giver"){
+            lblNavTitle.text = "Create Profile"
+        }
+        
+        btnNext.backgroundColor = AppColor.skyColor
+        btnPrevious.backgroundColor = AppColor.darkBlueColor
+
     }
     
     @IBAction func btnBackClick(_ sender: UIButton) {
-      navigationController!.popViewController(animated: false)
+      self.navigationController?.popViewController(animated: true)
     }
     @IBAction func btnNextClick(_ sender: Any) {
         let vc = CreateProfileThird(nibName: "CreateProfileThird", bundle: nil)

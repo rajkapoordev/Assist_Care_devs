@@ -11,6 +11,7 @@ import MapKit
 import Foundation
 class CareGiverBeginServices: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
 
+    @IBOutlet var scrollView: UIScrollView!
     
     @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var lblAddress: UILabel!
@@ -40,7 +41,6 @@ class CareGiverBeginServices: UIViewController,MKMapViewDelegate,CLLocationManag
             
         }
 
-
         // Do any additional setup after loading the view.
     }
     
@@ -65,6 +65,7 @@ class CareGiverBeginServices: UIViewController,MKMapViewDelegate,CLLocationManag
     }
     
     @IBAction func btnBack(_ sender: UIButton) {
+        self.navigationController?.popViewController(animated: true)
     }
     @IBAction func btnArrivedClick(_ sender: UIButton) {
         let vc = CarePlanVC(nibName: "CarePlanVC", bundle: nil)
@@ -75,15 +76,4 @@ class CareGiverBeginServices: UIViewController,MKMapViewDelegate,CLLocationManag
         // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

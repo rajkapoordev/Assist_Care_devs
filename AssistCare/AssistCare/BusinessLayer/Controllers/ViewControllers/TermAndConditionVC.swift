@@ -35,7 +35,7 @@ class TermAndConditionVC: UIViewController {
     
     
     @IBAction func btnAgree(_ sender: UIButton) {
-        let vc = EditProfileCareGiver(nibName: "EditProfileCareGiver", bundle: nil)
+        let vc = ThanksVc(nibName: "ThanksVc", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 

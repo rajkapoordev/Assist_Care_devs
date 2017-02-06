@@ -19,7 +19,7 @@ class CareGiverAgendaCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         imgProfile.setRounded()
-        // Initialization code
+        btnMsg.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "chat"), scaledToSize: CGSize(width: btnMsg.bounds.size.width, height: btnMsg.bounds.size.height)), for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

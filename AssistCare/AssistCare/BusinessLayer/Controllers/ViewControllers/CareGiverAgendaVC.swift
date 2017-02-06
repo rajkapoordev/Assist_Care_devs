@@ -15,6 +15,7 @@ class CareGiverAgendaVC: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     var locationManager = CLLocationManager()
 
     
+    @IBOutlet var lbUpcomingBooking: UILabel!
     @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var lblTime: UILabel!
     @IBOutlet var lblName: MKMapView!
@@ -29,6 +30,7 @@ class CareGiverAgendaVC: UIViewController,MKMapViewDelegate,CLLocationManagerDel
         mapView.delegate = self
         self.tabBarController?.tabBar.isHidden = true
         imgProfile.setRounded()
+        lbUpcomingBooking.backgroundColor = AppColor.grayColor
         
             
             self.mapView.showsUserLocation = true
