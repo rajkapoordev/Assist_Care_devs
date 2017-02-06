@@ -24,7 +24,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         //For keyboard manager
         IQKeyboardManager.sharedManager().enable = true
         
-        let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
+        let vc = EditProfileCareGiver(nibName: "EditProfileCareGiver", bundle: nil)
       
         self.window = UIWindow(frame: UIScreen.main.bounds)
         
