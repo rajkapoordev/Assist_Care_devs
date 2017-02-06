@@ -17,8 +17,8 @@ class VerificationVC: UIViewController ,UITextFieldDelegate{
     @IBOutlet var btnNavBack: UIButton!
     @IBOutlet var vwNavBar: UIView!
     @IBOutlet var lblNavTitle: UILabel!
-    @IBOutlet var btnNext: UIButton!
     
+    @IBOutlet var btnNext: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

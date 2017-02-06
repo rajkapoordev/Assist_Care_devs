@@ -13,6 +13,7 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     
     @IBOutlet var vwStatusBar: UIView!
     
+    @IBOutlet var btnNext: UIButton!
     //Navigation Bar
     @IBOutlet var btnNavBack: UIButton!
     @IBOutlet var vwNavBar: UIView!
@@ -157,7 +158,7 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
     
     }
     
-    @IBAction func btnNextClick(_ sender: Any) {
+    @IBAction func btnNextClick(_ sender: UIButton) {
         let vc = CreateProfileSecond(nibName: "CreateProfileSecond", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: false)
         

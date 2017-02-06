@@ -67,7 +67,7 @@ class CreateProfileSecond: UIViewController,UITableViewDelegate,UITableViewDataS
     
     
     @IBAction func btnBackClick(_ sender: UIButton) {
-        navigationController?.popViewController(animated: false)
+        navigationController!.popViewController(animated: false)
        
 
     }

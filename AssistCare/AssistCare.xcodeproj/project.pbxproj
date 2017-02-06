@@ -37,6 +37,7 @@
 		0C19A2EE1E3731EF0014B01C /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */; };
 		0C1A91761E4597870033B34A /* PatientRatingServiceFilled.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1A91751E4597870033B34A /* PatientRatingServiceFilled.xib */; };
 		0C1A91781E45979D0033B34A /* PatientRatingServiceFilled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A91771E45979D0033B34A /* PatientRatingServiceFilled.swift */; };
+		0C25E46C1E483E2100D38889 /* HCSStarRatingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C25E46B1E483E2100D38889 /* HCSStarRatingView.m */; };
 		0C3513FB1E4442450005E773 /* CareGiverCalenderAppoinmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3513F71E4442450005E773 /* CareGiverCalenderAppoinmentVC.xib */; };
 		0C3513FC1E4442450005E773 /* CareGiverNotificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3513F81E4442450005E773 /* CareGiverNotificationVC.xib */; };
 		0C3513FD1E4442450005E773 /* PatientCareGiverRoute.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3513F91E4442450005E773 /* PatientCareGiverRoute.xib */; };
@@ -294,6 +295,8 @@
 		0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWeekdayView.m; path = FSCalendar/FSCalendarWeekdayView.m; sourceTree = "<group>"; };
 		0C1A91751E4597870033B34A /* PatientRatingServiceFilled.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientRatingServiceFilled.xib; sourceTree = "<group>"; };
 		0C1A91771E45979D0033B34A /* PatientRatingServiceFilled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientRatingServiceFilled.swift; sourceTree = "<group>"; };
+		0C25E46A1E483E2100D38889 /* HCSStarRatingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HCSStarRatingView.h; sourceTree = "<group>"; };
+		0C25E46B1E483E2100D38889 /* HCSStarRatingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HCSStarRatingView.m; sourceTree = "<group>"; };
 		0C3513F71E4442450005E773 /* CareGiverCalenderAppoinmentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareGiverCalenderAppoinmentVC.xib; sourceTree = "<group>"; };
 		0C3513F81E4442450005E773 /* CareGiverNotificationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareGiverNotificationVC.xib; sourceTree = "<group>"; };
 		0C3513F91E4442450005E773 /* PatientCareGiverRoute.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientCareGiverRoute.xib; sourceTree = "<group>"; };
@@ -545,6 +548,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0C25E4681E483E2100D38889 /* HCSStarRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				0C25E4691E483E2100D38889 /* HCSStarRatingView */,
+			);
+			path = HCSStarRatingView;
+			sourceTree = "<group>";
+		};
+		0C25E4691E483E2100D38889 /* HCSStarRatingView */ = {
+			isa = PBXGroup;
+			children = (
+				0C25E46A1E483E2100D38889 /* HCSStarRatingView.h */,
+				0C25E46B1E483E2100D38889 /* HCSStarRatingView.m */,
+			);
+			path = HCSStarRatingView;
+			sourceTree = "<group>";
+		};
 		0C36E91C1E433B2100AA288A /* IQKeyboardManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -838,6 +858,7 @@
 		243705CE1E2F49C100005416 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				0C25E4681E483E2100D38889 /* HCSStarRatingView */,
 				0C3514071E4442E80005E773 /* CustomDialogClass.swift */,
 				0C3514081E4442E80005E773 /* Validation.swift */,
 				24194F361E31E1BD00982135 /* MapAnnotation.swift */,
@@ -1316,6 +1337,7 @@
 				0C36E9381E433B2100AA288A /* IQUIViewController+Additions.swift in Sources */,
 				0C36E9401E433B2100AA288A /* IQPreviousNextView.swift in Sources */,
 				0C79972A1E449E910082AD16 /* DisplayReservationVC.swift in Sources */,
+				0C25E46C1E483E2100D38889 /* HCSStarRatingView.m in Sources */,
 				24194F371E31E1BD00982135 /* MapAnnotation.swift in Sources */,
 				0C19A2E71E3731EF0014B01C /* FSCalendarDelegationFactory.m in Sources */,
 				0C811F4B1E3C8DBB008A578C /* CareServicesVC.swift in Sources */,
