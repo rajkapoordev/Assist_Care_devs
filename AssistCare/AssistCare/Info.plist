@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>CLIENT_ID</key>
+	<string>94840686265-tgvf57a49r5pve4l8lpe9cfkva05jepv.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.94840686265-tgvf57a49r5pve4l8lpe9cfkva05jepv</string>
 	<key> NSLocationWhenInUseUsageDescription</key>
 	<string>This app wants access your location</string>
 	<key>CFBundleDevelopmentRegion</key>
@@ -21,18 +25,32 @@
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1895583467344589</string>
+			</array>
+		</dict>
+		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.lanet.GoogleSDKTry</string>
+			<string>com.lanetteam.assistcare</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>327847630381-6dbe80qbvs1s4ollt9j75qt50p4aajeu.apps.googleusercontent.com</string>
+				<string>com.lanetteam.assistcare</string>
 			</array>
 		</dict>
 	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
+	<key>FacebookAppID</key>
+	<string>1895583467344589</string>
+	<key>FacebookDisplayName</key>
+	<string>Assist Care</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbauth2</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSLocationAlwaysUsageDescription</key>

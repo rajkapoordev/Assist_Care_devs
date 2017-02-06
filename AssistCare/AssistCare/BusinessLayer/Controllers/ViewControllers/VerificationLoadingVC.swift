@@ -31,7 +31,7 @@ class VerificationLoadingVC: UIViewController {
             if (page == "Patient")
             {
 //          let vc = EditProfile(nibName: "EditProfile", bundle: nil)
-            let vc = EditProfile(nibName: "EditProfile", bundle: nil)
+            let vc = CreateProfileFirst(nibName: "EditProfile", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: true)
             }
             else

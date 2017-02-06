@@ -8,44 +8,39 @@
 
 import UIKit
 import MapKit
-
 import CoreLocation
-class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDataSource,CLLocationManagerDelegate,MKMapViewDelegate, UITextViewDelegate {
 
+class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDataSource,CLLocationManagerDelegate,MKMapViewDelegate, UITextViewDelegate {
     
     @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var scrollView: UIScrollView!
 
     let locationManager = CLLocationManager()
-    
-    @IBOutlet var txtVwInstruction: UITextView!
-    @IBOutlet var btnSkip: UIButton!
-    @IBOutlet var lbWhatWentWrong: UILabel!
-    @IBOutlet var lbTimeWentWrong: UILabel!
-    @IBOutlet var lbNameWentWrong: UILabel!
-    @IBOutlet var imgProfileWentWrong: UIImageView!
-    @IBOutlet var vwPopupWentWrong: UIView!
 
+    
+    @IBOutlet var scrollView: UIScrollView!
+    @IBOutlet var btnSkip: UIButton!
     @IBOutlet var tblView: UITableView!
     @IBOutlet var vWTop: UIView!
     @IBOutlet var mapView: MKMapView!
+    
+    
     
     @IBAction func btnSkip(_ sender: Any) {
         
     }
     
-    let border = UIView()
     var header = NSMutableArray()
+    let locationManager = CLLocationManager()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         vwStatusBar.backgroundColor = AppColor.redStatusBar
         txtVwInstruction.delegate = self
         vwPopupWentWrong.layer.cornerRadius = 5.0
-        tblView.register(UINib(nibName:"MedicationPrompt",bundle : nil), forCellReuseIdentifier: "MedicationPrompt")
-        scrollView.contentSize = CGSize(width: 0, height: (vWTop.frame.height + tblView.frame.height))
 
-        
+        tblView.register(UINib(nibName:"MedicationPrompt",bundle : nil), forCellReuseIdentifier: "MedicationPrompt")
+        scrollView.contentSize = CGSize(width: 0, height: (vWTop.frame.height + tblView.frame.height))        
         self.mapView.showsUserLocation = true
         if (CLLocationManager.locationServicesEnabled()) {
             locationManager.delegate = self
@@ -63,7 +58,35 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
         }
         mapView.delegate = self
         self.tabBarController?.tabBar.isHidden = true
+        
+        let vc = PatientRatingServiceFilled(nibName: "PatientRatingServiceFilled", bundle: nil)
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: false, completion: nil)
     }
+    
+    
+    /*func callWentWrongPopUp(){
+        
+        let transperentView = UIView(frame: UIScreen.main.bounds)
+        transperentView.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.35)
+        
+        if !self.view.subviews.contains(transperentView) {
+            self.view.addSubview(transperentView)
+            self.view.addSubview(vwPopupWentWrong)
+            
+            vwPopupWentWrong.layer.shadowColor = UIColor.gray.cgColor
+            vwPopupWentWrong.layer.shadowOpacity = 2
+            vwPopupWentWrong.layer.shadowOffset = CGSize.zero
+            vwPopupWentWrong.layer.shadowRadius = 5
+            
+            /*let rectShape = CAShapeLayer()
+            rectShape.bounds = self.btnOk.frame
+            rectShape.position = self.btnOk.center
+            rectShape.path = UIBezierPath(roundedRect: self.btnOk.bounds, byRoundingCorners: [.bottomLeft , .bottomRight], cornerRadii: CGSize(width: 5, height: 5)).cgPath
+            self.btnOk.layer.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0).cgColor
+            self.btnOk.layer.mask = rectShap*/
+        }
+    }*/
 
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
         let locationArray = locations as NSArray
@@ -102,8 +125,6 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
     func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
         print("Errors " + error.localizedDescription)
     }
-    
-
 
     override func viewDidLayoutSubviews() {
         vwPopupWentWrong.frame = CGRect(x: 20, y: (ScreenSize.SCREEN_HEIGHT/2) - (self.vwPopupWentWrong.bounds.size.height / 2), width: ScreenSize.SCREEN_WIDTH - 40, height: self.vwPopupWentWrong.bounds.size.height)
@@ -163,7 +184,7 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
         self.present(vc, animated: true, completion: nil)
         
     }
-    
+
     func textViewDidChange(_ textView: UITextView) {
         if txtVwInstruction.subviews.contains(border){
             border.removeFromSuperview()
@@ -174,7 +195,6 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
         border.frame = CGRect(x: txtVwInstruction.frame.origin.x, y: txtVwInstruction.frame.origin.y+txtVwInstruction.frame.height-2, width: textView.frame.width, height: 2)
         border.backgroundColor = AppColor.skyColor
         txtVwInstruction.superview!.insertSubview(border, aboveSubview: textView)
-
     }
 
 }
