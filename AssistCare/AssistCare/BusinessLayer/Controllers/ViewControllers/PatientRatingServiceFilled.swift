@@ -132,7 +132,7 @@ class PatientRatingServiceFilled: UIViewController,UICollectionViewDataSource,UI
         }
         
         border.frame = CGRect(x: txtvwInfo.frame.origin.x, y: txtvwInfo.frame.origin.y+txtvwInfo.frame.height-2, width: textView.frame.width, height: 2)
-        border.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        border.backgroundColor = AppColor.skyColor
         txtvwInfo.superview!.insertSubview(border, aboveSubview: textView)
         
     }
@@ -145,7 +145,7 @@ class PatientRatingServiceFilled: UIViewController,UICollectionViewDataSource,UI
         txtvwInfo.frame = CGRect(x: txtvwInfo.frame.origin.x, y: txtvwInfo.frame.origin.y, width: txtvwInfo.frame.size.width, height: height+10)
         
         border.frame = CGRect(x: txtvwInfo.frame.origin.x, y: txtvwInfo.frame.origin.y+txtvwInfo.frame.height-2, width: textView.frame.width, height: 2)
-        border.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        border.backgroundColor = AppColor.skyColor
         txtvwInfo.superview!.insertSubview(border, aboveSubview: textView)
         
     }
@@ -158,7 +158,7 @@ class PatientRatingServiceFilled: UIViewController,UICollectionViewDataSource,UI
         rectShape.bounds = self.btnContinue.frame
         rectShape.position = self.btnContinue.center
         rectShape.path = UIBezierPath(roundedRect: self.btnSkip.bounds, byRoundingCorners: [.bottomLeft , .bottomRight], cornerRadii: CGSize(width: 5, height: 5)).cgPath
-        self.btnSkip.layer.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0).cgColor
+        self.btnSkip.layer.backgroundColor = AppColor.skyColor.cgColor
         self.btnSkip.layer.mask = rectShape
         self.txtvwInfo.delegate = self
         self.txtvwInfo.becomeFirstResponder()
