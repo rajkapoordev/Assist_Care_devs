@@ -10,6 +10,8 @@ import UIKit
 
 class CareGiverChartViewProgressVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
 
+    
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var lbProgessReport: UILabel!
     @IBOutlet var lbProgressUpdate: UILabel!
     @IBOutlet var imgProgressUpdate: UIImageView!
@@ -31,6 +33,8 @@ class CareGiverChartViewProgressVC: UIViewController,UICollectionViewDelegate,UI
     }
     
     func setInterface(){
+        vwNavigation.backgroundColor = AppColor.redColor
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.collServicesProvided.delegate = self
         self.collServicesProvided.dataSource = self
         self.collServicesProvided.register(UINib(nibName: "CareServicesCell", bundle: nil), forCellWithReuseIdentifier: "CareServicesCell")

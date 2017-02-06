@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
-    <device id="retina4_7" orientation="portrait">
+    <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -18,13 +18,17 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="selected" translatesAutoresizingMaskIntoConstraints="NO" id="xEN-UK-zNy">
+                        <rect key="frame" x="276" y="10" width="35" height="45"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="visa.png" translatesAutoresizingMaskIntoConstraints="NO" id="u3e-eD-Ses">
                         <rect key="frame" x="22" y="11" width="54" height="37"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Personal***1234" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iAN-7H-nMa">
-                        <rect key="frame" x="84" y="13" width="228" height="35"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <rect key="frame" x="84" y="13" width="193" height="35"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -38,13 +42,15 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="imgPaymentCard" destination="u3e-eD-Ses" id="uWN-1z-ai8"/>
+                <outlet property="imgSelected" destination="xEN-UK-zNy" id="k70-iU-4Xw"/>
                 <outlet property="lblCardInfo" destination="iAN-7H-nMa" id="jXh-hQ-dZc"/>
                 <outlet property="vwBottomBorder" destination="20S-7C-Xf4" id="rPc-9n-N4s"/>
             </connections>
-            <point key="canvasLocation" x="-427" y="-67.5"/>
+            <point key="canvasLocation" x="-621" y="-67.5"/>
         </tableViewCell>
     </objects>
     <resources>
+        <image name="selected" width="128" height="128"/>
         <image name="visa.png" width="128" height="128"/>
     </resources>
 </document>

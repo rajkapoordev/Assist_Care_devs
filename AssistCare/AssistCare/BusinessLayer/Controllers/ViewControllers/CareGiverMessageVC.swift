@@ -10,6 +10,7 @@ import UIKit
 
 class CareGiverMessageVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet var vwStatusBar: UIView!
     //Navigation Bar
     @IBOutlet var vwNavBar: UIView!
     @IBOutlet var lblNavTitle: UILabel!
@@ -32,8 +33,9 @@ class CareGiverMessageVC: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func setInterface(){
+        vwStatusBar.backgroundColor = AppColor.orangeStatusBar
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: TAB_ORANGE_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.orangeColor
         lblNavTitle.textColor = UIColor.white
         self.tabBarController?.tabBar.isHidden = false
         lblNavTitle.text = "Messages"

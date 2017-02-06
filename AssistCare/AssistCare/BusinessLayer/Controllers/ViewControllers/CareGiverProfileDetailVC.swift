@@ -66,9 +66,9 @@ class CareGiverProfileDetailVC: UIViewController,UICollectionViewDelegate,UIColl
         imgFbIcon.setRounded()
         //btnBook.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
         
-        lblOwnVehicle.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
-        lblEnglish.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
-        lblSpenish.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        lblOwnVehicle.backgroundColor = AppColor.skyColor
+        lblEnglish.backgroundColor = AppColor.skyColor
+        lblSpenish.backgroundColor = AppColor.skyColor
         lblOwnVehicle.setRadius()
         lblSpenish.setRadius()
         lblEnglish.setRadius()
@@ -80,13 +80,12 @@ class CareGiverProfileDetailVC: UIViewController,UICollectionViewDelegate,UIColl
         self.navigationController!.popViewController(animated: true)
     }
     
-    
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

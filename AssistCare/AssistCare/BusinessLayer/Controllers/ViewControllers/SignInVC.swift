@@ -10,6 +10,8 @@ import UIKit
 
 class SignInVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
     
+    @IBOutlet var vwStatusBar: UIView!
+    
     //Navigation Bar
     @IBOutlet var btnNavBack: UIButton!
     @IBOutlet var vwNavBar: UIView!
@@ -26,14 +28,16 @@ class SignInVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setInterface()
-        
-        GIDSignIn.sharedInstance().shouldFetchBasicProfile = true
+         GIDSignIn.sharedInstance().shouldFetchBasicProfile = true
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.login")
         GIDSignIn.sharedInstance().scopes.append("https://www.googleapis.com/auth/plus.me")
         //
         GIDSignIn.sharedInstance().signInSilently()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setInterface()
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,14 +47,15 @@ class SignInVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
     
     func setInterface(){
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         scrollViewMain.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 490)
-        
         txtEmail.delegate = self
         txtPassword.delegate = self
         txtEmail.setBottomBorder()
         txtPassword.setBottomBorder()
+        btnSignIn.backgroundColor = AppColor.backColor
         btnSignIn.shadow()
     }
     

@@ -24,6 +24,7 @@
                 <outlet property="view" destination="iN0-l3-epB" id="hST-RF-7CC"/>
                 <outlet property="vwNavigation" destination="AzM-Bp-ZEp" id="zxA-Dm-0GT"/>
                 <outlet property="vwPopup" destination="7Bx-uu-gvF" id="IYC-6s-FKs"/>
+                <outlet property="vwStatusBar" destination="oAz-qY-RCa" id="cNm-J4-xB0"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -59,6 +60,11 @@
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="0.0" green="0.50196081400000003" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oAz-qY-RCa">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -122,7 +128,7 @@
                             <color key="textColor" red="0.38823529411764707" green="0.38823529411764707" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
-                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y4Y-bn-uGp">
+                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="userprofile" translatesAutoresizingMaskIntoConstraints="NO" id="y4Y-bn-uGp">
                             <rect key="frame" x="18" y="18" width="45" height="45"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         </imageView>
@@ -138,11 +144,12 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-318" y="351"/>
+            <point key="canvasLocation" x="-599" y="283"/>
         </view>
     </objects>
     <resources>
         <image name="Gift Card" width="52" height="52"/>
         <image name="user.png" width="64" height="64"/>
+        <image name="userprofile" width="250" height="250"/>
     </resources>
 </document>

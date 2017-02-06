@@ -11,6 +11,8 @@ import MapKit
 
 class CareGiverDetailVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
     
+    
+    @IBOutlet var vwStatusBar: UIView!
     //Navigation Bar
     @IBOutlet var btnNavBack: UIButton!
     @IBOutlet var vwNavBar: UIView!
@@ -34,7 +36,6 @@ class CareGiverDetailVC: UIViewController,UICollectionViewDelegate,UICollectionV
     
     @IBOutlet var lblReviewInfo: UILabel!
 
-    
     @IBOutlet var imgFbIcon: UIImageView!
     @IBOutlet var btnViewFbFriends: UIButton!
     @IBOutlet var imgCareGiverFB: UIImageView!
@@ -52,13 +53,17 @@ class CareGiverDetailVC: UIViewController,UICollectionViewDelegate,UICollectionV
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tabBarController?.tabBar.isHidden = true
         cvcCareServices.register(UINib(nibName:"CareServicesCell",bundle: nil) , forCellWithReuseIdentifier: "CareServicesCell")
         cvcCareServices.delegate = self
         cvcCareServices.dataSource = self
+        setInterface()
     }
     
     override func viewDidLayoutSubviews() {
-        self.setInterface()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
     }
     
     override func didReceiveMemoryWarning() {
@@ -67,19 +72,21 @@ class CareGiverDetailVC: UIViewController,UICollectionViewDelegate,UICollectionV
     }
     
     func setInterface() {
+        self.tabBarController?.tabBar.isHidden = true
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         self.automaticallyAdjustsScrollViewInsets = false
-        scrollViewMain.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 795)
+        scrollViewMain.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 787)
         imgProfile.setRounded()
         imgCareGiverFB.setRounded()
         imgFbIcon.setRounded()
-        btnBook.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        btnBook.backgroundColor = AppColor.skyColor
         
-        lblOwnVehicle.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
-        lblEnglish.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
-        lblSpenish.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        lblOwnVehicle.backgroundColor = AppColor.skyColor
+        lblEnglish.backgroundColor = AppColor.skyColor
+        lblSpenish.backgroundColor = AppColor.skyColor
         lblOwnVehicle.setRadius()
         lblSpenish.setRadius()
         lblEnglish.setRadius()
@@ -95,7 +102,7 @@ class CareGiverDetailVC: UIViewController,UICollectionViewDelegate,UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 2
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -122,8 +129,9 @@ class CareGiverDetailVC: UIViewController,UICollectionViewDelegate,UICollectionV
         let noOfCell: Int = 6
         cvcCareServices.frame = CGRect(x: cvcCareServices.frame.origin.x, y: cvcCareServices.frame.origin.y, width: cvcCareServices.frame.width, height: (CGFloat(size) *  CGFloat(ceil(Double(noOfCell)/3)) + (items * CGFloat(ceil(Double(noOfCell)/3)))))
         
-        let scroll = vwFirstScroll.frame.height + vwInScroll.frame.height + collectionView.frame.height + 5
+        let scroll = vwFirstScroll.frame.height + vwInScroll.frame.height + collectionView.frame.height
         scrollViewMain.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: scroll)
+        
         vwInScroll.frame = CGRect(x: 0, y: cvcCareServices.frame.origin.y +  cvcCareServices.frame.height, width: ScreenSize.SCREEN_WIDTH, height: self.vwInScroll.frame.height)
         return CGSize(width: size, height: size)
     }
@@ -132,7 +140,6 @@ class CareGiverDetailVC: UIViewController,UICollectionViewDelegate,UICollectionV
         let selectedCell = collectionView.cellForItem(at: indexPath) as! CareServicesCell
         if selectedCell.isSelected == true {
             selectedCell.vWMark.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-            
             selectedCell.vWMark.isHidden = false
             selectedCell.imgMark.isHidden = false
         }else {

@@ -10,8 +10,14 @@ import UIKit
 
 class PatientEditProfile: UIViewController,UITableViewDataSource,UITableViewDelegate,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
-    @IBOutlet var txtFname: UITextField!
+    @IBOutlet var vwStatusBar: UIView!
     
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+    
+    @IBOutlet var txtFname: UITextField!
     @IBOutlet var imgProfile: UIImageView!
     
     @IBOutlet var txtAddress: UITextField!
@@ -46,6 +52,12 @@ class PatientEditProfile: UIViewController,UITableViewDataSource,UITableViewDele
     
     func setUpUI()
     {
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
+        self.navigationController?.navigationBar.isHidden = true
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
+        vwNavBar.backgroundColor = AppColor.redColor
+        lblNavTitle.textColor = UIColor.white
+
         btnLogout.shadow()
         txtFname.setBottomBorder()
         txtLname.setBottomBorder()
@@ -53,6 +65,10 @@ class PatientEditProfile: UIViewController,UITableViewDataSource,UITableViewDele
         imgProfile.setRounded()
     }
     
+    //Navigation back
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
+    }
     
     
     ////////////////TableView Methods/////////////////////

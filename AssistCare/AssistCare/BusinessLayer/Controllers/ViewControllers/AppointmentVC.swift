@@ -13,6 +13,8 @@ import CoreLocation
 
 class AppointmentVC: UIViewController,MKMapViewDelegate, UISearchBarDelegate {
 
+    @IBOutlet var vwStatusBar: UIView!
+    
     @IBOutlet var vwNavBar: UIView!
     @IBOutlet var lblNavTitle: UILabel!
 
@@ -43,8 +45,9 @@ class AppointmentVC: UIViewController,MKMapViewDelegate, UISearchBarDelegate {
     }
     
     func setInterface(){
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         mapView.delegate = self
         
@@ -108,6 +111,8 @@ class AppointmentVC: UIViewController,MKMapViewDelegate, UISearchBarDelegate {
     }
   
     @IBAction func btnTopRightBarAction(_ sender: Any) {
+        let userVC = EditProfileCareGiver(nibName: "EditProfileCareGiver", bundle: nil)
+        self.navigationController?.pushViewController(userVC, animated: true)
     }
     
     func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {

@@ -12,6 +12,7 @@ class PaymentCardDetailCell: UITableViewCell {
     
     @IBOutlet var imgPaymentCard: UIImageView!
     @IBOutlet var lblCardInfo: UILabel!
+    @IBOutlet var imgSelected: UIImageView!
     
     @IBOutlet var vwBottomBorder: UIView!
     

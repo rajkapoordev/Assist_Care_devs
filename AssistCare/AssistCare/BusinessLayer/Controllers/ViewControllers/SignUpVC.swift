@@ -13,6 +13,8 @@ import FBSDKShareKit
 
 class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate , GIDSignInUIDelegate ,FBSDKLoginButtonDelegate{
     
+    @IBOutlet var vwStatusBar: UIView!
+    
     @IBOutlet weak var signInButton: GIDSignInButton!
     
     @IBOutlet var scrollSignUp: UIScrollView!
@@ -33,13 +35,11 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate , GIDSi
     var imageViewPost : UIImageView!
     var postButtonMsg : UIButton!
     var postButtonPhoto : UIButton!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
         txtEmail.delegate = self
         txtPassword.delegate = self
-        
         
         self.setInterface()
         //Google sign in
@@ -67,16 +67,16 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate , GIDSi
     
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
-        
         txtEmail.setBottomBorder()
         txtPassword.setBottomBorder()
+        btnSignUp.backgroundColor = AppColor.backColor
         btnSignUp.layer.cornerRadius = 2.0
         btnSignUp.shadow()
         btnFacebook.shadow()
         scrollSignUp.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 490)
-
     }
     
     //Navigation back
@@ -85,7 +85,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate , GIDSi
     }
     
     @IBAction func btnSignUp(_ sender: Any) {
-        let defaults = UserDefaults.standard
+  //      let defaults = UserDefaults.standard
 //        defaults.set(role, forKey: "UserRole")
 //        defaults.synchronize()
 //        let page = defaults.value(forKey: "UserRole") as! String
@@ -154,7 +154,7 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate , GIDSi
         postButtonPhoto.setTitle("Post a Photo", for: UIControlState.normal)
         postButtonPhoto.setTitleColor(UIColor.blue, for: UIControlState.normal)
         postButtonPhoto.setTitleColor(UIColor.cyan, for: UIControlState.highlighted)
-        postButtonPhoto.addTarget(self, action: Selector("btnPostPhoto:"), for: UIControlEvents.touchUpInside)
+        postButtonPhoto.addTarget(self, action: #selector(btnPostPhoto(sender:)), for: UIControlEvents.touchUpInside)
         view.addSubview(postButtonPhoto)
         
     }

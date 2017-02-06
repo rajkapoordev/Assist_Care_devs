@@ -10,6 +10,7 @@ import UIKit
 
 class ManagePaymentCardMethodVC: UIViewController, UITextFieldDelegate {
  
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var scrollView: UIScrollView!
     @IBOutlet var txtPaymentType: UITextField!
     @IBOutlet var txtNameOfCard: UITextField!
@@ -39,13 +40,13 @@ class ManagePaymentCardMethodVC: UIViewController, UITextFieldDelegate {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     //For setting interface design
     func setInterface() {
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         scrollView.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 520)
         lblNavTitle.text = "Add Payment Method"
@@ -75,8 +76,8 @@ class ManagePaymentCardMethodVC: UIViewController, UITextFieldDelegate {
 
     //Save payment method
     @IBAction func btnSave(_ sender: UIButton) {
-        btnSave.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
-        let vc = PaymentCardDetailVC(nibName:"PaymentCardDetailVC", bundle: nil)
+        btnSave.backgroundColor = AppColor.skyColor
+        let vc = PaymentCardDetailVC(nibName: "PaymentCardDetailVC", bundle: nil)
         navigationController?.pushViewController(vc, animated: false)
     }
     

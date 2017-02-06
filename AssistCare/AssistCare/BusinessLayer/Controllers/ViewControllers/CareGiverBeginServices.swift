@@ -12,6 +12,7 @@ import Foundation
 class CareGiverBeginServices: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
 
     
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var lblAddress: UILabel!
     @IBOutlet var lblTime: UILabel!
     @IBOutlet var lblName: UILabel!
@@ -20,7 +21,7 @@ class CareGiverBeginServices: UIViewController,MKMapViewDelegate,CLLocationManag
     var locationManager = CLLocationManager()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         mapView.delegate = self
         imgProfile.setRounded()
         self.tabBarController?.tabBar.isHidden = true

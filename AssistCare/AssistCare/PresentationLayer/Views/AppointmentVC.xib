@@ -19,6 +19,7 @@
                 <outlet property="topRightBarButton" destination="9XB-2X-EMV" id="YeP-87-TlP"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="vwNavBar" destination="3IE-Te-WH7" id="qc5-qZ-uDA"/>
+                <outlet property="vwStatusBar" destination="Y8c-IW-w5g" id="lIj-3a-8dj"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -26,6 +27,11 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <view contentMode="scaleToFill" misplaced="YES" id="Y8c-IW-w5g">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="20"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </view>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="PXa-l4-0Ns">
                     <rect key="frame" x="0.0" y="64" width="320" height="450"/>
                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -105,7 +111,7 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="-139" y="-16"/>
+            <point key="canvasLocation" x="-207" y="-185"/>
         </view>
     </objects>
     <resources>

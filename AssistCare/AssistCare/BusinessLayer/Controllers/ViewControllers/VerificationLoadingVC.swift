@@ -10,6 +10,8 @@ import UIKit
 
 class VerificationLoadingVC: UIViewController {
 
+    
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var lbLoading: UILabel!
     @IBOutlet var imgLoading: UIImageView!
     //Navigation Bar
@@ -39,7 +41,6 @@ class VerificationLoadingVC: UIViewController {
             
             }
         }
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -47,9 +48,10 @@ class VerificationLoadingVC: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    func setInterface(){
+    func setInterface() {
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         
         lbLoading.text = "Waiting for text message to automatically verify phone number"

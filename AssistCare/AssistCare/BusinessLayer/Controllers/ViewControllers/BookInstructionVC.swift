@@ -10,6 +10,7 @@ import UIKit
 
 class BookInstructionVC: UIViewController,UITextViewDelegate {
 
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var btnContinue: UIButton!
     @IBOutlet var btnBack: UIButton!
     @IBOutlet var vwNavBar: UIView!
@@ -36,8 +37,9 @@ class BookInstructionVC: UIViewController,UITextViewDelegate {
     }
 
     func setInterface() {
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "Book"
         self.tabBarController?.tabBar.isHidden = true
@@ -56,7 +58,7 @@ class BookInstructionVC: UIViewController,UITextViewDelegate {
 
         lbInstruction.isHidden = false
         border.frame = CGRect(x: txvInstructions.frame.origin.x, y: txvInstructions.frame.origin.y+txvInstructions.frame.height-2, width: textView.frame.width, height: 2)
-        border.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        border.backgroundColor = AppColor.skyColor
         txvInstructions.superview!.insertSubview(border, aboveSubview: textView)
 
     }
@@ -69,7 +71,7 @@ class BookInstructionVC: UIViewController,UITextViewDelegate {
         txvInstructions.frame = CGRect(x: txvInstructions.frame.origin.x, y: txvInstructions.frame.origin.y, width: txvInstructions.frame.size.width, height: height+10)
         
         border.frame = CGRect(x: txvInstructions.frame.origin.x, y: txvInstructions.frame.origin.y+txvInstructions.frame.height-2, width: textView.frame.width, height: 2)
-        border.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        border.backgroundColor = AppColor.skyColor
         txvInstructions.superview!.insertSubview(border, aboveSubview: textView)
     }
     @IBAction func btnBackClicked(_ sender: Any) {

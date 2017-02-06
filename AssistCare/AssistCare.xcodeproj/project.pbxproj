@@ -35,6 +35,8 @@
 		0C19A2EC1E3731EF0014B01C /* FSCalendarStickyHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DA1E3731EF0014B01C /* FSCalendarStickyHeader.m */; };
 		0C19A2ED1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DC1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m */; };
 		0C19A2EE1E3731EF0014B01C /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */; };
+		0C1A91761E4597870033B34A /* PatientRatingServiceFilled.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C1A91751E4597870033B34A /* PatientRatingServiceFilled.xib */; };
+		0C1A91781E45979D0033B34A /* PatientRatingServiceFilled.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C1A91771E45979D0033B34A /* PatientRatingServiceFilled.swift */; };
 		0C3513FB1E4442450005E773 /* CareGiverCalenderAppoinmentVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3513F71E4442450005E773 /* CareGiverCalenderAppoinmentVC.xib */; };
 		0C3513FC1E4442450005E773 /* CareGiverNotificationVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3513F81E4442450005E773 /* CareGiverNotificationVC.xib */; };
 		0C3513FD1E4442450005E773 /* PatientCareGiverRoute.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C3513F91E4442450005E773 /* PatientCareGiverRoute.xib */; };
@@ -290,6 +292,8 @@
 		0C19A2DC1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarTransitionCoordinator.m; path = FSCalendar/FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
 		0C19A2DD1E3731EF0014B01C /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FSCalendarWeekdayView.h; path = FSCalendar/FSCalendarWeekdayView.h; sourceTree = "<group>"; };
 		0C19A2DE1E3731EF0014B01C /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWeekdayView.m; path = FSCalendar/FSCalendarWeekdayView.m; sourceTree = "<group>"; };
+		0C1A91751E4597870033B34A /* PatientRatingServiceFilled.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientRatingServiceFilled.xib; sourceTree = "<group>"; };
+		0C1A91771E45979D0033B34A /* PatientRatingServiceFilled.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PatientRatingServiceFilled.swift; sourceTree = "<group>"; };
 		0C3513F71E4442450005E773 /* CareGiverCalenderAppoinmentVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareGiverCalenderAppoinmentVC.xib; sourceTree = "<group>"; };
 		0C3513F81E4442450005E773 /* CareGiverNotificationVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareGiverNotificationVC.xib; sourceTree = "<group>"; };
 		0C3513F91E4442450005E773 /* PatientCareGiverRoute.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PatientCareGiverRoute.xib; sourceTree = "<group>"; };
@@ -781,6 +785,7 @@
 		243705C61E2F49C100005416 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				0C1A91771E45979D0033B34A /* PatientRatingServiceFilled.swift */,
 				0C7997291E449E910082AD16 /* DisplayReservationVC.swift */,
 				0C35140D1E44461A0005E773 /* PatientCalendarAppointmentVC.swift */,
 				0C3513FF1E4442600005E773 /* CareGiverCalenderAppoinmentVC.swift */,
@@ -854,11 +859,9 @@
 		243705D31E2F49C100005416 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-
+				0C1A91751E4597870033B34A /* PatientRatingServiceFilled.xib */,
 				0C7997271E449E880082AD16 /* DisplayReservationVC.xib */,
-
 				243705D51E2F49C100005416 /* CellView */,
-
 				0C35140B1E4445FF0005E773 /* PatientCalendarAppointmentVC.xib */,
 				0C3513F71E4442450005E773 /* CareGiverCalenderAppoinmentVC.xib */,
 				0C3513F81E4442450005E773 /* CareGiverNotificationVC.xib */,
@@ -1098,6 +1101,7 @@
 				0C811F661E3CA14F008A578C /* plus.png in Resources */,
 				0C6745011E42F8CF0085C831 /* CareGiverAgendaVC.xib in Resources */,
 				0C91A8991E320B580000955E /* ReferealVC.xib in Resources */,
+				0C1A91761E4597870033B34A /* PatientRatingServiceFilled.xib in Resources */,
 				0C6745071E42F8CF0085C831 /* SearchResultVC.xib in Resources */,
 				30ACE1931E3C6F0E007A331F /* TabCell.xib in Resources */,
 				0CA0B74E1E38BA8E0066D0EA /* facebook.png in Resources */,
@@ -1319,6 +1323,7 @@
 				243705E11E2F49C100005416 /* CareServicesCell.swift in Sources */,
 				0CA0B73E1E38A8950066D0EA /* searchCareGiverOnMapVC.swift in Sources */,
 				0C3514031E4442600005E773 /* CareGiverCalenderAppoinmentVC.swift in Sources */,
+				0C1A91781E45979D0033B34A /* PatientRatingServiceFilled.swift in Sources */,
 				0C3514051E4442600005E773 /* PatientCareGiverRoute.swift in Sources */,
 				24562AAC1E309608000814C6 /* AppointmentVC.swift in Sources */,
 				0C3514121E4476DA0005E773 /* CareGiverMessageVC.swift in Sources */,

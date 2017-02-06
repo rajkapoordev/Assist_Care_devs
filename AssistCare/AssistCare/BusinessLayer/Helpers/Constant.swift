@@ -9,20 +9,14 @@
 import Foundation
 import UIKit
 
-let FONT_COLOR:UInt = 0x6D6D6D
-let INFO_FONT_COLOR:UInt = 0x6F7179
-let APP_COLOR:UInt = 0xE44754 //App red color
-let SILVER_COLOR:UInt = 0xF2F2F2
+//let FONT_COLOR:UInt = 0x6D6D6D
+//let INFO_FONT_COLOR:UInt = 0x6F7179
+//let APP_COLOR:UInt = 0xE44754 //App red color
+//let SILVER_COLOR:UInt = 0xF2F2F2
 let BACK_COLOR:UInt = 0xEEEEEE //textFieldBackColor
-let GRAY_COLOR:UInt = 0xE0E0E0
-let GREEN_COLOR:UInt = 0x46BCD0 // app green color
-let RED_COLOR:UInt = 0xDC454B //0xF07374
-let screenSize = UIScreen.main.bounds
-
-let TAB_ORANGE_COLOR: UInt = 0xFC7C63 //chat
-let TAB_BLUE_COLOR: UInt = 0x3FBBD0  //calender
-let TAB_GREEN_COLOR: UInt = 0x3CA192 //notification
-let TAB_RED_COLOR: UInt = 0xE34E52 //home
+//let GRAY_COLOR:UInt = 0xE0E0E0
+//let GREEN_COLOR:UInt = 0x46BCD0 // app green color
+//let RED_COLOR:UInt = 0xDC454B //0xF07374
 
 // define for user role
 let patient = "Patient"
@@ -55,6 +49,7 @@ struct AppColor {
     static let greenStatusBar = UIColor(red: 25/255, green: 150/255, blue: 130/255, alpha: 1.0)
     static let orangeStatusBar = UIColor(red: 245/255, green: 90/255, blue: 63/255, alpha: 1.0)
 }
+
 struct ScreenSize
 {
     static let SCREEN_WIDTH = UIScreen.main.bounds.size.width

@@ -9,6 +9,8 @@
 import UIKit
 
 class DisplayReviewVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UITableViewDelegate,UITableViewDataSource  {
+    
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var btnBack: UIButton!
     @IBOutlet var vwNavBar: UIView!
     @IBOutlet var lblNavTitle: UILabel!
@@ -37,8 +39,9 @@ class DisplayReviewVC: UIViewController,UICollectionViewDelegate,UICollectionVie
     }
     
     func setInterface() {
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "Reviews"
         self.tabBarController?.tabBar.isHidden = true
@@ -70,8 +73,8 @@ class DisplayReviewVC: UIViewController,UICollectionViewDelegate,UICollectionVie
         }
       
         if(indexPath == index){
-            cell.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
-            cell.lb_cellTab.textColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+            cell.backgroundColor = AppColor.skyColor
+            cell.lb_cellTab.textColor = AppColor.skyColor
         }else{
             cell.backgroundColor = UIColor.clear
             cell.lb_cellTab.textColor = UIColor.gray
@@ -126,7 +129,7 @@ class DisplayReviewVC: UIViewController,UICollectionViewDelegate,UICollectionVie
         // Dispose of any resources that can be recreated.
     }
     @IBAction func btnBackClicked(_ sender: Any) {
-        self.navigationController?.popViewController(animated: true)
+        self.navigationController!.popViewController(animated: true)
     }
     
 

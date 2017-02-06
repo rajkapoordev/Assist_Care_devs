@@ -9,6 +9,9 @@
 import UIKit
 
 class DisplayReservationVC: UIViewController {
+    
+    
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var lbDate: UILabel!
     @IBOutlet var btnOk: UIButton!
 
@@ -16,9 +19,8 @@ class DisplayReservationVC: UIViewController {
    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
+        vwStatusBar.backgroundColor = AppColor.skyStatusBar
+   }
     
     override func viewDidLayoutSubviews() {
     }
@@ -34,15 +36,5 @@ class DisplayReservationVC: UIViewController {
     
     @IBAction func btnOkClicked(_ sender: Any) {
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

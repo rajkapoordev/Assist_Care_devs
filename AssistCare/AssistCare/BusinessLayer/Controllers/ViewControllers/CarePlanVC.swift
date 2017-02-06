@@ -9,12 +9,19 @@
 import UIKit
 
 class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
-
+    
+    @IBOutlet var vwStatusBar: UIView!
+   
+    //Navigation Bar
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+    
     @IBOutlet var btnCheck: UIButton!
     @IBOutlet var btnFinish: UIButton!
     @IBOutlet var btnNevermind: UIButton!
-
-  @IBOutlet var tblView: UITableView!
+    
+    @IBOutlet var tblView: UITableView!
     var customView = UIView()
     var headerTitle = NSMutableArray()
     var isArrExpand = NSMutableArray()
@@ -34,11 +41,9 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         self.tabBarController?.tabBar.isHidden = true
     }
     
-    
-   
     @IBAction func btnCheckClick(_ sender: UIButton) {
     }
- 
+    
     
     @IBAction func btnNevermindClick(_ sender: UIButton) {
     }
@@ -50,6 +55,10 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
+        vwNavBar.backgroundColor = AppColor.redColor
+        lblNavTitle.textColor = UIColor.white
+
         self.vWPopup.layer.cornerRadius = 5;
         let transperentView = UIView(frame: UIScreen.main.bounds)
         transperentView.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.35)
@@ -67,23 +76,21 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
             rectShape.bounds = self.btnNevermind.frame
             rectShape.position = self.btnNevermind.center
             rectShape.path = UIBezierPath(roundedRect: self.btnNevermind.bounds, byRoundingCorners: [.bottomLeft , .bottomRight], cornerRadii: CGSize(width: 5, height: 5)).cgPath
-            self.btnNevermind.layer.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0).cgColor
+            self.btnNevermind.layer.backgroundColor = AppColor.skyColor.cgColor
             self.btnNevermind.layer.mask = rectShape
             
             
-           
+            
             rectShape.bounds = self.btnFinish.frame
             rectShape.position = self.btnFinish.center
             rectShape.path = UIBezierPath(roundedRect: self.btnFinish.bounds, byRoundingCorners: [.bottomLeft , .bottomRight], cornerRadii: CGSize(width: 5, height: 5)).cgPath
-            self.btnFinish.layer.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0).cgColor
+            self.btnFinish.layer.backgroundColor = AppColor.skyColor.cgColor
             self.btnFinish.layer.mask = rectShape
-           
         }
-        
     }
+    
     func setValue()
     {
-        
         headerTitle.add("Meal Preparation")
         headerTitle.add("Medication Prompt")
         headerTitle.add("Patient Progress")
@@ -94,10 +101,7 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         {
             isArrExpand.add(false)
         }
-        
     }
-    
-    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return headerTitle.count
@@ -144,11 +148,11 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vwMain = UIView()
-        vwMain.frame = CGRect(x: 0, y: 0, width: screenSize.width, height: screenSize.height)
-         vWPopup.center = CGPoint(x: vwMain.frame.size.width  / 2, y: vwMain.frame.size.height / 2)
+        vwMain.frame = CGRect(x: 0, y: 0, width: ScreenSize.SCREEN_WIDTH, height: ScreenSize.SCREEN_HEIGHT)
+        vWPopup.center = CGPoint(x: vwMain.frame.size.width  / 2, y: vwMain.frame.size.height / 2)
         vwMain.addSubview(vWPopup)
         appDelegate().window?.addSubview(vwMain)
-//        self.view.addSubview(vwMain)
+        //        self.view.addSubview(vwMain)
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -209,7 +213,9 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         
     }
     
-    
+    @IBAction func btnNavBack(_ sender: UIButton) {
+        self.navigationController!.popViewController(animated: true)
+    }
     
     func btnClick(sender:UIButton)
     {
@@ -253,17 +259,6 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-    
-    /*
-     // MARK: - Navigation
-     
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     // Get the new view controller using segue.destinationViewController.
-     // Pass the selected object to the new view controller.
-     }
-     */
     
 }
 extension String {

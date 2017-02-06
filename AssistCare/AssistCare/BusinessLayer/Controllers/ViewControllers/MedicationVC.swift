@@ -11,6 +11,7 @@ import UIKit
 
 class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource,UITextFieldDelegate{
 
+    @IBOutlet var vwStausBar: UIView!
     @IBOutlet var btnAdd: UIButton!
     @IBOutlet var btnDone: UIButton!
     @IBOutlet var pickerView: UIPickerView!
@@ -54,19 +55,20 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
     }
     
     func setInterface() {
+        vwStausBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "Medication"
         
         txtMedicationName.setBottomBorder()
-        btnMon.backgroundColor = getGrayColor()
-        btnTue.backgroundColor = getGrayColor()
-        btnWed.backgroundColor = getGrayColor()
-        btnThur.backgroundColor = getGrayColor()
-        btnFri.backgroundColor = getGrayColor()
-        btnSat.backgroundColor = getGrayColor()
-        btnSun.backgroundColor = getGrayColor()
+        btnMon.backgroundColor = AppColor.grayColor
+        btnTue.backgroundColor = AppColor.grayColor
+        btnWed.backgroundColor = AppColor.grayColor
+        btnThur.backgroundColor = AppColor.grayColor
+        btnFri.backgroundColor = AppColor.grayColor
+        btnSat.backgroundColor = AppColor.grayColor
+        btnSun.backgroundColor = AppColor.grayColor
         
         btnMon.layer.cornerRadius = btnMon.bounds.size.width/2
         btnTue.layer.cornerRadius = btnTue.bounds.size.width/2
@@ -82,8 +84,8 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
         btnFood.titleLabel?.lineBreakMode = .byWordWrapping
         
         btnAdd.layer.cornerRadius = 2.0
-        view.backgroundColor = getBackgroundColor()
-        txtMedicationName.backgroundColor = getBackgroundColor()
+        view.backgroundColor = AppColor.backColor
+        txtMedicationName.backgroundColor = AppColor.backColor
         btnAdd.shadow()
         btnTime.shadow()
         btnFood.shadow()
@@ -130,78 +132,78 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
     }
     
     @IBAction func btnMon(_ sender: Any) {
-        if(btnMon.backgroundColor == getGrayColor() ){
-            btnMon.backgroundColor = getGreenColor()
+        if(btnMon.backgroundColor == AppColor.grayColor ){
+            btnMon.backgroundColor = AppColor.skyColor
             btnMon.setTitleColor(UIColor.white, for: .normal)
         }else{
         
-            btnMon.backgroundColor = getGrayColor()
+            btnMon.backgroundColor = AppColor.grayColor
             btnMon.setTitleColor(UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1), for: .normal)
         }
     }
     
     @IBAction func btnTue(_ sender: Any) {
-        if(btnTue.backgroundColor == getGrayColor() ){
-            btnTue.backgroundColor = getGreenColor()
+        if(btnTue.backgroundColor == AppColor.grayColor ){
+            btnTue.backgroundColor = AppColor.skyColor
             btnTue.setTitleColor(UIColor.white, for: .normal)
         }else{
             
-            btnTue.backgroundColor = getGrayColor()
+            btnTue.backgroundColor = AppColor.grayColor
             btnTue.setTitleColor(UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1), for: .normal)
         }
     }
     
     @IBAction func btnWed(_ sender: Any) {
-        if(btnWed.backgroundColor == getGrayColor() ){
-            btnWed.backgroundColor = getGreenColor()
+        if(btnWed.backgroundColor == AppColor.grayColor ){
+            btnWed.backgroundColor = AppColor.skyColor
             btnWed.setTitleColor(UIColor.white, for: .normal)
         }else{
             
-            btnWed.backgroundColor = getGrayColor()
+            btnWed.backgroundColor = AppColor.grayColor
             btnWed.setTitleColor(UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1), for: .normal)
         }
     }
     
     @IBAction func btnThur(_ sender: Any) {
-        if(btnThur.backgroundColor == getGrayColor() ){
-            btnThur.backgroundColor = getGreenColor()
+        if(btnThur.backgroundColor == AppColor.grayColor ){
+            btnThur.backgroundColor = AppColor.skyColor
             btnThur.setTitleColor(UIColor.white, for: .normal)
         }else{
             
-            btnThur.backgroundColor = getGrayColor()
+            btnThur.backgroundColor = AppColor.grayColor
             btnThur.setTitleColor(UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1), for: .normal)
         }
     }
     
     @IBAction func btnFri(_ sender: Any) {
-        if(btnFri.backgroundColor == getGrayColor() ){
-            btnFri.backgroundColor = getGreenColor()
+        if(btnFri.backgroundColor == AppColor.grayColor ){
+            btnFri.backgroundColor = AppColor.skyColor
             btnFri.setTitleColor(UIColor.white, for: .normal)
         }else{
             
-            btnFri.backgroundColor = getGrayColor()
+            btnFri.backgroundColor = AppColor.grayColor
             btnFri.setTitleColor(UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1), for: .normal)
         }
     }
     
     @IBAction func btnSat(_ sender: Any) {
-        if(btnSat.backgroundColor == getGrayColor() ){
-            btnSat.backgroundColor = getGreenColor()
+        if(btnSat.backgroundColor == AppColor.grayColor ){
+            btnSat.backgroundColor = AppColor.skyColor
             btnSat.setTitleColor(UIColor.white, for: .normal)
         }else{
             
-            btnSat.backgroundColor = getGrayColor()
+            btnSat.backgroundColor = AppColor.grayColor
             btnSat.setTitleColor(UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1), for: .normal)
         }
     }
     
     @IBAction func btnSun(_ sender: Any) {
-        if(btnSun.backgroundColor == getGrayColor() ){
-            btnSun.backgroundColor = getGreenColor()
+        if(btnSun.backgroundColor == AppColor.grayColor ){
+            btnSun.backgroundColor = AppColor.skyColor
             btnSun.setTitleColor(UIColor.white, for: .normal)
         }else{
             
-            btnSun.backgroundColor = getGrayColor()
+            btnSun.backgroundColor = AppColor.grayColor
             btnSun.setTitleColor(UIColor(red: 108/255, green: 108/255, blue: 108/255, alpha: 1), for: .normal)
         }
     }

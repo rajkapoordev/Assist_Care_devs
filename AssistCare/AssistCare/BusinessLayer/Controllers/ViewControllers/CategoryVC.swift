@@ -10,6 +10,7 @@ import UIKit
 
 class CategoryVC: UIViewController {
     
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var vwPatient: UIView!
     @IBOutlet var vwCareGiver: UIView!
     @IBOutlet var vwButton: UIView!
@@ -33,7 +34,7 @@ class CategoryVC: UIViewController {
         setUserRole(role: patient)
         vwPatient.isHidden = false
         vwCareGiver.isHidden = true
-        btnPatient.setTitleColor(UIColor(red: 70/255, green: 188/255, blue: 208/255, alpha: 1), for: .normal)
+        btnPatient.setTitleColor(AppColor.skyColor, for: .normal)
         btnCareGiver.setTitleColor(UIColor(red: 109/255, green: 109/255, blue: 109/255, alpha: 1), for: .normal)
     }
     
@@ -41,14 +42,13 @@ class CategoryVC: UIViewController {
         setUserRole(role: careGiver)
         vwPatient.isHidden = true
         vwCareGiver.isHidden = false
-        btnCareGiver.setTitleColor(UIColor(red: 70/255, green: 188/255, blue: 208/255, alpha: 1), for: .normal)
+        btnCareGiver.setTitleColor(AppColor.skyColor, for: .normal)
         btnPatient.setTitleColor(UIColor(red: 109/255, green: 109/255, blue: 109/255, alpha: 1), for: .normal)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setUserRole(role: patient)
-        self.setInterface()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -57,7 +57,13 @@ class CategoryVC: UIViewController {
     
     func setInterface(){
         navigationController?.navigationBar.isHidden = true
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
+        btnSignUp.backgroundColor = AppColor.skyColor
+        vwCareGiver.backgroundColor = AppColor.skyColor
+        vwPatient.backgroundColor = AppColor.skyColor
+        btnPatient.setTitleColor(AppColor.skyColor, for: .normal)
     }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         

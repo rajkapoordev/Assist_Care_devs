@@ -47,7 +47,7 @@ class FriendsBookedVC: UIViewController, UITableViewDelegate, UITableViewDataSou
             rectShape.bounds = self.btnOk.frame
             rectShape.position = self.btnOk.center
             rectShape.path = UIBezierPath(roundedRect: self.btnOk.bounds, byRoundingCorners: [.bottomLeft , .bottomRight], cornerRadii: CGSize(width: 5, height: 5)).cgPath
-            self.btnOk.layer.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0).cgColor
+            self.btnOk.layer.backgroundColor = AppColor.skyColor.cgColor
             self.btnOk.layer.mask = rectShape
         }
         

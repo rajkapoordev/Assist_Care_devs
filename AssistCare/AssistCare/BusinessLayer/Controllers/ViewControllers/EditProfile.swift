@@ -12,6 +12,11 @@ class EditProfile: UIViewController,UICollectionViewDelegate,UICollectionViewDat
 
     let imagePicker = UIImagePickerController()
     
+    @IBOutlet var vwStatusBar: UIView!
+    
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+    
     @IBOutlet var btnNext: UIButton!
     @IBOutlet var vw1: UIView!
     
@@ -27,8 +32,13 @@ class EditProfile: UIViewController,UICollectionViewDelegate,UICollectionViewDat
     
     @IBOutlet var txtAddress: UITextField!
     @IBOutlet var imgAddress: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.isHidden = true
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
+        vwNavBar.backgroundColor = AppColor.redColor
+        lblNavTitle.textColor = UIColor.white
         txtFirstName.setBottomBorder()
         txtLastName.setBottomBorder()
         txtFirstName.delegate = self
@@ -44,8 +54,6 @@ class EditProfile: UIViewController,UICollectionViewDelegate,UICollectionViewDat
         scrollView.contentSize = CGSize(width:0, height: 5 + vw1.frame.height + vw2.frame.height + cvcServices.frame.height + btnNext.frame.height + 100)
         imagePicker.delegate = self
         shadow(button: btnNext)
-
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {
@@ -53,9 +61,8 @@ class EditProfile: UIViewController,UICollectionViewDelegate,UICollectionViewDat
         // Dispose of any resources that can be recreated.
     }
     
-    
     @IBAction func btnBackClick(_ sender: UIButton) {
-        navigationController?.popViewController(animated: false)
+        navigationController!.popViewController(animated: false)
     }
     
     @IBAction func pickDocument(_ sender: Any) {

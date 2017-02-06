@@ -14,6 +14,8 @@ import CoreLocation
 class CareGiverAgendaVC: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate,UITableViewDelegate,UITableViewDataSource {
     var locationManager = CLLocationManager()
 
+    
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var lblTime: UILabel!
     @IBOutlet var lblName: MKMapView!
     @IBOutlet var imgProfile: UIImageView!
@@ -23,6 +25,7 @@ class CareGiverAgendaVC: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     @IBOutlet var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         mapView.delegate = self
         self.tabBarController?.tabBar.isHidden = true
         imgProfile.setRounded()

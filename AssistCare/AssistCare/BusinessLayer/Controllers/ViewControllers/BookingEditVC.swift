@@ -9,6 +9,8 @@
 import UIKit
 
 class BookingEditVC: UIViewController {
+    
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var btnBack: UIButton!
     @IBOutlet var vwNavBar: UIView!
     @IBOutlet var lblNavTitle: UILabel!
@@ -24,10 +26,7 @@ class BookingEditVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setInterface()
-
-        // Do any additional setup after loading the view.
     }
    
     @IBAction func bookingChanged(_ sender: Any) {
@@ -76,8 +75,9 @@ class BookingEditVC: UIViewController {
     }
 
     func setInterface() {
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: RED_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "Book"
         self.tabBarController?.tabBar.isHidden = true

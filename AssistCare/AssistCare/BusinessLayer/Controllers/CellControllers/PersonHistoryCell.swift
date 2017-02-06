@@ -27,7 +27,7 @@ class PersonHistoryCell: UITableViewCell {
     }
     
     func setInterface() {
-        self.lblEmailId.textColor = appUIColorFromRGB(rgbValue: FONT_COLOR, alpha: 1.0)
+        self.lblEmailId.textColor = UIColor.gray
         self.imgPerson.layer.cornerRadius = self.imgPerson.bounds.size.width * 0.5
         self.imgPerson.clipsToBounds = true
     }

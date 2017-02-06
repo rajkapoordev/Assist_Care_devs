@@ -15,6 +15,8 @@ protocol HandleMapSearch {
 }
 class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionViewDelegate,UICollectionViewDelegateFlowLayout,UIPickerViewDelegate,UIPickerViewDataSource, FSCalendarDataSource, FSCalendarDelegate,UIGestureRecognizerDelegate,UISearchBarDelegate{
     
+    
+    @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var vWSearch: UIView!
     @IBOutlet var lblDay: UILabel!
     @IBOutlet var lbMonth: UILabel!
@@ -128,7 +130,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         if (flag == 0) {
             self.lblPopUpAmPm.text = "AM"
             self.btnAM.layer.cornerRadius = self.btnAM.frame.width / 2
-            self.btnAM.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1)
+            self.btnAM.backgroundColor = AppColor.skyColor
             self.btnAM.setTitleColor(UIColor.white, for: .normal)
             self.meridiem = "AM"
             
@@ -138,7 +140,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         }else {
             self.lblPopUpAmPm.text = "PM"
             self.btnPM.layer.cornerRadius = self.btnPM.frame.width / 2
-            self.btnPM.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1)
+            self.btnPM.backgroundColor = AppColor.skyColor
             self.btnPM.setTitleColor(UIColor.white, for: .normal)
             self.meridiem = "PM"
             
@@ -298,8 +300,8 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         btnOkay.frame = CGRect(x: vwPopUp.frame.size.width/2, y: vwPopUp.frame.size.height - 45, width: vwPopUp.frame.size.width/2, height: 45)
         btnCancelAppoinment.setTitle("CANCEL APPOINMENT", for: .normal)
         btnOkay.setTitle("OKAY", for: .normal)
-        btnCancelAppoinment.backgroundColor = getRedColor()
-        btnOkay.backgroundColor = getGreenColor()
+        btnCancelAppoinment.backgroundColor = AppColor.redColor
+        btnOkay.backgroundColor = AppColor.skyColor
         btnCancelAppoinment.titleLabel?.numberOfLines = 0; // Dynamic number of lines
         btnCancelAppoinment.titleLabel?.lineBreakMode = .byWordWrapping
         btnOkay.tintColor = UIColor.white
@@ -312,8 +314,9 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
     }
     func setInterface() {
+        vwStatusBar.backgroundColor = AppColor.skyStatusBar
         self.navigationController?.navigationBar.isHidden = true
-        vwNavBar.backgroundColor = appUIColorFromRGB(rgbValue: GREEN_COLOR, alpha: 1.0)
+        vwNavBar.backgroundColor = AppColor.skyColor
         lblNavTitle.textColor = UIColor.white
         lblNavTitle.text = "New Appoinment"
         self.tabBarController?.tabBar.isHidden = true

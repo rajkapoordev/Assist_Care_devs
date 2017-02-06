@@ -3,6 +3,11 @@
 
 class CareServicesVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,UIPickerViewDelegate,UIPickerViewDataSource {
     
+    @IBOutlet var vwStatusBar: UIView!
+
+    @IBOutlet var vwNavBar: UIView!
+    @IBOutlet var lblNavTitle: UILabel!
+    
     @IBOutlet var vWLanguage: UIView!
     
     @IBOutlet var pickerView: UIPickerView!
@@ -10,8 +15,6 @@ class CareServicesVC: UIViewController,UICollectionViewDelegate,UICollectionView
     @IBOutlet var vWTop: UIView!
     
     @IBOutlet var btnLanguage: UIButton!
-    
-    
     
     @IBOutlet var vWadd: UIView!
     
@@ -21,8 +24,6 @@ class CareServicesVC: UIViewController,UICollectionViewDelegate,UICollectionView
     
     @IBOutlet var btnAdd: UIButton!
     
-    
-    
     @IBOutlet var btnPrevious: UIButton!
     
     @IBOutlet var vWBottom: UIView!
@@ -30,8 +31,6 @@ class CareServicesVC: UIViewController,UICollectionViewDelegate,UICollectionView
     @IBOutlet var cvcCareServices: UICollectionView!
     
     @IBOutlet var scrollView: UIScrollView!
-    
-    
     
     var languages = ["English","Japani","China","Hindi"]
     
@@ -43,12 +42,10 @@ class CareServicesVC: UIViewController,UICollectionViewDelegate,UICollectionView
     
     var tag = 0
     
-    
-    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
+        vwNavBar.backgroundColor = AppColor.redColor
         self.vWLanguage.setBottomBorderView()
         
         vWadd.setBottomBorderView()
@@ -56,29 +53,14 @@ class CareServicesVC: UIViewController,UICollectionViewDelegate,UICollectionView
         btnNext.shadow()
         
         btnPrevious.shadow()
-        
-        
-        
-        
-        
+       
         pickerView.delegate = self
         
         cvcCareServices?.allowsMultipleSelection = true
         
         cvcCareServices.register(UINib(nibName:"CareServicesCell",bundle: nil) , forCellWithReuseIdentifier: "CareServicesCell")
-        
-        
-        
+       
         scrollView.contentSize = CGSize(width:0, height: 5 + vWTop.frame.height + vWTop.frame.height + cvcCareServices.frame.height + btnNext.frame.height + 100 + vWBottom.frame.height)
-        
-        
-        
-        
-        
-        
-        
-        // Do any additional setup after loading the view.
-        
     }
     
     @IBAction func btnBackClick(_ sender: UIButton) {

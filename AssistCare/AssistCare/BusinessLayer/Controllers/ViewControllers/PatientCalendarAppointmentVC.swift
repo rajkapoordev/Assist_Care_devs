@@ -12,6 +12,8 @@ import CoreLocation
 
 class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout,DialogDelegate,MKMapViewDelegate,CLLocationManagerDelegate  {
 
+    
+    @IBOutlet var vwStatusBar: UIView!
     let locationManager = CLLocationManager()
     var selectedPin:MKPlacemark? = nil
     @IBOutlet var vWFirst: UIView!
@@ -38,12 +40,10 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        vwStatusBar.backgroundColor = AppColor.redStatusBar
         scrollView.contentSize = CGSize(width:0, height: 5 + vWFirst.frame.height + vWSecond.frame.height + cvcServices.frame.height + 100)
          cvcServices.register(UINib(nibName:"CareServicesCell",bundle: nil) , forCellWithReuseIdentifier: "CareServicesCell")
 
-      
-        
         vWInner.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.25).cgColor
         vWInner.layer.shadowOffset = CGSize(width: 5, height: 5)
         vWInner.layer.shadowOpacity = 0.7;
@@ -56,8 +56,6 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
         dialog.view.frame = self.view.frame
         
         mapView.delegate = self
-        
-        
         
         self.mapView.showsUserLocation = true
                 if (CLLocationManager.locationServicesEnabled()) {
@@ -74,9 +72,6 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
                     var span = MKCoordinateSpan()
                     span.latitudeDelta = 0.8
                     span.longitudeDelta = 0.8
-                    
-                
-
                     
                     let latitude = locationManager.location?.coordinate.latitude
                     let longitude = locationManager.location?.coordinate.longitude
@@ -95,15 +90,7 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
                 } else {
                     print("Location services are not enabled");
                 }
-        
-        
-        
-        
-        
-
     }
-    
-    
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         
@@ -137,20 +124,18 @@ class PatientCalendarAppointmentVC: UIViewController,UICollectionViewDelegate,UI
     func tapPinInMap(sender: UITapGestureRecognizer) {
         let selectedPin = (sender.view)!.tag
         print(selectedPin)
-        
-        
     }
-
-    
-    
     
     @IBAction func btnLikeClick(_ sender: UIButton) {
     }
+    
     @IBAction func btnMessageClick(_ sender: UIButton) {
     }
+    
     @IBAction func btnCancelAppointmentClick(_ sender: UIButton) {
         dialog.displayAlert(strTitle : "Cancel All Recurring?",  strMsg: "Do You want to cancel all recurring booking or just the one for 2/28?", btnOkText: "ALL RECURRING", btnCancelText: "JUST ONE",type: "")
     }
+    
     @IBAction func btnBackClick(_ sender: UIButton) {
     }
     
