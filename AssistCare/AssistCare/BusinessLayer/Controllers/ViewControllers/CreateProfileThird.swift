@@ -40,14 +40,14 @@ class CreateProfileThird: UIViewController,UITableViewDelegate,UITableViewDataSo
         
         
         let previous = UIButton(frame: CGRect(x: 20, y: 0, width: ScreenSize.SCREEN_WIDTH/2 - 30 , height: 40))
-        previous.setTitle("Previous", for: .normal)
+        previous.setTitle("PREVIOUS", for: .normal)
         previous.addTarget(self, action: #selector(previousAction), for: .touchUpInside)
         
         let Next = UIButton(frame: CGRect(x: ScreenSize.SCREEN_WIDTH/2 + 10 , y: 0, width: ScreenSize.SCREEN_WIDTH/2 - 30, height: 40))
-        Next.setTitle("Next", for: .normal)
+        Next.setTitle("NEXT", for: .normal)
         Next.addTarget(self, action: #selector(nextAction), for: .touchUpInside)
-        previous.backgroundColor = UIColor.brown
-        Next.backgroundColor = UIColor.black
+        previous.backgroundColor = AppColor.darkBlueColor
+        Next.backgroundColor = AppColor.skyColor
         previous.shadow()
         Next.shadow()
         customView.addSubview(previous)

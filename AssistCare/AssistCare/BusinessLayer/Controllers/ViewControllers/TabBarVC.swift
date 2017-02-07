@@ -11,11 +11,12 @@ import UIKit
 class TabBarVC:UITabBarController,UITabBarControllerDelegate {
     
     var selectedVC: Int = Int()
-    var myVC1 = AppointmentVC()
+    var myVC1:UIViewController!
     var myVC2 = CalenderGraphVC()
     var myVC3 = CareGiverNotificationVC()
     var myVC4 = CareGiverMessageVC()
     let heightOfTabBar : CGFloat = 50
+    var page:String!
     
     var navigationVC1 = UINavigationController()
     var navigationVC2 = UINavigationController()
@@ -24,6 +25,16 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let defaults = UserDefaults.standard
+        //        defaults.set(role, forKey: "UserRole")
+        //        defaults.synchronize()
+        
+        page = defaults.value(forKey: "UserRole") as! String
+        if (page == "Patient"){
+            myVC1 = AppointmentVC()
+        }else{
+            myVC1 = CareGiverAgendaVC()
+        }
         setupTabBar()
         self.navigationController?.isNavigationBarHidden = true
     }
@@ -42,7 +53,12 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
     func setupTabBar()
     {
         self.tabBar.tintColor = UIColor.white
-        self.myVC1 = AppointmentVC(nibName: "AppointmentVC", bundle: nil)
+        if (page == "Patient"){
+            self.myVC1 = AppointmentVC(nibName: "AppointmentVC", bundle: nil)
+        }else{
+            self.myVC1 = CareGiverAgendaVC(nibName: "CareGiverAgendaVC", bundle: nil)
+        }
+        
         self.myVC2 = CalenderGraphVC(nibName: "CalenderGraphVC", bundle: nil)
         self.myVC3 = CareGiverNotificationVC(nibName:"CareGiverNotificationVC", bundle: nil)
         self.myVC4 = CareGiverMessageVC(nibName:"CareGiverMessageVC", bundle: nil)

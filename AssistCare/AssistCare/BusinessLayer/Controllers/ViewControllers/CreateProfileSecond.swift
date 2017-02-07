@@ -11,7 +11,10 @@ import UIKit
 class CreateProfileSecond: UIViewController,UITableViewDelegate,UITableViewDataSource,UIPickerViewDelegate,UIPickerViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
     @IBOutlet var vwStatusBar: UIView!
+     @IBOutlet var lbNavigation: UILabel!
     
+    @IBOutlet var btnNavBack: UIButton!
+    @IBOutlet var vwNavigation: UIView!
     @IBOutlet var scrollView: UIScrollView!
     var customView = UIView()
     @IBOutlet var lbl1: UILabel!
@@ -28,24 +31,25 @@ class CreateProfileSecond: UIViewController,UITableViewDelegate,UITableViewDataS
     @IBOutlet var pickerView: UIPickerView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        let defaults = UserDefaults.standard
+        let page = defaults.value(forKey: "UserRole") as! String
+        if !(page == "Patient"){
+            lbNavigation.text = "Create Profile"
+        }
         vwStatusBar.backgroundColor = AppColor.redStatusBar
         imagePicker.delegate = self
         setHeaderValue()
         pickerView.delegate = self
         customView.frame = CGRect(x: 5, y: 0, width: ScreenSize.SCREEN_WIDTH, height: 50)
-       // customView.backgroundColor = UIColor.red
-        
-        
         let previous = UIButton(frame: CGRect(x: 20, y: 0, width: ScreenSize.SCREEN_WIDTH/2 - 30 , height: 40))
-        previous.setTitle("Previous", for: .normal)
+        previous.setTitle("PREVIOUS", for: .normal)
         previous.addTarget(self, action: #selector(buttonAction), for: .touchUpInside)
 
         let Next = UIButton(frame: CGRect(x: ScreenSize.SCREEN_WIDTH/2 + 10 , y: 0, width: ScreenSize.SCREEN_WIDTH/2 - 30, height: 40))
-        Next.setTitle("Next", for: .normal)
+        Next.setTitle("NEXT", for: .normal)
         Next.addTarget(self, action: #selector(nextAction), for: .touchUpInside)
-        previous.backgroundColor = UIColor.brown
-        Next.backgroundColor = UIColor.black
+        previous.backgroundColor = AppColor.darkBlueColor
+        Next.backgroundColor = AppColor.skyColor
         previous.shadow()
         Next.shadow()
         customView.addSubview(previous)
@@ -53,8 +57,6 @@ class CreateProfileSecond: UIViewController,UITableViewDelegate,UITableViewDataS
 
         tblView.register(UINib(nibName: "CirtificateCell", bundle: nil), forCellReuseIdentifier: "CirtificateCell")
         tblView.tableFooterView = customView
-        
-        // Do any additional setup after loading the view.
     }
     
     func nextAction()

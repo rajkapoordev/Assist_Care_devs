@@ -10,6 +10,7 @@ import UIKit
 
 class CreateProfileFour: UIViewController,UITextFieldDelegate {
 
+    @IBOutlet var vwButton: UIView!
     @IBOutlet var vwStatusBar: UIView!
     
     @IBOutlet var btnNavBack: UIButton!
@@ -33,7 +34,7 @@ class CreateProfileFour: UIViewController,UITextFieldDelegate {
         setUI()
         setDeledate()
         
-        scrollView.contentSize = CGSize(width: 0, height: scrollView.frame.size.height)
+        scrollView.contentSize = CGSize(width: 0, height: vwButton.bounds.size.height + vwButton.frame.origin.y + 10)
 
         // Do any additional setup after loading the view.
     }
@@ -52,10 +53,12 @@ class CreateProfileFour: UIViewController,UITextFieldDelegate {
         txtAccountNumber.setBottomBorder()
         btnSubmit.shadow()
         btnPrevious.shadow()
+        btnPrevious.backgroundColor = AppColor.darkBlueColor
+        btnSubmit.backgroundColor = AppColor.skyColor
     }
     
     @IBAction func btnNavBack(_ sender: UIButton) {
-        self.navigationController!.popViewController(animated: true)
+        self.navigationController?.popViewController(animated: true)
     }
     
     func setDeledate()

@@ -67,6 +67,11 @@ class PaymentCardDetailVC: UIViewController, UITableViewDelegate, UITableViewDat
 //        self.navigationController?.pushViewController(managePaymentVC, animated: true)
         let cell = tblPaymentCardDetail.cellForRow(at: indexPath) as! PaymentCardDetailCell
         cell.imgSelected.isHidden = false
+        
+        let vc = TabBarVC(nibName: "TabBarVC", bundle: nil)
+        let nav = UINavigationController(rootViewController: vc)
+        nav.isNavigationBarHidden = true
+        appDelegate().window?.rootViewController = nav
     }
     
     func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {

@@ -111,7 +111,8 @@ class ReferealVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         self.tabBarController?.tabBar.isHidden = true
-        
+        btnInvite.layer.cornerRadius = 2.0
+        btnInvite.shadow()
         activeInvite()
         //Register nib
         
