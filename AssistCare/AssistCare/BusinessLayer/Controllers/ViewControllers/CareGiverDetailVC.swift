@@ -64,6 +64,7 @@ class CareGiverDetailVC: UIViewController,UICollectionViewDelegate,UICollectionV
     }
     
     override func viewWillAppear(_ animated: Bool) {
+        setInterface()
     }
     
     override func didReceiveMemoryWarning() {

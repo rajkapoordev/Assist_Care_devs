@@ -51,6 +51,10 @@ class CareGiverNotificationVC: UIViewController,UITableViewDataSource,UITableVie
         self.setInterface()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        setInterface()
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         

@@ -32,8 +32,17 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
         super.viewDidLoad()
         tblView.register(UINib(nibName:"MedicationPrompt",bundle : nil), forCellReuseIdentifier: "MedicationPrompt")
         scrollView.contentSize = CGSize(width: 0, height: (vWTop.frame.height + tblView.frame.height))
-
-        
+        setInterface()
+        let vc = PatientRatingServiceFilled(nibName: "PatientRatingServiceFilled", bundle: nil)
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: false, completion: nil)
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setInterface()
+    }
+    
+    func setInterface(){
         self.mapView.showsUserLocation = true
         if (CLLocationManager.locationServicesEnabled()) {
             locationManager.delegate = self
@@ -50,14 +59,11 @@ class PatientCareGiverRoute: UIViewController,UITableViewDelegate,UITableViewDat
             print("Location services are not enabled");
         }
         mapView.delegate = self
-
+        
         self.tabBarController?.tabBar.isHidden = true
         
-        let vc = PatientRatingServiceFilled(nibName: "PatientRatingServiceFilled", bundle: nil)
-        vc.modalPresentationStyle = .overFullScreen
-        self.present(vc, animated: false, completion: nil)
+
     }
-    
     
     /*func callWentWrongPopUp(){
         
