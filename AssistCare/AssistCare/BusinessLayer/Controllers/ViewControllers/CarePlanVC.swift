@@ -12,8 +12,17 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     @IBOutlet var vwStatusBar: UIView!
     
+    //view Rating
+    
+    @IBOutlet var vwRating: UIView!
+    @IBOutlet var vwSubRating: UIView!
+    @IBOutlet var vwProfileInfo: UIView!
+    @IBOutlet var btnSubmit: UIButton!
+    @IBOutlet var vwRateBooking: UIView!
+    
     //view Finish Appoinment
     
+    @IBOutlet var lbFinishDescription: UILabel!
     @IBOutlet var vwFinishAppoinment: UIView!
     @IBOutlet var vwSubFinishAppoinment: UIView!
     @IBOutlet var btnNevermindAppoinment: UIButton!
@@ -37,12 +46,14 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     @IBOutlet var vwNavBar: UIView!
     @IBOutlet var lblNavTitle: UILabel!
     
+    @IBOutlet var imgProfile: UIImageView!
     @IBOutlet var tblView: UITableView!
     var customView = UIView()
     var headerTitle = NSMutableArray()
     var isArrExpand = NSMutableArray()
     var reference = NSMutableArray()
     var subTitle = NSMutableArray()
+    var checked:Bool = false
     
     @IBOutlet var vWPopup: UIView!
     
@@ -79,14 +90,13 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
        // self.vWPopup.layer.cornerRadius = 5;
         let transperentView = UIView(frame: UIScreen.main.bounds)
         transperentView.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.35)
+        imgProfile.setRounded()
         
-        
-        if !self.view.subviews.contains(transperentView) {
-            self.view.addSubview(transperentView)
             self.setFinishEarlyPopup()
-            self.view.addSubview(vwFinishServices)
+            self.setFinishAppoinmentPopup()
+            self.setRating()
+            //self.view.addSubview(vwRating)
         
-        }
         
            /* vWPopup.layer.shadowColor = UIColor.gray.cgColor
             vWPopup.layer.shadowOpacity = 2
@@ -124,14 +134,32 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     func setFinishEarlyPopup(){
         vwSubFinishServices.layer.cornerRadius = 5.0
-        self.btnFinish.roundedBottomRightButton()
-        self.btnNevermind.roundedBottomLeftButton()
+        btnFinish.roundedBottomRightButton()
+        btnNevermind.roundedBottomLeftButton()
         lbDescription.frame = CGRect(x: self.lbDescription.frame.origin.x, y: self.lbDescription.frame.origin.y, width: self.lbDescription.bounds.size.width, height: heightForView(text: lbDescription.text!, font: lbDescription.font, width: self.lbDescription.bounds.size.width))
         btnNevermind.backgroundColor = UIColor.white
         btnFinish.backgroundColor = AppColor.skyColor
         btnNevermind.setTitleColor(AppColor.skyColor, for: .normal)
         btnFinish.setTitleColor(UIColor.white, for: .normal)
         btnCheck.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "Checked"), scaledToSize: CGSize(width: btnCheck.bounds.size.width, height: btnCheck.bounds.size.height)), for: .normal)
+    }
+    
+    func setFinishAppoinmentPopup(){
+        vwSubFinishAppoinment.layer.cornerRadius = 5.0
+        btnFinishEarly.roundedBottomRightButton()
+        btnNevermindAppoinment.roundedBottomLeftButton()
+        lbFinishDescription.frame = CGRect(x: self.lbFinishDescription.frame.origin.x, y: self.lbFinishDescription.frame.origin.y, width: self.lbFinishDescription.bounds.size.width, height: heightForView(text: lbFinishDescription.text!, font: lbFinishDescription.font, width: self.lbFinishDescription.bounds.size.width))
+        btnNevermindAppoinment.backgroundColor = UIColor.white
+        btnFinishEarly.backgroundColor = AppColor.redColor
+        btnNevermindAppoinment.setTitleColor(AppColor.redColor, for: .normal)
+        btnFinishEarly.setTitleColor(UIColor.white, for: .normal)
+    }
+    
+    
+    func setRating(){
+        vwSubRating.layer.cornerRadius = 5.0
+        btnSubmit.roundedBottomLeftButton()
+        btnSubmit.roundedBottomRightButton()
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -155,6 +183,13 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         {
             tblView.register(UINib(nibName:"MedicationPrompt",bundle : nil), forCellReuseIdentifier: "MedicationPrompt")
             let cell = tableView.dequeueReusableCell(withIdentifier: "MedicationPrompt", for: indexPath) as! MedicationPrompt
+            if(checked == true){
+                cell.btnCkeck.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "Checked"), scaledToSize: CGSize(width: btnCheck.bounds.size.width, height: btnCheck.bounds.size.height)), for: .normal)
+                cell.imgStatus.image = imageWithImage(#imageLiteral(resourceName: "Correct"), scaledToSize: CGSize(width: cell.imgStatus.bounds.size.width, height: cell.imgStatus.bounds.size.height))
+            }else{
+                cell.btnCkeck.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "Unchecked"), scaledToSize: CGSize(width: btnCheck.bounds.size.width, height: btnCheck.bounds.size.height)), for: .normal)
+                cell.imgStatus.image = imageWithImage(#imageLiteral(resourceName: "Incorrect"), scaledToSize: CGSize(width: cell.imgStatus.bounds.size.width, height: cell.imgStatus.bounds.size.height))
+            }
             //            cell.lblDescription.text = str
             //            cell.lblDescription.numberOfLines = 0
             //            cell.lblDescription.lineBreakMode = NSLineBreakMode.byWordWrapping
@@ -192,6 +227,15 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
             var name = cell.lblName.text
             let vc = CareGiverChartViewProgressVC(nibName: "CareGiverChartViewProgressVC", bundle: nil)
             self.navigationController?.pushViewController(vc, animated: false)
+            
+        }else if indexPath.section == 1{
+            if(checked == true){
+                checked = false
+                tblView.reloadData()
+            }else{
+                checked = true
+                tblView.reloadData()
+            }
             
         }
        /* let vwMain = UIView()

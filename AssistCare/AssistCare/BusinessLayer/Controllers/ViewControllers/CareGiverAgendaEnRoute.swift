@@ -53,7 +53,8 @@ class CareGiverAgendaEnRoute: UIViewController,UITableViewDelegate,UITableViewDa
     }
     
     @IBAction func btnCarePlan(_ sender: Any) {
-        
+        let vc = CarePlanVC(nibName: "CarePlanVC", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: false)
     }
     
 }

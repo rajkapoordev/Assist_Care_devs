@@ -217,6 +217,24 @@
 		24562AE71E30D128000814C6 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562AE61E30D128000814C6 /* libc++.tbd */; };
 		24562AE91E30D132000814C6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562AE81E30D132000814C6 /* libz.tbd */; };
 		24562B061E30D7E8000814C6 /* GooglePlacePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24562B051E30D7E8000814C6 /* GooglePlacePicker.bundle */; };
+		249C93D81E4AE04C0050067B /* CareGiverAgendaEnRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C93D61E4AE04C0050067B /* CareGiverAgendaEnRoute.swift */; };
+		249C93DC1E4AE05F0050067B /* CareGiverAgendaEnRoute.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249C93DA1E4AE05F0050067B /* CareGiverAgendaEnRoute.xib */; };
+		249C93DF1E4B1A300050067B /* EventCalenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C93DE1E4B1A300050067B /* EventCalenderVC.swift */; };
+		249C93E11E4B1A500050067B /* EventCalenderVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249C93E01E4B1A500050067B /* EventCalenderVC.xib */; };
+		249C946E1E4B27740050067B /* DDCalendarEvent.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C94521E4B27740050067B /* DDCalendarEvent.m */; };
+		249C946F1E4B27740050067B /* DDCalendarEventView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C94541E4B27740050067B /* DDCalendarEventView.m */; };
+		249C94701E4B27740050067B /* DDCalendarHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C94561E4B27740050067B /* DDCalendarHeaderView.m */; };
+		249C94711E4B27740050067B /* DDCalendarHourLinesView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C94581E4B27740050067B /* DDCalendarHourLinesView.m */; };
+		249C94721E4B27740050067B /* DDCalendarSingleDayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C945A1E4B27740050067B /* DDCalendarSingleDayView.m */; };
+		249C94731E4B27740050067B /* DDCalendarDaysScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C945C1E4B27740050067B /* DDCalendarDaysScrollView.m */; };
+		249C94741E4B27740050067B /* DDCalendarView.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C945E1E4B27740050067B /* DDCalendarView.m */; };
+		249C94751E4B27740050067B /* NSDate+DDCalendar.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C94611E4B27740050067B /* NSDate+DDCalendar.m */; };
+		249C94761E4B27740050067B /* OBDragDropManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C94641E4B27740050067B /* OBDragDropManager.m */; };
+		249C94771E4B27740050067B /* OBLongPressDragDropGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C94671E4B27740050067B /* OBLongPressDragDropGestureRecognizer.m */; };
+		249C94781E4B27740050067B /* UIGestureRecognizer+OBDragDrop.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C94691E4B27740050067B /* UIGestureRecognizer+OBDragDrop.m */; };
+		249C94791E4B27740050067B /* UIView+OBDropZone.m in Sources */ = {isa = PBXBuildFile; fileRef = 249C946B1E4B27740050067B /* UIView+OBDropZone.m */; };
+		249C94911E4B2BA20050067B /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C94901E4B2BA20050067B /* EventView.swift */; };
+		249C94931E4B2BB50050067B /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C94921E4B2BB50050067B /* EventManager.swift */; };
 		30AA538A1E3B65200009640C /* DisplayReviewVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA53891E3B65200009640C /* DisplayReviewVC.swift */; };
 		30AA538C1E3B65480009640C /* DisplayReviewVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 30AA538B1E3B65480009640C /* DisplayReviewVC.xib */; };
 		30AA53971E3B71980009640C /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30AA53951E3B71980009640C /* ReviewCell.swift */; };
@@ -484,6 +502,39 @@
 		24562AE61E30D128000814C6 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		24562AE81E30D132000814C6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		24562B051E30D7E8000814C6 /* GooglePlacePicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlacePicker.bundle; sourceTree = "<group>"; };
+		249C93D61E4AE04C0050067B /* CareGiverAgendaEnRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareGiverAgendaEnRoute.swift; sourceTree = "<group>"; };
+		249C93DA1E4AE05F0050067B /* CareGiverAgendaEnRoute.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareGiverAgendaEnRoute.xib; sourceTree = "<group>"; };
+		249C93DE1E4B1A300050067B /* EventCalenderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCalenderVC.swift; sourceTree = "<group>"; };
+		249C93E01E4B1A500050067B /* EventCalenderVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventCalenderVC.xib; sourceTree = "<group>"; };
+		249C94511E4B27740050067B /* DDCalendarEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarEvent.h; sourceTree = "<group>"; };
+		249C94521E4B27740050067B /* DDCalendarEvent.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarEvent.m; sourceTree = "<group>"; };
+		249C94531E4B27740050067B /* DDCalendarEventView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarEventView.h; sourceTree = "<group>"; };
+		249C94541E4B27740050067B /* DDCalendarEventView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarEventView.m; sourceTree = "<group>"; };
+		249C94551E4B27740050067B /* DDCalendarHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarHeaderView.h; sourceTree = "<group>"; };
+		249C94561E4B27740050067B /* DDCalendarHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarHeaderView.m; sourceTree = "<group>"; };
+		249C94571E4B27740050067B /* DDCalendarHourLinesView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarHourLinesView.h; sourceTree = "<group>"; };
+		249C94581E4B27740050067B /* DDCalendarHourLinesView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarHourLinesView.m; sourceTree = "<group>"; };
+		249C94591E4B27740050067B /* DDCalendarSingleDayView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarSingleDayView.h; sourceTree = "<group>"; };
+		249C945A1E4B27740050067B /* DDCalendarSingleDayView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarSingleDayView.m; sourceTree = "<group>"; };
+		249C945B1E4B27740050067B /* DDCalendarDaysScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarDaysScrollView.h; sourceTree = "<group>"; };
+		249C945C1E4B27740050067B /* DDCalendarDaysScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarDaysScrollView.m; sourceTree = "<group>"; };
+		249C945D1E4B27740050067B /* DDCalendarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarView.h; sourceTree = "<group>"; };
+		249C945E1E4B27740050067B /* DDCalendarView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDCalendarView.m; sourceTree = "<group>"; };
+		249C945F1E4B27740050067B /* DDCalendarViewConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDCalendarViewConstants.h; sourceTree = "<group>"; };
+		249C94601E4B27740050067B /* NSDate+DDCalendar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+DDCalendar.h"; sourceTree = "<group>"; };
+		249C94611E4B27740050067B /* NSDate+DDCalendar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+DDCalendar.m"; sourceTree = "<group>"; };
+		249C94621E4B27740050067B /* OBDragDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBDragDrop.h; sourceTree = "<group>"; };
+		249C94631E4B27740050067B /* OBDragDropManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBDragDropManager.h; sourceTree = "<group>"; };
+		249C94641E4B27740050067B /* OBDragDropManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBDragDropManager.m; sourceTree = "<group>"; };
+		249C94651E4B27740050067B /* OBDragDropProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBDragDropProtocol.h; sourceTree = "<group>"; };
+		249C94661E4B27740050067B /* OBLongPressDragDropGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OBLongPressDragDropGestureRecognizer.h; sourceTree = "<group>"; };
+		249C94671E4B27740050067B /* OBLongPressDragDropGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OBLongPressDragDropGestureRecognizer.m; sourceTree = "<group>"; };
+		249C94681E4B27740050067B /* UIGestureRecognizer+OBDragDrop.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIGestureRecognizer+OBDragDrop.h"; sourceTree = "<group>"; };
+		249C94691E4B27740050067B /* UIGestureRecognizer+OBDragDrop.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIGestureRecognizer+OBDragDrop.m"; sourceTree = "<group>"; };
+		249C946A1E4B27740050067B /* UIView+OBDropZone.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+OBDropZone.h"; sourceTree = "<group>"; };
+		249C946B1E4B27740050067B /* UIView+OBDropZone.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+OBDropZone.m"; sourceTree = "<group>"; };
+		249C94901E4B2BA20050067B /* EventView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EventView.swift; path = HCSStarRatingView/EventView.swift; sourceTree = "<group>"; };
+		249C94921E4B2BB50050067B /* EventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		30AA53891E3B65200009640C /* DisplayReviewVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayReviewVC.swift; sourceTree = "<group>"; };
 		30AA538B1E3B65480009640C /* DisplayReviewVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DisplayReviewVC.xib; sourceTree = "<group>"; };
 		30AA53951E3B71980009640C /* ReviewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
@@ -725,6 +776,7 @@
 		0CBA41E31E2CAA9A0008C8E4 /* AssistCare */ = {
 			isa = PBXGroup;
 			children = (
+				249C946D1E4B27740050067B /* DDCalendarView_objc */,
 				0C36E91C1E433B2100AA288A /* IQKeyboardManager */,
 				0CAC45F11E372FFA00C79AFA /* AppImages */,
 				24562B051E30D7E8000814C6 /* GooglePlacePicker.bundle */,
@@ -805,6 +857,7 @@
 		243705C61E2F49C100005416 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				249C93D61E4AE04C0050067B /* CareGiverAgendaEnRoute.swift */,
 				0C1A91771E45979D0033B34A /* PatientRatingServiceFilled.swift */,
 				0C7997291E449E910082AD16 /* DisplayReservationVC.swift */,
 				0C35140D1E44461A0005E773 /* PatientCalendarAppointmentVC.swift */,
@@ -851,6 +904,7 @@
 				0C7A159F1E3C7D690030D4D1 /* SignInVC.swift */,
 				0C3514111E4476DA0005E773 /* CareGiverMessageVC.swift */,
 				0C7997231E449C050082AD16 /* CalenderGraphVC.swift */,
+				249C93DE1E4B1A300050067B /* EventCalenderVC.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -859,6 +913,8 @@
 			isa = PBXGroup;
 			children = (
 				0C25E4681E483E2100D38889 /* HCSStarRatingView */,
+				249C94921E4B2BB50050067B /* EventManager.swift */,
+				249C94901E4B2BA20050067B /* EventView.swift */,
 				0C3514071E4442E80005E773 /* CustomDialogClass.swift */,
 				0C3514081E4442E80005E773 /* Validation.swift */,
 				24194F361E31E1BD00982135 /* MapAnnotation.swift */,
@@ -880,9 +936,10 @@
 		243705D31E2F49C100005416 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				243705D51E2F49C100005416 /* CellView */,
+				249C93DA1E4AE05F0050067B /* CareGiverAgendaEnRoute.xib */,
 				0C1A91751E4597870033B34A /* PatientRatingServiceFilled.xib */,
 				0C7997271E449E880082AD16 /* DisplayReservationVC.xib */,
-				243705D51E2F49C100005416 /* CellView */,
 				0C35140B1E4445FF0005E773 /* PatientCalendarAppointmentVC.xib */,
 				0C3513F71E4442450005E773 /* CareGiverCalenderAppoinmentVC.xib */,
 				0C3513F81E4442450005E773 /* CareGiverNotificationVC.xib */,
@@ -926,6 +983,7 @@
 				0C7A15A11E3C7D740030D4D1 /* SignInVC.xib */,
 				0C35140F1E4476BF0005E773 /* CareGiverMessageVC.xib */,
 				0C7997251E449C1B0082AD16 /* CalenderGraphVC.xib */,
+				249C93E01E4B1A500050067B /* EventCalenderVC.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -992,6 +1050,49 @@
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
+		};
+		249C946C1E4B27740050067B /* OBDragDrop */ = {
+			isa = PBXGroup;
+			children = (
+				249C94621E4B27740050067B /* OBDragDrop.h */,
+				249C94631E4B27740050067B /* OBDragDropManager.h */,
+				249C94641E4B27740050067B /* OBDragDropManager.m */,
+				249C94651E4B27740050067B /* OBDragDropProtocol.h */,
+				249C94661E4B27740050067B /* OBLongPressDragDropGestureRecognizer.h */,
+				249C94671E4B27740050067B /* OBLongPressDragDropGestureRecognizer.m */,
+				249C94681E4B27740050067B /* UIGestureRecognizer+OBDragDrop.h */,
+				249C94691E4B27740050067B /* UIGestureRecognizer+OBDragDrop.m */,
+				249C946A1E4B27740050067B /* UIView+OBDropZone.h */,
+				249C946B1E4B27740050067B /* UIView+OBDropZone.m */,
+			);
+			path = OBDragDrop;
+			sourceTree = "<group>";
+		};
+		249C946D1E4B27740050067B /* DDCalendarView_objc */ = {
+			isa = PBXGroup;
+			children = (
+				249C94511E4B27740050067B /* DDCalendarEvent.h */,
+				249C94521E4B27740050067B /* DDCalendarEvent.m */,
+				249C94531E4B27740050067B /* DDCalendarEventView.h */,
+				249C94541E4B27740050067B /* DDCalendarEventView.m */,
+				249C94551E4B27740050067B /* DDCalendarHeaderView.h */,
+				249C94561E4B27740050067B /* DDCalendarHeaderView.m */,
+				249C94571E4B27740050067B /* DDCalendarHourLinesView.h */,
+				249C94581E4B27740050067B /* DDCalendarHourLinesView.m */,
+				249C94591E4B27740050067B /* DDCalendarSingleDayView.h */,
+				249C945A1E4B27740050067B /* DDCalendarSingleDayView.m */,
+				249C945B1E4B27740050067B /* DDCalendarDaysScrollView.h */,
+				249C945C1E4B27740050067B /* DDCalendarDaysScrollView.m */,
+				249C945D1E4B27740050067B /* DDCalendarView.h */,
+				249C945E1E4B27740050067B /* DDCalendarView.m */,
+				249C945F1E4B27740050067B /* DDCalendarViewConstants.h */,
+				249C94601E4B27740050067B /* NSDate+DDCalendar.h */,
+				249C94611E4B27740050067B /* NSDate+DDCalendar.m */,
+				249C946C1E4B27740050067B /* OBDragDrop */,
+			);
+			name = DDCalendarView_objc;
+			path = "/Users/itilak/Downloads/DDCalendarView-master/Demos/CalendarDemo_objc/../../DDCalendarView_objc";
+			sourceTree = "<absolute>";
 		};
 /* End PBXGroup section */
 
@@ -1066,6 +1167,7 @@
 				TargetAttributes = {
 					0CBA41E01E2CAA9A0008C8E4 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Z29NEKZ6C4;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Manual;
 					};
@@ -1174,6 +1276,7 @@
 				24562AB21E30963B000814C6 /* AppointmentVC.xib in Resources */,
 				0C3CD1E61E43210500B24536 /* Verified.png in Resources */,
 				0C3CD1E41E43210500B24536 /* payment.png in Resources */,
+				249C93DC1E4AE05F0050067B /* CareGiverAgendaEnRoute.xib in Resources */,
 				0CBA41EC1E2CAA9A0008C8E4 /* Assets.xcassets in Resources */,
 				0C91A8A71E3230530000955E /* PersonHistoryCell.xib in Resources */,
 				0C19A2BA1E3731B30014B01C /* back_nav.png in Resources */,
@@ -1184,6 +1287,7 @@
 				0C6744F81E42F8BF0085C831 /* ReservationCell.xib in Resources */,
 				243705F51E2F49C100005416 /* VerificationVC.xib in Resources */,
 				0C7A15A21E3C7D740030D4D1 /* SignInVC.xib in Resources */,
+				249C93E11E4B1A500050067B /* EventCalenderVC.xib in Resources */,
 				0CAC45DA1E3721FA00C79AFA /* GoogleSignIn.bundle in Resources */,
 				0C7997261E449C1B0082AD16 /* CalenderGraphVC.xib in Resources */,
 				24562AB31E30963B000814C6 /* PaymentDetailsVc.xib in Resources */,
@@ -1309,7 +1413,9 @@
 				0C6744EB1E42F8A60085C831 /* CareGiverAgendaCell.swift in Sources */,
 				30AA538A1E3B65200009640C /* DisplayReviewVC.swift in Sources */,
 				0C36E93D1E433B2100AA288A /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				249C94791E4B27740050067B /* UIView+OBDropZone.m in Sources */,
 				0C35140A1E4442E80005E773 /* Validation.swift in Sources */,
+				249C94741E4B27740050067B /* DDCalendarView.m in Sources */,
 				0C6744EF1E42F8A60085C831 /* SearchResultCell.swift in Sources */,
 				0C6744DF1E42F8980085C831 /* CareGiverAgendaVC.swift in Sources */,
 				30EDB3891E3C8DFD0090C5C2 /* BookingVC.swift in Sources */,
@@ -1317,17 +1423,22 @@
 				0CA0B7491E38B9D60066D0EA /* FriendBookedCell.swift in Sources */,
 				0C3514041E4442600005E773 /* CareGiverNotificationVC.swift in Sources */,
 				0C36E9371E433B2100AA288A /* IQUIView+Hierarchy.swift in Sources */,
+				249C94731E4B27740050067B /* DDCalendarDaysScrollView.m in Sources */,
 				243705E91E2F49C100005416 /* VerificationVC.swift in Sources */,
 				0C811F601E3C8EA2008A578C /* ReferenceCell.swift in Sources */,
 				0C19A2E61E3731EF0014B01C /* FSCalendarConstants.m in Sources */,
 				0C36E93F1E433B2100AA288A /* IQBarButtonItem.swift in Sources */,
 				0C19A2E11E3731EF0014B01C /* FSCalendarAppearance.m in Sources */,
+				249C93DF1E4B1A300050067B /* EventCalenderVC.swift in Sources */,
 				0C19A2E51E3731EF0014B01C /* FSCalendarCollectionViewLayout.m in Sources */,
+				249C94711E4B27740050067B /* DDCalendarHourLinesView.m in Sources */,
 				0C36E9411E433B2100AA288A /* IQTitleBarButtonItem.swift in Sources */,
 				0C6744E31E42F8980085C831 /* NumOfReservationVC.swift in Sources */,
 				0C811F521E3C8DE8008A578C /* OtherCertificateCell.swift in Sources */,
 				0C6744ED1E42F8A60085C831 /* MedicationPrompt.swift in Sources */,
+				249C93D81E4AE04C0050067B /* CareGiverAgendaEnRoute.swift in Sources */,
 				0C811F711E3CACD2008A578C /* TermAndConditionVC.swift in Sources */,
+				249C94721E4B27740050067B /* DDCalendarSingleDayView.m in Sources */,
 				0C19A2DF1E3731EF0014B01C /* FSCalendar.m in Sources */,
 				0C19A2EC1E3731EF0014B01C /* FSCalendarStickyHeader.m in Sources */,
 				0C36E9391E433B2100AA288A /* IQUIWindow+Hierarchy.swift in Sources */,
@@ -1346,21 +1457,25 @@
 				0CA0B73E1E38A8950066D0EA /* searchCareGiverOnMapVC.swift in Sources */,
 				0C3514031E4442600005E773 /* CareGiverCalenderAppoinmentVC.swift in Sources */,
 				0C1A91781E45979D0033B34A /* PatientRatingServiceFilled.swift in Sources */,
+				249C946E1E4B27740050067B /* DDCalendarEvent.m in Sources */,
 				0C3514051E4442600005E773 /* PatientCareGiverRoute.swift in Sources */,
 				24562AAC1E309608000814C6 /* AppointmentVC.swift in Sources */,
 				0C3514121E4476DA0005E773 /* CareGiverMessageVC.swift in Sources */,
 				243705E51E2F49C100005416 /* MedicationVC.swift in Sources */,
+				249C946F1E4B27740050067B /* DDCalendarEventView.m in Sources */,
 				0C811F4E1E3C8DBB008A578C /* CreateProfileThird.swift in Sources */,
 				0CBA41E51E2CAA9A0008C8E4 /* AppDelegate.swift in Sources */,
 				0C6744EC1E42F8A60085C831 /* MealPreparation.swift in Sources */,
 				0C19A2EB1E3731EF0014B01C /* FSCalendarScopeHandle.m in Sources */,
 				0C36E9351E433B2100AA288A /* IQUIScrollView+Additions.swift in Sources */,
 				0CA0B73A1E38A8630066D0EA /* CareGiverDetailVC.swift in Sources */,
+				249C94911E4B2BA20050067B /* EventView.swift in Sources */,
 				0C6744E51E42F8980085C831 /* SearchResultVC.swift in Sources */,
 				30EDB3951E3CC80B0090C5C2 /* BookingEditVC.swift in Sources */,
 				243705E31E2F49C100005416 /* CategoryVC.swift in Sources */,
 				0C36E9361E433B2100AA288A /* IQUITextFieldView+Additions.swift in Sources */,
 				0C19A2E81E3731EF0014B01C /* FSCalendarDelegationProxy.m in Sources */,
+				249C94701E4B27740050067B /* DDCalendarHeaderView.m in Sources */,
 				244EF67D1E44771600F14724 /* TblCell.swift in Sources */,
 				0C811F771E3CC076008A578C /* EditProfileCareGiver.swift in Sources */,
 				243130BB1E2F98DA006F24D4 /* NewAppoinmentVC.swift in Sources */,
@@ -1371,6 +1486,7 @@
 				0CA0B7441E38AEE70066D0EA /* FriendsBookedVC.swift in Sources */,
 				0C19A2E41E3731EF0014B01C /* FSCalendarCollectionView.m in Sources */,
 				0C6744EE1E42F8A60085C831 /* ReservationCell.swift in Sources */,
+				249C94781E4B27740050067B /* UIGestureRecognizer+OBDragDrop.m in Sources */,
 				0C6744E01E42F8980085C831 /* CareGiverBeginServices.swift in Sources */,
 				0C91A89B1E320BFC0000955E /* ReferealVC.swift in Sources */,
 				0C91A8971E31F51E0000955E /* AppoinmentHeaderCell.swift in Sources */,
@@ -1381,10 +1497,12 @@
 				0C19A2EA1E3731EF0014B01C /* FSCalendarHeaderView.m in Sources */,
 				0C36E93E1E433B2100AA288A /* IQTextView.swift in Sources */,
 				243705E41E2F49C100005416 /* EditProfile.swift in Sources */,
+				249C94931E4B2BB50050067B /* EventManager.swift in Sources */,
 				0C811F4D1E3C8DBB008A578C /* CreateProfileSecond.swift in Sources */,
 				0C36E9431E433B2100AA288A /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				0C811F511E3C8DE8008A578C /* CirtificateCell.swift in Sources */,
 				243705EC1E2F49C100005416 /* Extension.swift in Sources */,
+				249C94771E4B27740050067B /* OBLongPressDragDropGestureRecognizer.m in Sources */,
 				0C4E923A1E3CC4E600FD34E3 /* CareGiverProfileDetailVC.swift in Sources */,
 				0C6744E11E42F8980085C831 /* CareGiverChartViewProgressVC.swift in Sources */,
 				0C7A15A01E3C7D690030D4D1 /* SignInVC.swift in Sources */,
@@ -1392,11 +1510,13 @@
 				243705EA1E2F49C100005416 /* AppDesign.swift in Sources */,
 				0C811F4C1E3C8DBB008A578C /* CreateProfileFour.swift in Sources */,
 				0C3514091E4442E80005E773 /* CustomDialogClass.swift in Sources */,
+				249C94751E4B27740050067B /* NSDate+DDCalendar.m in Sources */,
 				24562AAE1E309608000814C6 /* ThanksVc.swift in Sources */,
 				0C19A2EE1E3731EF0014B01C /* FSCalendarWeekdayView.m in Sources */,
 				0CAC45EE1E372F3900C79AFA /* PaymentCardDetailCell.swift in Sources */,
 				30EDB3911E3CB57A0090C5C2 /* BookInstructionVC.swift in Sources */,
 				0C19A2ED1E3731EF0014B01C /* FSCalendarTransitionCoordinator.m in Sources */,
+				249C94761E4B27740050067B /* OBDragDropManager.m in Sources */,
 				24562AAD1E309608000814C6 /* PaymentDetailsVc.swift in Sources */,
 				0C19A2E21E3731EF0014B01C /* FSCalendarCalculator.m in Sources */,
 				0C19A2E01E3731EF0014B01C /* FSCalendar+Deprecated.m in Sources */,
@@ -1549,7 +1669,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lior Zelering (TKVV26PMPU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lior Zelering (TKVV26PMPU)";
+				DEVELOPMENT_TEAM = Z29NEKZ6C4;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1558,9 +1681,11 @@
 				INFOPLIST_FILE = AssistCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.assistcare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quizment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "AssistCare-Bridging-Header.h";
+				PROVISIONING_PROFILE = "c7d39a41-aa71-46d0-b999-91751fb2ddba";
+				PROVISIONING_PROFILE_SPECIFIER = Quizment;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/itilak/Desktop/AssistCareProject/AssistCare/AssistCare/AssistCare-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1571,7 +1696,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: Lior Zelering (TKVV26PMPU)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lior Zelering (TKVV26PMPU)";
+				DEVELOPMENT_TEAM = Z29NEKZ6C4;
+				ENABLE_BITCODE = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1580,9 +1708,11 @@
 				INFOPLIST_FILE = AssistCare/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
-				PRODUCT_BUNDLE_IDENTIFIER = com.lanetteam.assistcare;
+				PRODUCT_BUNDLE_IDENTIFIER = com.quizment;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "AssistCare-Bridging-Header.h";
+				PROVISIONING_PROFILE = "c7d39a41-aa71-46d0-b999-91751fb2ddba";
+				PROVISIONING_PROFILE_SPECIFIER = Quizment;
+				"SWIFT_OBJC_BRIDGING_HEADER[arch=*]" = "/Users/itilak/Desktop/AssistCareProject/AssistCare/AssistCare/AssistCare-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

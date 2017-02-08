@@ -39,8 +39,8 @@ class ThanksVc: UIViewController {
         let defaults = UserDefaults.standard
         let page = defaults.value(forKey: "UserRole") as! String
         if !(page == "Patient"){
-            let vc = ReferealVC(nibName: "ReferealVC", bundle: nil)
-            self.navigationController?.pushViewController(vc, animated: true)
+            let vc = CategoryVC(nibName: "CategoryVC", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: false)
         }else{
             let vc = TabBarVC(nibName: "TabBarVC", bundle: nil)
             let nav = UINavigationController(rootViewController: vc)

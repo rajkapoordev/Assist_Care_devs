@@ -1,86 +1,88 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
-    <dict>
-        <key>CLIENT_ID</key>
-        <string>94840686265-tgvf57a49r5pve4l8lpe9cfkva05jepv.apps.googleusercontent.com</string>
-        <key>REVERSED_CLIENT_ID</key>
-        <string>com.googleusercontent.apps.94840686265-tgvf57a49r5pve4l8lpe9cfkva05jepv</string>
-        <key> NSLocationWhenInUseUsageDescription</key>
-        <string>This app wants access your location</string>
-        <key>CFBundleDevelopmentRegion</key>
-        <string>en</string>
-        <key>CFBundleExecutable</key>
-        <string>$(EXECUTABLE_NAME)</string>
-        <key>CFBundleIdentifier</key>
-        <string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
-        <key>CFBundleInfoDictionaryVersion</key>
-        <string>6.0</string>
-        <key>CFBundleName</key>
-        <string>$(PRODUCT_NAME)</string>
-        <key>CFBundlePackageType</key>
-        <string>APPL</string>
-        <key>CFBundleShortVersionString</key>
-        <string>1.0</string>
-        <key>CFBundleURLTypes</key>
-        <array>
-            <dict>
-                <key>CFBundleURLSchemes</key>
-                <array>
-                    <string>fb1895583467344589</string>
-                </array>
-            </dict>
-            <dict>
-                <key>CFBundleTypeRole</key>
-                <string>Editor</string>
-                <key>CFBundleURLName</key>
-                <string>com.lanetteam.assistcare</string>
-                <key>CFBundleURLSchemes</key>
-                <array>
-                    <string>com.lanetteam.assistcare</string>
-                </array>
-            </dict>
-        </array>
-        <key>CFBundleVersion</key>
-        <string>1</string>
-        <key>FacebookAppID</key>
-        <string>1895583467344589</string>
-        <key>FacebookDisplayName</key>
-        <string>Assist Care</string>
-        <key>LSApplicationQueriesSchemes</key>
-        <array>
-            <string>fbauth2</string>
-        </array>
-        <key>LSRequiresIPhoneOS</key>
-        <true/>
-        <key>NSLocationAlwaysUsageDescription</key>
-        <string>This application requires location services to work</string>
-        <key>NSLocationWhenInUseUsageDescription</key>
-        <string>This application requires location services to work</string>
-        <key>NSPhotoLibraryUsageDescription</key>
-        <string></string>
-        <key>Privacy - Photo Library Usage Description [ NSPhotoLibraryUsageDescription ]</key>
-        <string>Allow to access</string>
-        <key>UILaunchStoryboardName</key>
-        <string>LaunchScreen</string>
-        <key>UIRequiredDeviceCapabilities</key>
-        <array>
-            <string>armv7</string>
-        </array>
-        <key>UISupportedInterfaceOrientations</key>
-        <array>
-            <string>UIInterfaceOrientationPortrait</string>
-            <string>UIInterfaceOrientationLandscapeLeft</string>
-            <string>UIInterfaceOrientationLandscapeRight</string>
-        </array>
-        <key>UISupportedInterfaceOrientations~ipad</key>
-        <array>
-            <string>UIInterfaceOrientationPortrait</string>
-            <string>UIInterfaceOrientationPortraitUpsideDown</string>
-            <string>UIInterfaceOrientationLandscapeLeft</string>
-            <string>UIInterfaceOrientationLandscapeRight</string>
-        </array>
-        <key>privacy - location usage description</key>
-        <string>Do you allow this app to know your current location?</string>
-    </dict>
+<dict>
+	<key> NSLocationWhenInUseUsageDescription</key>
+	<string>This app wants access your location</string>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+    <key>NSCalendarsUsageDescription</key>
+    <string>Loads and shows events from local calendar</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1895583467344589</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>com.lanetteam.assistcare</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.lanetteam.assistcare</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>1</string>
+	<key>CLIENT_ID</key>
+	<string>94840686265-tgvf57a49r5pve4l8lpe9cfkva05jepv.apps.googleusercontent.com</string>
+	<key>FacebookAppID</key>
+	<string>1895583467344589</string>
+	<key>FacebookDisplayName</key>
+	<string>Assist Care</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbauth2</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This application requires location services to work</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This application requires location services to work</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string></string>
+	<key>Privacy - Photo Library Usage Description [ NSPhotoLibraryUsageDescription ]</key>
+	<string>Allow to access</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.94840686265-tgvf57a49r5pve4l8lpe9cfkva05jepv</string>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>privacy - location usage description</key>
+	<string>Do you allow this app to know your current location?</string>
+</dict>
 </plist>

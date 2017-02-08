@@ -37,7 +37,6 @@ class CareGiverAgendaVC: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     func setInterface(){
         vwStatusBar.backgroundColor = AppColor.redStatusBar
         mapView.delegate = self
-        self.tabBarController?.tabBar.isHidden = true
         imgProfile.setRounded()
         lbUpcomingBooking.backgroundColor = AppColor.grayColor
         self.tabBarController?.tabBar.isHidden = false
