@@ -11,8 +11,9 @@ import MapKit
 import Foundation
 class CareGiverBeginServices: UIViewController,MKMapViewDelegate,CLLocationManagerDelegate {
 
+    @IBOutlet var vwBottom: UIView!
     @IBOutlet var scrollView: UIScrollView!
-    
+    @IBOutlet var btnArrived: UIButton!
     @IBOutlet var vwStatusBar: UIView!
     @IBOutlet var lblAddress: UILabel!
     @IBOutlet var lblTime: UILabel!
@@ -20,12 +21,23 @@ class CareGiverBeginServices: UIViewController,MKMapViewDelegate,CLLocationManag
     @IBOutlet var imgProfile: UIImageView!
     @IBOutlet var mapView: MKMapView!
     var locationManager = CLLocationManager()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        setInterface()
+        scrollView.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: self.vwBottom.frame.origin.y + self.vwBottom.bounds.size.height + 10)
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setInterface()
+    }
+    
+    func setInterface(){
         vwStatusBar.backgroundColor = AppColor.redStatusBar
         mapView.delegate = self
         imgProfile.setRounded()
-        self.tabBarController?.tabBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = false
         
         self.mapView.showsUserLocation = true
         if (CLLocationManager.locationServicesEnabled()) {
@@ -40,10 +52,13 @@ class CareGiverBeginServices: UIViewController,MKMapViewDelegate,CLLocationManag
             mapView.mapType = .standard
             
         }
-
-        // Do any additional setup after loading the view.
+ 
     }
     
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
         if let annotation = annotation as? MapAnnotation {
@@ -67,13 +82,10 @@ class CareGiverBeginServices: UIViewController,MKMapViewDelegate,CLLocationManag
     @IBAction func btnBack(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
+    
     @IBAction func btnArrivedClick(_ sender: UIButton) {
         let vc = CarePlanVC(nibName: "CarePlanVC", bundle: nil)
         navigationController?.pushViewController(vc, animated: true)
-    }
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
 }

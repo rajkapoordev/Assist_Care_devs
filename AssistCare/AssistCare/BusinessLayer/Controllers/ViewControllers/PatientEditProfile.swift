@@ -41,13 +41,17 @@ class PatientEditProfile: UIViewController,UITableViewDataSource,UITableViewDele
         tblView.tableHeaderView = vWTblHeader
         tblView.tableFooterView = vWFooter
         setUpUI()
-        self.tabBarController?.tabBar.isHidden = true
+        
 
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setUpUI()
     }
     
     func setUpUI()
@@ -63,6 +67,7 @@ class PatientEditProfile: UIViewController,UITableViewDataSource,UITableViewDele
         txtLname.setBottomBorder()
         vWAddress.setBottomBorderView()
         imgProfile.setRounded()
+        self.tabBarController?.tabBar.isHidden = true
     }
     
     //Navigation back

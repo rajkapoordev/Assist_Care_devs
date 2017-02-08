@@ -26,36 +26,40 @@ class CareGiverAgendaVC: UIViewController,MKMapViewDelegate,CLLocationManagerDel
     @IBOutlet var mapView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        setInterface()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setInterface()
+    }
+    
+    func setInterface(){
         vwStatusBar.backgroundColor = AppColor.redStatusBar
         mapView.delegate = self
         self.tabBarController?.tabBar.isHidden = true
         imgProfile.setRounded()
         lbUpcomingBooking.backgroundColor = AppColor.grayColor
+        self.tabBarController?.tabBar.isHidden = false
         
+        self.mapView.showsUserLocation = true
+        if (CLLocationManager.locationServicesEnabled()) {
+            locationManager.delegate = self
+            locationManager.desiredAccuracy = kCLLocationAccuracyBest
+            locationManager.distanceFilter = kCLDistanceFilterNone
+            locationManager.requestWhenInUseAuthorization()
+            locationManager.requestAlwaysAuthorization()
+            locationManager.startMonitoringSignificantLocationChanges()
+            locationManager.startUpdatingLocation()
+            mapView.showsUserLocation = true
+            mapView.mapType = .standard
             
-            self.mapView.showsUserLocation = true
-            if (CLLocationManager.locationServicesEnabled()) {
-                locationManager.delegate = self
-                locationManager.desiredAccuracy = kCLLocationAccuracyBest
-                locationManager.distanceFilter = kCLDistanceFilterNone
-                locationManager.requestWhenInUseAuthorization()
-                locationManager.requestAlwaysAuthorization()
-                locationManager.startMonitoringSignificantLocationChanges()
-                locationManager.startUpdatingLocation()
-                mapView.showsUserLocation = true
-                mapView.mapType = .standard
-                
-            } else {
-                print("Location services are not enabled");
-            }
-            mapView.delegate = self
-            
-        
+        } else {
+            print("Location services are not enabled");
+        }
+        mapView.delegate = self
 
-
-        // Do any additional setup after loading the view.
     }
-    
     
     @IBAction func btnMyWayClick(_ sender: UIButton) {
         let vc = CareGiverBeginServices(nibName: "CareGiverBeginServices", bundle: nil)

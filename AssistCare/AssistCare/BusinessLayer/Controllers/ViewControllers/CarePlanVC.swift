@@ -11,15 +11,31 @@ import UIKit
 class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     @IBOutlet var vwStatusBar: UIView!
-   
+    
+    //view Finish Appoinment
+    
+    @IBOutlet var vwFinishAppoinment: UIView!
+    @IBOutlet var vwSubFinishAppoinment: UIView!
+    @IBOutlet var btnNevermindAppoinment: UIButton!
+    @IBOutlet var btnFinishEarly: UIButton!
+    @IBOutlet var lbFinishAppoinment: UILabel!
+    
+   //view Finish Services
+    
+    @IBOutlet var vwFinishServices: UIView!
+    @IBOutlet var vwSubFinishServices: UIView!
+    @IBOutlet var btnNevermind: UIButton!
+    @IBOutlet var btnFinish: UIButton!
+    @IBOutlet var lbFinishServiceEarly: UILabel!
+    @IBOutlet var lbDescription: UILabel!
+    @IBOutlet var lbNameOfMedication: UILabel!
+    @IBOutlet var lbTimeforMedicine: UILabel!
+    @IBOutlet var btnCheck: UIButton!
+    
     //Navigation Bar
     @IBOutlet var btnNavBack: UIButton!
     @IBOutlet var vwNavBar: UIView!
     @IBOutlet var lblNavTitle: UILabel!
-    
-    @IBOutlet var btnCheck: UIButton!
-    @IBOutlet var btnFinish: UIButton!
-    @IBOutlet var btnNevermind: UIButton!
     
     @IBOutlet var tblView: UITableView!
     var customView = UIView()
@@ -38,7 +54,7 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         addCustomeView()
         setInterface()
         tblView.tableFooterView = customView
-        self.tabBarController?.tabBar.isHidden = true
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     @IBAction func btnCheckClick(_ sender: UIButton) {
@@ -53,21 +69,26 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     }
     
     
+    
     func setInterface() {
         self.navigationController?.navigationBar.isHidden = true
         vwStatusBar.backgroundColor = AppColor.redStatusBar
         vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
 
-        self.vWPopup.layer.cornerRadius = 5;
+       // self.vWPopup.layer.cornerRadius = 5;
         let transperentView = UIView(frame: UIScreen.main.bounds)
         transperentView.backgroundColor = UIColor(colorLiteralRed: 0, green: 0, blue: 0, alpha: 0.35)
         
+        
         if !self.view.subviews.contains(transperentView) {
             self.view.addSubview(transperentView)
-            self.view.addSubview(vWPopup)
-            
-            vWPopup.layer.shadowColor = UIColor.gray.cgColor
+            self.setFinishEarlyPopup()
+            self.view.addSubview(vwFinishServices)
+        
+        }
+        
+           /* vWPopup.layer.shadowColor = UIColor.gray.cgColor
             vWPopup.layer.shadowOpacity = 2
             vWPopup.layer.shadowOffset = CGSize.zero
             vWPopup.layer.shadowRadius = 5
@@ -79,14 +100,12 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
             self.btnNevermind.layer.backgroundColor = AppColor.skyColor.cgColor
             self.btnNevermind.layer.mask = rectShape
             
-            
-            
             rectShape.bounds = self.btnFinish.frame
             rectShape.position = self.btnFinish.center
             rectShape.path = UIBezierPath(roundedRect: self.btnFinish.bounds, byRoundingCorners: [.bottomLeft , .bottomRight], cornerRadii: CGSize(width: 5, height: 5)).cgPath
             self.btnFinish.layer.backgroundColor = AppColor.skyColor.cgColor
             self.btnFinish.layer.mask = rectShape
-        }
+        }*/
     }
     
     func setValue()
@@ -101,6 +120,18 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         {
             isArrExpand.add(false)
         }
+    }
+    
+    func setFinishEarlyPopup(){
+        vwSubFinishServices.layer.cornerRadius = 5.0
+        self.btnFinish.roundedBottomRightButton()
+        self.btnNevermind.roundedBottomLeftButton()
+        lbDescription.frame = CGRect(x: self.lbDescription.frame.origin.x, y: self.lbDescription.frame.origin.y, width: self.lbDescription.bounds.size.width, height: heightForView(text: lbDescription.text!, font: lbDescription.font, width: self.lbDescription.bounds.size.width))
+        btnNevermind.backgroundColor = UIColor.white
+        btnFinish.backgroundColor = AppColor.skyColor
+        btnNevermind.setTitleColor(AppColor.skyColor, for: .normal)
+        btnFinish.setTitleColor(UIColor.white, for: .normal)
+        btnCheck.setBackgroundImage(imageWithImage(#imageLiteral(resourceName: "Checked"), scaledToSize: CGSize(width: btnCheck.bounds.size.width, height: btnCheck.bounds.size.height)), for: .normal)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -130,6 +161,15 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
             //            cell.lblDescription.sizeToFit()
             return cell
             
+        }else if indexPath.section == 2
+        {
+            tblView.register(UINib(nibName:"CareGiverAgendaCell",bundle : nil), forCellReuseIdentifier: "CareGiverAgendaCell")
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CareGiverAgendaCell", for: indexPath) as! CareGiverAgendaCell
+            cell.btnMsg.isHidden =   true
+            cell.lbDate.isHidden = false
+            cell.lbDate.text = "Feb.28"
+            return cell
+            
         }
         else
         {
@@ -147,11 +187,18 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vwMain = UIView()
+        if indexPath.section == 2{
+            let cell = tableView.cellForRow(at: indexPath) as! CareGiverAgendaCell
+            var name = cell.lblName.text
+            let vc = CareGiverChartViewProgressVC(nibName: "CareGiverChartViewProgressVC", bundle: nil)
+            self.navigationController?.pushViewController(vc, animated: false)
+            
+        }
+       /* let vwMain = UIView()
         vwMain.frame = CGRect(x: 0, y: 0, width: ScreenSize.SCREEN_WIDTH, height: ScreenSize.SCREEN_HEIGHT)
         vWPopup.center = CGPoint(x: vwMain.frame.size.width  / 2, y: vwMain.frame.size.height / 2)
         vwMain.addSubview(vWPopup)
-        appDelegate().window?.addSubview(vwMain)
+        appDelegate().window?.addSubview(vwMain)*/
         //        self.view.addSubview(vwMain)
     }
     
@@ -162,9 +209,9 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.section == 1{
-            return 100
+            return 60
         }else{
-            return str.height(constraintedWidth: tableView.frame.size.width, font: UIFont.systemFont(ofSize: 15))
+            return str.height(constraintedWidth: tableView.frame.size.width, font: UIFont.systemFont(ofSize: 15)) - 20
         }
     }
     
@@ -209,8 +256,6 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         headerView.addSubview(imgArrow)
         headerView.addSubview(btnClick)
         return headerView
-        
-        
     }
     
     @IBAction func btnNavBack(_ sender: UIButton) {
@@ -240,7 +285,7 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
         btnEndServiceEarly.setTitle("END SERVICE EARLY", for: .normal)
         btnEndServiceEarly.addTarget(self, action: #selector(nextClick), for: .touchUpInside)
         btnEndServiceEarly.titleLabel?.textColor = UIColor.red
-        btnEndServiceEarly.backgroundColor = UIColor.blue
+        btnEndServiceEarly.backgroundColor = AppColor.backColor
         btnEndServiceEarly.shadow()
         customView.addSubview(btnEndServiceEarly)
         
@@ -248,7 +293,7 @@ class CarePlanVC: UIViewController,UITableViewDataSource,UITableViewDelegate {
     
     func nextClick()
     {
-        let vc = CreateProfileFour(nibName: "CreateProfileFour", bundle: nil)
+        let vc = CareGiverAgendaEnRoute(nibName: "CareGiverAgendaEnRoute", bundle: nil)
         self.navigationController?.pushViewController(vc, animated: false)
         
     }

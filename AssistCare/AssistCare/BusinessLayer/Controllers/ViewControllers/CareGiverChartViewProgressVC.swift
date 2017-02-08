@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CareGiverChartViewProgressVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
+class CareGiverChartViewProgressVC: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout {
 
     
     @IBOutlet var vwStatusBar: UIView!
@@ -26,10 +26,16 @@ class CareGiverChartViewProgressVC: UIViewController,UICollectionViewDelegate,UI
     @IBOutlet var vwNavigation: UIView!
     @IBOutlet var lbNavigation: UILabel!
     @IBOutlet var btnBack: UIButton!
+    var name:String!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.setInterface()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        setInterface()
     }
     
     func setInterface(){
@@ -38,8 +44,10 @@ class CareGiverChartViewProgressVC: UIViewController,UICollectionViewDelegate,UI
         self.collServicesProvided.delegate = self
         self.collServicesProvided.dataSource = self
         self.collServicesProvided.register(UINib(nibName: "CareServicesCell", bundle: nil), forCellWithReuseIdentifier: "CareServicesCell")
-        imgPatient.layer.cornerRadius = imgPatient.bounds.size.width / 2
+        imgPatient.setRounded()
         self.tabBarController?.tabBar.isHidden = true
+        lbProgessReport.text = "The table view is not reloaded after the move operation - UITableView trusts you to change the underlying model list accordingly. If you have a bug in your implementation, the UI will show the moved cell as moved by the user, but the data object will have a different order."
+        lbProgessReport.frame = CGRect(x: self.lbProgessReport.frame.origin.x, y: self.lbProgessReport.frame.origin.y, width: self.lbProgessReport.bounds.size.width, height: heightForView(text: lbProgessReport.text!, font: lbProgessReport.font, width: self.lbProgessReport.bounds.size.width))
         
     }
 
@@ -79,12 +87,34 @@ class CareGiverChartViewProgressVC: UIViewController,UICollectionViewDelegate,UI
         let totalSpace = flowLayout.sectionInset.left
             + flowLayout.sectionInset.right
             + (flowLayout.minimumInteritemSpacing * CGFloat(numOfColumnsInRow - 1))
-        flowLayout.headerReferenceSize = CGSize(width: 320, height: 80)
-        
         let size = Int((collectionView.bounds.width - totalSpace) / CGFloat(numOfColumnsInRow))
-        //let items = (flowLayout.minimumInteritemSpacing * CGFloat(numOfColumnsInRow - 1))
+        let items = (flowLayout.minimumInteritemSpacing * CGFloat(numOfColumnsInRow - 1))
+         collServicesProvided.frame = CGRect(x: collServicesProvided.frame.origin.x, y: collServicesProvided.frame.origin.y, width: collServicesProvided.frame.width, height: (CGFloat(size) *  CGFloat(ceil(5/3)) + (items * CGFloat(ceil(5/3)))))
         return CGSize(width: size, height: size)
     }
 
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let selectedCell = collectionView.cellForItem(at: indexPath) as! CareServicesCell
+        
+        if selectedCell.isSelected == true
+        {
+            selectedCell.vWMark.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+            
+            selectedCell.vWMark.isHidden = false
+            selectedCell.imgMark.isHidden = false
+        }
+        else
+        {
+            selectedCell.vWMark.isHidden = true
+            selectedCell.imgMark.isHidden = true
+        }
+        
+        // var cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CareServicesCell", for: indexPath) as! CareServicesCell
+        
+    }
+    
+    @IBAction func btnBack(_ sender: Any) {
+        self.navigationController?.popViewController(animated: true)
+    }
 
 }
