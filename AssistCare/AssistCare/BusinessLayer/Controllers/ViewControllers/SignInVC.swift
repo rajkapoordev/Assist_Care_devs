@@ -76,9 +76,18 @@ class SignInVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
     }
     
     @IBAction func btnSignIn(_ sender: UIButton) {
-        
-              let varificationVC = VerificationVC(nibName: "VerificationVC", bundle: nil)
+        let defaults = UserDefaults.standard
+        let page = defaults.value(forKey: "UserRole") as! String
+
+       // if !(page == "Patient"){
+            let vc = TabBarVC(nibName: "TabBarVC", bundle: nil)
+            let nav = UINavigationController(rootViewController: vc)
+            nav.isNavigationBarHidden = true
+            appDelegate().window?.rootViewController = nav
+       /* }else{
+        let varificationVC = VerificationVC(nibName: "VerificationVC", bundle: nil)
         self.navigationController?.pushViewController(varificationVC, animated: true)
+        }*/
 
     }
     

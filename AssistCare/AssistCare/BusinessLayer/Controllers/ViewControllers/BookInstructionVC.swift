@@ -74,6 +74,22 @@ class BookInstructionVC: UIViewController,UITextViewDelegate {
         border.backgroundColor = AppColor.skyColor
         txvInstructions.superview!.insertSubview(border, aboveSubview: textView)
     }
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if (text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
+    }
+    // hides text fields
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        if (string == "\n") {
+            textField.resignFirstResponder()
+            return false
+        }
+        return true
+    }
     @IBAction func btnBackClicked(_ sender: Any) {
         self.navigationController!.popViewController(animated: true)
     }

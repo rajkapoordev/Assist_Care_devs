@@ -12,7 +12,7 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
     
     var selectedVC: Int = Int()
     var myVC1:UIViewController!
-    var myVC2 = CalenderGraphVC()
+    var myVC2 = EventCalenderVC()
     var myVC3 = CareGiverNotificationVC()
     var myVC4 = CareGiverMessageVC()
     let heightOfTabBar : CGFloat = 50
@@ -59,7 +59,7 @@ class TabBarVC:UITabBarController,UITabBarControllerDelegate {
             self.myVC1 = CareGiverAgendaVC(nibName: "CareGiverAgendaVC", bundle: nil)
         }
         
-        self.myVC2 = CalenderGraphVC(nibName: "CalenderGraphVC", bundle: nil)
+        self.myVC2 = EventCalenderVC(nibName: "EventCalenderVC", bundle: nil)
         self.myVC3 = CareGiverNotificationVC(nibName:"CareGiverNotificationVC", bundle: nil)
         self.myVC4 = CareGiverMessageVC(nibName:"CareGiverMessageVC", bundle: nil)
         
