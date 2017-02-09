@@ -20,10 +20,11 @@ class SearchResultVC: UIViewController,UITableViewDataSource,UITableViewDelegate
     
        override func viewDidLoad() {
         super.viewDidLoad()
-        vwStatusBar.backgroundColor = AppColor.redStatusBar
-        tblView.delegate = self
-        tblView.dataSource = self
-        self.tabBarController?.tabBar.isHidden = true
+        //vwStatusBar.backgroundColor = AppColor.redStatusBar
+       // tblView.delegate = self
+        //tblView.dataSource = self
+        //self.tabBarController?.tabBar.isHidden = true
+        
         // tblView.register(UINib(nibName:"TblCell",bundle : nil ), forCellReuseIdentifier: "TblCell")
 
     }

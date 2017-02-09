@@ -12,8 +12,8 @@ import EventKit
 class EventView: DDCalendarEventView {
     override var active : Bool {
         didSet {
-            var c = UIColor.red
-            if let ek = self.event.userInfo {
+            let c = UIColor(red: 182/255, green: 220/255, blue: 212/255, alpha: 1)
+            if (self.event.userInfo) != nil {
                 //c = UIColor()
             }
 

@@ -217,6 +217,7 @@
 		24562AE71E30D128000814C6 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562AE61E30D128000814C6 /* libc++.tbd */; };
 		24562AE91E30D132000814C6 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 24562AE81E30D132000814C6 /* libz.tbd */; };
 		24562B061E30D7E8000814C6 /* GooglePlacePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 24562B051E30D7E8000814C6 /* GooglePlacePicker.bundle */; };
+		246D3DA61E4C5FE6003F8F6C /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 246D3DA51E4C5FE6003F8F6C /* LocalAuthentication.framework */; };
 		249C93D81E4AE04C0050067B /* CareGiverAgendaEnRoute.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C93D61E4AE04C0050067B /* CareGiverAgendaEnRoute.swift */; };
 		249C93DC1E4AE05F0050067B /* CareGiverAgendaEnRoute.xib in Resources */ = {isa = PBXBuildFile; fileRef = 249C93DA1E4AE05F0050067B /* CareGiverAgendaEnRoute.xib */; };
 		249C93DF1E4B1A300050067B /* EventCalenderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 249C93DE1E4B1A300050067B /* EventCalenderVC.swift */; };
@@ -502,6 +503,7 @@
 		24562AE61E30D128000814C6 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
 		24562AE81E30D132000814C6 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		24562B051E30D7E8000814C6 /* GooglePlacePicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = GooglePlacePicker.bundle; sourceTree = "<group>"; };
+		246D3DA51E4C5FE6003F8F6C /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
 		249C93D61E4AE04C0050067B /* CareGiverAgendaEnRoute.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CareGiverAgendaEnRoute.swift; sourceTree = "<group>"; };
 		249C93DA1E4AE05F0050067B /* CareGiverAgendaEnRoute.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CareGiverAgendaEnRoute.xib; sourceTree = "<group>"; };
 		249C93DE1E4B1A300050067B /* EventCalenderVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventCalenderVC.swift; sourceTree = "<group>"; };
@@ -554,6 +556,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				246D3DA61E4C5FE6003F8F6C /* LocalAuthentication.framework in Frameworks */,
 				24562ADF1E30D0F9000814C6 /* UIKit.framework in Frameworks */,
 				0CAC45E41E37254300C79AFA /* Security.framework in Frameworks */,
 				0CAC45E21E37253C00C79AFA /* MediaPlayer.framework in Frameworks */,
@@ -1022,6 +1025,7 @@
 		24562ACB1E30D07D000814C6 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				246D3DA51E4C5FE6003F8F6C /* LocalAuthentication.framework */,
 				244EF6761E445E8F00F14724 /* FBSDKShareKit.framework */,
 				244EF6741E445E8B00F14724 /* FBSDKLoginKit.framework */,
 				244EF6721E445E8800F14724 /* FBSDKCoreKit.framework */,
@@ -1672,7 +1676,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lior Zelering (TKVV26PMPU)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lior Zelering (TKVV26PMPU)";
 				DEVELOPMENT_TEAM = Z29NEKZ6C4;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -1699,7 +1703,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer: Lior Zelering (TKVV26PMPU)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Lior Zelering (TKVV26PMPU)";
 				DEVELOPMENT_TEAM = Z29NEKZ6C4;
-				ENABLE_BITCODE = YES;
+				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",

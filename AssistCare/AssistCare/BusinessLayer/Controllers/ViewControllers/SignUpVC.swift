@@ -123,7 +123,12 @@ class SignUpVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate , GIDSi
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
+        if(textField == txtEmail){
+            txtPassword.becomeFirstResponder()
+        }else{
+            txtPassword.resignFirstResponder()
+        }
+        
         return true
     }
     

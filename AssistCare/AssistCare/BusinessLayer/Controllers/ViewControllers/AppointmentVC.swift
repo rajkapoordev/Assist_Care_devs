@@ -62,7 +62,7 @@ class AppointmentVC: UIViewController,MKMapViewDelegate, UISearchBarDelegate {
         let locationSearchTable = SearchResultVC(nibName: "SearchResultVC", bundle: nil)
         resultSearchController = UISearchController(searchResultsController: locationSearchTable)
         resultSearchController?.searchResultsUpdater = locationSearchTable
-        
+        self.view.bringSubview(toFront: SearchResultVC().view)
         let searchBar = resultSearchController!.searchBar
         searchBar.sizeToFit()
         searchBar.placeholder = "Search for places"

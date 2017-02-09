@@ -82,4 +82,8 @@ class SetupServicesVC: UIViewController,UITextFieldDelegate,UITableViewDelegate,
         return cell
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }

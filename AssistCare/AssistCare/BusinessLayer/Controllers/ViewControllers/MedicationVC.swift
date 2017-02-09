@@ -39,6 +39,7 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
     var selectedData:String!
     var tempButton:UIButton!
     var isOpened:Bool = false
+    var isFoodOpened:Bool = false
  
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -109,21 +110,22 @@ class MedicationVC: UIViewController,UIPickerViewDelegate,UIPickerViewDataSource
     }
 
     @IBAction func btnFood(_ sender: Any) {
-        if(isOpened == false){
+        if(isFoodOpened == false){
         self.tempButton = self.btnFood
         pickerView.reloadAllComponents()
         UIView.animate(withDuration: 0.6, animations:{self.vwOption.frame = CGRect(x: self.vwOption.frame.origin.x, y: (self.vwOption.frame.origin.y-self.vwOption.bounds.size.height), width: self.vwOption.bounds.size.width, height: self.vwOption.bounds.size.height)}, completion: { (bool) in
-            self.isOpened = true
+            self.isFoodOpened = true
         })
         }else{
            closePickerView()
-            self.isOpened = false
+            self.isFoodOpened = false
         }
     }
 
     @IBAction func btnDone(_ sender: Any) {
         closePickerView()
         self.isOpened = false
+        self.isFoodOpened = false
     }
     
     

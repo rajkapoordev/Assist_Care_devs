@@ -98,7 +98,7 @@ class CreateProfileFirst: UIViewController,UIPickerViewDelegate,UIPickerViewData
         }
         else
         {
-           scrollView.setContentOffset(CGPoint(x: 0.0, y: 0), animated: true)
+          // scrollView.setContentOffset(CGPoint(x: 0.0, y: 0), animated: true)
            // keyboardWillHide()
             textField.resignFirstResponder()
         }

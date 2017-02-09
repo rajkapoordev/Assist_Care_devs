@@ -79,7 +79,7 @@ class CareGiverDetailVC: UIViewController,UICollectionViewDelegate,UICollectionV
         vwNavBar.backgroundColor = AppColor.redColor
         lblNavTitle.textColor = UIColor.white
         self.automaticallyAdjustsScrollViewInsets = false
-        scrollViewMain.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: 787)
+        scrollViewMain.contentSize = CGSize(width: ScreenSize.SCREEN_WIDTH, height: btnBook.bounds.size.height + btnBook.frame.origin.y + 5)
         imgProfile.setRounded()
         imgCareGiverFB.setRounded()
         imgFbIcon.setRounded()
