@@ -24,11 +24,18 @@ class BookingEditVC: UIViewController {
     @IBOutlet var btnContinue: UIButton!
     @IBOutlet var swBook: UISwitch!
     
+    @IBOutlet var btnVisaPayment: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setInterface()
     }
    
+    @IBAction func btnVisaPayment(_ sender: Any) {
+        let vc = PaymentCardDetailVC(nibName: "PaymentCardDetailVC", bundle: nil)
+        self.navigationController?.pushViewController(vc, animated: true)
+    }
+    
     @IBAction func bookingChanged(_ sender: Any) {
         if swBook.isOn{
             vwDays.isHidden = false

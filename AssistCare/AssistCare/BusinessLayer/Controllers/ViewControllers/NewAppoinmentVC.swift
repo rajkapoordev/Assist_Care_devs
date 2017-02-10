@@ -250,28 +250,7 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         let locationManager = CLLocationManager()
         var resultSearchController:UISearchController? = nil
         
-        locationManager.delegate = self
-        locationManager.desiredAccuracy = kCLLocationAccuracyBest
-        locationManager.requestWhenInUseAuthorization()
-        
-        
-        let locationSearchTable = SearchResultVC(nibName: "SearchResultVC", bundle: nil)
-        
-        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
-        resultSearchController?.searchResultsUpdater = locationSearchTable
-        
-        let searchBar = resultSearchController!.searchBar
-        searchBar.sizeToFit()
-        searchBar.placeholder = "Search for places"
-        vWSearch.addSubview(searchBar)
-        //self.view.bringSubview(toFront: locationSearchTable)
-        //navigationItem.titleView = resultSearchController?.searchBar
-        resultSearchController?.hidesNavigationBarDuringPresentation = false
-        resultSearchController?.dimsBackgroundDuringPresentation = true
-        definesPresentationContext = true
-        locationSearchTable.mapView = mapView
-        locationSearchTable.handleMapSearchDelegate = self
-        
+
         self.collPrefferedServices.delegate = self
         self.collPrefferedServices.dataSource = self
         pickerView.delegate = self
@@ -281,6 +260,28 @@ class NewAppoinmentVC: UIViewController,UICollectionViewDataSource,UICollectionV
         
         self.collPrefferedServices.register(UINib(nibName: "AppoinmentHeaderCell", bundle: nil), forSupplementaryViewOfKind: UICollectionElementKindSectionHeader, withReuseIdentifier: "AppoinmentHeaderCell")
         self.setInterface()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        // locationManager.requestLocation()
+        // let locationSearchTable = storyboard!.instantiateViewController(withIdentifier: "LocationSearchTable") as! LocationSearchTable
+        
+        let locationSearchTable = SearchResultVC(nibName: "SearchResultVC", bundle: nil)
+        
+        resultSearchController = UISearchController(searchResultsController: locationSearchTable)
+        resultSearchController?.searchResultsUpdater = locationSearchTable
+        
+        let searchBar = resultSearchController!.searchBar
+        searchBar.sizeToFit()
+        searchBar.placeholder = "Search for places"
+        //vWSearch.addSubview(searchBar)
+        //navigationItem.titleView = resultSearchController?.searchBar
+        resultSearchController?.hidesNavigationBarDuringPresentation = false
+        resultSearchController?.dimsBackgroundDuringPresentation = true
+        definesPresentationContext = true
+        locationSearchTable.mapView = mapView
+        locationSearchTable.handleMapSearchDelegate = self
+
     }
     
     deinit {

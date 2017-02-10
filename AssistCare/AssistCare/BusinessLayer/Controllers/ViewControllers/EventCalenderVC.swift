@@ -12,9 +12,21 @@ import EventKitUI
 
 class EventCalenderVC: UIViewController, DDCalendarViewDelegate, DDCalendarViewDataSource, EKEventViewDelegate{
 
-    @IBOutlet var lbDay: UILabel!
+    
+    @IBOutlet var btnSun: UIButton!
+    @IBOutlet var btnThur: UIButton!
+    @IBOutlet var btnFri: UIButton!
+    @IBOutlet var btnMon: UIButton!
+    @IBOutlet var btnWed: UIButton!
+    @IBOutlet var btnTue: UIButton!
+    @IBOutlet var btnSat: UIButton!
+    @IBOutlet var btnAddSchedule: UIButton!
+    @IBOutlet var vwSchedule: UIView!
+    @IBOutlet var btnAdd: UIButton!
+    @IBOutlet var dayLabel: UILabel!
     @IBOutlet var calenderView: DDCalendarView!
-
+    @IBOutlet var vwNavigationBar: UIView!
+    @IBOutlet var vwStatusBar: UIView!
     
     var dict = Dictionary<Int, [DDCalendarEvent]>()
     var mgr = EventManager()
@@ -22,8 +34,26 @@ class EventCalenderVC: UIViewController, DDCalendarViewDelegate, DDCalendarViewD
     override func viewDidLoad() {
         super.viewDidLoad()
         self.calenderView.scrollDateToVisible(Date(), animated: false)
+        self.setInterface()
     }
    
+    func setInterface(){
+        self.vwStatusBar.backgroundColor = AppColor.skyStatusBar
+        self.vwNavigationBar.backgroundColor = AppColor.skyColor
+        self.btnAdd.backgroundColor = AppColor.skyColor
+        self.btnAdd.shadow()
+        self.btnAdd.layer.cornerRadius = self.btnAdd.bounds.size.width / 2
+        btnMon.layer.cornerRadius = btnMon.bounds.size.width / 2
+        btnTue.layer.cornerRadius = btnTue.bounds.size.width / 2
+        btnWed.layer.cornerRadius = btnWed.bounds.size.width / 2
+        btnThur.layer.cornerRadius = btnThur.bounds.size.width / 2
+        btnFri.layer.cornerRadius = btnFri.bounds.size.width / 2
+        btnSat.layer.cornerRadius = btnSat.bounds.size.width / 2
+        btnSun.layer .cornerRadius = btnSun.bounds.size.width / 2
+        btnAddSchedule.backgroundColor = AppColor.skyColor
+        
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
@@ -75,8 +105,16 @@ class EventCalenderVC: UIViewController, DDCalendarViewDelegate, DDCalendarViewD
     
     
     func calendarView(_ view: DDCalendarView, focussedOnDay date: Date) {
-        //self.lbDay.text = (date as NSDate).stringWithDateOnly()
-        
+        self.dayLabel.text = (date as NSDate).stringWithDateOnly()
+        if view.numberOfDays > 1 {
+            var num = Double(view.numberOfDays - 1)
+            var num2 = (60 * 60 * 24)
+            var toDate = date.addingTimeInterval(num * Double(num2))
+            self.dayLabel.text = "\((date as NSDate).stringWithDateOnly()!) - \((toDate as NSDate).stringWithDateOnly()!)"
+        }
+        else {
+            self.dayLabel.text = (date as NSDate).stringWithDateOnly()
+        }
         
         let days = (date as NSDate).days(from: Date())
         self.loadCachedEvents(days) { (events) -> Void in
@@ -167,6 +205,22 @@ class EventCalenderVC: UIViewController, DDCalendarViewDelegate, DDCalendarViewD
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    @IBAction func btnAdd(_ sender: Any) {
+        self.btnAdd.isHidden = true
+        self.tabBarController?.tabBar.isHidden = true
+        UIView.animate(withDuration: 0.6, animations:{self.vwSchedule.frame = CGRect(x: self.vwSchedule.frame.origin.x, y: (self.vwSchedule.frame.origin.y-self.vwSchedule.bounds.size.height), width: self.vwSchedule.bounds.size.width, height: self.vwSchedule.bounds.size.height)}, completion: { (bool) in
+            
+        })
+        
+    }
+    
+    @IBAction func btnAddSchedule(_ sender: Any) {
+        UIView.animate(withDuration: 0.6, animations:{self.vwSchedule.frame = CGRect(x: self.vwSchedule.frame.origin.x, y: (self.vwSchedule.frame.origin.y+self.vwSchedule.bounds.size.height), width: self.vwSchedule.bounds.size.width, height: self.vwSchedule.bounds.size.height)}, completion: { (bool) in
+            self.btnAdd.isHidden = false
+            self.tabBarController?.tabBar.isHidden = false
+        })
+    }
     
 }
 

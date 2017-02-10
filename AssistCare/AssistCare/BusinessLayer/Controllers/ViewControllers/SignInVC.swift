@@ -70,6 +70,14 @@ class SignInVC: UIViewController, UITextFieldDelegate, GIDSignInDelegate {
         }
     }
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if(textField == txtEmail){
+            txtPassword.becomeFirstResponder()
+        }else{
+            txtPassword.resignFirstResponder()
+        }
+        return true
+    }
     //Navigation back
     @IBAction func btnNavBack(_ sender: UIButton) {
         self.navigationController!.popViewController(animated: true)
